@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            /* table start */
+            .table_box {
+                    width: 90%;
+                    max-width: 1440px;
+                    margin: 50px auto 90px;
+              /* overflow: hidden; */
+              /* border: 1px solid #979797; */
+              /* border-radius: 30px; */
+              font-size: 16px;
+              color: #787878;
+                  padding: 5px 23px 46px;
+        border-radius: 24px;
+        box-shadow: 0 12px 36px 0 rgba(136, 138, 144, 0.2), 0 12px 50px -24px rgba(0, 0, 0, 0.16);
+          background-color: #ffffff;
+          }
+        
+          .table_box>li {
+              width: 100%;
+              min-height: 50px;
+              display: flex;
+          /*    border: 1px solid #979797;*/
+              border-top: none;
+              position: relative;
+              top: 0;
+              left: 0;
+          }
+          .color_font{
+            color: #2768b3;
+          }
+        .table_box>.line1{
+               width: 100%;
+        min-height: 50px;
+        display: flex;
+        border-top: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        }
+        .table_box .line1 .column3,.table_box .line1 .column2{
+            padding: 16px 0px 17px;
+            margin: 0 0px 12px 0px;
+           font-size: 32px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.38;
+        letter-spacing: -0.55px;
+        text-align: center;
+        color: #32c5ff;
+        background-color: #fff;
+        }
+        
+        
+          .table_box>li.line1 {
+        
+              overflow: hidden;
+              border-top: 1px solid #979797;
+              border-radius: 30px 30px 0 0;
+              font-size: 16px;
+              font-weight: bold;
+              color: #3c3c3c;
+          }
+        
+          .table_box>li>span {
+              /* padding:0 15px; */
+              display: flex;
+              align-items: center;
+              box-sizing: border-box;
+              padding-left: 35px;
+              min-height: 35px;
+              text-align: left;
+              background-color: #fff;
+          }
+        
+          .table_box .column1 {
+              width: 33%;
+              min-width: 360px;
+              font-size: 20px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: -0.55px;
+        text-align: left;
+        color: #32c5ff;
+              padding:20px;
+              min-width: 197px;
+          }
+        
+          .table_box .column2 {
+              width: 35%;
+              font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.13;
+        letter-spacing: -0.23px;
+        text-align: left;
+        color: #3c3636;
+              padding:16px 20px 17px;
+              min-height: 76px;
+              background-color: #ECF9FD;
+              margin:0 20px 12px 20px ;
+              border-radius: 16px;
+          }
+          .table_box  .formtitle .column2,.table_box  .formtitle .column3{
+             background-color: #fff;
+          }
+        .table_box .columnb{
+           width: 3px;
+           background-color: #e9e9e9;
+           padding: 0;
+        }
+          .table_box .column3 {
+              width: 32%;
+              border-right: none !important;
+              font-size: 16px;
+        font-weight: 600;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.13;
+        letter-spacing: -0.23px;
+        text-align: left;
+        color: #3c3636;
+              padding:16px 20px 17px;
+              min-height: 76px;
+               background-color: #ECF9FD;
+              margin:0 20px 12px 20px ;
+               border-radius: 16px;
+          }
+        .table_box .line21  .column3,.table_box .line21  .column2 {margin:0 20px 0px 20px ;}
+          .line-icon {
+              background-image: url(https://explore.hiretual.com/l/874171/2020-11-19/8wr444/874171/1605835897CHDoD8u2/gth.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+              display: inline-block;
+              width: 19px;
+              height: 19px;
+              margin-left: 8px;
+        
+          }
+        
+          .tip-info {
+              box-sizing: border-box;
+              font-size: 16px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: #787878;
+              position: absolute;
+              display: none;
+              padding: 30px 30px 0 30px;
+              text-align: left;
+              background-position: center center;
+              background-size: 100% 100%;
+          }
+          .colose-icon{
+             background-image: url(https://explore.hiretual.com/l/874171/2021-04-08/9cbtml/874171/1617855148SjZtvLUw/jticon.png);
+             width: 30px;
+            height: 30px;
+            min-width: 30px;
+            display: inline-block;
+            background-size: cover;
+             transform: rotate(180deg);
+             transition: all .3s ease-in-out;
+            margin-left: 10px;
+            border-radius: 10px;
+          }
+          .open-icon{
+             background-image: url(https://explore.hiretual.com/l/874171/2021-04-08/9cbtml/874171/1617855148SjZtvLUw/jticon.png);
+             width: 30px;
+            height: 30px;
+            min-width: 30px;
+            background-size: cover;
+            display: inline-block;
+            margin-left: 10px;
+           
+            transition: all .3s ease-in-out;
+            border-radius: 10px;
+          }
+          .table_box .Industrycont{
+             display: none;
+          }
+           .table_box .Candidatecont{
+             display: none;
+          }
+           .table_box .atscont{
+             display: none;
+          }
+          .formborder{
+             border-radius: 0 0px 30px 30px;
+             overflow: hidden;
+          }
+          .line21{
+             border-radius: 0 0px 30px 30px;
+             overflow: hidden;
+          }
+          @media (max-width:880px) {
+            .table_box {
+                  padding: 10px 0;
+                  width: 100%;
+          }
+          }
+    </style>
+</head>
+<body>
+    <ul class="table_box">
+        <p class="line1">
+            <span class="column1"></span>
+            <span  class="column2 color_font">Hiretual</span>
+            <span  class="column3 color_font"> Our Competitors</span>
+        </p>
+        <li class="line2">
+            <span class="column1">Searchable Profiles</span><span class="columnb"></span>
+            <span class="column2"> 750M+ </span><span class="columnb"></span>
+  
+            <span class="column3"> At most 575M </span>
+        </li>
+        <li class="line3">
+            <span class="column1">Candidate Matching with Feedback</span><span class="columnb"></span>
+            <span class="column2">Yes, constant learning of user feedback (Good Fit / Not a Fit)</span><span class="columnb"></span>
+            <span class="column3">Keyword-based only</span>
+        </li>
+        <li class="line3">
+            <span class="column1">Enterprise-grade security compliance</span><span class="columnb"></span>
+            <span class="column2">Leviathan Security Group tested, SOC-2 Type I and II, GDPR, CCPA, EU-US Privacy Shield</span><span class="columnb"></span>
+            <span class="column3">Only Soc 2 Type II & GDPR</span>
+        </li>
+        <li class="line26">
+            <span class="column1">Boolean Syntax Support</span>
+            </span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> Yes  </span>
+  
+        </li>
+        <li onclick="openform(0)" class="formtitle titlecolose">
+            <span style="color: #2768B3;" class="column1">Industry Leading AI Sourcing<i class="formicon colose-icon"></i></span><span class="columnb"></span>
+            <span  class="column2">  </span><span class="columnb"></span>
+            <span class="column3">  </span>
+        </li>
+        <li class="line4 Industrycont">
+            <span class="column1">Healthcare Specific AI Sourcing </span><span class="columnb"></span>
+            <span class="column2">10M+ profiles, healthcare-specific filters and platforms </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+         
+        </li>
+        <li class="line5 Industrycont">
+            <span class="column1">Tech Specific AI Sourcing</span><span class="columnb"></span>
+            <span class="column2">20M+ profiles, tech-specific filters and platforms</span><span class="columnb"></span>
+            <span class="column3"> Some </span>
+  
+        </li>
+        <li class="line6 Industrycont">
+            <span class="column1">Diversity Filters and Insights</span><span class="columnb"></span>
+            <span class="column2"> Yes - Diversity filters with flexibility, Blind Sourcing Mode, Diversity Insights, Diversity Analytics Reports</span><span class="columnb"></span>
+            <span class="column3"> Some </span>
+            
+  
+        </li>
+        <li class="line7 Industrycont">
+            <span class="column1">Screening of Imported Candidates</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+        </li>
+        <li class="line8 Industrycont">
+            <span class="column1">Clearance Filters</span><span class="columnb"></span>
+            <span class="column2"> 3.7M cleared candidates with 12 security clearance filters and complete inference explanations</span><span class="columnb"></span>
+            <span class="column3">Only 1.9M cleared candidates</span>
+  
+  
+        </li>
+       
+        <li onclick="openform(1)" class=" formtitle titlecolose">
+           <span style="color: #2768B3;" class="column1">Candidate Engagement<i class="formicon colose-icon"></i></span><span class="columnb"></span>
+            <span class="column2">  </span><span class="columnb"></span>
+            <span class="column3">  </span>
+        </li>
+        <li class="line9 Candidatecont">
+           
+            <span class="column1">Email Sequences</span><span class="columnb"></span>
+            <span class="column2"> Up to 10 </span><span class="columnb"></span>
+            <span class="column3"> Up to 3 </span>
+        </li>
+        <li class="line10 Candidatecont">
+            <span class="column1">Comprehensive Tracking</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+        </li>
+        <li class="line11 Candidatecont">
+            <span class="column1">Send on behalf of</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> Yes </span>
+           
+        </li>
+        <li class="line12 Candidatecont">
+            <span class="column1">Contact Abundance & Accuracy</span><span class="columnb"></span>
+            <span class="column2">Yes, work and personal phone numbers and emails completely verified (90% finding rate with 95% accuracy)</span>
+         <span class="columnb"></span>   <span class="column3">Minimal Accuracy </span>
+        </li>
+        <li class="line13 Candidatecont">
+            <span class="column1">Market Insights</span><span class="columnb"></span>
+           <span class="column2">Yes, savable and shareable reports with Diversity, Clearance, U.S. Work Authorization filters, and more </span>
+           <span class="columnb"></span>  <span class="column3">Yes (smaller database, less accurate data) </span>
+        
+        </li>
+        <li onclick="openform(2)"  class=" formborder formtitle titlecolose">
+           <span style="color: #2768B3;" class="column1">ATS/CRM Integrations<i class="formicon colose-icon"></i></span><span class="columnb"></span>
+            <span class="column2">  </span><span class="columnb"></span>
+            <span class="column3">  </span>
+        </li>
+        <li class="line14 atscont">
+            <span class="column1">Total Integrations</span><span class="columnb"></span>
+            <span class="column2"> 30+ ATS/CRM integrations </span><span class="columnb"></span>
+            <span class="column3"> Minimal capabilities with at most 10 vendors</span>
+        </li>
+        <li class="line15 atscont">
+            <span class="column1">Deep Integrations</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+         
+  
+        </li>
+        <li class="line16 atscont">
+            <span class="column1">Screening & Ranking of ATS Candidates</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+        </li>
+        <li class="line17 atscont">
+            <span class="column1" >Search candidates in your ATS with AI-powered filters</span>
+           <span class="columnb"></span> <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+          
+        </li>
+        <li class="line18 atscont">
+            <span class="column1">Deduplication</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+           
+  
+        </li>
+        <li class="line19 atscont">
+            <span class="column1">Refresh & Enrich</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+        </li>
+        <li class="line20 atscont">
+            <span class="column1" >Sync of Notes, Tags, Emails, Experiences, Education across both platforms</span>
+           <span class="columnb"></span> <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+        </li>
+        <li class="line21 atscont">
+            <span class="column1">View Candidates and User Activity across both platforms</span><span class="columnb"></span>
+            <span class="column2"> Yes </span><span class="columnb"></span>
+            <span class="column3"> No </span>
+        </li>
+    </ul>
+
+    <script>
+        var _fn = function (classname) {
+            var view_h = $(window).height() - 100;
+            var img_text_box = $('.' + classname);
+            var len = img_text_box.length;
+
+            var scroll_fn = function () {
+                var scrolltop = $(document).scrollTop();
+                for (var i = 0; i < img_text_box.length; i++) {
+                    var top_y = img_text_box.eq(i).offset().top;
+                    var div_h = img_text_box.eq(i).height()
+                    if (top_y - scrolltop < view_h && top_y - scrolltop > -div_h * 0.75) {
+                        img_text_box.eq(i).addClass('act');
+                    }
+                }
+            };
+
+            $(window).scroll(scroll_fn);
+            scroll_fn(classname)
+        };
+        _fn('text_img');
+
+        function openform(type){
+     var b=$(".formtitle")
+     var d=$(".formicon")
+     if(type==0){
+        var a=$(".Industrycont")
+        
+        for(var i=0;i<a.length;i++){
+           if(a[i].style.display!="flex"){
+              b[type].className="formtitle titleopen"
+              d[type].className="formicon open-icon"
+              a[i].style.display="flex"
+           }else{
+              b[type].className="formtitle titlecolose"
+              d[type].className="formicon colose-icon"
+              a[i].style.display="none"
+           }
+        }
+     }else if(type==1){
+        var c=$(".Candidatecont")
+        
+        for(var i=0;i<c.length;i++){
+           if(c[i].style.display!="flex"){
+              b[type].className="formtitle titleopen"
+              d[type].className="formicon open-icon"
+              c[i].style.display="flex"
+           }else{
+              b[type].className="formtitle titlecolose"
+              d[type].className="formicon colose-icon"
+              c[i].style.display="none"
+           }
+        }
+     }else if(type==2){
+        var c=$(".atscont")
+        
+        for(var i=0;i<c.length;i++){
+           if(c[i].style.display!="flex"){
+              b[type].className="line14  formtitle titleopen"
+              d[type].className="formicon open-icon"
+              c[i].style.display="flex"
+           }else{
+              b[type].className="line14  formborder formtitle titlecolose"
+              d[type].className="formicon colose-icon"
+              c[i].style.display="none"
+           }
+        }
+     }
+  }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- use form:RecruitmentConsultant-form-form -->
+    <!-- Cookiebot  -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="63dcd82f-a840-4920-8988-8fa19ab4a95f"
+        data-blockingmode="auto" type="text/javascript"></script>
+    <!-- Cookiebot  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="%%description%%" />
+    <title>%%title%%</title>
+    <!-- <meta property="og:image" content="https://explore.hiretual.com/l/874171/2021-01-15/92yvpw/874171/1610693263Ii1nWHyK/Hiretual_6_Min_Demo.png"> -->
+    <link rel="icon" href="https://storage.pardot.com/874171/163468/htm_icon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="https://explore.hiretual.com/explore.hiretual.index.css" />
+    <!-- zoominfo -->
+
+    <script>
+        (function () {
+            var zi = document.createElement('script');
+            zi.type = 'text/javascript';
+            zi.async = true;
+            zi.src = 'https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(zi, s);
+        })();
+    </script>
+
+    <script>
+
+
+        function getParam(p) {
+            var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function getExpiryRecord(value) {
+            var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 以毫秒计的 90 天有效期
+
+            var expiryDate = new Date().getTime() + expiryPeriod;
+            return {
+                value: value,
+                expiryDate: expiryDate
+            };
+        }
+
+        function addGclid() {
+            var gclidParam = getParam('gclid');
+            var gclidFormFields = ['874171_106691pi_874171_106691', 'foobar']; // 此处所有可能的 GCLID 表单字段
+            var gclidRecord = null;
+            var currGclidFormField;
+
+            var gclsrcParam = getParam('gclsrc');
+            var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+
+            gclidFormFields.forEach(function (field) {
+                if (document.getElementById(field)) {
+                    currGclidFormField = document.getElementById(field);
+                }
+            });
+
+            if (gclidParam && isGclsrcValid) {
+                gclidRecord = getExpiryRecord(gclidParam);
+                localStorage.setItem('gclid', JSON.stringify(gclidRecord));
+            }
+
+            var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
+            var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+
+            if (currGclidFormField && isGclidValid) {
+                currGclidFormField.value = gclid.value;
+            }
+        }
+
+        window.addEventListener('load', addGclid);
+
+    </script>
+
+    <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
+    <script>
+        window.addEventListener('message', receiveMessage, false);
+        function receiveMessage(event) {
+            if (event.data && event.data.message === 'PARDOT_DATA' && event.data.data) {
+                var data = event.data.data;
+                const submitData = {
+                    FirstName: data['FirstName'],
+                    LastName: data['LastName'],
+                    Company: data['CompanyName'],
+                    Email: data['WorkEmail'],
+                    Title: data['JobTitle'],
+                    Phone: data['Phone'],
+                    Lead_Form_Company_Size__c: data['CompanySize'],
+                    Number_of_recruiters__c: data['NumberofRecruiters']
+                }
+                ChiliPiper.submit("hiretual", "pardot-request-a-demo", { map: true, lead: submitData })
+            }
+        };
+
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", arial, sans-serif;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        img,
+        div,
+        h1,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        #pardot-form {
+            padding: 0;
+        }
+
+        #page-heade {
+            width: 100%;
+            display: flex;
+        }
+
+        #page-heade div img {
+            width: 99px;
+            height: 99px;
+            border-radius: 100%;
+            background-color: #2768b3;
+            margin-left: -1px;
+            margin-right: -1px;
+        }
+.bgcolor1{
+    background-image:linear-gradient(260deg, rgb(180 251 251 / 49%) , rgba(0,0,0,0) 70%);
+}
+        /* part1 */
+        .part1 {
+            width: 100%;
+            padding: 100px 0 85px;
+            background-image: url(https://explore.hiretual.com/l/874171/2021-04-15/9d8178/874171/1618467583i2czkV9Y/bg1.png);
+            background-position:right bottom;
+            background-size: auto 96%;
+            background-repeat: no-repeat;
+            
+        }
+
+        .part-content {
+            width: 85%;
+            max-width: 1500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0px auto;
+        }
+
+        .part-content .left-text {
+            max-width: 730px;
+            width: 58%;
+        }
+
+        .part-content .left-text h1 {
+            width: 100%;
+            background-image: linear-gradient(to bottom, #2768b3, #002a6e), linear-gradient(to bottom, #2768b3, #2768b3);
+  font-family: Poppins;
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #2768b3;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+        }
+
+        .part-content .left-text h5 {
+            font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.89;
+  letter-spacing: -0.23px;
+  text-align: left;
+  color: #3c3636;
+            margin: 25px 0 55px;
+        }
+
+        .part-content .left-text img {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .part-content .right-table {
+            width: 32%;
+            max-width: 365px;
+            min-width: 320px;
+            min-height: 550px;
+            box-sizing: border-box;
+            padding: 15px 20px 5px;
+            border-radius: 14px;
+            box-shadow: 0 4px 52px 0 rgba(0, 0, 0, 0.16);
+            background-color: #8edfff8f;
+        }
+
+        @media (max-width: 950px) {
+            .part-content {
+                width: 96%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 880px) {
+            .part1 {
+                padding: 100px 0 60px;
+    background-position: right bottom;
+    background-size: auto 65%,100% 100%;
+    background-repeat: no-repeat;
+            
+        }
+            .part-content {
+                width: 96%;
+                flex-wrap: wrap;
+            }
+
+            .part-content .left-text {
+                width: 100%;
+                margin: 50px auto;
+                text-align: center;
+
+            }
+
+            .part-content .left-text img {
+                width: 90%;
+                margin: 0 auto;
+
+            }
+
+            .part-content .right-table {
+                width: 80%;
+                margin: 50px auto;
+            }
+        }
+        /* part2 */
+        .part2 {
+            width: 100%;
+            padding: 75px 0 0;
+            background-image: url(https://explore.hiretual.com/l/874171/2021-04-15/9d817b/874171/1618467584CnRhWKh7/bg2.png);
+            background-position:left top;
+            background-size: auto 63%;
+            background-repeat: no-repeat;
+        }
+
+        .logo_list {
+            width: 90%;
+            max-width: 1350px;
+            margin: 0px auto 115px;
+            border-radius: 8px;
+            font-size: 0;
+            padding: 68px 0 75px;
+            text-align: center;
+            box-shadow: 0 24px 30px 0 rgba(34, 36, 54, 0.02), 0 64px 72px 0 rgba(81, 88, 94, 0.02), 0 4px 40px 0 rgba(135, 199, 224, 0.05), inset 0 0 30px 0 rgba(233, 233, 233, 0.1), 0 50px 74px 0 rgba(72, 72, 72, 0.1), 0 -8px 32px 0 rgba(194, 220, 251, 0.1);
+  background-color: #ffffff;
+        }
+
+        .logo_list .logo_title {
+            width: 100%;
+            background-image: linear-gradient(to top, #2768b3, #002a6e), linear-gradient(to bottom, #2768b3, #2768b3);
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.55px;
+  text-align: center;
+  color: #2768b3;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+            margin-bottom: 50px;
+        }
+
+        .part2-title {
+            max-width: 827px;
+            margin: 160px auto 60px;
+            background-image: linear-gradient(to bottom, #2768b3, #002a6e), linear-gradient(to bottom, #2768b3, #2768b3);
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.55px;
+  text-align: center;
+  color: #2768b3;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+        }
+
+        .part2-main {
+            width: 98%;
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 50px;
+        }
+
+        .part2-main .contentbox {
+            width: 39%;
+    margin: 0 -3%;
+    max-width: 508px;
+    border-radius: 20px;
+    background-image: url(https://explore.hiretual.com/l/874171/2021-04-13/9d55jl/874171/1618364228rsCKloFa/bg0.png);
+    background-size: 100% 100%;
+    padding: 126px 42px 225px;
+        }
+
+        .part2-main .contentbox h1 {
+            flex: 0 0 295px;
+            width: 100%;
+            flex-grow: 0;
+            margin: 0 auto 25px;
+            font-size: 108.4px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.53px;
+  text-align: center;
+  color: #ffffff;
+        }
+
+      
+
+        .part2-main .contentbox h5 {
+            width: 100%;
+            max-width: 285px;
+            margin: 0 auto;
+            font-size: 33px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: -0.46px;
+  text-align: center;
+  color: #ffffff;
+        }
+
+        @media (max-width: 1250px) {
+            .part2 {
+            background-size: auto 53%;
+    
+        }
+            .part2-main {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .part2-main .contentbox {
+                width: 100%;
+                margin:0 -2% -10%;
+                max-width: 508px;
+            }
+        }
+        @media (max-width: 960px){
+            .part2 {
+            background-size: auto 31%;
+    
+        }
+        }
+        @media (max-width: 500px) {
+            
+
+            .part2-main {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .part2-main .contentbox {
+                width: 100%;
+                margin:0 -2% -2%;
+                max-width: 508px;
+                padding: 29% 50px 45%;
+            }
+            .part2-main .contentbox h1 {
+            
+            width: 100%;
+            font-size: 75px;
+        }
+
+        .part2-main .contentbox h5 {
+            font-size: 25px;
+        }
+
+        }
+        /* part3 */
+        .part3 {
+            width: 100%;
+           background-color: rgba(79, 195, 249, 1);
+            padding: 100px 0;
+        }
+
+        .p_title {
+            background-image: linear-gradient(225deg, #2768b3, #3892e9, #54ccfc);
+            font-size: 40px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.38;
+            letter-spacing: -0.55px;
+            text-align: center;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo_list img {
+            width: 93%;
+            max-width: 1065px;
+        }
+
+        .part3 .text_img {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 98%;
+            max-width: 1450px;
+            margin: 0 auto;
+        }
+        
+        .text_img .text {
+            width: 45%;
+    max-width: 550px;
+    margin: 0 2% 0 1%;
+        }
+        .text_img .text.right{
+            margin: 0 3% 0 0;
+        }
+        .text_img .text h1 {
+            font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #2768b3;
+  margin-top: 60px;
+        }
+        .text_img .text h1:nth-of-type(1) {
+            margin-top: 0px;
+        }
+        .text_img .text h5 {
+            font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+            margin-top: 20px;
+        }
+
+
+        .text_img .img {
+            width: 78%;
+    margin-right: -23%;
+    max-width: 1100px;
+        }
+
+        .text_img .left {
+
+            opacity: 0;
+            transform: translateX(-150px);
+            transition: all 1s;
+        }
+
+        .text_img.act .left {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        .text_img .right {
+
+            opacity: 0;
+            transform: translateX(150px);
+            transition: all 1s;
+        }
+
+        .text_img.act .right {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+
+
+        @media (max-width: 1100px) {
+
+            .part3 .text_img {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 50px 0;
+                background-image:none;
+            }
+        .part3 .text_img .text {
+                width: 92%;
+                max-width: 92%;
+                margin: 0 auto;
+            }
+
+            .text_img .img {
+                width: 90%;
+                margin: 50px auto;
+            }
+
+        }
+
+        /* part4 */
+        .part4{
+            padding: 1px 0;
+            background-image:linear-gradient(105deg, rgba(136, 216, 248, 0.4) , rgba(0,0,0,0) 82%);
+        }
+     
+        .part4_bottom_title {
+            background-image: linear-gradient(to bottom, #2768b3, #002a6e), linear-gradient(to bottom, #2768b3, #2768b3);
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.55px;
+  text-align: center;
+  color: #2768b3;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 137px;
+        }
+
+        .part4_bottom_but {
+            width: 252px;
+            height: 62px;
+            margin: 55px auto 115px;
+            display: block;
+            line-height: 62px;
+            font-size: 21px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 10px;
+            background-color: #f15b0c;
+        }
+
+    </style>
+</head>
+
+<body>
+     <!-- top logo -->
+     <div id="page-heade">
+        <div style="width: 100px;
+    background-color: #2768b3;
+    height: 38px;"></div>
+        <div style="height: 38px;background-color: #2768b3;">
+            <a href="hiretual.com" target="_top">
+                <img src="https://explore.hiretual.com/l/874171/2021-01-19/93hzt1/874171/1611103986jlriEYyB/logoblue.png"
+                    alt="Hiretual Logo in white with light blog background">
+            </a>
+        </div>
+
+        <div style="width: 100%;background-color: #2768b3;height: 38px;"></div>
+    </div>
+    <div class="bgcolor1">
+<!-- part1 -->
+<div class="part1">
+    <div class="part-content">
+        <div class="left-text">
+            <h1>Recruitment Consultants Need The Best Recruitment Software.</h1>
+            <h5>Hiretual’s AI-powered Candidate Search and Data Hub covers all the tools to help you craft recruitment strategies, source candidates with speed, automate engagement, and more. </h5>
+            <img src="https://explore.hiretual.com/l/874171/2021-04-15/9d8176/874171/16184670802ynWBnsd/Image1.png"
+                alt="">
+        </div>
+        <div class="right-table" id="table">
+            %%content%%
+        </div>
+    </div>
+</div>
+
+
+<!-- part2 -->
+<div class="part2">
+<div class="logo_list">
+    <p class="logo_title">Recruitment Consultants Everywhere Trust Our Tech </p>
+    <img src="https://explore.hiretual.com/l/874171/2021-04-15/9d817g/874171/1618468145SIDTGJ73/Logos.png"
+        alt="">
+</div>
+<p class="part2-title">What Separates Our Recruitment Software From The Rest? </p>
+<div class="part2-main">
+    <div class="contentbox">
+        <h1> 50%</h1>
+        <h5>Less Time Sourcing</h5>
+    </div>
+    <div class="contentbox">
+        <h1> 5x</h1>
+        <h5>More Qualified Leads </h5>
+    </div>
+    <div class="contentbox">
+        <h1>45% </h1>
+        <h5>Increase In Response Rates </h5>
+    </div>
+</div>
+</div>
+    </div>
+    
+<!-- part3 -->
+
+<div class="part3">
+
+    <div class="text_img">
+        <div class="text left">
+            <h1>Craft Recruitment Strategies Your Clients Will Love </h1>
+            <h5>Inform your client recruitment strategies with extensive talent market data right at your fingertips, including average market values, availability, skills, locations, past companies, and more.  </h5>
+            <h1>Cast A Wider Net For Your Targeted Searches</h1>
+            <h5>With increased competition for talent and multiple reqs to fill, cast a wider net for your candidate search from our industry-leading talent pool of 750M+ profiles to locate quality candidates across the open web. Use 30+ advanced AI filters to find candidates for any role and industry.   </h5>
+            <h1>Automate Engagement With Ease  </h1>
+            <h5>Schedule and send emails in groups of up to 200 candidates at a time with one click. Personalize outreach campaigns with email tokens (i.e. name, company, location) and sequence up to 10 unique touchpoints.  </h5>
+        </div>
+        <img class="img right"
+            src="https://explore.hiretual.com/l/874171/2021-04-15/9d817x/874171/1618469400DvjDlun8/Image2_2.png"
+            alt="">
+    </div>
+</div>
+   
+    <div class="part4">
+       
+        <p class="part4_bottom_title">Take Your Recruitment Tech Stack To The Next Level</p>
+
+        <a class="part4_bottom_but" href="#table">CONTACT SALES</a>
+    </div>
+
+    <script src="https://explore.hiretual.com/explore.hiretual.index.js"></script>
+    <script src="https://storage.pardot.com/874171/1605775081fJQEwFqt/jquery_3.5.1.min.js"></script>
+    <script>
+        var _fn = function (classname) {
+            var view_h = $(window).height() - 100;
+            var img_text_box = $('.' + classname);
+            var len = img_text_box.length;
+
+            var scroll_fn = function () {
+                var scrolltop = $(document).scrollTop();
+                for (var i = 0; i < img_text_box.length; i++) {
+                    var top_y = img_text_box.eq(i).offset().top;
+                    var div_h = img_text_box.eq(i).height()
+                    if (top_y - scrolltop < view_h && top_y - scrolltop > -div_h * 0.75) {
+                        img_text_box.eq(i).addClass('act');
+                    }
+                }
+            };
+
+            $(window).scroll(scroll_fn);
+            scroll_fn(classname)
+        }
+
+        _fn('text_img');
+
+
+    </script>
+    <noscript>
+        <img src="https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0" width="1" height="1" style="display: none;" />
+    </noscript>
+</body>
+
+</html>

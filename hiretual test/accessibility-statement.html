@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Poppins;
+        }
+        a{
+        text-decoration: none;
+        }
+        .jump-button {
+    display: inline-block;
+    width: 234px;
+    height: 52px;
+    line-height: 52px;
+    background: linear-gradient(
+114.45deg
+, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+    box-shadow: 0px 100px 80px rgb(232 87 65 / 7%), 0px 41.7776px 33.4221px rgb(232 87 65 / 5%), 0px 22.3363px 17.869px rgb(232 87 65 / 4%), 0px 12.5216px 10.0172px rgb(232 87 65 / 4%), 0px 6.6501px 5.32008px rgb(232 87 65 / 3%), 0px 2.76726px 2.21381px rgb(232 87 65 / 2%);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+.jump-button2 {
+    display: inline-block;
+    width: 211px;
+    height: 53px;
+    line-height: 53px;
+    background: linear-gradient(
+114.45deg
+, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+    box-shadow: 0px 100px 80px rgb(232 87 65 / 7%), 0px 41.7776px 33.4221px rgb(232 87 65 / 5%), 0px 22.3363px 17.869px rgb(232 87 65 / 4%), 0px 12.5216px 10.0172px rgb(232 87 65 / 4%), 0px 6.6501px 5.32008px rgb(232 87 65 / 3%), 0px 2.76726px 2.21381px rgb(232 87 65 / 2%);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+}
+.outbox{
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+@media (max-width:750px){
+    .outbox{
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+}
+/* part1 */
+        .part1{
+            padding: 1px 0;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #4E8DF6;
+            background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Ellipse-211.png);
+            background-repeat: no-repeat;
+            background-size: auto 125%;
+            background-position: center 16%;
+            overflow: hidden;
+            min-height: 740px;
+        }
+        .part1 .part1main{
+            text-align: center;
+        }   
+       .part1main .part1-title{
+           max-width: 640px;
+        font-style: normal;
+font-weight: bold !important;
+font-size: 48px !important;
+line-height: 72px !important;
+text-align: center;
+text-transform: capitalize;
+color: #FFFFFF !important;
+margin: 55px auto 15px;
+animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 0.5s;
+        transform: translateY(200px);
+        opacity: 0;
+        padding:0;
+       }
+       .part1main .part1-title2{
+        
+        font-weight: normal !important;
+font-size: 18px !important;
+line-height: 27px !important;
+text-align: center;
+color: #FFFFFF !important;
+margin: 15px auto 27px;
+animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 1s;
+        transform: translateY(200px);
+        opacity: 0;
+        padding:0;
+       }
+       .part1 .but1{
+        animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 1.5s;
+        transform: translateY(200px);
+        opacity: 0;
+       }
+.part1img{
+    width: 405px;
+    margin: 72px auto 50px;
+    animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 2s;
+        transform: translateY(200px);
+        opacity: 0;
+        position: relative;
+}
+.part1img .mainimg{
+    width: 100%;
+}
+.part1img .icon{
+    width: 86px;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+}
+.part1img .icon:nth-of-type(2){
+    top: 145px;
+    left: -49px;
+    animation: icon1 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 2.5s;
+}
+.part1img .icon:nth-of-type(3){
+    top: -20px;
+    left: 281px;
+    animation: icon2 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 3s;
+}
+.part1img .icon:nth-of-type(4){
+    top: 257px;
+    left: 310px;
+    animation: icon3 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 3.5s;
+}
+@keyframes icon1 {
+    0%{
+        top: 123px;
+        left: 156px;
+        transform: scale(0.2);
+    }
+    100%{
+        top: 145px;
+    left: -49px;
+    transform: scale(1);
+    opacity: 1;
+    }
+}
+@keyframes icon2 {
+    0%{
+        top: 123px;
+        left: 156px;
+        transform: scale(0.2);
+    }
+    100%{
+        top: -20px;
+        left: 281px;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes icon3 {
+    0%{
+        top: 123px;
+        left: 156px;
+        transform: scale(0.2);
+    }
+    100%{
+        top: 257px;
+    left: 310px;
+    transform: scale(1);
+    opacity: 1;
+    }
+}
+@keyframes animate0 {
+        from {
+            transform: translateY(200px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @media (max-width:1150px){
+    .part1{
+        margin-top: 20px;
+    }
+}
+@media (max-width:980px){
+    .part1{
+        margin-top: 10px;
+    }
+}
+    @media (max-width:750px) {
+        .part1main .part1-title{
+  
+font-size: 36px !important;
+line-height: 54px !important;
+       }
+       .part1main .part1-title2{
+font-size: 24px !important;
+line-height: 36px !important;
+       }
+    }
+.part2{
+    padding: 100px 0 175px;
+}
+.part2 .main_p{
+    font-style: normal;
+font-weight: normal !important;
+font-size: 18px !important;
+line-height: 27px !important;
+color: #000000 !important;
+margin-bottom: 50px;
+padding: 0 !important;
+}
+.part2 .main_p>a{
+    color: #4E8DF6 !important;
+    font-weight: bold !important;
+}
+.part2 ul{
+    padding: 0 !important;
+}
+.part2 li.main_p{
+    list-style-type: initial;
+    margin-bottom: 0;
+    margin-left: 30px;
+    
+}
+@media (max-width:750px) {
+    .part2 .main_p{
+        font-size: 24px !important;
+    line-height: 36px !important;
+}
+}
+/* partbottom */
+.partbottom {
+        background-color: #4E8DF6;
+        display: flex;
+    justify-content: center;
+    }
+    .partbottom .cont {
+        max-width: 1180px;
+        margin-right: 77px;
+        display: flex;
+        align-items: center;
+    }
+    .partbottom .cont>div {
+        width: 45%;
+    }
+    .partbottom .cont div.right-box {
+        width: 72%;
+    }
+    .partbottom .cont .left-box {
+        display: flex;
+    }
+    .partbottom .cont .left-box .ellipse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 125px;
+        height: 160px;
+        background: rgba(118, 167, 255, 0.7);
+        box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+        border-radius: 200px;
+    }
+    .partbottom .cont .left-box .ellipse>img {
+        width: 100px;
+        height: 100px;
+        margin: 10px auto 8px;
+    }
+    .partbottom .cont .left-box .ellipse .name {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        color: #FFFFFF;
+    }
+    .partbottom .cont .left-box>.ellipse:first-child {
+        margin-top: 96px;
+    }
+    .partbottom .cont .left-box .e-box .ellipse:last-child {
+        margin-top: 33px;
+        margin-left: 3px;
+    }
+    .partbottom .cont .left-box .e-box .ellipse:last-child {
+        margin-top: 18px;
+        margin-left: 18px;
+    }
+    .partbottom .cont .left-box>.ellipse:last-child {
+    margin-top: 68px;
+        margin-left: 3px;
+    }
+    .partbottom .cont .right-box {
+        margin: 100px 0 87px;
+    }
+    .partbottom .cont .right-box .text {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 54px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+    }
+    .partbottom .cont .right-box .btn {
+        display: flex;
+    }
+    .partbottom .cont .right-box .btn1 {
+        width: 211px;
+        height: 53px;
+        display: block;
+        background: #E16427;
+        border-radius: 30px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        border: 0;
+        text-decoration: none;
+        line-height: 53px;
+        margin-right: 32px;
+    }
+    @media (max-width:1200px) {
+    .partbottom .cont {
+        margin-right: 0;
+    }
+    .partbottom .cont div.right-box{
+        width: 90%;
+        margin: 35px auto;
+        text-align: center;
+    }
+    .partbottom .cont>div {
+    width: 45%;
+    margin-right: 3%;
+}
+
+}
+@media (max-width:980px) {
+    .partbottom .cont {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+    }
+    .partbottom .cont div.right-box{
+        margin: 35px auto;
+        text-align: center;
+    }
+    .partbottom .cont .left-box{
+        width: 425px;
+        margin-top: 50px;
+    }
+    .partbottom .cont .right-box .text{
+        text-align: center;
+    }
+
+}
+@media screen and (max-width: 1150px){
+    div.et_pb_row {
+        width: 100%!important;
+    }
+}
+@media (max-width: 750px) {
+ 
+}
+@media (max-width: 560px){
+    div.et_pb_css_mix_blend_mode_passthrough {
+        margin-left: 0px!important;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="part1">
+        <div class="part1main outbox">
+            <p class="part1-title">Hiretual's Accessibility  Statement</p>
+
+            <div class="part1img">
+                <img class="mainimg" src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/img1-8.png" alt="">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Group-7697.png" alt="" class="icon">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Group-7697.png" alt="" class="icon">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Group-7697.png" alt="" class="icon">
+            </div>
+        </div>
+    </div>
+    <div class="part2 outbox">
+        <p class="main_p">
+            Hiretual is committed to ensuring that all persons who may have one or more disabilities haseasy and complete access to all the services which are available to all potential and existing customers. Hiretual is currently reviewing and updating the Hiretual platforms to ensure thatboth the overall website and all documents/resources posted thereon, are available and providedin alternative, accessible formats.
+        </p>
+        <p class="main_p">
+            Hiretual is in the progress to make our products compliant in accordance with the guidelines inherited from Section 508 of the Rehabilitation Act (29 U.S.C. 794d), as amended in 1998, the European accessibility standard En 301 549, and the W3C WCAG (Web Content Accessibility Guidelines) 2.1 Level AA requirements. 
+        </p>
+        <p class="main_p">
+            Our platforms and web pages are being built using these guidelines. We regularly measure our platforms using a variety of methods, such as browser plug-ins, external vendor assessments, and individual page testing by our own Product Design team with a keen focus on accessibility.
+        </p>
+        <p class="main_p">
+            This multifaceted approach helps ensure that accessibility will be maintained as guidelines change and technology evolves.
+        </p>
+        <p class="main_p">
+            For more information, questions or concerns regarding accessibility at Hiretual or to request communication in an accessible format, please contact Hiretual’s Customer Support via:
+        </p>
+        <ul>
+            <li class="main_p">
+                By Email: <a href="mailto:support@hiretual.com">support@hiretual.com</a> 
+            </li>
+            <li class="main_p">
+                By Regular Mail: ATTN: Customer Support, HireTeamMate, Inc. dba Hiretual 2513 E. Charleston Rd., Suite 200, Mountain View, CA, 94043
+            </li>
+        </ul>
+    </div>
+
+       <!-- partbottom -->
+       <div class="partbottom">
+        <div class="cont">
+            <div class="left-box">
+                <div class="ellipse">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/peo4.png"
+                        alt="" class="photo">
+                    <div class="name">Healthcare</div>
+                </div>
+                <div class="e-box">
+                    <div class="ellipse">
+                        <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Diversity.png"
+                            alt="" class="photo">
+                        <div class="name">Diversity</div>
+                    </div>
+                    <div class="ellipse">
+                        <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/newScholar.png"
+                            alt="" class="photo">
+                        <div class="name">Scholar</div>
+                    </div>
+                </div>
+                <div class="ellipse">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Tech.png" alt=""
+                        class="photo">
+                    <div class="name">Tech</div>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="text">Curious to know why thousands of 
+                    recruiters trust Hiretual to find and hire 
+                    the best candidates?</div>
+                <a class="jump-button2" data-vars-ga-category="curious to know why thousands of recruiters trust Hiretual to find and hire the best candidates?" data-vars-ga-action="click_contact sales" href="https://explore.hiretual.com/contact-sales">CONTACT SALES</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

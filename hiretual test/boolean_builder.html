@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <title>Document</title>
+    <!-- <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        div h1,
+        div h2,
+        div h3,
+        div h4,
+        div h5,
+        div h6 {
+            letter-spacing: normal;
+            padding: 0;
+            margin: 0;
+        }
+        @media screen and (max-width: 1150px){
+div.et_pb_row {
+    width: 100%!important;
+}
+        }
+div p{
+    padding: 0;
+}
+        html,
+        body {
+            overflow-x: hidden;
+            min-width: 750px;
+            font-family: Poppins;
+        }
+input{
+    font-family: Poppins;
+}
+
+
+        button {
+            background: none;
+            cursor: pointer;
+        }
+
+        .but {
+            display: block;
+            width: 264px;
+            height: 52px;
+            line-height: 52px;
+            background: #E16427;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .blueT {
+            color: #4E8DF6;
+        }
+
+        .reset {
+            width: 79px;
+            height: 46px;
+            background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/reset.png);
+            background-position: right center;
+            background-size: 14px auto;
+            background-repeat: no-repeat;
+            padding-right: 21px;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 46px;
+            text-align: center;
+            color: #4E8DF6;
+            border: none;
+        }
+        .iconbg{
+            display: inline-block;
+            background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png?002);
+    background-repeat: no-repeat;
+    background-size: 497px auto;
+        }
+        .boolean_part {
+            font-size: 0;
+            width: 100%;
+            background: #F5F8FC;
+            padding: 60px 0 80px;
+        }
+
+        .boolean_part .main {
+            max-width: 1080px;
+            width: 96%;
+            margin: 0 auto;
+        }
+
+        .boolean_part .main .toptitle {
+            text-align: center;
+        }
+
+        #main-content .boolean_part .main .toptitle .ph1 {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            color: #000000;
+            margin: 25px auto 120px;
+        }
+        .formbox .outbox{
+            margin-bottom: 24px;
+        }
+        .mandatory_box.outbox{
+            margin-bottom: 1px;
+        }
+        #main-content .formbox .title{
+            position: relative;
+        }
+        #main-content .formbox .title p{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 46px;
+            text-align: left;
+            color: #000000;
+            position: relative;
+            margin: 0 0 8px 0;
+        }
+
+        #main-content .formbox .title2 p{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 46px;
+            text-align: left;
+            color: #545659;
+            margin: 0 0 8px 0;
+        }
+
+        .formbox .title .reset {
+            position: absolute;
+            right: 15px;
+            top: 0px;
+        }
+
+        #main-content .formbox .grayT {
+            color: #8F9397;
+        }
+        .formbox .inputbox{
+            position: relative;
+            width: 100%;
+            padding: 6px 40px 0 12px;
+min-height: 40px;
+background: #FFFFFF;
+border-radius: 5px;
+        }
+        .formbox .outbox .inputbox .jt{
+            background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/angle-down-light.png);
+    background-position: center center;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 97%;
+    transform-origin: center 52%;
+    /* transition: all 0.2s; */
+        }
+        .formbox .outbox .inputbox.choose .jt{
+            transform: rotate(180deg);
+        }
+        .formbox .outbox .inputbox .clean{
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACvSURBVHgBhdLBDYMwDAVQ24g9WKWT9NwjG8AEXKr20l26SvZAuPWvQHITk1jiENsPghO+P15X0m1aV72M4y1RJZblOfS9vEm6SdTQh+iXQKGF0Asjm33JFqmGPUIvDB+Fzgq2GOxJftsRQo39W3OMfISQ53xLHiMXoQLmeIcFQggFIa2GaKv+n/aGYmB/MJoe8mfT5jPkjyPCXEPRwA4sLYRALr9hdld1rqEIM+v8BbLIzwAXjGqJAAAAAElFTkSuQmCC);
+    background-position: center center;
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 94%;
+    transform-origin: center 52%;
+    transition: all 0.2s;
+    display: none;
+        }
+        .formbox .outbox .inputbox .clean:hover{
+            transform: scale(1.2);
+        }
+        .formbox .job_box.outbox .inputbox .clean{
+            left: 97%;
+        }
+        .formbox .inputbox .oinput{
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 14px;
+line-height: 28px;
+color: #000000;
+            height: 28px;
+            padding: 0;
+        }
+        .strlen{
+            font-size: 14px;
+line-height: 28px;
+display: none;
+        }
+        .formbox .inputbox .oinput::placeholder{
+font-size: 14px;
+line-height: 28;
+color: #8F9397;
+        }
+        .formbox .inputbox .keywordbox{
+            vertical-align: top;
+            height: 28px;
+            width: auto;
+            display: inline-block;
+            align-items: center;
+            margin: 0 8px 6px 0;
+        }
+        .formbox .inputbox .keywordbox .word{
+            vertical-align: top;
+            display: inline-block;
+            padding: 0 8px;
+            font-style: normal;
+font-weight: normal;
+            font-size: 14px;
+line-height: 28px;
+height: 28px;
+color: #2F2F30;
+background: rgba(78, 141, 246, 0.2);
+border-radius: 5px 0 0 5px;
+margin-right: 1px;
+        }
+        .formbox .inputbox .keywordbox .x{
+            display: inline-block;
+            width: 28px;
+height: 28px;
+background-color: rgba(78, 141, 246, 0.2);
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACvSURBVHgBhdLBDYMwDAVQ24g9WKWT9NwjG8AEXKr20l26SvZAuPWvQHITk1jiENsPghO+P15X0m1aV72M4y1RJZblOfS9vEm6SdTQh+iXQKGF0Asjm33JFqmGPUIvDB+Fzgq2GOxJftsRQo39W3OMfISQ53xLHiMXoQLmeIcFQggFIa2GaKv+n/aGYmB/MJoe8mfT5jPkjyPCXEPRwA4sLYRALr9hdld1rqEIM+v8BbLIzwAXjGqJAAAAAElFTkSuQmCC);
+background-repeat: no-repeat;
+background-size: 14px auto;
+background-position: center center;
+border-radius: 0px 5px 5px 0px;
+cursor: pointer;
+        }
+        /* 关键词数据 */
+        .formbox .data_box{
+            position: relative;
+            width: 100%;
+        }
+        /* 系统匹配关键词 */
+        .formbox .data_box .systemkeyword_box{
+            display: none;
+            z-index: 1;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 8px 0px 25px 10px;
+        }
+        .formbox .data_box .systemkeyword_box>li{
+            display: inline-block;
+            width: auto;
+height: 28px;
+border-radius: 5px;
+font-weight: normal;
+font-size: 14px;
+line-height: 28px;
+padding: 0 8px;
+cursor: pointer;
+color: #4E8DF6;
+transition: background-color 0.1s;
+margin: 0 0 9px 0;
+        }
+        .formbox .data_box .systemkeyword_box>li:hover{
+            background: #4E8DF6;
+            color: #FFFFFF;
+        }
+
+        /* 系统推荐关键词 */
+        .formbox .data_box .recommendkeyword_box{
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            margin-top: 6px;
+            background: #FFFFFF;
+box-shadow: 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+border-radius: 0 0 5px 5px;
+z-index: 2;
+max-height: 450px;
+overflow-y: auto;
+        }
+        
+        .formbox .data_box .recommendkeyword_box::-webkit-scrollbar {
+            width: 6px;
+            /*滚动条的尺寸*/
+        }
+
+        .formbox .data_box .recommendkeyword_box::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: #B1B2B5;
+
+        }
+
+        .formbox .data_box .recommendkeyword_box>li{
+            width: 100%;
+            font-size: 14px;
+line-height: 42px;
+padding: 0 12px;
+color: #000000;
+transition: background-color 0.2s;
+cursor: pointer;
+        }
+        .formbox .data_box .recommendkeyword_box>li:hover{
+            background: rgba(78, 141, 246, 0.2);
+        }
+        /* type to search */
+        .formbox .data_box .to_search{
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            margin-top: 5px;
+            background: #FFFFFF;
+box-shadow: 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+border-radius: 5px;
+z-index: 3;
+font-weight: normal;
+font-size: 14px;
+line-height: 40px;
+height: 40px;
+color: #8F9397;
+padding: 0 0 0 12px;
+
+        }
+        .formbox .data_box .to_search>span.p2{
+            display: none;
+        }
+        .formbox .data_box .to_search.state2>span.p2{
+            display: block;
+            text-align: center;
+        }
+        .formbox .data_box .to_search.state2>span.p1{
+            display: none;
+        }
+        .boolean_part .but{
+            margin: 80px auto 60px;
+        }
+        .showboolean_box{
+            width: 100%;
+            text-align: right;
+            display: none;
+        }
+        .showboolean_box .booleantext{
+            padding: 10px;
+            width: 100%;
+            margin: 12px 0;
+font-size: 14px;
+line-height: 21px;
+color: #8F9397;
+resize: none;
+border: none;
+outline: none;
+
+        }
+        .showboolean_box .booleantext::selection {
+    background-color: #cce2ff;
+    color: rgba(0,0,0,.87);
+}
+        .showboolean_box .copybut{
+            width: 79px;
+    height: 46px;
+    background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/copy-light.png);
+    background-position: left 16px;
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    padding-left: 21px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+    color: #4E8DF6;
+    border: none;
+        }
+        .boolean_part .main-2{
+            text-align: center;
+        }
+        #main-content .boolean_part .main-2 .title{
+            font-weight: bold;
+font-size: 36px;
+line-height: 54px;
+color: #000000;
+        }
+        .boolean_part .main-2>img.icon{
+            margin: 15px auto 35px;
+        }
+        #main-content .boolean_part .main-2 .text{
+            margin: 0 auto ;
+            max-width: 630px;
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #000000;
+        }
+        /* copy tip */
+        .copytip{
+            width: 302px;
+            height: 56px;
+            position:fixed;
+            font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+color: #2F2F30;
+background: #FFFFFF;
+box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.08);
+border-radius: 6px;
+padding: 17px 0px 15px 15px;
+left: 50%;
+transform: translateX(-151px);
+top: 150px;
+z-index: 9;
+display: none;
+        }
+        .copytip .icon{
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png?002);
+    background-repeat: no-repeat;
+    background-size: 497px auto;
+    background-position: 0 -259px;
+    margin: 0 5px -9px 0;
+        }
+        .copytip .close{
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACvSURBVHgBhdLBDYMwDAVQ24g9WKWT9NwjG8AEXKr20l26SvZAuPWvQHITk1jiENsPghO+P15X0m1aV72M4y1RJZblOfS9vEm6SdTQh+iXQKGF0Asjm33JFqmGPUIvDB+Fzgq2GOxJftsRQo39W3OMfISQ53xLHiMXoQLmeIcFQggFIa2GaKv+n/aGYmB/MJoe8mfT5jPkjyPCXEPRwA4sLYRALr9hdld1rqEIM+v8BbLIzwAXjGqJAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-size: 8px auto;
+    background-position: center center;
+    margin: 3px 5px 0px 9px;
+   
+        }
+        /* black layer */
+        .black_layer{
+            width: 100%;
+            height: 100%;
+            background: rgba(38, 40, 40, 0.6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 7;
+            display: none;
+        }
+        .copy_popup{
+ 
+            width: 90%;
+            max-width: 800px;
+            min-height: 600px;
+            position: fixed;
+          top: 220px;
+left: 50%;
+transform: translateX(-50%);
+background: #ffffff;
+border-radius: 6px;
+
+        }
+        .copy_popup .popup1{
+            background: #F5F8FC;
+            padding: 1px 0;
+            border-radius: 6px;
+        }
+        .copy_popup .popup1 .copy_popup_close{
+            width: 40px;
+    height: 40px;
+    background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png?002);
+    background-repeat: no-repeat;
+    background-size: 497px auto;
+    background-position: -57px -260px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+        }
+       #main-content .copy_popup .title{
+            font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 16px;
+color: #2F2F30;
+text-align: center;
+margin: 80px auto 43px;
+        }
+        #main-content .copy_popup .title>i{
+            display: inline-block;
+            width: 18px;
+            height: 20px;
+            background-position: 0px -216px;
+            margin-bottom: -5px;
+        }
+        .copy_popup .popup1 .skipbox{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 440px;
+            margin: 0 auto 45px;
+        }
+        .copy_popup .popup1 .skipbox .skip{
+            width: 209px;
+            height: 45px;
+            background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png?002);
+    background-repeat: no-repeat;
+    background-size: 497px auto;
+
+        }
+        .copy_popup .popup1 .skipbox .lin_skip{
+            background-position: 0 -333px;
+        }
+        .copy_popup .popup1 .skipbox .google_skip{
+            background-position: 0 -410px;
+        }
+        #main-content .copy_popup .popup2 .title2{
+            justify-content: center;
+            position: relative;
+            font-weight: 500;
+font-size: 24px;
+display: flex;
+align-items: center;
+color: #2F2F30;
+margin: 30px auto 0;
+        }
+        #main-content .copy_popup .popup2 .title2 .blueT{
+            line-height: 31px;
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #4e8df6;
+    color: #4E8DF6;
+        }
+        #main-content .copy_popup .popup2 .title2 .icon1{
+            width: 43px;
+    height: 43px;
+    margin: 0 5px 0 10px;
+    background-position: -356px -225px;
+        }
+        #main-content .copy_popup .popup2 .title2 .icon2{
+            width: 53px;
+    height: 45px;
+    background-size: 400px;
+    background-position: -354px -94px;
+        }
+        #main-content .copy_popup .popup2 .title2 .icon3{
+            width: 40px;
+    height: 40px;
+    background-position: -455px -282px;
+        }
+        #main-content .copy_popup .popup2 .title2 .icon4{
+            width: 50px;
+    height: 32px;
+    background-position: -351px -177px;
+    position: absolute;
+    bottom: -30px;
+    left: 24%;
+    transform: translate(-15px , 10px);
+    animation: icon4 1.6s linear infinite;
+        }
+        @keyframes icon4 {
+            0%{
+                transform: translate(-15px , 10px);
+                
+            }
+            50%{
+                transform: translate(0px , 0px);
+               
+            }
+            100%{
+                transform: translate(-15px , 10px);
+                
+            }
+        }
+
+        #main-content .copy_popup .popup2 .box{
+            width: 100%;
+    max-width: 621px;
+    margin: 35px auto 60px;
+    display: flex;
+    justify-content: space-between;
+        }
+        #main-content .copy_popup .popup2 .box>.eachbox{
+            width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        }
+        #main-content .copy_popup .popup2 .box>.eachbox>img{
+            box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.08);
+        }
+        #main-content .copy_popup .popup2 .box .text{
+            max-width: 255px;
+            font-size: 12px;
+line-height: 16px;
+color: #2F2F30;
+text-align: left;
+margin: 33px auto;
+        }
+        /* part2 */
+        .part2{
+            width: 100%;
+        }
+        #main-content .part2 .title{
+            font-weight: bold;
+font-size: 36px;
+line-height: 54px;
+text-align: center;
+color: #000000;
+max-width: 600px;
+margin: 100px auto 24px;
+        }
+        #main-content .part2 .title2{
+            max-width: 1000px;
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #000000;
+margin: 0 auto 80px;
+        }
+        #main-content .part2 .title2>a{
+            text-decoration: underline;
+            color: #4E8DF6;
+        }
+        .part2-2{
+            max-width: 900px;
+            display: flex;
+            justify-content: space-between;
+    
+            flex-wrap: wrap;
+            margin: 0 auto 142px;
+        }
+        .part2-2 .eachbox{
+            width: 49%;
+            background: #FFFFFF;
+border: 1px solid rgba(203, 203, 203, 0.5);
+box-sizing: border-box;
+box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+border-radius: 13px;
+padding: 40px 40px 60px;
+        }
+        .part2-2 .eachbox .icon{
+            width: 53px;
+    height: 60px;
+    background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png?002);
+    background-repeat: no-repeat;
+    background-size: 497px auto;
+        }
+        .part2-2 .eachbox.box1 .icon{
+            background-position: -344px 0;
+        }
+        .part2-2 .eachbox.box2 .icon{
+            background-position: -349px -95px;
+        }
+        #main-content .part2-2 .eachbox .title{
+            font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+text-align: left;
+margin: 20px 0;
+        }
+        #main-content .part2-2 .eachbox .text{
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+        }
+        .text-img{
+            max-width: 1080px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0px auto 65px;
+        }
+        #main-content .text-img .text{
+            width: 45%;
+            max-width: 465px;
+            text-align: left;
+        }
+        #main-content .text-img .text .title{
+            font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 54px;
+color: #000000;
+text-align: left;
+        }
+        #main-content .text-img .text .text1{
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+color: #6F777B;
+position: relative;
+margin: 30px 0 16px;
+text-align: left;
+        }
+        #main-content .text-img .text .text2{
+            padding-left: 20px;
+            margin: 0;
+        }
+        #main-content .text-img .text .text2::before{
+            content: ' ';
+            width: 13px;
+            height: 13px;
+            background: #4E8DF6;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 20px;
+        }
+        #main-content .text-img .img{
+            
+           max-width: 50%;
+        }
+        @media (max-width:980px) {
+            .part2-2 {
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto 142px;
+}
+.part2-2 .eachbox{
+    margin-bottom: 50px;
+}
+.text-img {
+    flex-direction: column;
+}
+#main-content .text-img .text{
+    width: 100%;
+}
+#main-content .text-img .img{
+    width: 90%;
+    margin: 50px 0 0 0 !important;
+    order: 2;
+}
+        }
+        .part2-3 {
+  overflow: hidden;
+  background-color: #f5f8fc;
+}
+.part2-3 .content {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.part2-3 .content::before {
+  content: '';
+  position: absolute;
+  left: -134px;
+  top: 76px;
+  height: 223px ;
+  width: 200px;
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: -30px -1px;
+}
+@media (max-width: 1350px) {
+  .part2-3 .content::before {
+    left: -50px;
+  }
+}
+.part2-3 .content .content-left {
+  max-width: 530px;
+  font-size: 50px;
+  line-height: 1.5;
+  color: #000;
+  padding: 190px 0 180px;
+  font-weight: 700;
+}
+.part2-3 .content .content-left div{
+    line-height: 1.5;
+}
+.part2-3 .content .content-left b {
+  color: #4e8df6;
+}
+.part2-3 .content .content-left .content-text1 .one {
+  position: relative;
+  display: inline-block;
+}
+.part2-3 .content .content-left .content-text1 .one::before {
+  content: '';
+  position: absolute;
+  width: 43px;
+  height: 33px;
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: 42px 444px;
+  top: -25px;
+  left: 43px;
+}
+.part2-3 .content .content-left .content-text1 .jiangpai {
+  padding-right: 50px;
+  position: relative;
+  display: inline-block;
+}
+.part2-3 .content .content-left .content-text1 .jiangpai::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 50px;
+    background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+    background-position: 36px 250px;
+  right: 0;
+  top: calc(50% - 25px);
+}
+.part2-3 .content .content-left .content-text2 .company {
+  text-decoration: underline 4px solid #000;
+  padding-left: 64px;
+  position: relative;
+  display: inline-block;
+  text-underline-position: from-font;
+}
+.part2-3 .content .content-left .content-text2 .company::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  top: calc(50% - 25px);
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: 50px 328px;
+}
+.part2-3 .content .content-left .content-text2 .company::after {
+  content: '';
+  position: absolute;
+  width: 43px;
+  height: 32px;
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: 43px 385px;
+  left: 55px;
+  bottom: -30px;
+}
+.part2-3 .content .content-right .list {
+  margin: 0;
+  margin-right: -55px;
+  padding: 140px 0 170px 87px;
+  box-shadow: -17px 0px 52px -32px #9cbae080;
+  list-style: none;
+}
+.part2-3 .content .content-right .list > li {
+  font-size: 18px;
+  font-weight: bold;
+  color: #545659;
+  line-height: 1.67;
+  padding-left: 24px;
+  position: relative;
+}
+.part2-3 .content .content-right .list > li::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #545659;
+  left: 7.5px;
+  top: calc(50% - 2.5px);
+}
+@media (max-width: 1350px) {
+  .part2-3 .content .content-right .list {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 1240px) {
+  .part2-3 .content .content-right .list {
+    margin-right: 0;
+    padding-left: 24px;
+  }
+}
+@media (max-width: 980px) {
+  .part2-3 .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .part2-3 .content::before {
+    left: 0;
+  }
+  .part2-3 .content .content-left {
+    padding: 120px 0 0;
+  }
+  .part2-3 .content .content-right {
+    width: 100%;
+  }
+  .part2-3 .content .content-right .list {
+    box-shadow: none;
+  }
+}
+      /* partbottom */
+      .partbottom {
+            background-color: #4E8DF6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .partbottom .cont {
+            max-width: 1240px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-left: 70px;
+
+        }
+
+        .partbottom .cont>div {
+            width: 45%;
+        }
+
+        .partbottom .cont div.right-box {
+            width: 63%;
+        }
+
+        .partbottom .cont .left-box {
+            display: flex;
+            margin: 35px 0;
+        }
+
+        .partbottom .cont .left-box .ellipse {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 125px;
+            height: 160px;
+            background: rgba(118, 167, 255, 0.7);
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 200px;
+        }
+
+        .partbottom .cont .left-box .ellipse>img {
+            width: 100px;
+            height: 100px;
+            margin: 10px auto 8px;
+        }
+
+        .partbottom .cont .left-box .ellipse .name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+
+        .partbottom .cont .left-box>.ellipse:first-child {
+            margin-top: 96px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 33px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 18px;
+            margin-left: 18px;
+        }
+
+        .partbottom .cont .left-box>.ellipse:last-child {
+            margin-top: 68px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .right-box {
+            margin: 100px 0 87px;
+        }
+
+        .partbottom .cont .right-box .text {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            color: #FFFFFF;
+            margin-bottom: 60px;
+        }
+
+        .partbottom .cont .right-box .btn {
+            display: flex;
+        }
+
+        .partbottom .cont .right-box .btn1 {
+            width: 211px;
+            height: 53px;
+            display: block;
+            background: #E16427;
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            border: 0;
+            text-decoration: none;
+            line-height: 53px;
+            margin : 0 auto;
+        }
+
+        @media (max-width:1200px) {
+            .partbottom .cont {
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                width: 90%;
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont>div {
+                width: 45%;
+                margin-right: 3%;
+            }
+
+        }
+
+        @media (max-width:980px) {
+            .partbottom .cont {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont .left-box {
+                width: 425px;
+                margin-top: 50px;
+            }
+
+            .partbottom .cont .right-box .text {
+                text-align: center;
+            }
+
+        }
+    </style> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        div h1,
+        div h2,
+        div h3,
+        div h4,
+        div h5,
+        div h6 {
+            letter-spacing: normal;
+            padding: 0;
+            margin: 0;
+        }
+        @media screen and (max-width: 1150px){
+div.et_pb_row {
+    width: 100%!important;
+}
+        }
+div p{
+    padding: 0;
+}
+        html,
+        body {
+            overflow-x: hidden;
+            min-width: 750px;
+            font-family: Poppins;
+          font-weight:normal;
+        }
+input{
+    font-family: Poppins;
+}
+  img, div, h1, h3, h4, h5, h6, p{
+    line-height: normal;
+  }
+/* wpcss */
+.formbox .inputbox{
+    font-size: 14px;
+}
+.job_box .css-1wy0on6 :nth-child(2),
+.job_box .css-1wy0on6 :nth-child(3)
+{
+    display: none;
+}
+#main-content .formbox .css-26l3qy-menu .css-11unzgr>div{
+    padding: 0 0 0 10px;
+    font-size: 14px;
+    line-height: 42px;
+    height: 42px;
+    color: #000000;
+}
+#main-content .formbox .css-26l3qy-menu .css-gg45go-NoOptionsMessage,
+#main-content .formbox .css-26l3qy-menu .css-11unzgr .css-1gl4k7y{
+    color: #8F9397;
+    text-align: left;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 0 0 10px;
+}
+#main-content .formbox .css-26l3qy-menu .css-11unzgr .css-1gl4k7y .loadingtext{
+    text-align: center;
+    color: #8F9397;
+}
+  #main-content .formbox .title{
+    position: relative;
+    margin-top: 21px;
+}
+#main-content .boolean_part .main .toptitle .ph1{
+    text-transform: capitalize;
+}
+/* wpcss */
+        /* part2 */
+        .part2{
+            width: 100%;
+        }
+        #main-content .part2 .title{
+            font-weight: bold;
+font-size: 36px;
+line-height: 54px;
+text-align: center;
+color: #000000;
+max-width: 600px;
+margin: 100px auto 24px;
+        }
+            #main-content .part2 .title2{
+            max-width: 1000px;
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+color: #000000;
+margin: 0 auto 80px;
+        }
+        #main-content .part2 .title2>a{
+            text-decoration: underline;
+            color: #4E8DF6;
+        }
+        .part2-2{
+            max-width: 900px;
+            display: flex;
+            justify-content: space-between;
+    
+            flex-wrap: wrap;
+            margin: 0 auto 142px;
+        }
+        .part2-2 .eachbox{
+            width: 49%;
+            background: #FFFFFF;
+border: 1px solid rgba(203, 203, 203, 0.5);
+box-sizing: border-box;
+box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+border-radius: 13px;
+padding: 40px 40px 60px;
+        }
+        .part2-2 .eachbox .icon{
+            width: 53px;
+    height: 60px;
+    background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png?002);
+    background-repeat: no-repeat;
+    background-size: 497px auto;
+        }
+        .part2-2 .eachbox.box1 .icon{
+            background-position: -344px 0;
+        }
+        .part2-2 .eachbox.box2 .icon{
+            background-position: -349px -95px;
+        }
+        #main-content .part2-2 .eachbox .title{
+            font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+text-align: left;
+margin: 20px 0;
+        }
+        #main-content .part2-2 .eachbox .text{
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+color: #000000;
+        }
+        .text-img{
+            max-width: 1080px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 0px auto 65px;
+        }
+        #main-content .text-img .text{
+            width: 45%;
+            max-width: 465px;
+            text-align: left;
+        }
+        #main-content .text-img .text .title{
+            text-transform: capitalize;
+            font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 54px;
+color: #000000;
+text-align: left;
+        }
+        #main-content .text-img .text .text1{
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+color: #6F777B;
+position: relative;
+margin: 30px 0 16px;
+text-align: left;
+        }
+        #main-content .text-img .text .text2{
+            text-transform: capitalize;
+            padding-left: 20px;
+            margin: 0;
+        }
+        #main-content .text-img .text .text2::before{
+            content: ' ';
+            width: 13px;
+            height: 13px;
+            background: #4E8DF6;
+            border-radius: 50%;
+            position: absolute;
+            left: 0px;
+            top: 35px;
+        }
+        #main-content .text-img .img{
+            
+           max-width: 50%;
+        }
+        @media (max-width:980px) {
+            .part2-2 {
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto 142px;
+}
+.part2-2 .eachbox{
+    margin-bottom: 50px;
+}
+.text-img {
+    flex-direction: column;
+}
+#main-content .text-img .text{
+    width: 100%;
+}
+#main-content .text-img .img{
+    width: 90%;
+    margin: 50px 0 0 0 !important;
+    order: 2;
+}
+        }
+        .part2-3 {
+  overflow: hidden;
+  background-color: #f5f8fc;
+}
+.part2-3 .content {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.part2-3 .content::before {
+  content: '';
+  position: absolute;
+  left: -134px;
+  top: 76px;
+  height: 223px ;
+  width: 200px;
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: -30px -1px;
+}
+@media (max-width: 1350px) {
+  .part2-3 .content::before {
+    left: -50px;
+  }
+}
+.part2-3 .content .content-left {
+  max-width: 530px;
+  font-size: 50px;
+  line-height: 1.5;
+  color: #000;
+  padding: 190px 0 180px;
+  font-weight: 700;
+}
+.part2-3 .content .content-left div{
+    line-height: 1.5;
+}
+.part2-3 .content .content-left b {
+  color: #4e8df6;
+}
+.part2-3 .content .content-left .content-text1 .one {
+  position: relative;
+  display: inline-block;
+}
+.part2-3 .content .content-left .content-text1 .one::before {
+  content: '';
+  position: absolute;
+  width: 43px;
+  height: 33px;
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: 42px 444px;
+  top: -25px;
+  left: 43px;
+}
+.part2-3 .content .content-left .content-text1 .jiangpai {
+  padding-right: 50px;
+  position: relative;
+  display: inline-block;
+}
+.part2-3 .content .content-left .content-text1 .jiangpai::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 50px;
+    background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+    background-position: 36px 250px;
+  right: 0;
+  top: calc(50% - 25px);
+}
+.part2-3 .content .content-left .content-text2 .company {
+  text-decoration: underline 4px solid #000;
+  padding-left: 64px;
+  position: relative;
+  display: inline-block;
+  text-underline-position: from-font;
+}
+.part2-3 .content .content-left .content-text2 .company::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  top: calc(50% - 25px);
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: 50px 328px;
+}
+.part2-3 .content .content-left .content-text2 .company::after {
+  content: '';
+  position: absolute;
+  width: 43px;
+  height: 32px;
+  background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/texticon.png);
+  background-position: 43px 385px;
+  left: 55px;
+  bottom: -30px;
+}
+.part2-3 .content .content-right .list {
+  margin: 0;
+  margin-right: -55px;
+  padding: 140px 0 170px 87px;
+  box-shadow: -17px 0px 52px -32px #9cbae080;
+  list-style: none;
+}
+.part2-3 .content .content-right .list > li {
+  font-size: 18px;
+  font-weight: bold;
+  color: #545659;
+  line-height: 1.67;
+  padding-left: 24px;
+  position: relative;
+}
+.part2-3 .content .content-right .list > li::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #545659;
+  left: 7.5px;
+  top: calc(50% - 2.5px);
+}
+@media (max-width: 1350px) {
+  .part2-3 .content .content-right .list {
+    padding-left: 60px;
+  }
+}
+@media (max-width: 1240px) {
+  .part2-3 .content .content-right .list {
+    margin-right: 0;
+    padding-left: 24px;
+  }
+}
+@media (max-width: 980px) {
+  .part2-3 .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .part2-3 .content::before {
+    left: 0;
+  }
+  .part2-3 .content .content-left {
+    padding: 120px 0 0;
+  }
+  .part2-3 .content .content-right {
+    width: 100%;
+  }
+  .part2-3 .content .content-right .list {
+    box-shadow: none;
+  }
+}
+      /* partbottom */
+      .partbottom {
+            background-color: #4E8DF6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .partbottom .cont {
+            max-width: 1240px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding-left: 70px;
+
+        }
+
+        .partbottom .cont>div {
+            width: 45%;
+        }
+
+        .partbottom .cont div.right-box {
+            width: 63%;
+        }
+
+        .partbottom .cont .left-box {
+            display: flex;
+            margin: 35px 0;
+        }
+
+        .partbottom .cont .left-box .ellipse {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 125px;
+            height: 160px;
+            background: rgba(118, 167, 255, 0.7);
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 200px;
+        }
+
+        .partbottom .cont .left-box .ellipse>img {
+            width: 100px;
+            height: 100px;
+            margin: 10px auto 8px;
+        }
+
+        .partbottom .cont .left-box .ellipse .name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+
+        .partbottom .cont .left-box>.ellipse:first-child {
+            margin-top: 96px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 33px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 18px;
+            margin-left: 18px;
+        }
+
+        .partbottom .cont .left-box>.ellipse:last-child {
+            margin-top: 68px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .right-box {
+            margin: 100px 0 87px;
+        }
+
+        .partbottom .cont .right-box .text {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            color: #FFFFFF;
+            margin-bottom: 60px;
+        }
+
+        .partbottom .cont .right-box .btn {
+            display: flex;
+        }
+
+        .partbottom .cont .right-box .btn1 {
+            width: 211px;
+            height: 53px;
+            display: block;
+            background: #E16427;
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            border: 0;
+            text-decoration: none;
+            line-height: 53px;
+            margin : 0 auto;
+        }
+
+        @media (max-width:1200px) {
+            .partbottom .cont {
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                width: 90%;
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont>div {
+                width: 45%;
+                margin-right: 3%;
+            }
+
+        }
+
+        @media (max-width:980px) {
+            .partbottom .cont {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont .left-box {
+                width: 425px;
+                margin-top: 50px;
+            }
+
+            .partbottom .cont .right-box .text {
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+<body id="main-content">
+    <div class="boolean_part" style="display: none;">
+        <div class="main">
+            <div class="toptitle">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/Active.png" alt=""
+                    class="icon">
+                <p class="ph1">
+                    Hiretual Boolean builder
+                </p>
+                <span class="strlen"></span>
+            </div>
+            <div class="formbox">
+                <div class="job_box outbox" name='job'>
+                    <div class="title">
+                        <p>Job Titles <span class="blueT">*</span> <span class="grayT">(Choose up to <span
+                                    class="blueT">5</span>)</span> </p>
+                        <button class="reset resetform">Reset</button>
+
+                    </div>
+                    <div class="inputbox">
+                        <!-- <div class="keywordbox">
+                            <span class="word">Project manager</span>
+                            <span class="x"></span>
+                        </div> -->
+                        
+                        <input class="oinput" parent="job" type="text" placeholder=" Select titles or expertises">
+                        <span class="clean"></span>
+                    </div>
+                    <div class="data_box">
+                        <ul class="systemkeyword_box" parent="job">
+                            <li>+Project manager2</li>
+
+                         
+
+                        </ul>
+                        <ul class="recommendkeyword_box">
+                            <li class="r_li">Project manager</li>
+                        </ul>
+                        <div class="to_search state1">
+                            <span class="p1">Type to search</span>
+                            <span class="p2">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_title">
+                    <div class="title">
+                        <p>Skills <span class="grayT">(Choose at least <span class="blueT">3</span>)</span> </p>
+                    </div>
+                </div>
+                <div class="mandatory_box outbox" name='mandatory'>
+                    <div class="title2">
+                        <p>Mandatory Skills <span class="grayT">(Choose up to <span class="blueT">5</span>)</span> </p>
+                    </div>
+                    <div class="inputbox">
+                        <!-- <div class="keywordbox">
+                            <span class="word">Project manager</span>
+                            <span class="x"></span>
+                        </div> -->
+                        
+                        <input class="oinput" parent="mandatory" type="text" placeholder=" Add must-have skills">
+                        <span class="clean"></span>
+                        <span class="jt"></span>
+                    </div>
+                    <div class="data_box">
+                        <ul class="systemkeyword_box" parent="mandatory">
+                            <li>+Project manager2</li>
+
+                         
+
+                        </ul>
+                        <ul class="recommendkeyword_box">
+                            <li>Project manager</li>
+                        </ul>
+                        <div class="to_search state1">
+                            <span class="p1">Type to search</span>
+                            <span class="p2">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="preferred_box outbox" name='preferred'>
+                    <div class="title2">
+                        <p>Preferred Skills </p>
+                    </div>
+                    <div class="inputbox">
+                        <!-- <div class="keywordbox">
+                            <span class="word">Project manager</span>
+                            <span class="x"></span>
+                        </div> -->
+                        
+                        <input class="oinput" parent="preferred" type="text" placeholder=" Add nice-to-have skills">
+                        <span class="clean"></span>
+                        <span class="jt"></span>
+                    </div>
+                    <div class="data_box">
+                        <ul class="systemkeyword_box" parent="preferred">
+                            <li>+Project manager2</li>
+
+                         
+
+                        </ul>
+                        <ul class="recommendkeyword_box">
+                            <li>Project manager</li>
+                        </ul>
+                        <div class="to_search state1">
+                            <span class="p1">Type to search</span>
+                            <span class="p2">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location_box outbox" name='location'>
+                    <div class="title">
+                        <p>Locations <span class="grayT">(Choose up to  <span class="blueT">10</span>)</span> </p>
+                    </div>
+                    <div class="inputbox">
+                      
+                        
+                        <input class="oinput" parent="location" type="text" placeholder=" Add city,state,or country">
+                        <span class="clean"></span>
+                        <span class="jt"></span>
+                    </div>
+                    <div class="data_box">
+                        <ul class="systemkeyword_box" parent="location" >
+                            <li>+Project manager2</li>
+
+                        </ul>
+                        <ul class="recommendkeyword_box">
+                            <li>Project manager</li>
+                        </ul>
+                        <div class="to_search state1">
+                            <span class="p1">Type to search</span>
+                            <span class="p2">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="but generateboolean">Generate Boolean</a>
+                <div class="showboolean_box">
+                    <div class="title">
+                        <p>Boolean</p>
+                        <button class="reset resetboolean">Reset</button>
+
+                    </div>
+                    <textarea readonly=true class="booleantext" id="booleanString" rows="4" >fd</textarea>
+                    <button class="copybut">Copy</button>
+                </div>
+               
+             
+            </div>
+
+        </div>
+        <div class="main-2">
+           <p class="title">Source How You Want With Hiretual</p>
+           <img class="icon" src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/Mask-Group.png" alt="">
+           <p class="text">Some recruiters on your team may like <strong>boolean strings</strong>. Some prefer <strong>AI filters</strong>. Hiretual empowers your team <span class="blueT">to do both</span>.</p>
+        </div>
+        <div class="copytip"> <span class="icon"></span> Your Boolean string has been copied <span class="close"></span> </div>
+        <div class="black_layer">
+            <div class="copy_popup">
+                <div class="popup1">
+                    <div class="copy_popup_close"></div>
+                <p class="title"> <i class="iconbg"></i> Use your boolean to directly search on</p>
+                <div class="skipbox">
+                    <a href="" class="skip lin_skip"></a>
+                <a href="" class="skip google_skip"></a>
+                </div>
+                
+                </div>
+                <div class="popup2">
+                    <p class="title2">Hi <span class="icon1 iconbg"></span> <a href="#" class="blueT">Sign up for free</a> <span class="icon2 iconbg"></span> to use Hiretual AI Sourcing <span class="icon3 iconbg"></span> ! <span class="icon4 iconbg"></span> </p>
+                    <div class="box">
+                        <div class="eachbox">
+                            <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/pop-2.png" alt="">
+                            <span class="text">Search within Hiretual’s 750M+ candidate pool with your boolean string and AI filters</span>
+                        </div>
+                        <div class="eachbox">
+                            <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/09/pop-1.png" alt="">
+                            <span class="text">Supplement Your Boolean Strings with Advanced AI Filters</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="part2">
+        <p class="title">Kick-off Your Candidate Search with Boolean Strings</p>
+        <p class="title2">Hiretual lets you build boolean strings search in seconds and with our search enhancements you’ll find your ideal qualified candidates. <a href="https://chrome.google.com/webstore/detail/hiretual-10x-faster-talen/jeablngoapekimaeoeclgcefdcpjhjcg" target="_blank" rel="noopener">Download our free chrome extension</a>  to search on 25+ platforms with:
+        </p>
+        <div class="part2-2">
+            <div class="eachbox box1">
+                <div class="icon"></div>
+                <p class="title">JD mode</p>
+                <p class="text">Copy/paste a job description and Hiretual’s AI will extract and parse the relevant keywords for you to generate a Boolean string.</p>
+            </div>
+            <div class="eachbox box2">
+                <div class="icon"></div>
+                <p class="title">Quick mode</p>
+                <p class="text">Choose a job title or area of expertise and Hiretual’s AI will predict and generate your keywords. You also have an option for even more comprehensive searches that allow you to customize your string by adding other filters like mandatory skills, industries, and locations. </p>
+            </div>
+        </div>
+        <div class="text-img">
+            <div class="text">
+                <p class="title">Discover Hidden Profiles in your ATS with Boolean and AI</p>
+                <p class="text1">For hiring teams looking to fill open reqs, <strong>ATS’s contain a pool of past applicants</strong> that have shown prior interest in your organization and have upskilled since your last engagement touchpoint. </p>
+                <p class="text1 text2"><strong>+ Plus:<br>
+                    Using Hiretual you can plug in profile keywords or Boolean strings to search across your ATS candidate pool.</strong></p>
+            </div>
+            <img class="img" style="max-width: 472px;" src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/11/booleanimg2.png" alt="">
+        </div>
+        <div class="text-img">
+            <img class="img" style="margin-bottom: -260px;" src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/11/boolean001.png" alt="">
+            <div class="text">
+                <p class="title">Supplement Your Boolean Strings with Advanced AI Filters</p>
+                <p class="text1">Boolean Searches are a great first step to finding qualified candidates. Hiretual takes your search even further with advanced <strong>AI Filters that allow you to focus into the perfect candidate like Job title, Mandatory Skills, Preferred Skills, Locations, Years of experience, and Keywords.</strong></p>
+               
+            </div>
+           
+        </div>
+        <div class="part2-3">
+            <div class="content">
+                <div class="content-left">
+                    <div class="content-text1">And That’s Just <b class="one">One</b> of <b>Many</b> <span class="jiangpai">Awesome</span> <br> Features On the </div>
+                    <div class="content-text2"><span class="company">Hiretual</span> Platform.</div>
+                </div>
+                <div class="content-right">                
+                    <ul class="list">
+                        <li>Source from 45+ Open Web Platforms</li>
+                        <li>Contact Abundance & Accuracy</li>
+                        <li>GDPR Compliant</li>
+                        <li>Healthcare Specific AI Sourcing</li>
+                        <li>Tech Specific AI Sourcing</li>
+                        <li>Diversity Filters and Insights</li>
+                        <li>Screening & Ranking of ATS Candidates</li>
+                        <li>Candidate Engagement</li>
+                        <li>Email Sequences</li>
+                        <li>Comprehensive Tracking</li>
+                        <li>Market Insights</li>
+                        <li>ATS/CRM Integrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="partbottom">
+        <div class="cont">
+          <div class="left-box box">
+            <div class="ellipse">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/peo4.png" alt="Portrait of a girl" class="photo">
+                <div class="name">Healthcare</div>
+            </div>
+            <div class="e-box">
+                <div class="ellipse">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Diversity.png" alt="Portrait of a girl" class="photo">
+                    <div class="name">Diversity</div>
+                </div>
+                <div class="ellipse">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/newScholar.png" alt="Portrait of a man" class="photo">
+                    <div class="name">Scholar</div>
+                </div>
+            </div>
+            <div class="ellipse">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Tech.png" alt="Portrait of a man" class="photo">
+                <div class="name">Tech</div>
+            </div>
+        </div>
+            <div class="right-box box">
+                <div class="text">Experience The #1 Sourcing Solution.</div>
+                <a class="btn1" href="https://explore.hiretual.com/contact-sales" target="_blank" rel="noopener">Get Started Now</a>
+            </div>
+        </div>
+    </div>
+    　<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="./jQuery-3-5-1.js"></script>
+    <script>
+        var public_data = {
+            record_t0:0,
+            joblable:[],
+            jobmaxlable:5,
+            mandatorylable:[],
+            mandatorymaxlable:5,
+            preferredlable:[],
+            preferredmaxlable:100,
+            locationlable:[],
+            locationmaxlable:10,
+            currentinput:null,
+            inputval:'',
+            job_record:{},
+            mandatory_record:{},
+            preferred_record:{},
+            location_record:{},
+            allinput:document.getElementsByClassName('oinput'),
+            first_time:true,
+
+        }
+
+        var public_fn = {
+            initpage:function(){
+
+                $('.oinput').on('blur',public_fn.listen_blur);
+                $('.oinput').on('input',public_fn.oinput_put);
+                // $('.oinput').on('focus',public_fn.listen_focus);
+                $('.inputbox').on('mousedown',public_fn.focus_input);
+                $('.inputbox').on('click','.x',public_fn.del_keyword);
+                $('.recommendkeyword_box').on('mousedown','li',public_fn.appendkeyword);
+                $('.systemkeyword_box').on('click','li',public_fn.appendkeyword);
+                $('.copybut').on('click',public_fn.copytext);
+                $('.generateboolean').on('click',public_fn.req_boolean);
+                $('.clean').on('click',public_fn.clean_lable);
+                $('.resetform').on('click',public_fn.resetall);
+                $('.copy_popup_close').on('click',public_fn.close_layer);
+                $('.copytip').on('click',public_fn.close_copytip);
+            },
+         
+            listen_blur:function(){
+                var _this = $(this);
+                // _this.css('opacity',0);
+                public_data.inputval = ''
+             
+                // public_data[public_data.currentinput+'blurT'] = setTimeout(() => {
+                    _this.val("").css('opacity',1);
+                    public_fn.control_popup('state3',this);
+                    $('.'+ _this.attr('parent') +'_box .inputbox').removeClass('choose');
+                    public_fn.setinputWidth(this);
+                    // public_data[public_data.currentinput+'blurT'] && clearTimeout(public_data[public_data.currentinput+'blurT']);
+                // }, 200);
+                
+            },
+            focus_input:function(){
+               
+                event.preventDefault();
+                var oinput = $(this).find('.oinput');
+                public_fn.setinputWidth(oinput);
+           
+                oinput.focus();
+                public_data.currentinput = oinput.attr('parent');
+                // public_data[public_data.currentinput+'blurT'] && clearTimeout(public_data[public_data.currentinput+'blurT']);
+                $('.'+public_data.currentinput+'_box .to_search').removeClass('state2').show();
+                $('.'+public_data.currentinput+'_box .inputbox').addClass('choose');
+                
+            
+            },
+            oinput_put:function(){
+                if(!public_data.currentinput){
+                    public_data.currentinput = $(this).attr('parent');
+                }
+                var val = public_fn.setinputWidth2(this);
+                if(val == 'nochange') return;
+                public_data.inputval = val;
+                if(!val){
+                    $('.'+public_data.currentinput+'_box .to_search').removeClass('state2');
+                    public_fn.setinputWidth($('.'+public_data.currentinput+'_box .oinput'));
+                    public_fn.control_popup('state1');
+                    return;
+                }
+                
+             var data = public_data[public_data.currentinput+'_record'][val];
+
+                if(data){
+                    public_fn.generate_recommendkeyword(data);
+                }else{
+                    $('.'+public_data.currentinput+'_box .to_search').addClass('state2');
+                    public_fn.control_popup('state1');
+                    public_fn.delete_deal(public_fn.ajax_fn,'boolean1',val,public_fn.generate_recommendkeyword);
+                }
+               
+
+            },
+            setinputWidth2:function(_this){
+                var val = $(_this).val().replace(/\s+/g, " ");
+                $(_this).val(val);
+                if(public_data.inputval == val)return 'nochange';
+                $('.strlen').html(val);
+                $(_this).css('width',$('.strlen').width()+5);
+
+                return val;
+            },
+            setinputWidth:function(_this){
+         
+                var keywords = public_data[$(_this).attr('parent')+'lable'];
+           
+                var oinput = $(_this);
+                if(keywords && keywords.length>0){
+                    oinput.css('width','2px');
+                }else{
+                    
+                    oinput.css('width','100%');
+                }
+               
+            },
+            control_popup:function(state,_this){
+                if(!_this){
+                    if(state == 'state1'){
+                    $('.'+public_data.currentinput+'_box .data_box .to_search').show();
+                    $('.'+public_data.currentinput+'_box .recommendkeyword_box').hide();
+                }else if(state == 'state2'){
+                    $('.'+public_data.currentinput+'_box .data_box .to_search').hide();
+                    $('.'+public_data.currentinput+'_box .recommendkeyword_box').show();
+                }else if(state == 'state3'){
+                    $('.'+public_data.currentinput+'_box .data_box .to_search').hide();
+                    $('.'+public_data.currentinput+'_box .recommendkeyword_box').hide();
+                }
+                }else{
+                    if(state == 'state1'){
+                    $('.'+ $(_this).attr('parent') +'_box .data_box .to_search').show();
+                    $('.'+ $(_this).attr('parent') +'_box .recommendkeyword_box').hide();
+                }else if(state == 'state2'){
+                    $('.'+ $(_this).attr('parent') +'_box .data_box .to_search').hide();
+                    $('.'+ $(_this).attr('parent') +'_box .recommendkeyword_box').show();
+                }else if(state == 'state3'){
+                    $('.'+ $(_this).attr('parent') +'_box .data_box .to_search').hide();
+                    $('.'+ $(_this).attr('parent') +'_box .recommendkeyword_box').hide();
+                }
+                }
+                
+            },
+            generate_recommendkeyword:function(data,val){
+                val && (public_data[public_data.currentinput+'_record'][val] = data);
+                var d_arr = data.data;
+                var str = ``;
+                for(var i=0;i<d_arr.length;i++){
+                    if(d_arr[i] == public_data.inputval) continue;
+                    str += `<li class="r_li" v="${d_arr[i]}">${d_arr[i]}</li>`;
+                }
+
+                $('.'+public_data.currentinput+'_box .recommendkeyword_box').html(str);
+                public_fn.control_popup('state2');
+               
+
+            },
+           
+            appendkeyword:function(){
+                // event.preventDefault();
+              
+                if($(this).attr('noclick')){
+                    return;
+                }
+                $(this).attr('noclick',true);
+                
+                var parent = $(this).parent().attr('parent');
+                parent && (public_data.currentinput = parent);
+
+                if(public_data[public_data.currentinput+'lable'].length>=public_data[public_data.currentinput+'maxlable']){
+                    return;
+                }
+                
+                public_data.chooseli = $(this).attr('v');
+                var odiv = document.createElement('div');
+                odiv.setAttribute('v',public_data.chooseli);
+                odiv.className = 'keywordbox';
+                odiv.innerHTML = `<span class="word">${public_data.chooseli}</span>
+                            <span class="x"></span>`;
+
+                $('.'+public_data.currentinput+'_box .oinput').before(odiv);
+                public_data[public_data.currentinput+'lable'].push(public_data.chooseli);
+                public_fn.setinputWidth($('.'+public_data.currentinput+'_box .oinput'));
+                // $('.'+public_data.currentinput+'_box .oinput').focus();
+                // 发送选择词，请求推荐关键词
+                public_fn.req_systemkeyword();
+                public_fn.check_ifnull();
+              
+            },
+            check_lable:function(){
+                if(public_data.joblable.length==0){
+                    console.log('no title')
+                }else if(public_data.preferredlable.length+public_data.mandatorylable.length<3){
+                    console.log('no skill');
+                }
+            },
+            req_systemkeyword:function(){
+                var data = {titles:public_data.joblable,mandatorySkills:public_data.mandatorylable,relatedSkills:public_data.preferredlable};
+                public_fn.ajax_fn('/boolean2',data,public_fn.generate_systemkeyword);
+            },
+            generate_systemkeyword:function(d){
+               
+                eachdata(d.data.titles,'job');
+                eachdata(d.data.mandatorySkills,'mandatory');
+                if(public_data.first_time&& public_data.currentinput != 'preferred'){
+                    eachdata_input(d.data.relatedSkills);
+                }else{
+                    public_data.first_time = false;
+                    eachdata(d.data.relatedSkills,'preferred');
+                }
+             
+
+                function eachdata(d,parent){
+                    var str = '';
+                    for(var i=0;i<d.length;i++){
+                        str+=`<li v="${d[i]}">+${d[i]}</li>`;
+                    };
+
+                   
+                    if($('.'+parent+'_box .systemkeyword_box li').length>0){
+                        $('.'+parent+'_box .systemkeyword_box').html(str).show();
+                    }else{
+                        $('.'+parent+'_box .systemkeyword_box').html(str).hide();
+                    }
+                   
+                }
+                function eachdata_input(d){
+
+                    var str = '';
+                    for(var i=0;i<d.length;i++){
+
+                        var odiv = document.createElement('div');
+                odiv.setAttribute('v',d[i]);
+                odiv.className = 'keywordbox';
+                odiv.innerHTML = `<span class="word">${d[i]}</span>
+                            <span class="x"></span>`;
+
+                $('.preferred_box .oinput').before(odiv);
+                public_data.preferredlable.push(d[i]);
+                    };
+
+                   
+                    if($('.preferred_box .systemkeyword_box li').length>0){
+                        $('.preferred_box .systemkeyword_box').html(str).show();
+                    }else{
+                        $('.preferred_box .systemkeyword_box').html(str).hide();
+                    }
+                    public_fn.setinputWidth($('.preferred_box .oinput'));
+                    // 发送选择词，请求推荐关键词
+                    public_fn.check_ifnull();
+                    public_data.first_time = false;
+                }
+                
+            },
+            del_keyword:function(){
+                var keyword = $(this).parent().attr('v');
+                var index = public_data[public_data.currentinput+'lable'].indexOf(keyword);
+            
+                public_data[public_data.currentinput+'lable'].splice(index,1);
+                $(this).parent().remove();
+                public_fn.req_systemkeyword();
+                public_fn.setinputWidth($('.'+public_data.currentinput+'_box .oinput'));
+                public_fn.check_ifnull();
+            },
+            check_ifnull:function(){
+                if(public_data[public_data.currentinput+'lable'].length>0){
+                    $('.'+public_data.currentinput+'_box .inputbox .clean').show();
+                }else{
+                    $('.'+public_data.currentinput+'_box .inputbox .clean').hide();
+                }
+            },
+            clean_lable:function(){
+
+                public_data[public_data.currentinput+'lable'] = [];
+                $('.'+public_data.currentinput+'_box .inputbox .keywordbox').remove();
+                public_fn.req_systemkeyword();
+                public_fn.setinputWidth($('.'+public_data.currentinput+'_box .oinput'));
+                public_fn.check_ifnull();
+            },
+            delete_deal:function(fn,url1,data,callfn){
+                if( public_data.setT) clearTimeout( public_data.setT);
+                public_data.setT = setTimeout(function(){
+                    fn(url1,data,callfn);
+                },300)
+
+              
+            },
+            copytext:function(){
+                var t=document.getElementById("booleanString");
+                t.select(); // 选择对象
+                    document.execCommand("Copy"); // 执行浏览器复制命令
+                    $('.copytip').fadeIn(300);
+                var t = setTimeout(function(){
+                    public_fn.close_copytip();
+                    clearTimeout(t);
+                },3000);
+            },
+            close_layer:function(){
+                $('.black_layer').add('.copytip').fadeOut(300);
+            },
+            close_copytip:function(){
+                $('.copytip').fadeOut(300);
+            },
+            resetall:function(){
+            // public_data.joblable = []
+            // public_data.mandatorylable = []
+            // public_data.preferredlable = []
+            // public_data.locationlable = []
+
+            public_data.currentinput = 'job';
+            resetfn();
+            public_data.currentinput = 'mandatory';
+            resetfn();
+            public_data.currentinput = 'preferred';
+            resetfn();
+            public_data.currentinput = 'location';
+            resetfn();
+
+                function resetfn(){
+                 
+console.log(public_data.currentinput)
+public_data[public_data.currentinput+'lable'] = [];
+$('.'+public_data.currentinput+'_box .inputbox .keywordbox').remove();
+$('.systemkeyword_box').html('').hide();
+public_fn.setinputWidth($('.'+public_data.currentinput+'_box .oinput'));
+public_fn.check_ifnull();
+           }
+
+            },
+            req_boolean:function(){
+                if(public_data.joblable.length==0){
+                    console.log('no title')
+                }else if(public_data.preferredlable.length+public_data.mandatorylable.length<3){
+                    console.log('no skill');
+                }else{
+                    var data = {titles:public_data.joblable,mandatorySkills:public_data.mandatorylable,relatedSkills:public_data.preferredlable};
+                    public_fn.ajax_fn('/boolean3',data,public_fn.generate_boolean);
+                }
+            },
+
+            generate_boolean:function(data){
+                $('.booleantext').val(data.str);
+                $('.showboolean_box').show();
+                $('.copytip').fadeIn(300);
+                var t = setTimeout(function(){
+                    $('.black_layer').add('.copytip').fadeIn(300);
+                    clearTimeout(t);
+                },1000)
+            },
+            ajax_fn:function(url,d,callfn){
+                // if(url == 'url1'){
+                //     testajax.d1(callfn,data);
+                // }else{
+                //     testajax.d2(callfn,data);
+                // }
+               
+
+                // return;
+                console.log(d)
+                $.ajax({
+                    type:'POST',
+                    url:'http://127.0.0.28:8080/api/'+url,
+                    data:d,
+                    // contentType:'application/json; charset=utf-8',
+                    success:function(e){
+                        callfn(e,d);
+                
+                    },
+                    error:function(err){
+                        console.log(err)
+                    }
+                })
+            }
+
+        }
+
+
+    // testfn();
+    
+        window.addEventListener('load',public_fn.initpage)
+    </script>
+</body>
+
+</html>

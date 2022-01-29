@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case-study-template</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+</head>
+
+<body>
+    <div id="main-content" style="width: 80%;margin: 0 auto;box-sizing: border-box;">
+        <!-- 1 -->
+        <style>
+            * {
+                font-family: Poppins;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                overflow: visible;
+            }
+
+            #main-content .part1bg {
+                width: 100%;
+                background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/national-cancer-institute-BxXgTQEw1M4-unsplash-1.png);
+                background-size: 111% auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            div p {
+                padding: 0;
+            }
+
+            .et_pb_section_0.content-box1 {
+                max-width: 75%;
+            }
+
+            #main-content .casestudy-part1 {
+                width: 100%;
+                max-width: 1080px;
+                margin: 0 auto;
+                padding: 80px 150px 88px 0;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                height: 100%;
+            }
+
+            #main-content .casestudy-part1 .part1-content {
+                transform-origin: 0 50%;
+                max-width: 600px;
+                width: 100%;
+                margin: 0;
+                text-align: left;
+            }
+
+            #main-content .casestudy-part1 .part1-content .title1 {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 36px;
+                align-items: cleft;
+                color: #FFFFFF !important;
+                padding: 0;
+            }
+
+            #main-content .casestudy-part1 .part1-content .title2 {
+                display: inline-block;
+                max-width: 320px;
+                height: 40px;
+                background: linear-gradient(109.53deg, #4E8DF6 10.62%, #2768B3 63.23%), #2768B3;
+                border-radius: 30px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 40px;
+                margin: 13px 0 1px;
+                color: #ffffff !important;
+                padding: 0 16px;
+                text-align: center;
+
+            }
+
+            #main-content .casestudy-part1 .part1-content .title3 {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 54px;
+                color: #FFFFFF !important;
+                padding: 0;
+            }
+
+            @media (max-width:1440px) {
+                #main-content .part1bg {
+                    background-size: cover;
+                }
+
+            }
+
+            @media (max-width:1380px) {
+                .content-box1 {
+                    max-width: 1080px !important;
+                }
+            }
+
+            @media (max-width:1080px) {
+
+                #main-content .casestudy-part1 {
+                    justify-content: center;
+                    padding-right: 0;
+                    /* padding: 0 10px; */
+                }
+            }
+        </style>
+        <style>
+            @media (max-width: 1150px) {
+                #main-content .et_pb_row {
+                    width: 100% !important;
+                }
+            }
+
+            @media (max-width: 560px) {
+                #main-content .et_pb_css_mix_blend_mode_passthrough {
+                    margin-left: 0px !important;
+                }
+            }
+
+            a {
+                text-decoration: none;
+            }
+            .link_loading{
+position: fixed;
+top: 0;
+left: 0;
+width: 25px;
+height: 25px;
+border: 5px solid #666;
+border-bottom: none;
+border-radius: 50%;
+z-index: 999;
+display: none;
+
+animation: loading 1s linear infinite;
+            }
+           @keyframes loading {
+               0%{
+                   transform: rotate(0);
+               }
+               100%{
+                   transform: rotate(360deg);
+               }
+           }
+            .casestudy-part2 {
+                width: 100%;
+                max-width: 1080px;
+                margin: 0 auto;
+                padding: 0 90px 0 47px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            .casestudy-part2 .close_phoneinput{
+                position: absolute;
+                z-index: 5;
+                top: 30px;
+                right: 30px;
+                width: 40px;
+                height: 40px;
+                display: none;
+            }
+            .casestudy-part2 .close_phoneinput>img{
+                width: 100%;
+            }
+            .leftbox {
+                flex: 0 0 215px;
+                margin-top: 175px;
+                margin-bottom: 300px;
+                width: 215px;
+                display: inline-block;
+                z-index: 30;
+            }
+
+            .part2-left {
+                width: 100%;
+                position: sticky;
+                top: 175px !important;
+            }
+
+            .left-top {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hir-logo {
+                width: 34px;
+                margin-bottom: 16px;
+            }
+            .hir-logo_phone {
+                display: none;
+           
+            }
+
+            .sub-box {
+                width: 100%;
+                padding-bottom: 34px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                margin-bottom: 10px;
+                position: relative;
+            }
+
+            .show-form {
+                width: 100%;
+                height: 40px;
+                background: #8F9397;
+                border-radius: 30px;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 40px;
+                color: #FFFFFF;
+                border: none
+            }
+            .show-form_phone {
+                width: 100%;
+                height: 40px;
+                background: linear-gradient(114.45deg, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+border-radius: 30px;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 40px;
+                color: #FFFFFF;
+                border: none;
+                display: none;
+                
+            }
+            .form-box {
+                width: 100%;
+            }
+
+            .form-box.hide {
+                width: 1px;
+                height: 1px;
+                opacity: 0;
+                position: absolute;
+            }
+
+            .heart-load {
+                padding-left: 15px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .heart {
+                min-width: 40px;
+                min-height: 20px;
+                margin-right: 9px;
+            }
+
+            body.page-template-default #main-content .wpulike {
+                display: block;
+                padding: 0;
+            }
+
+            /* #main-content .wp_ulike_btn:focus{
+    outline: 1px #2768B3 auto;
+} */
+            #main-content .wpulike-heart .wp_ulike_put_image:after {
+                width: 18px;
+                height: 18px;
+                background-size: 100% 100%;
+                background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/Vector.png) !important;
+            }
+
+            #main-content .wpulike-heart .wp_ulike_put_image.wp_ulike_btn_is_active:after {
+                filter: none;
+                background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/aix.png) !important;
+            }
+
+            #main-content .wpulike-heart .count-box {
+                font-size: 12px;
+                margin-left: 5px;
+                font-weight: 500;
+            }
+
+            #main-content .wpulike-heart .wp_ulike_general_class {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            #main-content .wpulike-heart .wp_ulike_put_image {
+                padding: 15px 6px;
+            }
+
+            .down_load_box {
+                display: none;
+                /* display: flex; */
+                align-items: center;
+            }
+
+            .down_load_box>span {
+                margin-left: 4px;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 28px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+
+            .load_pdf {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/load-1.png);
+                background-size: 100% 100%;
+            }
+
+            .content-nav {
+                margin-top: 58px;
+                width: 100%;
+                text-align: left;
+                padding-left: 15px;
+            }
+
+            .content-nav .content-nav-title {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 28px;
+                color: rgba(0, 0, 0, 0.4);
+                display: block;
+                margin-bottom: 16px;
+            }
+
+            .content-nav .guide h2 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                min-height: 20px;
+                width: 172px;
+                display: block;
+                color: #000000;
+                font-style: normal;
+                font-size: 12px;
+                line-height: 20px;
+                text-decoration: none;
+                /* margin-top: 8px; */
+                padding-bottom: 8px;
+                transition: all 0.1s;
+                text-align: left;
+                font-weight: normal;
+            }
+
+            .content-nav .guide h2:hover {
+                width: 100%;
+                font-weight: 600;
+                padding: 8px 0 16px;
+                margin-top: 0;
+                margin-bottom: 0px;
+                overflow: initial;
+                white-space: inherit;
+            }
+
+            /* .content-nav .guide:hover>.show{
+    display: none;
+}
+.content-nav .guide:hover>.hide{
+    display: inline-block;
+} */
+            .content-nav .guide.view h2 {
+                width: 100%;
+                font-weight: 600;
+                padding: 8px 0 16px;
+                margin-top: 0;
+                margin-bottom: 0px;
+                overflow: initial;
+                white-space: inherit;
+            }
+
+            /* .content-nav .guide.view>.show{
+    display: none;
+}
+.content-nav .guide.view>.hide{
+    display: inline-block;
+} */
+            /* .content-nav .guide>.show{
+font-weight: normal;
+}
+.content-nav .guide>.hide{
+font-weight: 600;
+display: none;
+} */
+            .go_to_lib {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 18px;
+                text-decoration-line: underline;
+                text-transform: capitalize;
+                color: #2768B3;
+                text-decoration: underline !important;
+            }
+
+            @media (max-width:1080px) {
+                .leftbox {
+                    flex: 0 0 100%;
+                    width: 100%;
+                    height: 510px;
+                    position: fixed;
+                    padding: 0;
+                    bottom: 0px !important;
+                    left: 0;
+                    background: rgba(78, 141, 246, 0.8);
+border-radius: 20px 20px 0 0;
+backdrop-filter: blur(17px);
+                    margin: 0;
+                    max-width: 100%;
+                    overflow: hidden;
+                    display: none;
+                    transition: height 0.3s;
+                }
+                .nav-list-box {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                .part2-left{
+                    position: relative;
+                }
+                .left-top {
+    width: 100%;
+    text-align: center;
+    transform: scale(1.2);
+}
+                .casestudy-part2 .close_phoneinput{
+                    display: inline-block;
+                }
+                .sub-box{
+                    width: 96%;
+    max-width: 333px;
+    margin: 0 auto;
+    border-bottom: none;
+    margin-bottom: 10px;
+    position: relative;
+}
+                .content-nav .guide {
+                    width: 49%;
+                }
+
+                .content-nav .guide h2 {
+                    width: 100%;
+                }
+                .hir-logo {
+                    display: none;
+                width: 34px;
+                margin-bottom: 16px;
+            }
+            .hir-logo_phone {
+                display: inline-block;
+                width: 62px;
+                margin-bottom: 16px;
+            }
+            .show-form{
+                display: none;
+            }
+            .show-form_phone{
+                display: block;
+            }
+            /* hide bottom */
+            .leftbox.hide{
+                height: 115px;
+            }
+            .leftbox.hide .close_phoneinput{
+                display: none;
+            }
+            .leftbox.hide .part2-left{
+                top: 30px !important;
+            }
+            }
+
+            @media (max-width:550px){
+                .left-top {
+    transform: scale(1);
+}
+            }
+            /* ____________________________________________part2_min-text ___________ */
+            .casestudy-part2 {
+                text-align: right;
+            }
+
+            .casestudy-part2 .part2-maincontent {
+                width: 80%;
+                max-width: 670px;
+                margin: 0 0 0 auto;
+                display: inline-block;
+
+            }
+
+            .read-time {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 32px 0 39px;
+            }
+
+            .read-time>img {
+                width: 25px;
+                margin-right: 9px;
+            }
+
+            .read-time>span {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 28px;
+                color: #2768B3;
+            }
+            #main-content .casestudy-part2 .num_anim{
+                width: 100%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                padding: 0 0 28px 0;
+                margin-bottom: 28px;
+            }
+            #main-content .casestudy-part2 .num_anim>.pnum{
+                font-weight: normal;
+                font-size: 16px !important;
+line-height: 28px !important;
+color: rgba(0, 0, 0, 0.6) !important;
+            }
+            .num_anim>p>span{
+                display: inline-block;
+                width: 41px;
+                font-weight: bold;
+                margin-right: 4px;
+            }
+            .num_anim>p>span>i{
+                font-style: normal;
+            }
+            #main-content .casestudy-part2 .part2-maincontent p {
+                color: rgba(0, 0, 0, 0.8) !important;
+                text-align: left !important;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p1 {
+                font-style: italic;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 28px;
+                color: #000000 !important;
+                margin-bottom: 40px;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p1>span {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 28px;
+                color: rgba(0, 0, 0, 0.4);
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p2 {
+                font-style: italic;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 30px;
+                margin-bottom: 16px;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p3 {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 30px;
+                color: rgba(0, 0, 0, 0.6) !important;
+                text-align: right !important;
+                margin-bottom: 65px;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p4 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 28px;
+                color: rgba(0, 0, 0, 0.8) !important;
+                text-align: left;
+                margin-bottom: 36px;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p4>span {
+                font-weight: 700;
+                font-style: italic;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p4>a {
+                color: #2768B3 !important;
+                text-decoration: underline !important;
+            }
+
+            .casestudy-part2 .part2-maincontent .content-img {
+                width: 100%;
+                margin: 38px 0;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .h2title {
+                text-align: left !important;
+                font-style: normal;
+                font-weight: 900 !important;
+                font-size: 24px !important;
+                line-height: 28px;
+                color: #2768B3 !important;
+                margin-bottom: 38px;
+                padding: 0;
+            }
+
+            .cat_s_button {
+                width: 169px;
+                height: 43px !important;
+                border-radius: 26px;
+                background-color: #f15b0c;
+                box-sizing: border-box;
+                -moz-border-radius: 30px;
+                -webkit-border-radius: 30px;
+                border-radius: 30px;
+                display: block;
+                cursor: pointer;
+                color: #ffffff;
+                font-size: 14px;
+                text-align: center;
+                line-height: 23px;
+                padding: 10px 0px;
+                font-weight: 700;
+                letter-spacing: normal;
+                transition: all 0.5s ease;
+                white-space: nowrap;
+                border: none;
+
+                margin: 64px auto;
+                text-decoration: none;
+            }
+
+            .cat_s_button:hover {
+                background-color: #FFAD8D;
+            }
+
+            .bottom-line {
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                height: 1px;
+            }
+
+            #main-content .casestudy-part2 .part2-maincontent .p4 .blockspan {
+                font-style: normal;
+                display: block;
+                font-weight: 500;
+            }
+
+            @media (max-width: 1080px) {
+
+                .casestudy-part2 {
+                    justify-content: center;
+                    padding: 0 3% 0;
+                }
+
+                .casestudy-part2 .part2-maincontent {
+                    width: 100%;
+                    margin: 0;
+                }
+                .content-nav,.heart-load{
+                    display: none;
+                }
+                .form-box {
+    width: 96%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+            }
+        </style>
+        <style>
+            .part3 {
+                padding: 1px 115px 1px 138px;
+                width: 100%;
+                max-width: 1080px;
+                margin: 0 auto;
+            }
+
+            .part3title {
+                font-weight: 900 !important;
+                font-size: 24px !important;
+                line-height: 28px !important;
+                color: #2768B3 !important;
+                text-align: left;
+                margin: 0 0 50px;
+            }
+
+            .part3 .tag-box {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .part3 .tag-box .taglist {
+                display: inline-block;
+                padding: 6px 20px;
+                font-size: 16px;
+                line-height: 28px;
+                color: rgba(0, 0, 0, 0.8);
+                border: 1px solid #C4C4C4;
+                border-radius: 5px;
+                margin: 0 12px 16px 0;
+            }
+
+            .part3 .tag-box .taglist:focus {
+                font-weight: bold;
+                background-color: #4E8DF6;
+                border: none;
+                color: #ffffff;
+                outline: none;
+            }
+
+            .part3 .tag-box .taglist.choose {
+                font-weight: bold;
+                background-color: #4E8DF6;
+                border: none;
+                color: #ffffff;
+            }
+
+            .part3 .show_otherpage {
+                width: 100%;
+                min-height: 400px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-top: 50px;
+            }
+
+            .show_otherpage .each_page_infor {
+                width: 31%;
+                margin-right: 2%;
+                margin-bottom: 55px;
+                min-width: 200px;
+                background: #FFFFFF;
+                box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+                border-radius: 13px;
+                display: none;
+            }
+
+            .show_otherpage .each_page_infor a {
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            .show_otherpage .each_page_infor.hide {
+                display: none !important;
+            }
+
+            .show_otherpage .each_page_infor .img {
+                width: 100%;
+                height: 229px;
+                border-radius: 13px;
+                background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/national-cancer-institute-BxXgTQEw1M4-unsplash-1.png);
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+
+            .show_otherpage .each_page_infor .title {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 21px;
+                color: #000000;
+                text-align: left;
+                margin: 21px 13px 5px;
+            }
+
+            .show_otherpage .each_page_infor .read-time {
+                display: flex;
+                margin: 0 0 33px 13px;
+                align-items: center;
+            }
+
+            .show_otherpage .each_page_infor .read-time>span {
+                font-style: normal;
+                font-weight: bold;
+                font-size: 12px;
+                line-height: 28px;
+                color: #4E8DF6;
+            }
+
+            .part3 .read-time>img {
+                width: 19px;
+            }
+
+            .add_more {
+                display: block;
+                font-size: 16px;
+                line-height: 28px;
+                color: #4E8DF6;
+                text-align: center;
+            }
+
+            .add_more.hide {
+                display: none;
+            }
+
+            @media (max-width:1080px) {
+                .part3 {
+                    padding: 1px 3%;
+              
+                }
+            }
+
+            @media (max-width:800px) {
+                .part3 .show_otherpage {
+
+                    justify-content: space-between;
+
+                }
+
+                .show_otherpage .each_page_infor {
+                    width: 46%;
+                    max-width: 252px;
+                }
+            }
+            @media (max-width:750px){
+                .show_otherpage .each_page_infor{
+                    width: 100%;
+        margin-bottom: 55px;
+        min-width: 160px;
+        max-width: 100%;
+        background: #FFFFFF;
+        box-shadow: none;
+        border-radius: 0;
+                }
+                .show_otherpage .each_page_infor a {
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .show_otherpage .each_page_infor .img{
+        width: 135px;
+    height: 135px;
+    flex: 0 0 135px;
+    background-size: auto 100%;
+    background-position: center center;
+    }
+    .show_otherpage .each_page_infor .title{
+        margin: 8px 13px 5px;
+    }
+            }
+            @media (max-width:550px) {
+                .part3 .show_otherpage {
+
+                    justify-content: center;
+
+                }
+
+                .show_otherpage .each_page_infor {
+                    width: 100%;
+
+                }
+            }
+        </style>
+
+        <!-- ___________________________________1________________________________________ -->
+        <div class="part1bg">
+            <div class="casestudy-part1" industry="Healthcare">
+                <div class="part1-content">
+                    <p class="title1">
+                        Featured Customer
+                    </p>
+                    <p class="title2">
+                        Arkansas Children’s Hospital
+                    </p>
+                    <h1 class="title3">
+                        How Arkansas Children’s Hospital Builds Pipelines for Future Roles With Hiretual
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- ___________________________________________________2____________________________________________________ -->
+
+
+        <div class="casestudy-part2">
+            <div class="leftbox">
+                <a class="close_phoneinput" href="javascript:void(0)">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Vector-5.png" alt="">
+                </a>
+                <div class="part2-left">
+                    <div class="left-top">
+                        <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/Group-5.png"
+                            alt="" class="hir-logo">
+                            <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Group-5-1.png"
+                            alt="" class="hir-logo_phone">
+                        <div class="sub-box">
+                            <button class="show-form" onclick="show_form()">Subscribe</button>
+                            <button class="show-form_phone" onclick="show_form()">Subscribe to Our Newsletter</button>
+                           <div class="phone_text">
+                               
+                           </div>
+                            <div class="form-box hide">
+                                <iframe class="_iframe" src="https://explore.hiretual.com/l/874171/2021-04-23/9f92nn"
+                                    width="100%" type="text/html" frameborder="0" allowTransparency="true"
+                                    style="border: 0"></iframe>
+
+                            </div>
+                        </div>
+                        <div class="heart-load">
+                            <div class="heart"></div>
+                            <div class="down_load_box">
+                                <a href="#" download="test.pdf" class="load_pdf"></a>
+                                <span>Download</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-nav">
+                        <span class="content-nav-title">TABLE OF CONTENTS</span>
+                        <!-- list -->
+                        <div class="nav-list-box"></div>
+                        <a class="go_to_lib"
+                            href="https://staging-hiretualcom.kinsta.cloud/resources/content-library/">Back to Content
+                            Library</a>
+                    </div>
+                </div>
+            </div>
+            <div class="part2-maincontent">
+                <div class="read-time">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/Group5998.png" alt="">
+                    <span>6 min read</span>
+                </div>
+                <style>
+                    .num_anim>.pnum>span{
+                      width: 35px;
+                    }
+                  </style>
+                <div class="num_anim">
+                    <p class="pnum"> <span><i class="numbox" num=40>0</i>%</span> Less time sourcing</p>
+                    <p class="pnum"> <span><i class="numbox" num=75>0</i>%</span> Increase in response rates</p>
+                    <p class="pnum"> <span><i class="numbox" num=60>0</i>%</span> Increase in qualified leads</p>
+                    <p class="pnum"> <span><i class="numbox" num=100>0</i>%</span> Increase in qualified leads</p>
+                </div>
+                <p class="p1">
+                    <span>Arkansas </span> Children’s Hospital was searching for a solution to help them increase
+                    efficiency when sourcing for large volumes of healthcare reqs. Healthcare recruiters face unique
+                    hiring challenges acquiring candidates for niche roles in an industry already riddled with a
+                    shortage of talent.
+                </p>
+                <p class="p1">
+                    Arkansas Children’s Hospital uses Hiretual to proactively source across multiple open web
+                    recruitment channels and leverage AI-powered insights to map out long-term hiring roadmaps.
+                </p>
+                <p class="p2">
+                    “The ease of being able to use it, the price on it, the ROI — it’s just a good product, it really
+                    is.”
+                </p>
+                <p class="p3">George Cobb, Talent Sourcer at Arkansas Children’s Hospital </p>
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/jud-mackrill-Of_m3hMsoAA-unsplash-4.png"
+                    alt="" class="content-img">
+                <h2 class="h2title" id="h2title1">
+                    1.Exploring More Recruitment Channels to Navigate Talent Shortages
+                </h2>
+                <p class="p4" style="margin-bottom:65px">
+                    George Cobb, Talent Sourcer at <a href=""> Arkansas Children’s Hospital, </a> was looking for a
+                    candidate search solution that would give him flexibility to expand and explore talent pools. As the
+                    only solely dedicated hospital providing care for children in Arkansas, the hospital has a staff of
+                    more than 500 physicians, 200 residents and 4000 supporting staff. George needed a more efficient
+                    way to search across multiple open web platforms simultaneously to identify qualified candidates
+                    faster and acquire up-to-date profiles and contact information.
+                </p>
+                <p class="p4" style="margin-bottom:35px">The hospital builds talent pipelines for extremely in-demand
+                    healthcare roles in Little Rock, Arkansas, such as bilingual nurses and operating room nurses. “The
+                    competition for Registered Nurse residents in Little Rock, Arkansas is brutal so we need to hook
+                    them early and stay engaged,” George says about his current strategy recruiting prospects to prevent
+                    shortage of a role in 2022. </p>
+
+                <p class="p4">
+                    With Hiretual’s AI Sourcing, George proactively sources for future roles to prepare the hospital for
+                    potential talent shortages and employee burnout.
+                </p>
+
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/thisisengineering-raeng-uOhBxB23Wao-unsplash-1.png"
+                    alt="" class="content-img">
+
+                <h2 class="h2title" id="h2title2">
+                    2.Staying on Top of Competitors and Market Trends
+                </h2>
+                <p class="p4">
+                    <span>“Some think we’re going out there to push this magic button and we’re going to suddenly get
+                        all these applicants, but that’s not the way it works,” George says. </span>
+                </p>
+                <p class="p4"> To overcome fierce employer competition in Little Rock, George has to know what his
+                    competitors are up to. To better understand where healthcare professionals around him are currently
+                    working, he leverages Hiretual’s Market Insights to identify trends within a talent pool for a
+                    particular role. Some patterns he would look out for within Market Insights include the top
+                    hospitals for a particular role, the number of professionals who changed jobs within a period of
+                    time, the average years of experience professionals had at a particular hospital or the density of
+                    talent in the area who spoke a different language or came from an underrepresented group. </p>
+                <p class="p4"> From there, George breaks this data down and easily exports the information as reports to
+                    share with hiring managers. These findings help him align expectations for a more productive search
+                    by taking into account details such as the best locations and employers to target, the amount of
+                    time needed to nurture these candidates and how flexible they can be on requirements like skills and
+                    years of experience. </p>
+                <p class="p4" style="margin-bottom: 0;"> <span>“Hospitals may have an abundance of Respiratory
+                        Therapists while we’re having a shortage so now with these insights I know what those hospitals
+                        are and I can see that Respiratory Therapists with 3 years of experience are starting to move
+                        now and 10% of them have left their jobs in the past 12 months, so I can start building my
+                        roadmap to engage with them,” George explained. </span> </p>
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/priscilla-du-preez-XkKCui44iM0-unsplash-5.png"
+                    alt="" class="content-img">
+
+                <h2 class="h2title" id="h2title3">
+                    3.Higher-Quality Touch Points with Automated Email Campaigns
+                </h2>
+                <p class="p4"> George sources for medical, non-medical and high-level positions on Hiretual. With so
+                    many roles to build pipelines for and many of his prospects requiring long-term
+                    relationship-building to convert into candidates, George needed a tool to track and manage mass
+                    engagement campaigns with many touch points. </p>
+                <p class="p4"><span> “I love sending out emails on Hiretual. It just took off and I use it every day,”
+                        he said. “This allows me to source a title, and directly send these candidates an email, and a
+                        few days later I know I already have another email scheduled with something new that I want to
+                        tell them about.” </span></p>
+                <p class="p4"> The flexibility of editing and scheduling different touch points within a Hiretual email
+                    sequence lets George experiment and determine the most effective email outreach content. </p>
+                <p class="p4"> “One of my favorites is ‘How many diapers do you think we use in a year at Arkansas
+                    Children’s Hospital?’. It’s helpful to easily drop emails like these in my sequence because I can
+                    work on something else and come back to these candidates later when responses trickle in after this
+                    touch point,” he says.</p>
+
+                <h2 class="h2title" id="h2title4">
+                    4.Serving Community with a Diverse and Inclusive Workforce
+                </h2>
+                <p class="p4">To better support and serve the community, the hospital also wanted to expand their search
+                    for executive roles so that it was more inclusive and representative of the diversity in Little
+                    Rock, Arkansas. </p>
+                <p class="p4"> George found success using Hiretual to refine an existing executive search upon noticing
+                    a lack of diversity among candidates he was already engaging with. With Hiretual’s Diversity
+                    Sourcing, he was able to scale his search down to a smaller but more targeted pool of qualified
+                    candidates who came from underrepresented groups. </p>
+                <p class="p4"> “I was just blown away because now I had all these new candidates that I didn’t have
+                    before because I wasn’t able to manually find them from all these different platforms, and now I had
+                    a whole new talent pool for this role,” he said.</p>
+
+                <h2 class="h2title" id="h2title5">
+                    5.Achieving Recruiting Objectives with Hiretual
+                </h2>
+                <p class="p4"> Hiretual continues to incorporate new sourcing and engagement features to maintain the
+                    ease-of-use and flexibility that the Arkansas Children’s Hospital is looking for when building
+                    long-term hiring strategies for hard-to-find roles. </p>
+                <p class="p4"> “From a sourcing perspective, when we put [Hiretual] against who we had, it didn’t even
+                    compare. We’re finding people a lot quicker and we’ve made some really good hires because of that,”
+                    George said. </p>
+
+                <a class="cat_s_button" href="https://explore.hiretual.com/contact-sales" target="_blank"
+                    rel="noopener noreferrer">CONTACT SALES</a>
+            </div>
+            <div class="bottom-line"></div>
+
+        </div>
+        <!-- ________________________________3______________________________________ -->
+
+        <div class="part3">
+            <p class="part3title">Discover More Story From Hiretual Customers </p>
+            <div class="tag-box">
+                <a href="javascript:void(0)" onclick="choose_industry('healthcare')" class="taglist  healthcare_but"
+                    data="healthcare">Healthcare</a>
+                <a href="javascript:void(0)" onclick="choose_industry('tech')" class="taglist tech_but"
+                    data="tech">Tech</a>
+                <a href="javascript:void(0)" onclick="choose_industry('government')" class="taglist government_but"
+                    data="government">Government Contracting</a>
+                <a href="javascript:void(0)" onclick="choose_industry('recruiting')" class="taglist recruiting_but"
+                    data="recruiting">Recruiting</a>
+                <a href="javascript:void(0)" onclick="choose_industry('staffing')" class="taglist staffing_but"
+                    data="staffing">Staffing</a>
+                <a href="javascript:void(0)" onclick="choose_industry('banking')" class="taglist banking_but"
+                    data="banking">Banking</a>
+                <a href="javascript:void(0)" onclick="choose_industry('e-commerce')" class="taglist e-commerce_but"
+                    data="e-commerce">E-Commerce</a>
+
+            </div>
+            <div class="show_otherpage">
+                <!-- choose page -->
+            </div>
+            <a href="javascript:void(0)" class="add_more hide" onclick="add_more()">More+</a>
+        </div>
+
+    </div>
+    <div class="link_loading"></div>
+    <script src="https://storage.pardot.com/874171/1605775081fJQEwFqt/jquery_3.5.1.min.js"></script>
+    <script>
+        var $ = $ || jQuery;
+        var num_run = 1;
+        var base_url = 'https://' + window.location.host;
+        var phone_data = {
+            init_phone_input_flag:0,
+           phone_input_show:1,
+           touch0:0,
+           touch1:0
+            
+        }
+       
+        var case_data = [
+            {
+                case_study: 'Apptio',
+                title: "Apptio Find High Volume Qualified Candidates With Hiretual AI Sourcing",
+                url: base_url + "/resources/case-studies/apptio-case-study/",
+                img: 'https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/apptio-casestudy-top2.png',
+                Industry: ['Tech'],
+                read_time: 3,
+            },
+            {
+                case_study: "Arkansas Children's Hospital",
+                title: "How Arkansas Children’s Hospital Builds Pipelines for Future Roles With Hiretual",
+                url: base_url + "/resources/case-studies/arkansas-childrens-hospital-case-study/",
+                img: 'https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/national-cancer-institute-BxXgTQEw1M4-unsplash-1.png',
+                Industry: ['Healthcare'],
+                read_time: 5,
+            },
+            {
+                case_study: 'Bayview',
+                title: "Bayview Talent Group Fill High Market Demand with Hiretual",
+                url: base_url + "/resources/case-studies/bayview-case-study-2/",
+                img: 'https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/bayview-casestudy-top.png',
+                Industry: ['Staffing'],
+                read_time: 3,
+            },
+            {
+                case_study: 'Chenega Corporation',
+                title: "Hiretual Enhance Diverse Candidate Engagement for Chenega Corporation",
+                url: base_url + "/resources/case-studies/chenega-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/10/Chenega-Corporation-Case-Study2-1.png',
+                Industry: ['Government', 'Tech'],
+                read_time: 3,
+            },
+            {
+                case_study: 'CMK Resources',
+                title: "CMK Resources Ramp Up Candidate Engagement With Hiretual",
+                url: base_url + "/resources/case-studies/cmk-resources-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/10/bg-1.png',
+                Industry: ['Staffing', 'Recruiting'],
+                read_time: 3,
+            },
+            {
+                case_study: 'Cornerstone',
+                title: "Strategic Candidate Sourcing and Engagement Planning for Cornerstone",
+                url: base_url + "/resources/case-studies/cornerstone-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/10/Cornerstone.png',
+                Industry: ['Tech', 'Recruiting', 'Staffing'],
+                read_time: 3,
+            },
+            {
+                case_study: 'DadJ',
+                title: "DadJ Inc Drive Successful Recruitment Process In Tight Labor Market",
+                url: base_url + "/resources/case-studies/dadj-case-study-3/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/09/DADJ-Case-Study-2.png',
+                Industry: ['Healthcare', 'Staffing'],
+                read_time: 3,
+            },
+            {
+                case_study: 'Data Hire',
+                title: "Reach Recruiting Objectives In The Age Of AI",
+                url: base_url + "/resources/case-studies/data-hire-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/10/bg.png',
+                Industry: ['Staffing', 'Recruiting'],
+                read_time: 1,
+            },
+            {
+                case_study: 'Dynamic Search Group',
+                title: "Dynamic Search Group Access to Largest Talent Pool with Fresh Talent",
+                url: base_url + "/resources/case-studies/dynamic-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2020/01/dynamic-page-bg.jpg',
+                Industry: ['Staffing', 'Recruiting'],
+                read_time: 1,
+            },
+            {
+                case_study: 'First Entertainment Credit Union',
+                title: "NPO Sees Time-Saving and Talent Pool Solution With Hiretual",
+                url: base_url + "/resources/case-studies/first-entertainment-credit-union-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/10/First-Entertainment.png',
+                Industry: ['Banking'],
+                read_time: 3,
+            },
+            {
+                case_study: 'JANE',
+                title: "Activate Higher Candidate Response with Email Sequence by JANE",
+                url: base_url + "/resources/case-studies/jane-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/11/jane-bg.jpg',
+                Industry: ['Recruiting'],
+                read_time: 2,
+            },
+            {
+                case_study: 'Poshmark',
+                title: "How Poshmark Stands Out With Hiretual",
+                url: base_url + "/resources/case-studies/poshmark-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2020/06/posh-casestudy-bg.png',
+                Industry: ['E-Commerce'],
+                read_time: 3,
+            },
+            {
+                case_study: 'Premier Search',
+                title: "How Premier Search Find Fresh Pool of Candidates for Client",
+                url: base_url + "/resources/case-studies/premier-search-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/11/premier-top-bg.jpg',
+                Industry: ['Staffing', 'Recruiting'],
+                read_time: 2,
+            },
+            {
+                case_study: 'Session M',
+                title: "Session M Case Study: Better Finding of Interested Candidates Than Your Professional Network",
+                url: base_url + "/resources/case-studies/sessionm-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/10/header.png',
+                Industry: ['Tech'],
+                read_time: 2,
+            },
+            {
+                case_study: 'Tango Card',
+                title: "Data Driven Insights To Attract Passive Candidates for Tango Card",
+                url: base_url + "/resources/case-studies/tango-card-case-study/",
+                img: 'https://hiretual.com/wp-content/uploads/2019/10/tango-1.png',
+                Industry: ['Tech'],
+                read_time: 4,
+            },
+
+        ];
+
+        // 渲染文章标题菜单
+        function set_content_nav() {
+            var h2title = document.getElementsByClassName('h2title');
+            var str = '';
+            for (var i = 0; i < h2title.length; i++) {
+                var t = h2title[i].innerHTML;
+                str += '<a href="#' + h2title[i].id + '" class="guide"><h2> ' + t + ' </h2></a>';
+
+            };
+            document.getElementsByClassName('nav-list-box')[0].innerHTML = str;
+        };
+        set_content_nav();
+
+        // 点击展示表格
+        function show_form() {
+            document.getElementsByClassName('form-box')[0].setAttribute('class', 'form-box');
+            document.getElementsByClassName('show-form')[0].style.display = 'none';
+            document.getElementsByClassName('show-form_phone')[0].style.display = 'none';
+        }
+
+        // 渲染底部类别选择
+        function create_more() {
+            var more_str = ''
+            for (var i = 0; i < case_data.length; i++) {
+                var inds = case_data[i].Industry.join(' ').toLowerCase();
+                more_str += '<div class="each_page_infor ' + inds + '"><a href="' + case_data[i].url + '"> <div class="img" style="background-image: url(' + case_data[i].img + ');"></div> <div class="left-box"> <div class="title"> ' + case_data[i].title + ' </div> <div class="read-time"> <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/Group6002.png" alt="">  <span>' + case_data[i].read_time + ' min read</span>  </div> </div> </a></div>'
+            };
+
+            document.getElementsByClassName('show_otherpage')[0].innerHTML = more_str;
+        };
+        create_more();
+
+        // 初始化底部类别选择
+        var choose_ind = document.getElementsByClassName('casestudy-part1')[0].getAttribute('industry');
+        function choose_industry(ind) {
+            ind = ind.toLowerCase() || 'staffing';
+            var eles = document.getElementsByClassName('each_page_infor');
+            $('.taglist').removeClass('choose');
+            $('.' + ind + '_but').addClass('choose');
+            var numadd = 0;
+            for (var i = 0; i < eles.length; i++) {
+                if (eles[i].getAttribute('class').indexOf(ind) > 0) {
+                    numadd++;
+                    eles[i].style.display = 'block';
+                    if (numadd > 6) {
+                        eles[i].setAttribute('class', eles[i].getAttribute('class') + ' hide')
+                    }
+                } else {
+                    eles[i].style.display = 'none';
+
+                }
+                choose_ind = ind;
+            };
+
+            if (numadd <= 6) {
+                $('.add_more').addClass('hide');
+            } else {
+                $('.add_more').removeClass('hide');
+            }
+        };
+        choose_industry(choose_ind);
+
+        // 底部类别选择：加载更多
+        function add_more() {
+            $('.each_page_infor').removeClass('hide');
+            $('.add_more').addClass('hide');
+            $('.' + choose_ind + ' a')[5].focus();
+        };
+
+       // 数字动画
+       var num_anim_run = function () { 
+        num_run = 0;
+            var num_box = $('.numbox');
+            var allnum = [];
+            var maxnum = 0;
+            for(var i=0;i<num_box.length;i++){
+                var ele = $(num_box[i]);
+                var n = parseInt(ele.attr('num'));
+                maxnum = maxnum > n ? maxnum : n;
+                allnum[i] = n;
+             
+            };
+
+            var lock = 0;
+            var set_T = setInterval(function () {
+                lock++;
+                for(var i=0;i<num_box.length;i++){
+                    var ele = $(num_box[i]);
+                    // console.log(allnum[i])
+                    if(lock<=allnum[i]){
+                        var n = parseInt(ele.html());
+                        ele.html(++n);
+                    }else if(lock>=maxnum){
+                        clearInterval(set_T);
+                        
+                    };
+                    
+            };
+
+            },30)
+
+        };
+        // num_anim_run();
+        // 监听页面滚动
+        var listen_scroll = function () {
+            var view_h = $(window).height();
+            var document_h = $(document).height();
+            var h2title = $('.h2title');
+            var len = h2title.length;
+
+            var scroll_fn = function () {
+                var scrolltop = $(document).scrollTop();
+                for (var i = 0; i < h2title.length; i++) {
+                    var top_y = h2title.eq(i).offset().top;
+
+                    if (top_y - scrolltop < 300) {
+                        $('.guide').removeClass('view');
+                        $('.guide').eq(i).addClass('view');
+
+                    }
+                };
+
+// set num
+                var num_anim = $('.num_anim');
+                if(($('.num_anim').offset().top - scrolltop) < view_h/2 && num_run){
+                    num_anim_run();
+                };
+
+
+                // set phone show input
+                if((scrolltop+view_h)/document_h > 0.8 && phone_data.phone_input_show){
+                    $('.leftbox').fadeIn(500,function(){
+                        phone_input_tool.slidepage();
+                    });
+                }
+
+            };
+
+            $(window).scroll(scroll_fn);
+            scroll_fn();
+        };
+
+        var phone_input_tool = {
+            close:function(){
+                phone_data.phone_input_show = 0;
+                $('.leftbox').fadeOut(300);
+            },
+            hidebox:function(){
+                $('.leftbox').addClass('hide');
+                phone_data.hidebox = 1;
+                
+            },
+            showbox:function(){
+                
+                if(phone_data.hidebox){
+                    phone_data.hidebox = 0;
+                    $('.leftbox').removeClass('hide');
+                }
+                return false;
+                
+            },
+            slidepage:function(){
+              
+                $('body').on("touchstart",function(e){
+                    phone_data.touch0 = e.touches[0].clientY;
+                });
+                $('body').on("touchmove",function(e){
+                    if(phone_data.hidebox){
+                        return;
+                    };
+                     
+                    phone_data.touch1 = e.touches[0].clientY;
+                    if( Math.abs(phone_data.touch1 - phone_data.touch0) > 50){
+                        phone_input_tool.hidebox();
+                    }
+                });
+                // $('.casestudy-part2').on("touchstart",function(e){
+                //     phone_data.touch0 = e.touches[0].clientY;
+                // });
+         
+    $('.casestudy-part2').on("touchend",function(e){
+        phone_data.touch1 = e.touches[0].clientY;
+        
+    });
+
+            },
+            init_phone_input:function(){
+                phone_data.init_phone_input_flag = 1;
+                $('.leftbox').on('click', phone_input_tool.showbox);
+                $('.casestudy-part2 .close_phoneinput').on('click',phone_input_tool.close);
+                
+            }
+
+        }
+
+        var set_part1 = function () {
+            var wid = document.body.offsetWidth || window.screen.width;
+            if (wid > 1440) {
+                if (wid > 2500) {
+                    wid = 2500
+                }
+                $('.part1bg').css('height', (wid * 0.8) / 2.5);
+                $('.part1-content').css('transform', 'scale(' + (wid * 0.8) / 1.8 / 600 + ')');
+            } else {
+                $('.part1-content').css('transform', 'scale(1)');
+            };
+            if(wid <= 1080 && !phone_data.init_phone_input_flag){
+                phone_input_tool.init_phone_input();
+            }
+        }
+
+        window.onresize = set_part1;
+
+        window.case_study_init = function (params) {
+            // var heart = document.getElementsByClassName('wpulike')[0];
+            // var heart_box = document.getElementsByClassName('heart')[0];
+            // heart_box.appendChild(heart);
+            listen_scroll();
+            set_part1();
+        }
+window.case_study_init();
+
+
+function link_loading (){
+    $('.each_page_infor').on('click',function(e){
+        var x = e.clientX;
+        var y = e.clientY;
+       $('.link_loading').css({'left':x+'px','top':y+'px','display':'block'});
+       var t = setTimeout(function(){
+        $('.link_loading').fadeOut(300);
+clearTimeout(t);
+       },2000);
+    })
+};
+link_loading();
+    </script>
+
+</body>
+
+</html>

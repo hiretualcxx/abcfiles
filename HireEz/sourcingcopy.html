@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <title>sourcing</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Manrope;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .outbox {
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        @media (max-width:750px) {
+            .outbox {
+                width: 90%;
+                max-width: 550px;
+                margin: 0 auto;
+            }
+        }
+
+
+
+        /* part1 */
+        .part1 {
+            padding: 1px 0;
+            width: 100%;
+            margin: 0 auto;
+            background-color: var(--childPart1Bg);
+            overflow: hidden;
+            min-height: 740px;
+        }
+        .part1img .mainimg{
+          height:auto;
+        }
+        .part1 .part1main {
+            text-align: center;
+        }
+
+        #main-content .part1main .part1-title {
+            max-width: 785px;
+            font-style: normal;
+            font-weight: bold ;
+            font-size: 48px;
+            line-height: 72px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 55px auto 15px;
+            padding: 0;
+            opacity: 0;
+            animation: part1-show 1s forwards;
+        }
+
+        #main-content .part1main .part1-title2 {
+            max-width: 785px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: left;
+            color: #FFFFFF;
+            margin: 15px auto 160px;
+            padding: 0;
+            opacity: 0;
+            animation: part1-show 1s forwards 1s;
+        }
+
+        .part1img {
+            max-width: 812px;
+            width: 90%;
+            opacity: 0;
+            animation: part1-show 1s forwards 2s;
+        }
+        @keyframes part1-show {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        @media (max-width:750px) {
+            .part1main .part1-title {
+                font-size: 36px !important;
+                line-height: 54px !important;
+            }
+
+            .part1main .part1-title2 {
+                font-size: 24px !important;
+                line-height: 36px !important;
+            }
+        }
+
+       
+        .part2 {
+            padding: 130px 0 150px 20px;
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        #main-content .part2-title {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 46px;
+            text-align: center;
+            color: #000000;
+            margin: 100px 0;
+        }
+
+        .part2main {
+            width: 100%;
+            display: flex;
+
+            justify-content: flex-start;
+        }
+
+        .part2main .showbox {
+            margin: 0 20px 40px 0;
+            width: 47%;
+            flex: 0 0 47%;
+            display: none;
+        }
+
+        .part2main .showbox.open {}
+
+        .part2main .showbox .eachbox {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            padding: 56px 64px;
+            display: block;
+        }
+
+        .part2main .hidebox {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hidebox.open {
+            justify-content: left;
+        }
+
+        .eachbox {
+            position: relative;
+            max-width: 255px;
+            margin: 0 20px 40px 0;
+            padding: 56px 24px 28px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 13px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .hidebox .view {
+            border: 1px solid #2764FC;
+        }
+
+        .showbox .eachbox.view {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .hidebox .eachbox:hover {
+           
+            transform: scale(1.03);
+        }
+
+        .eachbox .d1 {
+            text-align: center
+        }
+
+        .eachbox .d1>.icon {
+            width: auto;
+            height: 32px;
+        }
+       
+
+        #main-content .eachbox .d1>.title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 28px;
+            color: #000000;
+            margin: 23px auto 38px;
+            text-align: center;
+            max-width: 196px;
+        }
+        #main-content .hidebox .eachbox .d1>.title.line2{
+            max-width: 135px;
+        }
+
+        .eachbox .d1>.title.t2 {
+            margin: 46px 0 45px;
+        }
+
+        #main-content .eachbox .d2 {
+            text-align: left;
+            height: 0px;
+            overflow: hidden;
+            /* transition:  height 0.5s; */
+        }
+
+        #main-content .eachbox .d2 .text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+line-height: 25px;
+color: #545659;
+            margin-bottom: 40px;
+        }
+        #main-content .eachbox .d2 .text .content{
+            margin-bottom: 29px;
+        }
+        #main-content .eachbox .d2 .text .c_list{
+            margin: 0px 0 20px;
+        }
+        #main-content .eachbox .d2 .text .c_list li{
+            padding: 0 0 0 20px;
+            list-style-type: none;
+            position: relative;
+            margin: 0px 0 0 10px;
+        }
+        #main-content .eachbox .d2 .text .c_list li::before{
+            content: " ";
+            background-color:#545659;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            position: absolute;
+            top: 11px;
+            left: 0;
+
+        }
+     
+.eachbox .d2 .text button {
+            font-family: Proxima Nova;
+font-style: normal;
+font-weight: bold;
+            color: #00154C;
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            line-height: 18px;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .view.eachbox .d2 .text button{ 
+            animation: leanmareshow 0.1s linear 1s forwards;
+        }
+        @keyframes leanmareshow {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        #main-content .showbox .eachbox .d2 {
+            height: auto;
+        }
+
+        .eachbox .jt {
+            transform: rotate(180deg);
+            position: absolute;
+            bottom: 23px;
+            right: 37px;
+            transition: all 0.3s;
+        }
+
+        .showbox .eachbox .jt {
+            transform: rotate(0deg);
+        }
+
+        @media (max-width:1180px) {
+            .part2main {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                max-width: 830px;
+                margin: 0 auto;
+            }
+
+            .part2main .hidebox {
+                justify-content: center;
+
+            }
+
+            .part2main .hidebox.open {
+                justify-content: center;
+                max-width: 300px;
+            }
+        }
+
+        @media screen and (max-width: 1150px) {
+            div.et_pb_row {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 750px) {}
+
+        @media (max-width: 560px) {
+            div.et_pb_css_mix_blend_mode_passthrough {
+                margin-left: 0px !important;
+            }
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="main-content">
+       
+  
+      <div class="part1">
+            
+              <div class="part1main outbox">
+                  <h1 class="part1-title">Unleash Access to Untapped Talent Pools</h1>
+                  <p class="part1-title2">Unleash access to 750M+ candidates from 45+ open web platforms, get market insights and DE&I information to build data-driven recruiting strategies and maximize the value of your existing ATS database </p>
+                  <img class="part1img" src="https://hireez.com/wp-content/uploads/2022/01/topimg.png" alt="">
+              </div>
+      </div>
+
+      <div class="part2">
+                
+        <div class="part2main">
+            <div class="showbox"> </div>
+            <div class="hidebox">
+                <a class="eachbox box1" href="javascript:void(0)" n=0 >
+                    <div class="d1">
+                        <img src="https://hireez.com/wp-content/uploads/2022/01/sourcing.svg" alt="" class="icon">
+                        <p class="title">Sourcing</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            <p class="content"> Go beyond job boards and LinkedIn to access more than 750 million profiles with information from more than 45 online platforms.</p>
+                            <ul class="c_list">
+                                <li>Meta (Facebook)</li>
+                                <li>Twitter</li>
+                                <li>LinkedIn</li>
+                                <li>GitHub</li>
+                                <li>AngelList</li>
+                                <li>RateMDs</li>
+                                <li>Zocdoc</li>
+                                <li>Kaggle</li>
+                                <li>Healthgrades</li>
+                                <li>CareerBuilder</li>
+                            </ul>
+                      
+                            <button onclick="public_fn.click_a('hireez.com/features/sourcing/')" >Learn more ></button>
+                        </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+                <a class="eachbox box2" href="javascript:void(0)" n=1 >
+                    <div class="d1">
+                        <img src="https://hireez.com/wp-content/uploads/2022/01/Diversity.svg" alt="" class="icon">
+                        <p class="title">Diversity & Inclusion</p>
+                    </div>
+                    <div class="d2">
+                      <div class="text">
+                          <p class="content">Talent sourcing and talent intelligence built to bring underrepresented talent to the forefront of your search.</p>
+                          <p class="content">We analyze data such as pronouns, schools and memberships with professional organizations to surface minority candidates that are easily buried in general career platforms. With hireEZ, you can also access an interactive dashboard that analyzes how your team is interacting with minority groups. Identify engagement drop-offs, response rates and qualification rates to help you decide your next move.</p>
+                         
+                          <button onclick="public_fn.click_a('hireez.com/features/diversity-inclusion/')" >Learn more ></button>
+                      </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+                <a class="eachbox box3" href="javascript:void(0)" n=2 >
+                    <div class="d1">
+                        <img src="https://hireez.com/wp-content/uploads/2022/01/talent_data_cloud.png" alt="" class="icon">
+                        <p class="title">Talent Data Cloud</p>
+                    </div>
+                    <div class="d2">
+                      <div class="text">
+                          <p class="content">Maximize the value of your existing ATS database by deduplicating and enriching your existing profiles to build a seamless workflow for your hiring team and unlock the value of your existing database of candidates. 
+                          </p>
+                          <ul class="c_list">
+                              <li>Integrated with 30+ of the world’s leading ATS and CRM platforms</li>
+                              <li>Automatically sync candidate activities, notes, tags and engagement history across both platforms for better team collaboration</li>
+                              <li>A few clicks is all it takes for our two-way integrations to deduplicate profiles and update existing records with candidate data found from the open web</li>
+                              <li>After being refreshed and updated, candidates in your database can be easily segmented by ATS job or ATS stage directly within hireEZ</li>
+                          </ul>
+                          <button onclick="public_fn.click_a('hireez.com/features/talent-data-cloud/')" >Learn more ></button>
+                      </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+                <a class="eachbox box4" href="javascript:void(0)" n=3 >
+                    <div class="d1">
+                        <img src="https://hireez.com/wp-content/uploads/2022/01/chrome.svg" alt="" class="icon">
+                        <p class="title line2">Chrome Extension</p>
+                    </div>
+                    <div class="d2">
+                      <div class="text">
+                          <p class="content">Test out our candidate sourcing and contact-finding with <strong>no commitment</strong>  and <strong>no automatic payments</strong>. But that's not all. Unlock advanced features with our paid plans for a complete personal recruiting companion.</p>
+                      
+                          <button onclick="public_fn.click_a('hireez.com/features/chrome-extension/')" >Learn more ></button>
+                      </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+                <a class="eachbox box5" href="javascript:void(0)" n=4 >
+                    <div class="d1">
+                        <img src="https://hireez.com/wp-content/uploads/2022/01/market.svg" alt="" class="icon">
+                        <p class="title">Market Insights</p>
+                    </div>
+                    <div class="d2">
+                      <div class="text">
+                          <p class="content">Optimize the sourcing process and build strategic plans with market insights about your available talent pool and market trends. </p>
+                          <ul class="c_list">
+                              <li>Share addressable market data with hiring managers</li>
+                              <li>Take a data-driven approach when starting new company initiatives</li>
+                              <li>Export and share insights easily</li>
+                          </ul>
+                          <button onclick="public_fn.click_a('hireez.com/features/insights/')" >Learn more ></button>
+                      </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+                <a class="eachbox box6" href="javascript:void(0)" n=5 >
+                    <div class="d1">
+                        <img src="https://hireez.com/wp-content/uploads/2022/01/talent-map.png?a" alt="" class="icon">
+                        <p class="title">Talent Maps</p>
+                    </div>
+                    <div class="d2">
+                      <div class="text">
+                          <p class="content">hireEZ Talent Maps helps you develop strategic workforce plans and make informed decisions with industry-wide and competitor-specific benchmarking data and talent insights.</p>
+                          
+                          <button onclick="public_fn.click_a('hireez.com/product/talent-maps/')" >Learn more ></button>
+                      </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+                <a class="eachbox box7" href="javascript:void(0)" n=6 >
+                    <div class="d1">
+                        <img style="height: 27px;" src="https://hireez.com/wp-content/uploads/2022/01/talent-match.png?a" alt="" class="icon">
+                        <p class="title">Talent Match</p>
+                    </div>
+                    <div class="d2">
+                      <div class="text">
+                          <p class="content">Simplify candidate screening and accelerate sourcing with actionable data that reflects how candidates meet job requirements.</p>
+                        
+                          <button onclick="public_fn.click_a('hireez.com/product/talent-match/')" >Learn more ></button>
+                      </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+                <a class="eachbox box8" href="javascript:void(0)" n=7 >
+                    <div class="d1">
+                        <img src="https://hireez.com/wp-content/uploads/2022/01/boolean_builder_active.png" alt="">
+                        <p class="title">Boolean Builder</p>
+                    </div>
+                    <div class="d2">
+                      <div class="text">
+                          <p class="content">Some recruiters on your team may like boolean strings. Some prefer AI filters. hireEZ empowers your team to do both. </p>
+                          
+                          <button onclick="public_fn.click_a('hireez.com/features/boolean-builder/')" >Learn more ></button>
+                      </div>
+                    </div>
+                    <img width="20" height="20" class="jt" alt="Arrow pointing up"
+                        src="https://hireez.com/wp-content/uploads/2021/12/listicon.png">
+                </a>
+  
+            </div>
+        </div>
+    </div>
+
+    <script src="./jQuery-3-5-1.js"></script>
+    <script>
+        var on_load = true;
+        var enter = '';
+        var $ = $ || jQuery;
+        var public_fn = {
+            init: function () {
+                $('#bottom_contact_sales .part-title').html('Ready to hire the best talent?')
+                
+                
+                if (!on_load) return;
+                on_load = false;
+                $('.showbox').on('click', '.eachbox', public_fn.closebox);
+                $('.eachbox').click(public_fn.openbox);
+            },
+            click_a:function(url){
+                window.location.href="https://"+ url;
+                return;
+            },
+            
+            openbox: function (e) {
+                if (e.target.localName == 'button') return;
+                var _this = $(this);
+                if (!_this.attr('open') && ($('.showbox .eachbox').length == 0)) {
+            
+                    _this.attr('open', 1);
+
+                    $('.showbox').html(_this).slideDown(800);
+                    $('.hidebox').add('.showbox').removeClass('hide').addClass('open');
+
+                } else if ($('.showbox .eachbox').length > 0) {
+                    $('.showbox .eachbox').attr('open', false);
+                    $('.hidebox').append($('.showbox .eachbox'));
+
+                    $('.showbox').html(_this);
+                }
+                public_fn.boxsort(_this.attr('n'));
+                _this.addClass('view');
+
+                public_fn.scrollfn();
+
+            },
+            closebox: function (e) {
+            
+                 if (e.target.localName == 'button') return;
+             
+                var _this = $(this);
+                _this.parent().attr('open', false);
+                $('.showbox').slideUp(800, function () {
+                    $('.hidebox').append($('.showbox .eachbox'));
+                    public_fn.boxsort(0);
+                    $('.hidebox').add('.showbox').removeClass('open').addClass('hide');
+                });
+            },
+            boxsort: function (num) {
+                var eles = $('.part2main .eachbox');
+                for (var i = 0; i < eles.length; i++) {
+                    var e = $(eles[i]);
+                    var elen = +e.attr('n');
+                    var order = elen >= num ? (elen - num) : (eles.length - num + elen);
+                    $(e).css('order', order);
+                }
+            },
+       
+            scrollfn: function () {
+                window.scrollTo({
+                    left: 0,
+                    top: $('.part2').offset().top,
+                    behavior: 'smooth'
+                });
+            },
+        }
+        window.addEventListener('load', public_fn.init);
+    </script>
+</body>
+</html>

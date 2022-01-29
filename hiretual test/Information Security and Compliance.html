@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Poppins;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .jump-button {
+            display: inline-block;
+            width: 234px;
+            height: 52px;
+            line-height: 52px;
+            background: linear-gradient(114.45deg, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+            box-shadow: 0px 100px 80px rgb(232 87 65 / 7%), 0px 41.7776px 33.4221px rgb(232 87 65 / 5%), 0px 22.3363px 17.869px rgb(232 87 65 / 4%), 0px 12.5216px 10.0172px rgb(232 87 65 / 4%), 0px 6.6501px 5.32008px rgb(232 87 65 / 3%), 0px 2.76726px 2.21381px rgb(232 87 65 / 2%);
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .jump-button2 {
+            display: inline-block;
+            width: 211px;
+            height: 53px;
+            line-height: 53px;
+            background: linear-gradient(114.45deg, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+            box-shadow: 0px 100px 80px rgb(232 87 65 / 7%), 0px 41.7776px 33.4221px rgb(232 87 65 / 5%), 0px 22.3363px 17.869px rgb(232 87 65 / 4%), 0px 12.5216px 10.0172px rgb(232 87 65 / 4%), 0px 6.6501px 5.32008px rgb(232 87 65 / 3%), 0px 2.76726px 2.21381px rgb(232 87 65 / 2%);
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .outbox {
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        @media (max-width:750px) {
+            .outbox {
+                width: 90%;
+                max-width: 550px;
+                margin: 0 auto;
+            }
+        }
+
+        #main-content .part2 .title,#main-content .part3 .title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 46px;
+            text-align: center;
+            color: #000000;
+            margin: 100px auto;
+        }
+
+        /* part1 */
+        .part1 {
+            padding: 1px 0;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #4E8DF6;
+            background-image: url(data:image/png;base64,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);
+            background-repeat: no-repeat;
+            background-size: auto 125%;
+            background-position: center 16%;
+            overflow: hidden;
+            min-height: 740px;
+        }
+        .part1 .bgyuan{
+            position: absolute;
+
+        }
+        .part1 .part1main {
+            text-align: center;
+        }
+
+        #main-content .part1main .part1-title {
+            max-width: 550px;
+            font-style: normal;
+            font-weight: bold !important;
+            font-size: 48px !important;
+            line-height: 72px !important;
+            text-align: center;
+            text-transform: capitalize;
+            color: #FFFFFF !important;
+            margin: 55px auto 15px;
+            animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 0.5s;
+            transform: translateY(200px);
+            opacity: 0;
+            padding: 0;
+        }
+
+        #main-content .part1main .part1-title2 {
+            max-width: 580px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 15px auto 27px;
+            animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 1s;
+            transform: translateY(200px);
+            opacity: 0;
+            padding: 0;
+        }
+
+        .part1img {
+            width: 289px;
+            margin: 43px auto 50px;
+            animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 2s;
+            transform: translateY(200px);
+            opacity: 0;
+            position: relative;
+        }
+
+        .part1img .mainimg {
+            width: 100%;
+            margin-left: 23px;
+        }
+
+        .part1img .icon {
+            opacity: 0;
+            position: absolute;
+            z-index: 2;
+        }
+
+        .part1img .icon:nth-of-type(2) {
+            top: 41px;
+            left: -59px;
+            animation: icon1 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 2.5s;
+        }
+
+        .part1img .icon:nth-of-type(3) {
+            top: 73px;
+            left: 395px;
+            animation: icon2 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 3s;
+        }
+
+        .part1img .icon:nth-of-type(4) {
+            top: 200px;
+            left: 132px;
+            animation: icon3 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 3.5s;
+        }
+
+        @keyframes icon1 {
+            0% {
+                top: 123px;
+                left: 156px;
+                transform: scale(0.2);
+            }
+
+            100% {
+                top: 41px;
+                left: -59px;
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes icon2 {
+            0% {
+                top: 123px;
+                left: 156px;
+                transform: scale(0.2);
+            }
+
+            100% {
+                top: 73px;
+                left: 395px;
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes icon3 {
+            0% {
+                top: 123px;
+                left: 156px;
+                transform: scale(0.2);
+            }
+
+            100% {
+                top: 200px;
+                left: 132px;
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes animate0 {
+            from {
+                transform: translateY(200px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width:1150px) {
+            .part1 {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width:980px) {
+            .part1 {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width:750px) {
+            .part1main .part1-title {
+
+                font-size: 36px !important;
+                line-height: 54px !important;
+            }
+
+            .part1main .part1-title2 {
+                font-size: 24px !important;
+                line-height: 36px !important;
+            }
+        }
+
+        /* part2 */
+        .part2 .part2mian {
+            display: flex;
+            justify-content: space-between;
+            /* align-items: center; */
+        }
+
+        .part2 .part2mian .leftbox {
+            width: 40%;
+            max-width: 416px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .leftbox .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            display: none;
+            text-align: left;
+            transition: all 0.3s;
+        }
+
+        .leftbox .text.act {
+            position: relative;
+            opacity: 1;
+            display: block;
+        }
+
+        #main-content .leftbox .text .title {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            text-transform: capitalize;
+            color: #000000;
+            margin: 0;
+            text-align: left;
+        }
+
+        #main-content .leftbox .text .content {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            color: #6F777B;
+            margin: 10px 0;
+        }
+
+        #main-content .leftbox .text>a {
+            display: inline-block;
+            max-width: 390px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: left;
+            color: #4E8DF6;
+        }
+
+        .part2 .part2mian .rightbox {
+            width: 60%;
+            max-width: 660px;
+        }
+
+        .part2 .part2mian .rightbox .logoline1,
+        .part2 .part2mian .rightbox .logoline2 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .part2 .part2mian .rightbox .logo {
+            text-align: center;
+            width: 192px;
+            height: 220px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            border-radius: 13px;
+            transition: all 0.3s;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        part2 .part2mian .rightbox .logo>a {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .part2 .part2mian .rightbox .logo.act {
+            z-index: 3;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+
+        }
+
+        .part2 .part2mian .rightbox .logo img {
+            height: 80px;
+            margin: 36px auto 7px;
+        }
+
+        .part2 .part2mian .rightbox .logo span {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 28px;
+            text-align: center;
+            color: #000000;
+        }
+
+        .part2 .part2mian .rightbox .logo.act span {
+            color: #4E8DF6;
+        }
+@media (max-width:980px) {
+    .part2 .part2mian {
+    justify-content: center;
+    flex-wrap: wrap;
+ 
+}
+.part2 .part2mian .leftbox,
+.part2 .part2mian .rightbox{
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+}
+        .part3 {
+            padding: 0px 0 140px 20px;
+            width: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        #main-content .part3-title {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 46px;
+            text-align: center;
+            color: #000000;
+            margin: 100px 0;
+        }
+
+        .part3main {
+            width: 100%;
+            display: flex;
+
+            justify-content: flex-start;
+        }
+
+        .part3main .showbox {
+            margin: 0 20px 40px 0;
+            width: 47%;
+            flex: 0 0 47%;
+            display: none;
+        }
+
+        .part3main .showbox.open {}
+
+        .part3main .showbox .eachbox {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            padding: 90px 64px;
+            display: block;
+        }
+
+        .part3main .hidebox {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hidebox.open {
+            justify-content: left;
+        }
+
+        .eachbox {
+            position: relative;
+            max-width: 255px;
+            margin: 0 20px 40px 0;
+            padding: 90px 24px 28px;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 13px;
+            cursor: pointer;
+        }
+
+        .hidebox .view {
+            border: 1px solid #4E8DF6;
+        }
+
+        .showbox .eachbox.view {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .hidebox .eachbox:hover {
+            transition: transform 0.3s;
+            transform: scale(1.03);
+        }
+
+        .eachbox .d1 {
+            text-align: center
+        }
+
+        .eachbox .d1>.icon {
+            width: 55px;
+            height: 50px;
+            background-image: url(http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/allicon.png);
+            background-size: 500 auto;
+            background-repeat: no-repeat;
+        }
+
+        .box1 .d1>.icon {
+            background-position: -66px -69px;
+        }
+
+        .box2 .d1>.icon {
+            background-position: -65px 0;
+        }
+
+        .box3 .d1>.icon {
+            background-position: -116px 2px;
+        }
+
+        .box4 .d1>.icon {
+            background-position: 0px 2px;
+        }
+
+        .box5 .d1>.icon {
+            background-position: -180px 2px;
+        }
+
+        .box6 .d1>.icon {
+            background-position: -323px 2px;
+        }
+
+        .box7 .d1>.icon {
+            background-position: -239px 2px;
+        }
+
+        .box8 .d1>.icon {
+            background-position: -393px 2px;
+        }
+
+        .box9 .d1>.icon {
+            background-position: -454px 9px;
+        }
+
+        .box10 .d1>.icon {
+            background-position: 3px -69px;
+        }
+
+
+        #main-content .eachbox .d1>.title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 28px;
+            color: #000000;
+            margin: 39px 0 45px;
+            text-align: left;
+        }
+
+        .eachbox .d1>.title.t2 {
+            margin: 46px 0 45px;
+        }
+
+        #main-content .eachbox .d2 {
+            text-align: left;
+            height: 0px;
+            overflow: hidden;
+            /* transition:  height 0.5s; */
+        }
+
+        #main-content .eachbox .d2 .text {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            color: #545659;
+            margin-bottom: 40px;
+        }
+
+        #main-content .eachbox .d2 .text a,
+        #main-content .eachbox .d2 .text button {
+            text-decoration: underline;
+            color: #4E8DF6;
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        #main-content .eachbox .d2 .iconbox .icontitle {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            color: rgba(0, 0, 0, 0.7);
+            margin: 33px auto 15px;
+            position: relative;
+            padding-left: 21px;
+        }
+
+        .h_40 {
+            height: 40px;
+        }
+
+        .h_36 {
+            height: 36px;
+        }
+
+        .h_30 {
+            height: 30px;
+        }
+
+        #main-content .eachbox .d2 .iconbox .icontitle::before {
+            content: ' ';
+            width: 13px;
+            height: 13px;
+            background: #4E8DF6;
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 0px;
+        }
+
+        #main-content .eachbox .d2 .iconbox .icon {
+            padding-left: 20px;
+            display: flex;
+        }
+
+        #main-content .eachbox .d2 .iconbox .icon>img {
+            margin-right: 30px;
+        }
+
+        #main-content .eachbox .d2 .iconbox .icon>img:last-of-type {
+            margin-right: 0;
+        }
+
+        #main-content .eachbox .d2 .iconbox .icon>.img {
+            width: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            color: #4285F4;
+        }
+
+        #main-content .eachbox .d2 .iconbox .icon>.img>span {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 8px;
+            line-height: 9px;
+            text-align: center;
+            margin-top: 1px;
+            transform: scale(0.75);
+        }
+
+        #main-content .showbox .eachbox .d2 {
+            height: auto;
+        }
+
+        .eachbox .jt {
+            transform: rotate(180deg);
+            position: absolute;
+            bottom: 23px;
+            right: 37px;
+            transition: all 0.3s;
+        }
+
+        .showbox .eachbox .jt {
+            transform: rotate(0deg);
+        }
+
+        @media (max-width:1180px) {
+            .part3main {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                max-width: 830px;
+                margin: 0 auto;
+            }
+
+            .part3main .hidebox {
+                justify-content: center;
+
+            }
+
+            .part3main .hidebox.open {
+                justify-content: center;
+                max-width: 300px;
+            }
+        }
+
+        /* partbottom */
+        .partbottom {
+            background-color: #4E8DF6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .partbottom .cont {
+            max-width: 1080px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .partbottom .cont>div {
+            width: 45%;
+        }
+
+        .partbottom .cont div.right-box {
+            width: 52%;
+        }
+
+        .left-box {
+            margin: 35px 0;
+  display: flex;
+}
+.left-box .ellipse.xuxu {
+  transform: translateY(100px);
+}
+.left-box .ellipse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 125px;
+  height: 160px;
+  background-image: url(http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/ellipse-bg-new-v2.png);
+  background-size: 100% 100%;
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  border-radius: 62.5px;
+}
+.left-box .ellipse .photo {
+  width: 100px;
+  height: 100px;
+  margin: 10px auto 8px;
+}
+.left-box .ellipse .name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.left-box > .ellipse:first-child {
+  margin-top: 100px;
+}
+.left-box .e-box .ellipse:last-child {
+  margin-top: 33px;
+  margin-left: 3px;
+}
+.left-box .e-box .ellipse:last-child {
+  margin-top: 18px;
+  margin-left: 18px;
+}
+.left-box > .ellipse:last-child {
+  margin-top: 68px;
+  margin-left: 3px;
+}
+
+        .partbottom .cont .right-box {
+            margin: 100px 0 87px;
+        }
+
+        .partbottom .cont .right-box .text {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 60px;
+            color: #FFFFFF;
+            margin-bottom: 34px;
+        }
+
+        .partbottom .cont .right-box .btn {
+            display: flex;
+        }
+
+        .partbottom .cont .right-box .btn1 {
+            width: 211px;
+            height: 53px;
+            display: block;
+            background: #E16427;
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            border: 0;
+            text-decoration: none;
+            line-height: 53px;
+            margin-right: 32px;
+        }
+
+        @media (max-width:1200px) {
+            .partbottom .cont {
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                width: 90%;
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont>div {
+                width: 45%;
+                margin-right: 3%;
+            }
+
+        }
+
+        @media (max-width:980px) {
+            .partbottom .cont {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont .left-box {
+                width: 425px;
+                margin-top: 50px;
+            }
+
+            .partbottom .cont .right-box .text {
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 1150px) {
+            div.et_pb_row {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 750px) {}
+
+        @media (max-width: 560px) {
+            div.et_pb_css_mix_blend_mode_passthrough {
+                margin-left: 0px !important;
+            }
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="main-content">
+       
+    <div class="part1">
+      
+        <div class="part1main outbox">
+            <h1 class="part1-title">Information Security and Compliance</h1>
+            <p class="part1-title2">Our customers trust us with their data, and we’re committed to enforcing all
+                safeguards needed to protect your information.</p>
+            <div class="part1img">
+                <img class="mainimg"
+                    src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/anquan1.png" alt="">
+                <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-3.png" alt=""
+                    class="icon">
+                <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-2.png" alt=""
+                    class="icon">
+                <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-1.png" alt=""
+                    class="icon">
+            </div>
+        </div>
+    </div>
+    <div class="part2 outbox">
+        <p class="title">A High Bar for Privacy and Security</p>
+        <div class="part2mian">
+            <div class="leftbox">
+                <div class="text t1 act">
+                    <p class="title">CCPA Compliant</p>
+                    <p class="content">Under the California Consumer Privacy Act (CCPA), any California consumer can
+                        request to view all information a company has saved on them along with a full list of all third
+                        parties that data is shared with. If privacy guidelines are violated, even if there is no
+                        breach, consumers have the right to sue the company. Hiretual values consumer trust and is 100%
+                        CCPA compliant.</p>
+                    <a target="_blank" href="https://www.oag.ca.gov/privacy/ccpa" rel="noopener" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_Learn more about CCPA">Learn more about CCPA---></a>
+                </div>
+                <div class="text t2">
+                    <p class="title">GDPR compliant</p>
+                    <p class="content">The GDPR is the latest data protection directive for businesses to protect the
+                        privacy of EU citizens with enhanced security provisions. Hiretual is 100% GDPR compliant.</p>
+                    <a target="_blank" href="https://gdpr-info.eu/" rel="noopener" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_Learn more about GDPR">Learn more about GDPR---></a>
+                </div>
+                <div class="text t3">
+                    <p class="title">
+                        SOC 2 Type 2 certified</p>
+                    <p class="content">The SOC 2 Type 2 reports concern policies and procedures over a specified time
+                        period. For this more rigorous designation, systems must be evaluated for a minimum of six
+                        months.
+
+                        Hiretual’s procedures and controls have been third-party audited to validate our success in
+                        ensuring the security, availability, processing integrity and confidentiality of our customer’s
+                        information.</p>
+                    <a target="_blank" href="https://us.aicpa.org/interestareas/frc/assuranceadvisoryservices/serviceorganization-smanagement" rel="noopener" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_Learn more about SOC 2 Type 2 certified">Learn more about
+                        SOC 2 Type 2 certified---></a>
+                </div>
+                <div class="text t4">
+                    <p class="title">EU-US Privacy
+                        Shield certified</p>
+                    <p class="content">The Privacy Shield Framework, approved by the European Union (EU) and US
+                        Government, is a recognized mechanism for complying with EU data protection requirements when
+                        transferring personal data from the European Economic Area (EEA) to the United States.
+                        Organizations participating in the Framework are deemed to provide “adequate” privacy protection
+                        of data, as required under the EU Data Protection Directive and the General Data Protection
+                        Regulation (GDPR).
+                        Hiretual is aware of the Schrems II decision. In lieu of the Schrems II decision, Hiretual
+                        relies on the Standard Contractual Clauses (SCCs) from the GDPR incorporated into its Data
+                        Processing Addendums for any data transfers from the EEA to the U.S.</p>
+                    <a target="_blank" href="https://www.privacyshield.gov/Program-Overview" rel="noopener" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_Learn more about EU-US Privacy Shield certified">Learn more about EU-US Privacy Shield certified---></a>
+                </div>
+                <div class="text t5">
+                    <p class="title">OFCCP</p>
+                    <p class="content">The Office of Federal Contract Compliance (OFCCP) is a federal government organization that is responsible for ensuring that the companies working with the government are in compliance with fair employment practices. Hiretual supports record keeping standards established by OFCCP as required by our customers who are subject to this compliance. Hiretual helps the customers with their OFCCP audit by providing diversity reports that allows recruiters to gain analytical insights to their candidate pipelines. These reports provide a breakdown on the search by gender and ethnicity for candidates that they've taken an action on or engaged with on Hiretual's platform. These diversity reports from Hiretual can help a team's good faith diversity efforts in the case of an OFCCP audit, by allowing them to track and demonstrate the number of diversity searches performed and the ratio of underrepresented candidates in their pipeline. </p>
+                    <a target="_blank" href="https://www.dol.gov/agencies/ofccp" rel="noopener" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_Learn more about OFCCP">Learn more about OFCCP---></a>
+                </div>
+            </div>
+            <div class="rightbox">
+                <div class="logoline1">
+                    <a class="logo act" href="javascript:void(0)" data="t1" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_CCPA Compliant">
+                        <!-- <a target="_blank" href="https://www.oag.ca.gov/privacy/ccpa" rel="noopener"> -->
+                            <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/logo-5.png"
+                                alt="">
+                            <span>CCPA Compliant</span>
+                        <!-- </a> -->
+                    </a>
+                    <a class="logo" href="javascript:void(0)" data="t2" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_GDPR Compliant">
+                        <!-- <a target="_blank" href="https://gdpr-info.eu/" rel="noopener"> -->
+                            <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/logo-2.png"
+                                alt="">
+                            <span>GDPR compliant</span>
+                        <!-- </a> -->
+                    </a>
+                </div>
+                <div class="logoline2">
+                    <div class="logo" href="javascript:void(0)" data="t3" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_SOC 2 SOC 2 Type 2 Certified">
+                 
+                            <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/logo-4.png"
+                                alt="">
+                            <span>SOC 2 Type 2 certified</span>
+                     
+                    </div>
+                    <a class="logo" href="javascript:void(0)" data="t4" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_EU-US Privacy Shield Certified">
+                        <!-- <a target="_blank" href="https://www.privacyshield.gov/Program-Overview" rel="noopener"> -->
+                            <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/logo-1.png"
+                                alt="">
+                            <span>EU-US Privacy <br>
+                                Shield certified</span>
+                        <!-- </a> -->
+                    </a>
+                    <a class="logo" href="javascript:void(0)" data="t5" data-vars-ga-category="A High Bar for Privacy and Security" data-vars-ga-action="click_OFCCP">
+                        <!-- <a target="_blank" href="https://www.dol.gov/agencies/ofccp" rel="noopener"> -->
+                            <img style="height: 60px;margin-bottom: 27px;"
+                                src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/logo-3.png"
+                                alt="">
+                            <span>OFCCP</span>
+                        <!-- </a> -->
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="part3">
+        <p class="title">Designed to Protect You</p>
+        <div class="part3main">
+            <div class="showbox">
+            </div>
+            <div class="hidebox">
+                <a class="eachbox box1" href="javascript:void(0)" n=0 data-vars-ga-category="Designed to Protect You" data-keyaction="Data Center Security">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Data Center Security</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            Hiretual’s physical infrastructure is hosted and managed within Amazon’s secure data
+                            centers, as we utilize Amazon Web Service (AWS) technology. Amazon continually manages risk
+                            and undergoes recurring assessments to ensure compliance with industry standards. Amazon’s
+                            data center operations have been accredited under:<br>
+                            Learn more about Amazon security:
+                            <button onclick="window.open('https://aws.amazon.com/security/')" >https://aws.amazon.com/security</button>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">SOC 1/SSAE 16/ISAE 3402 (formerly SAS 70)</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-3-1.png"
+                                    alt="">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-1-1.png"
+                                    alt="">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-13.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">SOC 2</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-4.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">SOC 3</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-5.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">FISMA, DIACAP, and FedRAMP</p>
+                            <div class="icon">
+                                <img class="h_36"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-8.png"
+                                    alt="">
+                                <img class="h_36"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-2-1.png"
+                                    alt="">
+                                <img class="h_36"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-9.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">DOD CSM Levels 1-5</p>
+                            <div class="icon">
+                                <div class="h_36"></div>
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">PCI DSS Level 1</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-14.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">ISO 9001 / ISO 27001 / ISO 27017 / ISO 27018</p>
+                            <div class="icon">
+                                <div class="img">
+                                    <img class="h_30"
+                                        isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-6-1.png"
+                                        alt="">
+                                    <span>9001</span>
+                                </div>
+                                <div class="img">
+                                    <img class="h_30"
+                                        isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-6-1.png"
+                                        alt="">
+                                    <span>27001</span>
+                                </div>
+                                <div class="img">
+                                    <img class="h_30"
+                                        isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-6-1.png"
+                                        alt="">
+                                    <span>27017</span>
+                                </div>
+                                <div class="img">
+                                    <img class="h_30"
+                                        isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-6-1.png"
+                                        alt="">
+                                    <span>27018</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">ITAR</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-10.png"
+                                    alt="">
+                            </div>
+                        </div>
+
+                        <div class="iconbox">
+                            <p class="icontitle">FIPS 140-2</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-7.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">MTCS Level 3</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-11.png"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="iconbox">
+                            <p class="icontitle">HITRUST</p>
+                            <div class="icon">
+                                <img class="h_40"
+                                    isrc="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/icon-12.png"
+                                    alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box2" href="javascript:void(0)" n=1 data-vars-ga-category="Designed to Protect You" data-keyaction="Penetration Testing and Vulnerability Assessments">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Penetration Testing and Vulnerability Assessments</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            Third-party security testing of Hiretual's platform is performed by independent and
+                            reputable security consulting firms including and not limited to Leviathan and BishopFox.
+                            Findings from each assessment are reviewed by the assessors, risk ranked, and assigned to
+                            the responsible team.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box3" href="javascript:void(0)" n=2 data-vars-ga-category="Designed to Protect You" data-keyaction="Encrypted Data at Rest">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Encrypted Data at Rest</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            The data is stored encrypted in AWS EBS volumes with snapshots backed by Amazon S3. All data
+                            at rest is encrypted using Advanced Encryption Standard (AES) 256, a symmetric-key
+                            encryption standard using 256-bit encryption keys.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box4" href="javascript:void(0)" n=3 data-vars-ga-category="Designed to Protect You" data-keyaction="Encrypt Data in Transit">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Encrypt Data in Transit</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            Hiretual enables HTTPS for its customer facing web-services and internal services including
+                            SSL database connections to protect sensitive data transmitted to and from applications. To
+                            access Hiretual web services, a user requires a more secure network connection using the web
+                            browser. It is mandatory to use TLS 1.2 with strict cipher suites for secure network
+                            communication and data exchange between users systems and Hiretual web services.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box5" href="javascript:void(0)" n=4 data-vars-ga-category="Designed to Protect You" data-keyaction="Customer Data Retention and Destruction">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Customer Data Retention and Destruction</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            A customer has the freedom to request for removal of their data to comply with their data
+                            retention requirements. If they do not request explicitly for data removal, then Hiretual
+                            retains the database’s storage for a period of three years, after which time it is
+                            automatically destroyed, rendering the data unrecoverable.
+                            Decommissioning hardware is managed by our infrastructure provider using a process designed
+                            to prevent customer data exposure. AWS uses the techniques detailed in NIST 800-88
+                            (“Guidelines for Media Sanitization”) as part of the decommissioning.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box6" href="javascript:void(0)" n=5 data-vars-ga-category="Designed to Protect You" data-keyaction="Data Backups">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Data Backups</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            Application database backups for our products occur on the following frequencies: On site
+                            backups are performed daily and retained for two days in AWS us-west regions; Additional
+                            backups are taken bi-weekly, which are then stored and retained for four weeks in AWS
+                            us-east region. All backup data is encrypted using AES-256 encryption.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box7" href="javascript:void(0)" n=6 data-vars-ga-category="Designed to Protect You" data-keyaction="Physical Security">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Physical Security</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            Hiretual utilizes ISO 27001 and FISMA certified data centers managed by Amazon. AWS data
+                            centers are housed in nondescript facilities branded as AWS facilities. Physical access is
+                            strictly controlled both at the perimeter and at building ingress points by professional
+                            security staff utilizing video surveillance, intrusion detection systems, and other
+                            electronic means.
+                            Authorized staff must pass two-factor authentication a minimum of two times to access data
+                            center floors. All visitors are required to present identification and are signed in and
+                            continually escorted by authorized staff.
+                            AWS only provides data center access and information to employees and contractors who have a
+                            legitimate business need for such privileges. When an employee no longer has a business need
+                            for these privileges, his or her access is immediately revoked, even if they continue to be
+                            an employee of Amazon or Amazon Web Services. All physical access to data centers by AWS
+                            employees is logged and audited.
+
+                            For additional information see:
+                            <button onclick="window.open('https://aws.amazon.com/security')">https://aws.amazon.com/security</button>
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box8" href="javascript:void(0)" n=7 data-vars-ga-category="Designed to Protect You" data-keyaction="Data Access Control Access">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Data Access Control Access</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            At Hiretual, data access controls all infrastructure and customer’s data is granted based on
+                            principles of least privilege and need-to-know governed by role and individual user
+                            profiles. Access Authentication at Hiretual supports SAML 2.0 and SSO integration. Hiretual
+                            utilizes MFA, AWS SSO and Okta IdP to prevent unauthorized access to the systems and
+                            application.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box9" href="javascript:void(0)" n=8 data-vars-ga-category="Designed to Protect You" data-keyaction="Secure Development Practices">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Secure Development Practices</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            Audited and governed through SOC2 compliance, Hiretual actively monitors and applies
+                            development best practices to mitigate known vulnerability types such as those on the OWASP
+                            Top 10 Web Application Security Risks and actively monitors vulnerabilities using Lacework.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+                <a class="eachbox box10" href="javascript:void(0)" n=9 data-vars-ga-category="Designed to Protect You" data-keyaction="Disaster Recovery and High Availability">
+                    <div class="d1">
+                        <div class="icon"></div>
+                        <p class="title">Disaster Recovery and High Availability</p>
+                    </div>
+                    <div class="d2">
+                        <div class="text">
+                            Hiretual web services using AWS CloudFormation automates disaster recovery and automatically
+                            restores web applications and databases in the case of a disaster. Hiretual’s platform is
+                            designed to dynamically deploy the web-services within AWS US cloud regions, actively
+                            monitor for service failures, and recover any failed platform components including the
+                            web-services, application and database.
+                        </div>
+                    </div>
+                    <img class="jt" alt="Arrow pointing up"
+                        src="https://hiretual.com/wp-content/uploads/2021/05/listicon.png">
+                </a>
+            </div>
+        </div>
+    </div>
+     <!-- partbottom -->
+     <div class="partbottom">
+        <div class="cont">
+           <div class="left-box">
+    <div class="ellipse">
+        <picture>
+            <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/newHealthcare-2X.webp" type="image/webp">
+            <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/newHealthcare-2X.png" type="image/png">
+            <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/newHealthcare-2X.png" alt="Portrait of a girl" class="photo">
+        </picture>
+        <div class="name">Healthcare</div>
+    </div>
+    <div class="e-box">
+        <div class="ellipse">
+            <picture>
+                <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/Diversity-2X.webp" type="image/webp">
+                <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/Diversity-2X.png" type="image/png">
+                <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/Diversity-2X.png" alt="Portrait of a girl" class="photo">
+            </picture>
+            <div class="name">Diversity</div>
+        </div>
+        <div class="ellipse">
+            <picture>
+                <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/newScholar-2X.webp" type="image/webp">
+                <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/newScholar-2X.png" type="image/png">
+                <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/newScholar-2X.png" alt="Portrait of a man" class="photo">
+            </picture>
+            <div class="name">Scholar</div>
+        </div>
+    </div>
+    <div class="ellipse">
+        <picture>    
+            <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/Tech-2X.webp" type="image/webp">
+                <source srcset="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/Tech-2X.png" type="image/png">
+            <img src="http://hiretual.kinsta.cloud/wp-content/uploads/2021/11/Tech-2X.png" type="image/png" alt="Portrait of a man" class="photo">
+        </picture>
+        <div class="name">Tech</div>
+    </div>
+</div>
+            <div class="right-box">
+                <div class="text">Ready to hire the best talent?</div>
+                <a class="jump-button2"
+                    data-vars-ga-category="curious to know why thousands of recruiters trust Hiretual to find and hire the best candidates?"
+                    data-vars-ga-action="click_contact sales" href="https://explore.hiretual.com/contact-sales">CONTACT
+                    SALES</a>
+
+            </div>
+        </div>
+    </div>
+    <script src="./jQuery-3-5-1.js"></script>
+    <script>
+        var on_load = true;
+        var flag = true;
+        var enter = '';
+        var $ = $ || jQuery;
+        var pageHref = window.location.href;
+        var public_fn = {
+            init: function () {
+                if (!on_load) return;
+                on_load = false;
+                $('.showbox').on('click', '.eachbox', public_fn.closebox);
+                $('.eachbox').click(public_fn.openbox);
+                $('.logo').on('click', public_fn.clicklogo);
+                public_fn.addGaAction();
+              
+                $('.part2 a, .part3 a, .partbottom a').attr('data-vars-ga-label', pageHref);
+            },
+            clicklogo: function (e) {
+                
+                var control = $(this).attr('data');
+                if (enter == control) {
+                    return;
+                } else {
+                    enter = control;
+                }
+                $('.logo').removeClass('act');
+                $(this).addClass('act');
+                $('.text').removeClass('act');
+                $('.text.' + control).addClass('act');
+            },
+            
+            openbox: function () {
+                if (flag) {
+                    public_fn.loadimg();
+                    flag = false
+                }
+
+                var _this = $(this);
+                if (!_this.attr('open') && ($('.showbox .eachbox').length == 0)) {
+                    // _this.find('.jt').attr('open',1);
+                    _this.attr('open', 1);
+
+                    $('.showbox').html(_this).slideDown(800);
+                    $('.hidebox').add('.showbox').removeClass('hide').addClass('open');
+
+                } else if ($('.showbox .eachbox').length > 0) {
+                    $('.showbox .eachbox').attr('open', false);
+                    $('.hidebox').append($('.showbox .eachbox'));
+
+                    $('.showbox').html(_this);
+                }
+                public_fn.boxsort(_this.attr('n'));
+                _this.addClass('view');
+
+                public_fn.scrollfn();
+                public_fn.addGaAction();
+
+            },
+            closebox: function (e) {
+                if (e.target.localName == 'button') return;
+                var _this = $(this);
+                _this.parent().attr('open', false);
+                $('.showbox').slideUp(800, function () {
+                    $('.hidebox').append($('.showbox .eachbox'));
+                    public_fn.boxsort(0);
+                    $('.hidebox').add('.showbox').removeClass('open').addClass('hide');
+                });
+                _this.attr('data-vars-ga-action', 'click_expand_'+_this.attr('data-keyaction'));
+            },
+            boxsort: function (num) {
+                var eles = $('.part3main .eachbox');
+                for (var i = 0; i < eles.length; i++) {
+                    var e = $(eles[i]);
+                    var elen = +e.attr('n');
+                    var order = elen >= num ? (elen - num) : (eles.length - num + elen);
+                    $(e).css('order', order);
+                }
+            },
+            loadimg: function () {
+                var isrcs = $('img[isrc]');
+                console.log(isrcs)
+                var imgsrc;
+                for (var i = 0; i < isrcs.length; i++) {
+                    imgsrc = isrcs.eq(i).attr('isrc');
+                    isrcs.eq(i).attr('src', imgsrc);
+                }
+            },
+            scrollfn: function () {
+
+                window.scrollTo({
+                    left: 0,
+                    top: $('.part3').offset().top,
+                    behavior: 'smooth'
+                });
+            },
+            addGaAction() {
+                $('.hidebox a.eachbox').map(i => $('.hidebox a.eachbox').eq(i).attr('data-vars-ga-action','click_expand_' + $('.hidebox a.eachbox').eq(i).attr('data-keyaction')));
+                $('.showbox a.eachbox').map(i => $('.showbox a.eachbox').eq(i).attr('data-vars-ga-action','click_fold_' + $('.showbox a.eachbox').eq(i).attr('data-keyaction')));
+            }
+        }
+        window.addEventListener('load', public_fn.init);
+       
+        
+    </script>
+</body>
+</html>

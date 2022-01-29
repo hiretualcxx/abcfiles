@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+    .box{
+        width: 100%;
+        border: 1px solid #999;
+        border-radius: 20px;
+        display: flex;
+        min-height: 500px;
+        padding: 0 15px;
+    }
+    .urlbox{
+    flex: 1 1 35%;
+    border-right: 1px solid #999;
+    padding-top: 70px;
+    }
+    .urlbox>li{
+        text-align: left;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      font-size: 15px;
+      font-weight: 500;
+      height: 35px;
+      line-height: 35px;
+      text-align: left;
+      border-bottom: 1px solid #999;
+    }
+    .databox{
+        flex: 1 1 65%;
+        font-size: 15px;
+      font-weight: 500;
+      line-height: 35px;
+      text-align: center;
+      display: flex;
+      overflow-x: scroll;
+    }
+    .databox .everdaybox{
+        width: 450px;
+        border: 1px solid #999;
+        flex: 0 0 450px;
+    }
+    .databox .everdaybox .date{
+        height: 35px;
+        border-bottom: 1px solid #999;
+    }
+    .everdaybox .toptitle{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .everdaybox .toptitle>span{
+        flex: 1 1 20%;
+        font-size: 12px;
+        border-right: 1px solid #999;
+    }
+    .everdaybox .numbox{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .everdaybox .numbox>ul{
+        flex: 1 1 20%;
+        font-size: 12px;
+        border-right: 1px solid #999;
+    }
+    .everdaybox .numbox>ul>li{
+        height: 35px;
+        border-bottom: 1px solid #999;
+    }
+    </style>
+</head>
+<body>
+    <button onclick="tool_fn.toLargerCSV()" class="getcsv">导出</button>
+
+    <div class="box">
+        <ul class="urlbox">
+            <li>https://hiretual.com/features/expansive-candidate-profiles/</li>
+
+            <li>https://hiretual.com/features/expansive-candidate-profiles/</li>
+            <li>https://hiretual.com/features/expansive-candidate-profiles/</li>
+            <li>https://hiretual.com/features/expansive-candidate-profiles/</li>
+            <li>https://hiretual.com/features/expansive-candidate-profiles/</li>
+            <li>https://hiretual.com/features/expansive-candidate-profiles/</li>
+            <li>https://hiretual.com/features/expansive-candidate-profiles/</li>
+
+        </ul>
+        <div class="databox">
+            <div class="everdaybox">
+                <div class="date">2021-2-5</div>
+                <div class="toptitle">
+                    <span>Performance</span>
+                    <span>Accessibility</span>
+                    <span>Best Practices</span>
+                    <span>SEO</span>
+                    <span>Google</span>
+                </div>
+                <div class="numbox">
+                
+                        <ul id="Performance">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="Accessibility">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="Best_Practices">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="seo">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="Google">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                 
+                </div>
+            </div>
+            <div class="everdaybox">
+                <div class="date">2021-2-6</div>
+                <div class="toptitle">
+                    <span>Performance</span>
+                    <span>Accessibility</span>
+                    <span>Best Practices</span>
+                    <span>SEO</span>
+                    <span>Google</span>
+                </div>
+                <div class="numbox">
+                
+                        <ul id="Performance">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="Accessibility">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="Best_Practices">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="seo">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                        <ul id="Google">
+                            <li>99</li>
+
+                            <li>99</li>
+                            <li>99</li>
+                            <li>99</li>
+                        </ul>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./jQuery-3-5-1.js"></script>
+    <script src="./seodata.html"></script>
+    <script>
+        var urlarr = ['https://hiretual.com/', 'https://hiretual.com/about-us/',
+      'https://hiretual.com/accessibility-statement/', 'https://hiretual.com/api/', 'https://hiretual.com/apps/',
+      'https://hiretual.com/careers/', 'https://hiretual.com/ccpa/',
+      'https://hiretual.com/features/expansive-candidate-profiles/', 'https://hiretual.com/featured-articles/',
+      'https://hiretual.com/features/chrome-extension/', 'https://hiretual.com/features/diversity-inclusion/',
+      'https://hiretual.com/features/engagement/', 'https://hiretual.com/features/insights/',
+      'https://hiretual.com/features/integrations/', 'https://hiretual.com/features/security-clearance/',
+      'https://hiretual.com/features/sourcing/', 'https://hiretual.com/features/talent-data-cloud/',
+      'https://hiretual.com/gdpr/', 'https://hiretual.com/google-api-disclosure/',
+      'https://hiretual.com/new-partners/', 'https://hiretual.com/new-pricing/',
+      'https://hiretual.com/new-pricing/professional/', 'https://hiretual.com/newsroom/',
+      'https://hiretual.com/partners/', 'https://hiretual.com/partners/partner-program/',
+      'https://hiretual.com/pressrelease/', 'https://hiretual.com/resources/content-library/',
+      'https://hiretual.com/resources/feature-releases/', 'https://hiretual.com/security-compliance/',
+      'https://hiretual.com/solutions/', 'https://hiretual.com/solutions/enterprise/',
+      'https://hiretual.com/solutions/hypergrowth/', 'https://hiretual.com/solutions/small-medium/',
+      'https://hiretual.com/solutions/healthcare/', 'https://hiretual.com/solutions/security-defense/',
+      'https://hiretual.com/solutions/staff/', 'https://hiretual.com/solutions/collaboration/',
+      'https://hiretual.com/solutions/data-consolidation/', 'https://hiretual.com/solutions/business-development/',
+      'https://hiretual.com/sponsored/', 'https://hiretual.com/blog/how-to-source-candidates-on-Github',
+      'https://hiretual.com/blog/different-between-sourcing-vs-recruiting/',
+      'https://hiretual.com/blog/how-to-add-hiretual-chrome-extension/',
+      'https://hiretual.com/blog/recruiting-email-templates/',
+      'https://hiretual.com/blog/what-is-an-executive-recruiter/',
+      'https://hiretual.com/blog/best-email-finding-tool-for-recruiter/',
+      'https://hiretual.com/blog/what-is-hiretual/',
+      'https://hiretual.com/blog/boolean-recruiting-tools-with-hiretual/'
+    ]
+    
+        var tool_fn = {
+            init:function(){
+                tool_fn.showurl();
+                // tool_fn.showdata1();
+            },
+            showurl:function(){
+                var str = '<li>url</li>';
+                for(var i=0;i<urlarr.length;i++){
+                    str += `<li>${urlarr[i]}</li>`;
+                }
+
+                $('.urlbox').html(str)
+            },
+            showdata1:function(){
+                console.log(d_arr)
+                d_arr = d_arr || [];
+                for(var i=0;i<d_arr.length;i++){
+                    var odiv = document.createElement('div');
+                    $(odiv).attr({'class':'everdaybox','id':d_arr[i].date});
+                    $('.databox').append(odiv);
+                    console.log(odiv)
+                    tool_fn.readdata(d_arr[i]);
+                }
+            },
+            readdata:function(){
+
+            },
+            toLargerCSV:function(){
+ //CSV格式可以自己设定，适用MySQL导入或者excel打开。
+ //由于Excel单元格对于数字只支持15位，且首位为0会舍弃 建议用 =“数值” 
+                d_arr = d_arr || [];
+                var day = ' ,';
+                var title = 'url,';
+                var numstr = '';
+                var urlobj = {};
+
+                for(var i=0;i<d_arr.length;i++){
+                  day+=`${d_arr[i].date}, , , , ,`;
+                  title+=`Performance,Accessibility,Best Practices,SEO,Google,`
+                   
+                    number(d_arr[i].d);
+                };
+
+
+
+                function number(d){
+                    for(var key in d){
+                        var d0 = d[key];
+                        urlobj[key] =  urlobj[key] || '';
+                        urlobj[key] += `${Math.floor(d0.Performance*100)|| 'xxx'},${Math.floor(d0.Accessibility*100)|| 'xxx'},${Math.floor(d0.Best_Practices*100)|| 'xxx'},${Math.floor(d0.seo*100)|| 'xxx'},${Math.floor(d0.Google*100)|| 'xxx'},`;
+
+                    }
+                };
+                for(var k=0;k<urlarr.length;k++){
+                    urlobj[urlarr[k]] = `${urlarr[k]},${urlobj[urlarr[k]]}`;
+                    numstr += (urlobj[urlarr[k]]+'\n');
+                }
+str = `${day}\n${title}\n${numstr}`
+
+
+
+
+
+
+//  var str = '行号,内容,题目,标题\n aa \t,bb  \n';
+ 
+//  for(let i=0;i<100000;i++){
+//   str += i.toString()+',1234567890123456789\t,张三李四王五赵六,bbbb,\n'
+//  }
+ var blob = new Blob([str], {type: "text/plain;charset=utf-8"});  
+ //解决中文乱码问题
+ blob = new Blob([String.fromCharCode(0xFEFF), blob], {type: blob.type}); 
+ object_url = window.URL.createObjectURL(blob); 
+ var link = document.createElement("a");
+ link.href = object_url;
+ link.download = "导出.csv";
+ document.body.appendChild(link);
+ link.click();
+ document.body.removeChild(link);        
+ }
+        }
+
+        window.addEventListener('load',tool_fn.init)
+
+
+
+
+    </script>
+</body>
+</html>

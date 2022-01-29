@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Cookiebot  -->
+  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="63dcd82f-a840-4920-8988-8fa19ab4a95f"
+    data-blockingmode="auto" type="text/javascript"></script>
+  <!-- Cookiebot  -->
+  <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('message', receiveMessage, false);
+    function receiveMessage(event) {
+      if (event.data && event.data.message === 'PARDOT_DATA' && event.data.data) {
+        var data = event.data.data
+        const submitData = {
+          FirstName: data['FirstName'],
+          LastName: data['LastName'],
+          Email: data['WorkEmail'],
+          Lead_Form_Company_Size__c: data['CompanySize'],
+          Number_of_recruiters__c: data['NumberofRecruiters']
+        }
+        ChiliPiper.submit("hiretual", "pardot-request-a-demo", { map: true, lead: submitData })
+      }
+    };
+  </script>
+  <!-- zoominfo -->
+        <script>
+        (function () {
+          var zi = document.createElement('script');
+          zi.type = 'text/javascript';
+          zi.async = true;
+          zi.src = 'https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(zi, s);
+        })();
+        </script>
+   <script>
+    function getParam(p) {
+      var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    }
+    
+    function getExpiryRecord(value) {
+      var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 以毫秒计的 90 天有效期
+    
+      var expiryDate = new Date().getTime() + expiryPeriod;
+      return {
+        value: value,
+        expiryDate: expiryDate
+      };
+    }
+    
+    function addGclid() {
+      var gclidParam = getParam('gclid');
+      var gclidFormFields = ['874171_101583pi_874171_101583', 'foobar']; // 此处所有可能的 GCLID 表单字段
+      var gclidRecord = null;
+      var currGclidFormField;
+    
+      var gclsrcParam = getParam('gclsrc');
+      var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+    
+      gclidFormFields.forEach(function (field) {
+        if (document.getElementById(field)) {
+          currGclidFormField = document.getElementById(field);
+        }
+      });
+    
+      if (gclidParam && isGclsrcValid) {
+        gclidRecord = getExpiryRecord(gclidParam);
+        localStorage.setItem('gclid', JSON.stringify(gclidRecord));
+      }
+    
+      var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
+      var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+    
+      if (currGclidFormField && isGclidValid) {
+        currGclidFormField.value = gclid.value;
+      }
+    }
+    
+    window.addEventListener('load', addGclid);
+    </script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-CompatibleasdgIE=edge,chrome=1">
+  <meta name="description" content="%%description%%">
+  <title>%%title%% | Hiretual</title>
+  <link rel="icon" href="https://storage.pardot.com/874171/163468/htm_icon.webp">
+  <meta name="viewportasdgwidth=device-width, initial-scale=1.0">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://explore.hiretual.com/diversity.css">
+  <link rel="stylesheet" type="text/css" href="https://explore.hiretual.com/explore.hiretual.index.css" />
+
+  <!-- Global site tag (gtag.js) - Google Ads: 847012623 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-847012623"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-847012623');
+  </script>
+  <!--  Added by GoogleAnalytics integration -->
+  <script>
+    var _hsq = window._hsq = window._hsq || [];
+    _hsq.push(['addPrivacyConsentListener', function (consent) {
+      if (consent.allowed) {
+        (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-150598825-2', 'auto');
+        ga('send', 'pageview');
+      }
+    }]);
+  </script>
+
+  <!-- /Added by GoogleAnalytics integration -->
+
+  <link rel="canonical" href="https://discover.hiretual.com/source-candidates-with-security-clearance">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NSNSKFX');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5TF7RMB');</script>
+  <!-- End Google Tag Manager -->
+
+  <script>(function (c, p, d, u, id, i) {
+      id = ''; // Optional Custom ID for user in your system
+      u = 'https://tracking.g2crowd.com/attribution_tracking/conversions/' + c + '.js?p=' + encodeURI(p) + '&e=' + id;
+      i = document.createElement('script');
+      i.type = 'application/javascript';
+      i.src = u;
+      d.getElementsByTagName('head')[0].appendChild(i);
+    }("1397", document.location.href, document));</script>
+
+  <!-- Hotjar Tracking Code for https://discover.hiretual.com -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 1537703, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <style>
+    img,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    li,
+    span,
+    a,
+    p {
+      font-family: "Poppins", arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Poppins;
+    }
+
+    #page-heade {
+      width: 100%;
+      display: flex;
+      z-index: 99;
+    }
+
+    #page-heade div img {
+      z-index: 99;
+      width: 99px;
+      height: 99px;
+      border-radius: 100%;
+      background-color: #32C5FF;
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+
+    /* part1 */
+    /*part1 */
+    .part1 {
+      position: relative;
+      width: 100%;
+      /* background-image: url(https://explore.hiretual.com/l/874171/2021-01-28/949s1m/874171/1611895775GrIYehWR/group_6bg.png); */
+      background-image: url(https://explore.hiretual.com/l/874171/2021-01-29/94bdn9/874171/1611976513rlNMPEDQ/LP_Security_topbg.png);
+      background-position: center bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #f1f1f1;
+      box-sizing: border-box;
+    }
+    .partbgimg{
+      position: absolute;
+      left: 0;
+      bottom: 90px;
+      width: 100%;
+      max-width: 980px;
+      z-index: 1;
+    }
+    .title_img_table {
+      z-index: 9;
+      padding-top: 53px;
+      padding-bottom: 50px;
+      margin: 0 auto;
+      width: 83%;
+      max-width: 1500px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left_part {
+      width: 53%;
+      margin-top: 55px;
+      max-width: 650px;
+    }
+
+    .part1-title {
+      text-align: left;
+      width: 100%;
+      font-size: 36px;
+      font-weight: 700;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.19;
+      letter-spacing: normal;
+      color: #2768b3;
+    }
+
+    .part1-title>span {
+      color: #32c5ff;
+    }
+
+    .part1-h5 {
+      text-align: left;
+      font-size: 21px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.43;
+      letter-spacing: normal;
+      color: #2768b3;
+      margin-top: 40px;
+    }
+
+    .part1-h5>span {
+      font-weight: bold;
+    }
+
+    .page_table {
+      max-width: 450px;
+      min-width: 320px;
+      z-index: 9;
+      width: 38%;
+      min-height: 730px;
+    padding: 30px 30px 15px 30px;
+    border-radius: 22px;
+      border-radius: 22px;
+      background-color: #ffffff;
+    }
+
+    @media (max-width: 1400px) {
+      .part1 {
+        background-position: center bottom;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .title_img_table {
+        padding-top: 50px;
+        flex-wrap: wrap;
+      }
+
+      .left_part {
+        width: 80%;
+        margin-top: 50px;
+        margin: 50px auto;
+      }
+
+      .page_table {
+
+        width: 85%;
+        margin: 20px auto;
+      }
+    }
+
+    /* part2-icon */
+    .part2-icon {
+      width: 100%;
+      background-color: #ffffff;
+      padding: 46px 5%;
+      box-sizing: border-box;
+      border-top: solid 1px #dddddd;
+    }
+
+    .part2-icon .icon-box {
+      width: 100%;
+      max-width: 1900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .part2-icon .icon-box li {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 1150px) {
+      .part2-icon .icon-box {
+        flex-wrap: wrap;
+      }
+
+      .part2-icon .icon-box li {
+        width: 30%;
+        margin-bottom: 25px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .part2-icon .icon-box li {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .part2-icon .icon-box li {
+        width: 100%;
+      }
+    }
+
+    /* part3 */
+    .part3 {
+      border-top: solid 1px #dddddd;
+      padding-bottom: 60px;
+      text-align: center;
+      background-image: url(https://explore.hiretual.com/l/874171/2021-01-29/94bdn5/874171/1611976095zdJTzPG2/bigbg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+.part4{
+  width: 100%;
+  border-top: 1px solid #cacaca;
+      text-align: center;
+      margin-top: 130px;
+}
+    .title_p {
+      font-size: 36px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #2768b3;
+      width: 100%;
+      white-space: wrap;
+      text-align: center;
+      margin-top: 85px;
+    }
+
+    .title-yellow-seperator {
+      margin: 30px auto 90px;
+      max-width: 500px;
+      width: 80%;
+      height: 9px;
+    }
+
+    .part3-text-img {
+      max-width: 1550px;
+      margin: 0 auto 130px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .part3-text-img.content1 .text h1 {
+      margin-top: 80px;
+    }
+
+    .part3-text-img.content2 .text h1 {
+      margin-top: 25px;
+    }
+
+    .part3-text-img.content3 .text h1 {
+      margin-top: 25px;
+    }
+
+    .part3-text-img .text {
+      width: 36%;
+      max-width: 520px;
+    }
+
+    .part3-text-img .text.left {
+      margin-left: 7%;
+    }
+
+    .part3-text-img .text.right {
+      margin-right: 5%;
+    }
+
+    .part3-text-img .text>h1 {
+      margin: 0px 0 50px;
+      font-size: 36px;
+      text-align: left;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #2768b3;
+    }
+
+    .part3-text-img .text>h5 {
+      font-size: 24px;
+      text-align: left;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #7f7f7f;
+    }
+
+    .part3-text-img>img {
+      width: 50%;
+      max-width: 720px;
+    }
+
+    @media (max-width:1100px) {
+      .part3-text-img {
+
+        align-items: center;
+      }
+    }
+
+    @media (max-width:900px) {
+      .part3-text-img {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .part3-text-img .text {
+        width: 90%;
+        max-width: 520px;
+        margin: 0 0 50px 0 !important;
+      }
+
+      .part3-text-img .left-img {
+        width: 90%;
+        align-items: flex-start;
+        margin-right: 10%;
+        max-width: 800px;
+      }
+
+      .part3-text-img .right-img {
+        width: 90%;
+        align-items: flex-end;
+        margin-left: 10%;
+        max-width: 800px;
+      }
+    }
+
+    .part3-list {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0px auto 70px;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .part3-list .list_text {
+      width: 80%;
+    }
+
+    .part3-list .list_text h1 {
+      text-align: left;
+      font-size: 36px;
+      font-weight: bold;
+      color: #2768b3;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+
+    .part3-list .list_text h5 {
+      margin-top: 45px;
+      text-align: left;
+      font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #7f7f7f;
+    }
+
+    .part3-list .list_icon {
+      align-self: flex-start;
+    }
+    @media (max-width:800px) {
+      .part3-list{
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .part3-list .list_text {
+      width: 90%;
+    }
+    .part3-list .list_text h1 {
+      text-align: center;
+    
+    }
+
+    .part3-list .list_text h5 {
+      text-align: center;
+    }
+    }
+    /* part4 */
+    .part4-button-title {
+            font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2768b3;
+  margin: 105px auto 0px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .bottom-skip {
+            display: block;
+            width: 383px;
+  height: 72px;
+  border-radius: 10px;
+  background-color: #f15b0c;
+            margin: 0px auto 200px;
+            text-align: center;
+            font-size: 21px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+            line-height: 72px;
+        }
+
+
+  </style>
+</head>
+
+<body>
+  <!-- top logo -->
+  <div id="page-heade">
+    <div style="z-index: 99; width: 100px;background-color: #77D4FF;height: 38px;">
+    </div>
+    <div style="height: 38px;background-color: #77D4FF;z-index: 99;">
+      <a href="hiretual.com" target="_top"><img
+          src="https://explore.hiretual.com/l/874171/2021-01-28/949s13/874171/1611887716fGqD4vKH/logobbblue.png"
+          alt="Hiretual Logo in white with light blog background"></a>
+    </div>
+    <div style="width: 100%;background-color: #77D4FF;height: 38px;z-index: 99;"></div>
+  </div>
+  <!-- top logo end -->
+
+  <!-- part1 -->
+  <div class="part1">
+    <!-- top main content -->
+    <div class="title_img_table">
+
+      <div class="left_part">
+        <h1 class="part1-title"> The most trusted <span> security clearance sourcing suite</span> for all your security
+          clearance roles!</h1>
+        <h5 class="part1-h5">Hiretual’s Security Clearance Sourcing gives you access to the largest cleared talent pool
+          across <span> 45+ open web platforms and 12 powerful AI clearance filters.</span></h5>
+      </div>
+      <div class="page_table">
+        %%content%%
+      </div>
+    </div>
+<img src="https://explore.hiretual.com/l/874171/2021-01-28/949s11/874171/1611887035wu2WGD7l/LP_Security_main_image.png" alt="" class="partbgimg">
+  </div>
+  <!-- part2-icon -->
+  <div class="part2-icon">
+    <ul class="icon-box">
+      <li><img src="https://explore.hiretual.com/l/874171/2021-01-29/949s4y/874171/1611899516QZvzyjvE/logo_northrup.png"
+          alt=""></li>
+      <li><img style="margin-top:3px"
+          src="https://explore.hiretual.com/l/874171/2021-01-29/949s51/874171/1611899516ApoLfVgS/logo_paragon.png"
+          alt=""></li>
+      <li><img src="https://explore.hiretual.com/l/874171/2021-01-29/949s4t/874171/1611899515qoorGE7l/logo_airbus.png"
+          alt=""></li>
+      <li><img src="https://explore.hiretual.com/l/874171/2021-01-29/949s4p/874171/1611899515wsracQmF/logo_chenega.png"
+          alt=""></li>
+      <li><img style="margin-top: -6px"
+          src="https://explore.hiretual.com/l/874171/2021-01-29/949s4r/874171/16118995154p5e3Ou9/logo_esterline.png"
+          alt=""></li>
+      <li><img
+          src="https://explore.hiretual.com/l/874171/2021-01-29/949s4w/874171/16118995162Q2P58UV/logo_general_dynamics.png"
+          alt=""></li>
+    </ul>
+  </div>
+  <!-- part3 -->
+  <div class="part3">
+    <p class="title_p">Finding niche candidates with specific qualifications</p>
+    <img class="title-yellow-seperator"
+      src="https://explore.hiretual.com/l/874171/2020-10-28/8tb348/874171/160387394016ZZaZ29/yellow_seperator.png">
+    <div class="part3-text-img content1">
+      <div class="text left">
+        <h1>3.7M Cleared Candidates Ready To Be Found</h1>
+        <h5>The best place to start your search is the place where all the talent’s at. Tap into the industry’s largest
+          pool of candidates with security clearances from niche online platforms, job boards and even your own ATS/CRM.
+        </h5>
+      </div>
+      <img class="right-img"
+        src="https://explore.hiretual.com/l/874171/2021-01-29/94bdnm/874171/1611982168iIoQ9p7Q/img1_1.png"
+        alt="">
+    </div>
+    <div class="part3-text-img content2">
+      <img class="left-img"
+        src="https://explore.hiretual.com/l/874171/2021-02-19/96jpr6/874171/1613784282rg59T7rn/app_graphic_security_clearance_2.png" alt="">
+      <div class="text right">
+        <h1>12 AI-Powered Filters To Help You Target Clearance Statuses</h1>
+        <h5>Build the perfect search with our security clearance filters to narrow down on SCI, Confidential, Top
+          Secret, US Agencies and more. Uncover candidates with a specified clearance status, keyword, job title,
+          geographic location or employment history.</h5>
+      </div>
+
+    </div>
+    <div class="part3-text-img content3">
+
+      <div class="text left">
+        <h1>A Deeper Look At Candidate Clearances</h1>
+        <h5>Our Security Clearance Inference helps you understand why a candidate fits your criteria. Hiretual builds
+          user confidence by indicating government agencies, employers, or keywords that give a profile a clearance tag.
+        </h5>
+      </div>
+      <img class="right-img"
+        src="https://explore.hiretual.com/l/874171/2021-02-19/96jpr2/874171/16137841304o65PYto/app_graphic_activity_log_2.png" alt="">
+    </div>
+    <!-- part3 list -->
+    <div class="part3-list list1">
+      <img style="width: 126px;height: 135px;margin: 15px 0 0 20px;"
+        src="https://explore.hiretual.com/l/874171/2021-01-29/949sw7/874171/1611915408ROwtoLQ4/LP_Security_icon_1.svg"
+        alt="" class="list_icon">
+      <div class="list_text">
+        <h1>Best Fits Come First</h1>
+        <h5>No more digging at the bottom of the pile for those you may have missed. Hiretual surfaces the best 50
+          candidates for your search in order of relevance so you get to see your best choices first.</h5>
+      </div>
+
+    </div>
+    <div class="part3-list list2">
+      <img style="width: 116px;height: 118px;margin: 15px 0 0 15px;"
+        src="https://explore.hiretual.com/l/874171/2021-01-29/949sw9/874171/1611915448v7fhWrVZ/LP_Security_icon_2.svg"
+        alt="" class="list_icon">
+      <div class="list_text">
+        <h1>More Than Just Keywords</h1>
+        <h5>You’ll be the one helping our AI technology improve the quality of your searches. Instead of keywords, Hiretual conducts contextual searches that expand on alternative and popular titles related to your queries.</h5>
+      </div>
+    </div>
+    <div class="part3-list list3">
+      <img style="width: 142px;height: 108px;margin: 15px 0 0 0px;"
+        src="https://explore.hiretual.com/l/874171/2021-01-29/949swc/874171/16119159392KwGqYri/LP_Security_icon_3.svg"
+        alt="" class="list_icon">
+      <div class="list_text">
+        <h1>Bridging The Technology Gap</h1>
+        <h5>No more worrying about system integrations, programming or tedious data cleaning. We do it for you. Integrate Hiretual with your existing ATS/CRM, job boards, contact databases and other software in your tech stack.</h5>
+      </div>
+    </div>
+    <div class="part3-list list4">
+      <img style="width: 105px;height: 108px;margin: 15px 0 0 30px;"
+        src="https://explore.hiretual.com/l/874171/2021-01-29/949swk/874171/1611916280O8p9bUVk/LP_Security_icon_4.svg"
+        alt="" class="list_icon">
+      <div class="list_text">
+        <h1>We Keep Your Sourcing Secure</h1>
+        <h5>Hiretual has strict policies in place to ensure information security for your organization and your candidates. Hiretual is GDPR compliant, SOC 2 Type I and II certified, and EU-US Privacy Shield certified.
+        </h5>
+      </div>
+    </div>
+    <!-- part4 -->
+    <div class="part4">
+      <p class="part4-button-title">Ready to optimize your hiring process? Let’s get to work</p>
+    <img style="max-width: 530px;" class="title-yellow-seperator"
+        src="https://explore.hiretual.com/l/874171/2020-10-28/8tb348/874171/160387394016ZZaZ29/yellow_seperator.png">
+    <a href="javascript:document.documentElement.scrollTop = 0" class="bottom-skip pardotcta">CONTACT SALES</a>
+    </div>
+    
+  </div>
+
+  <noscript>
+        <img src="https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0" width="1" height="1" style="display: none;" />
+      </noscript>
+</body>
+<script src="https://explore.hiretual.com/explore.hiretual.index.js"></script>
+
+</html>

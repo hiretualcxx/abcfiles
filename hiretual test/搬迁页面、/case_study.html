@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .part3 {
+            padding: 30px 0 0;
+            width: 100%;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+    
+        .part3title {
+            font-weight: 900 !important;
+            font-size: 24px !important;
+            line-height: 28px !important;
+            color: #2768B3 !important;
+            text-align: left;
+            margin: 0 0 50px;
+        }
+    
+        .part3 .tag-box {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    
+        .part3 .tag-box .taglist {
+            display: inline-block;
+            padding: 6px 20px;
+            font-size: 16px;
+            line-height: 28px;
+            color: rgba(0, 0, 0, 0.8);
+            border: 1px solid #C4C4C4;
+            border-radius: 5px;
+            margin: 0 12px 16px 0;
+        }
+    
+        .part3 .tag-box .taglist:focus {
+            font-weight: bold;
+            background-color: #4E8DF6;
+            border: none;
+            color: #ffffff;
+            outline: none;
+        }
+    
+        .part3 .tag-box .taglist.choose {
+            font-weight: bold;
+            background-color: #4E8DF6;
+            border: none;
+            color: #ffffff;
+        }
+    
+        .part3 .show_otherpage {
+            width: 100%;
+            min-height: 400px;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+    
+        .show_otherpage .each_page_infor {
+            width: 31%;
+            margin-right: 2%;
+            margin-bottom: 55px;
+            min-width: 200px;
+            background: #FFFFFF;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 13px;
+            display: none;
+        }
+    
+        .show_otherpage .each_page_infor a {
+            text-decoration: none;
+            display: inline-block;
+        }
+    
+        .show_otherpage .each_page_infor.hide {
+            display: none !important;
+        }
+    
+        .show_otherpage .each_page_infor .img {
+            width: 100%;
+            height: 229px;
+            border-radius: 13px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(255, 255, 255, 0) 91.9%);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    
+        .show_otherpage .each_page_infor .title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+            text-align: left;
+            margin: 21px 13px 5px;
+        }
+    
+        .show_otherpage .each_page_infor .read-time {
+            display: flex;
+            margin: 0 0 33px 13px;
+            align-items: center;
+        }
+    
+        .show_otherpage .each_page_infor .read-time>span {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 28px;
+            color: #4E8DF6;
+        }
+    
+        .part3 .read-time>img {
+            width: 19px;
+        }
+    
+        .add_more {
+            display: block;
+            font-size: 16px;
+            line-height: 28px;
+            color: #4E8DF6;
+            text-align: center;
+        }
+    
+        .add_more.hide {
+            display: none;
+        }
+    
+        @media (max-width:1080px) {
+            .part3 {
+                padding: 30px 0 0;
+    
+            }
+        }
+    
+        @media (max-width:800px) {
+            .part3 .show_otherpage {
+                justify-content: space-between;
+                min-height: auto;
+            }
+    
+            .show_otherpage .each_page_infor {
+                width: 46%;
+                max-width: 252px;
+            }
+        }
+    
+        @media (max-width:750px) {
+            .part3title{
+                font-size: 36px !important;
+    line-height: 54px !important;
+            }
+            .part3 .tag-box .taglist{
+                margin: 0 24px 45px 0;
+                min-width: 39%;
+                padding: 19px 20px;
+    font-size: 24px;
+    line-height: 36px;
+            }
+            .show_otherpage .each_page_infor {
+                width: 100%;
+                margin-bottom: 55px;
+                min-width: 160px;
+                max-width: 100%;
+                background: #FFFFFF;
+                box-shadow: none;
+                border-radius: 0;
+            }
+    
+            .show_otherpage .each_page_infor a {
+                width: 100%;
+                text-decoration: none;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
+    
+            .show_otherpage .each_page_infor .img {
+                width: 135px;
+                height: 135px;
+                flex: 0 0 135px;
+                background-size: auto 100%;
+                background-position: center center;
+            }
+    
+            .show_otherpage .each_page_infor .title {
+                margin: 8px 13px 5px;
+                font-size: 24px;
+                line-height: 36px;
+            }
+            .show_otherpage .each_page_infor .read-time>span{
+                font-size: 18px;
+                    line-height: 28px;
+            }
+        }
+    
+        @media (max-width:550px) {
+            .part3 .show_otherpage {
+    
+                justify-content: center;
+    
+            }
+    
+            .show_otherpage .each_page_infor {
+                width: 100%;
+    
+            }
+        }
+    </style>
+    <div class="part3">
+        <p class="part3title">Discover More Story From Hiretual Customers </p>
+        <div class="tag-box">
+           <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers" data-vars-ga-action="click_consulting" onclick="choose_industry('consulting')" class="taglist consulting_but"
+                data="consulting">Consulting</a>
+            <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers" data-vars-ga-action="click_healthcare" onclick="choose_industry('healthcare')" class="taglist  healthcare_but"
+                data="healthcare">Healthcare</a>
+            <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers" data-vars-ga-action="click_tech" onclick="choose_industry('tech')" class="taglist tech_but"
+                data="tech">Tech</a>
+            <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers" data-vars-ga-action="click_government contracting" onclick="choose_industry('government')" class="taglist government_but"
+                data="government">Government Contracting</a>
+            <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers" data-vars-ga-action="click_staffing" onclick="choose_industry('staffing')" class="taglist staffing_but"
+                data="staffing">Staffing</a>
+            <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers" data-vars-ga-action="click_banking" onclick="choose_industry('banking')" class="taglist banking_but"
+                data="banking">Banking</a>
+            <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers" data-vars-ga-action="click_e-commerce" onclick="choose_industry('commerce')" class="taglist commerce_but"
+                data="commerce">E-Commerce</a>
+         
+        </div>
+        <div class="show_otherpage">
+            <!-- choose page -->
+        </div>
+        <a href="javascript:void(0)" data-vars-ga-category="discover more story from hiretual customers_tech" data-vars-ga-action="click_more" class="add_more hide" onclick="add_more()">More+</a>
+    </div>
+    <script src="../jQuery-3-5-1.js"></script>
+    <script src="https://hiretual.kinsta.cloud/blogjson/"></script>
+
+    <script>
+        
+        var $ = $ || jQuery;
+        var num_run = 1;
+        var fulll_url = window.location.href;
+        var base_url = 'https://' + window.location.host;
+        var phone_data = {
+            init_phone_input_flag: 0,
+            phone_input_show: 1,
+            touch0: 0,
+            touch1: 0
+        }
+    
+        var case_data = pageData.case_data;
+    
+        function addevend (){
+            
+            // data-vars-ga-category="" data-vars-ga-action="" data-vars-ga-label=""
+            var title = document.getElementsByClassName('title3')[0].innerHTML;
+            var show_form1 = document.getElementsByClassName('show-form')[0];
+            var show_form2 = document.getElementsByClassName('show-form_phone')[0];
+            show_form1.setAttribute('data-vars-ga-category',title);
+            show_form1.setAttribute('data-vars-ga-action','click_subscribe');
+            show_form1.setAttribute('data-vars-ga-label',fulll_url);
+            show_form2.setAttribute('data-vars-ga-category',title);
+            show_form2.setAttribute('data-vars-ga-action','click_subscribe');
+            show_form2.setAttribute('data-vars-ga-label',fulll_url);
+            
+            var like = document.getElementsByClassName('wp_ulike_btn')[0];
+            if(like){
+                like.setAttribute('data-vars-ga-category',title);
+                like.setAttribute('data-vars-ga-action','click_like');
+                like.setAttribute('data-vars-ga-label',fulll_url);
+            };
+    
+            var go_lib = document.getElementsByClassName('go_to_lib')[0];
+            go_lib.setAttribute('data-vars-ga-category',title);
+            go_lib.setAttribute('data-vars-ga-action','click_back to content library');
+            go_lib.setAttribute('data-vars-ga-label',fulll_url);
+    
+            var bottom_but = document.getElementsByClassName('cat_s_button')[0];
+            bottom_but.setAttribute('data-vars-ga-category',title);
+            bottom_but.setAttribute('data-vars-ga-action','click_contact sales');
+            bottom_but.setAttribute('data-vars-ga-label',fulll_url);
+    
+            var taglists = document.getElementsByClassName('taglist');
+            for(var i=0;i<taglists.length;i++){
+                taglists[i].setAttribute('data-vars-ga-label',fulll_url);
+            }
+            document.getElementsByClassName('add_more')[0].setAttribute('data-vars-ga-label',fulll_url);
+    
+            var a_ele = $('.part2-maincontent a').not('.cat_s_button');
+            for(var i=0;i<a_ele.length;i++){
+                var ele_t = $(a_ele[i]).html();
+                $(a_ele[i]).attr({"data-vars-ga-category":title,"data-vars-ga-action":`click_${ele_t}`,"data-vars-ga-label":fulll_url})
+            }
+            
+        }
+       
+        // 渲染文章标题菜单
+        function set_content_nav() {
+            var h2title = document.getElementsByClassName('h2title');
+            var str = '';
+            for (var i = 0; i < h2title.length; i++) {
+                var t = h2title[i].innerHTML;
+                str += '<a href="#' + h2title[i].id + '" class="guide"><h2> ' + t + ' </h2></a>';
+    
+            };
+            document.getElementsByClassName('nav-list-box')[0].innerHTML = str;
+        };
+        set_content_nav();
+    
+        // 点击展示表格
+        function show_form() {
+            document.getElementsByClassName('form-box')[0].setAttribute('class', 'form-box');
+            document.getElementsByClassName('show-form')[0].style.display = 'none';
+            document.getElementsByClassName('show-form_phone')[0].style.display = 'none';
+            document.getElementsByClassName('phone_text')[0].style.display = 'none';
+        }
+    
+        // 渲染底部类别选择
+        function create_more() {
+            var more_str = ''
+            
+            for (var i = 0; i < case_data.length; i++) {
+                var inds = case_data[i].classify.join(' ').toLowerCase();
+                // var 
+                more_str += `<div class="each_page_infor ${inds}">
+                    <a href="${base_url + case_data[i].url}" data-vars-ga-category="" data-vars-ga-action="click_${case_data[i].title}" data-vars-ga-label="${fulll_url}"> 
+                    <div class="img" style="background-image: url(${case_data[i].img});"></div> 
+                    <div class="left-box"> <div class="title"> ${case_data[i].title} </div> 
+                    <div class="read-time"> <img src="https://hiretual.kinsta.cloud/wp-content/uploads/2021/11/eye2.png" alt="Eye icon for reading time">  
+                        <span>${case_data[i].read_time} min read</span>  </div> 
+                    </div> </a></div>`
+            };
+    
+            document.getElementsByClassName('show_otherpage')[0].innerHTML = more_str;
+        };
+        create_more();
+    
+        // 初始化底部类别选择
+        var choose_ind = document.getElementsByClassName('casestudy-part1')[0].getAttribute('industry');
+        function choose_industry(ind) {
+            ind = ind.toLowerCase() || 'staffing';
+            var ga_cat = '';
+                        switch (ind) {
+                    case 'healthcare':
+                        ga_cat = 'discover more story from hiretual customers_healthcare';
+                        break;
+                    case 'tech':
+                    ga_cat = 'discover more story from hiretual customers_tech';
+                        break;
+                    case 'government':
+                    ga_cat = 'discover more story from hiretual customers_government contracting';
+                        break;
+                    case 'recruiting':
+                    ga_cat = 'discover more story from hiretual customers_recruiting';
+                        break;
+                        case 'staffing':
+                        ga_cat = 'discover more story from hiretual customers_staffing';
+                       break;
+                       case 'banking':
+                       ga_cat = 'discover more story from hiretual customers_banking';
+                       break;
+                       case 'commerce':
+                       ga_cat = 'discover more story from hiretual customers_e-commerce';
+                       break;
+                };
+            var eles = document.getElementsByClassName('each_page_infor');
+            $('.taglist').removeClass('choose');
+            $('.' + ind + '_but').addClass('choose');
+            var numadd = 0;
+            for (var i = 0; i < eles.length; i++) {
+                if (eles[i].getAttribute('class').indexOf(ind) > 0) {
+                    numadd++;
+                    $(eles[i]).children('a').attr('data-vars-ga-category',ga_cat);
+                    eles[i].style.display = 'block';
+                   
+                    if (numadd > 6) {
+                        eles[i].setAttribute('class', eles[i].getAttribute('class') + ' hide')
+                    }
+                } else {
+                    eles[i].style.display = 'none';
+    
+                }
+                choose_ind = ind;
+            };
+    
+            if (numadd <= 6) {
+                $('.add_more').addClass('hide');
+            } else {
+                $('.add_more').removeClass('hide');
+            }
+        };
+        choose_industry(choose_ind);
+    
+        // 底部类别选择：加载更多
+        function add_more() {
+            $('.each_page_infor').removeClass('hide');
+            $('.add_more').addClass('hide');
+            $('.' + choose_ind + ' a')[5].focus();
+        };
+    
+        // 数字动画
+        var num_anim_run = function () {
+            num_run = 0;
+            var num_box = $('.numbox');
+            var allnum = [];
+            var maxnum = 0;
+            for (var i = 0; i < num_box.length; i++) {
+                var ele = $(num_box[i]);
+                var n = parseInt(ele.attr('num'));
+                maxnum = maxnum > n ? maxnum : n;
+                allnum[i] = n;
+    
+            };
+    
+            var lock = 0;
+            var set_T = setInterval(function () {
+                lock++;
+                for (var i = 0; i < num_box.length; i++) {
+                    var ele = $(num_box[i]);
+                    // console.log(allnum[i])
+                    if (lock <= allnum[i]) {
+                        var n = parseInt(ele.html());
+                        ele.html(++n);
+                    } else if (lock >= maxnum) {
+                        clearInterval(set_T);
+                    };
+                };
+    
+            }, 30)
+    
+        };
+        // num_anim_run();
+        // 监听页面滚动
+        var listen_scroll = function () {
+            var view_h = $(window).height();
+            var document_h = $(document).height();
+            var h2title = $('.h2title');
+            var len = h2title.length;
+    
+            var scroll_fn = function () {
+                var scrolltop = $(document).scrollTop();
+                for (var i = 0; i < h2title.length; i++) {
+                    var top_y = h2title.eq(i).offset().top;
+    
+                    if (top_y - scrolltop < 300) {
+                        $('.guide').removeClass('view');
+                        $('.guide').eq(i).addClass('view');
+    
+                    }
+                };
+    
+                // set num
+                var num_anim = $('.num_anim');
+                if ($('.num_anim').length && ($('.num_anim').offset().top - scrolltop) < view_h*0.9  && num_run) {
+                    num_anim_run();
+                };
+    
+                // set phone show input
+                if ((scrolltop + view_h) / document_h > 0.8 && phone_data.phone_input_show) {
+                    $('.leftbox').fadeIn(500, function () {
+                        phone_input_tool.slidepage();
+                    });
+                }
+    
+            };
+    
+            $(window).scroll(scroll_fn);
+            scroll_fn();
+        };
+    
+        var phone_input_tool = {
+            close: function () {
+                phone_data.phone_input_show = 0;
+                $('.leftbox').fadeOut(300);
+            },
+            hidebox: function () {
+                $('.leftbox').addClass('hide');
+                phone_data.hidebox = 1;
+    
+            },
+            showbox: function () {
+    
+                if (phone_data.hidebox) {
+                    phone_data.hidebox = 0;
+                    $('.leftbox').removeClass('hide');
+                }
+                return false;
+    
+            },
+            slidepage: function () {
+    
+                $('body').on("touchstart", function (e) {
+                    phone_data.touch0 = e.touches[0].clientY;
+                });
+                $('body').on("touchmove", function (e) {
+                    if (phone_data.hidebox) {
+                        return;
+                    };
+    
+                    phone_data.touch1 = e.touches[0].clientY;
+                    if (Math.abs(phone_data.touch1 - phone_data.touch0) > 50) {
+                        phone_input_tool.hidebox();
+                    }
+                });
+                // $('.casestudy-part2').on("touchstart",function(e){
+                //     phone_data.touch0 = e.touches[0].clientY;
+                // });
+    
+                $('.casestudy-part2').on("touchend", function (e) {
+                    phone_data.touch1 = e.touches[0].clientY;
+    
+                });
+    
+            },
+            init_phone_input: function () {
+                phone_data.init_phone_input_flag = 1;
+                $('.leftbox').on('click', phone_input_tool.showbox);
+                $('.casestudy-part2 .close_phoneinput').on('click', phone_input_tool.close);
+    
+            }
+    
+        }
+    
+        var set_part1 = function () {
+          console.log(999)
+            var wid = document.body.offsetWidth || window.screen.width;
+         
+            if (wid > 1440) {
+                if (wid > 2500) {
+                    wid = 2500
+                }
+                $('.part1bg').css('height', (wid * 0.8) / 2.5);
+                $('.part1-content').css('transform', 'scale(' + (wid * 0.8) / 1.8 / 600 + ')');
+            } else {
+              
+         if(wid>=1024){
+            $('.part1-content').css('transform', 'scale(1)');
+         }else{
+            $('.part1-content').css('transform', 'scale(0.85)');
+         }
+    
+            };
+            if (wid <= 1080 && !phone_data.init_phone_input_flag) {
+             
+                phone_input_tool.init_phone_input();
+            }
+            
+        }
+    
+      
+       
+        window.onresize = set_part1;
+    
+        case_study_init = function (params) {
+           
+            addevend();
+            var heart = document.getElementsByClassName('wpulike')[0];
+            var heart_box = document.getElementsByClassName('heart')[0];
+            heart && heart_box.appendChild(heart);
+            listen_scroll();
+            set_part1();
+         var base64_str = basestr || '';
+            document.getElementsByClassName('part1bg')[0].style.backgroundImage=`url(${base64_str})`
+        }
+    
+    window.onload = case_study_init;
+    </script>
+</body>
+</html>

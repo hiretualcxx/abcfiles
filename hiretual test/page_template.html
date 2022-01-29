@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+</head>
+<style>
+    html,
+    body {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", arial, sans-serif;
+    }
+
+    img,div,h2,h3,h4,h5,h6,p,a,span,li,ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* head logo */
+    #page-heade {
+        width: 100%;
+        display: flex;
+    }
+
+    #page-heade div img {
+        width: 99px;
+        height: 99px;
+        border-radius: 100%;
+        background-color: #f15b0c;
+        margin-left: -1px;
+        margin-right: -1px;
+    }
+
+    .head-part1,
+    .head-part2,
+    .head-part3 {
+        background-color: #f15b0c;
+        height: 38px;
+    }
+
+    /* head logo end*/
+
+    /* text-table */
+
+    .part1 {
+        width: 100%;
+        background-color: #aaa;
+        border: 1px solid transparent;
+    }
+    .part1-content {
+        width: 80%;
+        max-width: 1240px;
+        margin: 90px auto 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    /* left-text */
+    .part1-content .left-text {
+        width: 45%;
+
+    }
+
+    .part1-content .left-text h2 {
+        width: 100%;
+        font-size: 60px;
+        line-height: 1.03;
+        color: #2768b3;
+        font-weight: 700;
+        margin-top: 115px;
+
+    }
+
+    .part1-content .left-text h2>span {
+        color: #32c5ff;
+    }
+
+    .part1-content .left-text h5 {
+        width: 100%;
+        font-size: 24px;
+        color: #3c3c3c;
+        line-height: 1.5;
+        margin: 32px 0 0;
+        font-weight: normal;
+    }
+
+    .part1-content .left-text img {
+        width: 100%;
+    }
+
+    /* left-text end*/
+    .part1-content .right-table {
+        width: 45%;
+        min-height: 200px;
+        background-color: #fff;
+        border-radius: 20px;
+        margin: 0 auto;
+    }
+
+    /* media code */
+    @media (max-width: 950px) {
+        .part1-content {
+            width: 92%;
+        }
+
+    }
+    @media (max-width: 750px) {
+        .part1-content {
+            width: 96%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .part1-content .left-text {
+            width: 100%;
+
+        }
+        .part1-content .right-table {
+            width: 80%;
+        }
+    }
+    /* media code end */ 
+</style>
+
+<body>
+    <!-- head logo -->
+    <div id="page-heade">
+        <div class="head-part1" style="width: 100px;"></div>
+        <div class="head-part2" style="width: auto;">
+            <a href="hiretual.com" target="_top">
+                <img src="https://explore.hiretual.com/l/874171/2021-01-12/92m1jy/874171/1610499092Obgm457I/orange.png"
+                    alt="Hiretual Logo in white with light blog background">
+            </a>
+        </div>
+
+        <div class="head-part3" style="width: 100%;"></div>
+    </div>
+    <!-- text-table -->
+    <div class="part1">
+        <div class="part1-content">
+            <div class="left-text">
+                <h2>See <span> Hiretual </span> in Action</h2>
+                <h5>Still not sure if Hiretual is right for you? <span> Watch our 6-min video </span>and get an overview
+                    of the Hiretual platform, including our AI Sourcing, Market Insights, and Hiretual Reporting
+                    feature.</h5>
+                <img src="https://explore.hiretual.com/l/874171/2021-01-12/92m1sh/874171/1610506781dvb4wnaZ/LP_in_action_screen_images_1_2.png"
+                    alt="">
+            </div>
+            <div class="right-table">%%content%%</div>
+        </div>
+
+    </div>
+        <!-- text-table end -->
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+      :root {
+    --yellow1: #ffc021;
+    --blue1: #2764FC;
+    --blue2: #00154D;
+    --font1: Proxima Nova, Manrope;
+    --font2: Manrope;
+    --btnColor: #000;
+    --green1: #5BCA94;
+    --orange1: #FE923A;
+    --purple1: #5556E4;
+    --part1Bg: #0F1114;
+    --black1: #0F1114;
+    --contactSalesColor: #00154D;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <title>sourcing</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Manrope;
+        }
+        a {
+            text-decoration: none;
+        }
+        .outbox {
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        @media (max-width:750px) {
+            .outbox {
+                width: 90%;
+                max-width: 550px;
+                margin: 0 auto;
+            }
+        }
+
+
+
+        /* part1 */
+        .part1 {
+            padding: 1px 0;
+            width: 100%;
+            margin: 0 auto;
+            background-color: var(--part1Bg);
+            /* background-color: #000000; */
+            overflow: hidden;
+            min-height: 740px;
+        }
+        .part1img .mainimg{
+          height:auto;
+        }
+        .part1 .part1main {
+            text-align: center;
+        }
+
+        #main-content .part1main .part1-title {
+            max-width: 785px;
+            font-style: normal;
+            font-weight: bold ;
+            font-size: 48px;
+            line-height: 72px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin: 55px auto 15px;
+            padding: 0;
+            opacity: 0;
+            animation: part1-show 1s forwards;
+        }
+        #main-content .part1main .part1-title2 {
+            max-width: 785px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: left;
+            color: #FFFFFF;
+            margin: 15px auto 160px;
+            padding: 0;
+            opacity: 0;
+            animation: part1-show 1s forwards 1s;
+        }
+        .part1img {
+            max-width: 812px;
+            width: 90%;
+            opacity: 0;
+            animation: part1-show 1s forwards 2s;
+        }
+        @keyframes part1-show {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        @media (max-width:750px) {
+            .part1main .part1-title {
+                font-size: 36px !important;
+                line-height: 54px !important;
+            }
+
+            .part1main .part1-title2 {
+                font-size: 24px !important;
+                line-height: 36px !important;
+            }
+        }
+/* part2 */
+.part2{
+    width: 95%;
+    max-width: 1080px;
+    margin: 125px auto 10px;
+    overflow: hidden;
+}
+#main-content .eachbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+}
+#main-content .eachbox:nth-child(even){
+    flex-direction:row-reverse
+}
+#main-content .eachbox .text .title {
+    font-family: Proxima Nova;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+line-height: 36px;
+text-transform: capitalize;
+color: #000000;
+        }
+
+        #main-content .eachbox .text {
+            width: 60%;
+            max-width: 515px;
+            font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+color: #6F777B;
+            margin-bottom: 40px;
+        }
+        #main-content .eachbox .text .content{
+            margin: 40px 0 29px;
+        }
+        #main-content .eachbox .text .c_list{
+            margin: 0px 0 20px;
+        }
+        #main-content .eachbox  .text .c_list li{
+            padding: 0 0 0 20px;
+            list-style-type: none;
+            position: relative;
+            margin: 0px 0 2px 10px;
+            
+        }
+        #main-content .eachbox:nth-child(3) .text .c_list li{
+            margin: 0px 0 25px 10px;
+        }
+        #main-content .eachbox  .text .c_list li::before{
+            content: " ";
+            background-color:#545659;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            position: absolute;
+            top: 11px;
+            left: 0;
+        }
+.eachbox  .text .lean_mare {
+    display: inline-block;
+    font-family: var(--font1) !important;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--blue2);
+    background: var(--yellow1);
+    border-radius: 30px;
+    padding: 10px 37px 11px 38px;
+    height: 22px;
+    box-sizing: content-box;
+    color: #333;
+            margin: 0;
+            opacity: 0;
+        }
+        .eachbox  .text .lean_mare.show{
+            animation: leanmareshow 0.3s linear 0.5s forwards;
+        }
+        @keyframes leanmareshow {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    .eachbox .imgpart{
+        max-width: 700px;
+    }
+    .eachbox:nth-child(1) img{
+        margin: 0 -75px 0 -55px;
+    }
+    .eachbox:nth-child(2) img{
+        margin: 0 -50px 0 -45px;
+    }
+    .eachbox:nth-child(3) img{
+        margin: 0 35px 0;
+    }
+    .eachbox:nth-child(4) img{
+        margin: 0 55px 0 0px;
+    }
+    .eachbox:nth-child(5) img{
+        margin: 0 50px 0 50px;
+    }
+    .eachbox:nth-child(6) img{
+        margin: 0 50px 0 -35px;
+    }
+    @media (max-width:850px) {
+        #main-content .eachbox{
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    </style>
+</head>
+
+<body id="main-content">
+       
+  
+      <div class="part1">
+            
+              <div class="part1main outbox">
+                  <h1 class="part1-title">Unleash Access to Untapped Talent Pools</h1>
+                  <p class="part1-title2">Unleash access to 750M+ candidates from 45+ open web platforms, get market insights and DE&I information to build data-driven recruiting strategies and maximize the value of your existing ATS database </p>
+                  <img class="part1img" src="https://hireez.com/wp-content/uploads/2022/01/topimg.png" alt="">
+              </div>
+      </div>
+
+      <div class="part2">
+        <div class="eachbox">
+            <div class="text">
+                <p class="title">Sourcing</p>
+                <p class="content"> Go beyond job boards and LinkedIn to access more than 750 million profiles with information from more than 45 online platforms.</p>
+                <ul class="c_list">
+                    <li>Meta (Facebook)</li>
+                    <li>Twitter</li>
+                    <li>LinkedIn</li>
+                    <li>GitHub</li>
+                    <li>AngelList</li>
+                    <li>RateMDs</li>
+                    <li>Zocdoc</li>
+                    <li>Kaggle</li>
+                    <li>Healthgrades</li>
+                    <li>CareerBuilder</li>
+                </ul>
+                <a data-vars-ga-category="Sourcing" data-vars-ga-action="click_learn more" href='https://hireez.com/solutions/ai-sourcing/' class="lean_mare url_e url_e">Learn more</a>
+                
+            </div>
+            <img class="imgpart" src="https://hireez.com/wp-content/uploads/2022/01/Group-31022-2.png" alt="">
+        </div>
+        <div class="eachbox">
+            <div class="text">
+                <p class="title">Diversity & Inclusion</p>
+                <p class="content">Talent sourcing and talent intelligence built to bring underrepresented talent to the forefront of your search.</p>
+                <p class="content">We analyze data such as pronouns, schools and memberships with professional organizations to surface minority candidates that are easily buried in general career platforms. With hireEZ, you can also access an interactive dashboard that analyzes how your team is interacting with minority groups. Identify engagement drop-offs, response rates and qualification rates to help you decide your next move.</p>
+               
+                <a data-vars-ga-category="Diversity & Inclusion" data-vars-ga-action="click_learn more" href='https://hireez.com/solutions/diversity-inclusion/' class="lean_mare url_e">Learn more</a>
+              
+            </div>
+            <img class="imgpart" src="https://hireez.com/wp-content/uploads/2022/01/Group-1786-1.png" alt="">
+        </div>
+        <div class="eachbox">
+            <div class="text">
+                <p class="title">Chrome Extension</p>
+                <p class="content">Test out our candidate sourcing and contact-finding with <strong>no commitment</strong>  and <strong>no automatic payments</strong>. But that's not all. Unlock advanced features with our paid plans for a complete personal recruiting companion.</p>
+                <a data-vars-ga-category="Chrome Extension" data-vars-ga-action="click_learn more" href='https://hireez.com/solutions/chrome-extension/' class="lean_mare url_e">Learn more</a>
+              
+            </div>
+            <img class="imgpart" src="https://hireez.com/wp-content/uploads/2022/01/Group-31025.png" alt="">
+        </div>
+        <div class="eachbox">
+            <div class="text">
+                <p class="title">Market Insights</p>
+                <p class="content">Optimize the sourcing process and build strategic plans with market insights about your available talent pool and market trends. </p>
+                <ul class="c_list">
+                    <li>Share addressable market data with hiring managers</li>
+                    <li>Take a data-driven approach when starting new company initiatives</li>
+                    <li>Export and share insights easily</li>
+                </ul>
+                <a data-vars-ga-category="Market Insights" data-vars-ga-action="click_learn more" href='https://hireez.com/solutions/insights/' class="lean_mare url_e">Learn more</a>
+              
+            </div>
+            <img class="imgpart" src="https://hireez.com/wp-content/uploads/2022/01/Group-1160.png?a" alt="">
+        </div>
+        <div class="eachbox">
+            <div class="text">
+                <p class="title">Talent Maps</p>
+                <p class="content">hireEZ Talent Maps helps you develop strategic workforce plans and make informed decisions with industry-wide and competitor-specific benchmarking data and talent insights.</p>
+                
+                <a data-vars-ga-category="Talent Maps" data-vars-ga-action="click_learn more" href='https://hireez.com/solutions/talent-maps/' class="lean_mare url_e">Learn more</a>
+               
+            </div>
+            <img class="imgpart" src="https://hireez.com/wp-content/uploads/2022/01/Group-30813.png" alt="">
+        </div>
+        <div class="eachbox">
+            <div class="text">
+                <p class="title">Boolean Builder</p>
+                <p class="content">Some recruiters on your team may like boolean strings. Some prefer AI filters. hireEZ empowers your team to do both. </p>
+                
+                <a data-vars-ga-category="Boolean Builder" data-vars-ga-action="click_learn more" href='https://hireez.com/solutions/boolean-builder/' class="lean_mare url_e">Learn more</a>
+             
+            </div>
+            <img class="imgpart" src="https://hireez.com/wp-content/uploads/2022/01/Group-650-3.png" alt="">
+        </div>
+      </div>
+
+    <script src="./jQuery-3-5-1.js"></script>
+
+    <script>
+        var full_url = window.location.href;
+        // 添加按钮事件
+        (function () {
+                var url_es = document.getElementsByClassName('url_e');
+                for (var i = 0; i < url_es.length; i++) {
+                    url_es[i].setAttribute('data-vars-ga-label', full_url)
+                }
+            })();
+
+        // Animation
+        var _fn = function (classname) {
+            var view_h = $(window).height() - 100;
+            var img_text_box = $('.' + classname);
+            var len = img_text_box.length;
+            var scroll_fn = function () {
+                var scrolltop = $(document).scrollTop();
+                for (var i = 0; i < img_text_box.length; i++) {
+                    var top_y = img_text_box.eq(i).offset().top;
+                    var div_h = img_text_box.eq(i).height()
+                    if (top_y - scrolltop < view_h && top_y - scrolltop > -div_h * 0.75) {
+                        img_text_box.eq(i).addClass('show');
+                    }
+                }
+            };
+            $(window).scroll(scroll_fn);
+            scroll_fn(classname)
+        };
+
+        window.addEventListener('load',function(){
+            _fn('lean_mare');
+        })
+      
+       
+    
+    </script>
+
+ 
+</body>
+</html>

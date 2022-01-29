@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .odiv {
+            display: none;
+        }
+
+        @media (max-width: 1024px) {
+            .odiv {
+                display: block;
+                font-size: 100px;
+                width: 100%;
+                height: 150%;
+                color: transparent;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+<!-- top bg title -->
+<style>
+    * {
+        font-family: Poppins;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .et_pb_section_0 {
+        position: sticky !important;
+        top: 0px !important;
+        z-index: 999999;
+    }
+
+    body {
+        overflow: visible;
+    }
+
+    .et-boc {
+        position: relative;
+        z-index: 1;
+    }
+
+    #___OmO___ {
+        display: none;
+    }
+
+    .odiv {
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        .odiv {
+            display: block;
+            font-size: 100px;
+            width: 100%;
+            height: 150%;
+            color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+        }
+    }
+
+    #main-content .part1bg {
+        z-index: 1;
+        min-height: 475px;
+        background-image: linear-gradient(to top, rgba(78, 141, 246, 0.9), rgba(78, 141, 246, 0.9)), url(https://hiretual.com/wp-content/uploads/2021/05/Beyond-Recruiting-Automation-Header-1080x675.png);
+        background-size: cover;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center, center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        margin: 0 auto;
+        box-shadow: 0px 6px 80px rgb(0 0 0 / 4%),
+            0px 2.50666px 33.4221px rgb(0 0 0 / 3%),
+            0px 1.34018px 17.869px rgb(0 0 0 / 2%),
+            0px 0.751293px 10.0172px rgb(0 0 0 / 2%),
+            0px 0.399006px 5.32008px rgb(0 0 0 / 1%),
+            0px 0.166035px 2.21381px rgb(0 0 0 / 1%);
+    }
+
+    div p {
+        padding: 0;
+    }
+
+    #main-content .title3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        display: inline-block;
+        line-height: 54px;
+        max-width: 550px;
+        color: #FFFFFF !important;
+        padding: 0;
+        text-align: left;
+        position: relative;
+        z-index: 3;
+    }
+
+    .part1bg .blog_lcp_optimize {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 105%;
+        overflow: hidden;
+        display: none;
+    }
+
+    @media (max-width:1440px) {
+        #main-content .part1bg {
+            background-size: cover;
+        }
+    }
+</style>
+
+
+<!-- main content -->
+<style>
+    #_blog_mainbox {
+        z-index: 3;
+        background-color: #fff;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 80px;
+        /* max-width: 1440px; */
+        width: 75%;
+        margin: 0 auto;
+        box-shadow: 0px -17px 10px 10px rgb(0 0 0 / 4%), 0px -13px 7px 5px rgb(0 0 0 / 3%), 0px -10px 4px 4px rgb(0 0 0 / 2%), 0px -6px 3px 3px rgb(0 0 0 / 2%), 0px -7px 2px 2px rgb(0 0 0 / 1%), 0px -7px 1px 1px rgb(0 0 0 / 1%);
+    }
+
+    @media (max-width: 1430px) {
+
+        div.mainfooterbox,
+        #main-content div.part1bg,
+        #_blog_mainbox {
+            width: 90%;
+        }
+    }
+
+    div#_blog_mainbox .rightmain * {
+        line-height: 1.75;
+    }
+
+    #main-content p,
+    h5 {
+        font-weight: 400;
+        line-height: 25px;
+        font-size: 16px;
+        padding-bottom: 1em;
+    }
+
+    .rightmain img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h3 {
+        color: #2768b3;
+        font-size: 22px;
+    }
+
+    #_blog_mainbox .close_phoneinput {
+        position: absolute;
+        z-index: 5;
+        top: 30px;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        display: none;
+    }
+
+    #_blog_mainbox .close_phoneinput>img {
+        width: 100%;
+    }
+
+    .leftbox {
+        flex: 0 0 230px;
+        margin-top: 65px;
+        margin-bottom: 300px;
+        width: 230px;
+        display: inline-block;
+        z-index: 30;
+    }
+
+    #main-content .leftnav {
+        width: 27% !important;
+        max-width: 235px !important;
+        margin-right: 5% !important;
+        position: sticky;
+        top: 175px !important;
+    }
+
+    .left-top {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hir-logo {
+        width: 170px;
+        margin-bottom: 13px;
+        margin-top: 13px;
+    }
+
+    .hir-logo_phone {
+        display: none;
+    }
+
+    .sub-box {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    .sub-box .phone_text {
+        display: none;
+    }
+
+    .show-form {
+        width: 100%;
+        height: 40px;
+        background: #8F9397;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 40px;
+        color: #FFFFFF;
+        border: none;
+        margin-bottom: 34px;
+    }
+
+    .show-form_phone {
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(114.45deg, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 40px;
+        color: #FFFFFF;
+        border: none;
+        display: none;
+    }
+
+    .form-box {
+        width: 100%;
+    }
+
+    .form-box.hide {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        position: absolute;
+    }
+
+    .heart-load {
+        padding-left: 15px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .heart {
+        min-width: 40px;
+        min-height: 20px;
+        margin-right: 9px;
+    }
+
+    body.page-template-default #main-content .wpulike {
+        display: block;
+        padding: 0;
+    }
+
+    #main-content .wpulike-heart .wp_ulike_put_image:after {
+        width: 18px;
+        height: 18px;
+        background-size: 100% 100%;
+        background-image: url(https://staging-staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/heart1.png) !important;
+    }
+
+    #main-content .wpulike-heart .wp_ulike_put_image.wp_ulike_btn_is_active:after {
+        filter: none;
+        background-image: url(https://staging-staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/heart2.png) !important;
+    }
+
+    #main-content .wpulike-heart .count-box {
+        font-size: 12px;
+        margin-left: 5px;
+        font-weight: 500;
+    }
+
+    #main-content .wpulike-heart .wp_ulike_general_class {
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    #main-content .wpulike-heart .wp_ulike_put_image {
+        padding: 15px 6px;
+    }
+
+    .down_load_box {
+        display: none;
+        /* display: flex; */
+        align-items: center;
+    }
+
+    .down_load_box>span {
+        margin-left: 4px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .load_pdf {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        /* background-image: url(https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/04/load-1.png); */
+        background-size: 100% 100%;
+    }
+
+    .content-nav {
+        margin-top: 5px;
+        width: 100%;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .content-nav .content-nav-title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.4);
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .content-nav .guide h2 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        min-height: 20px;
+        width: 172px;
+        display: block;
+        color: #000000;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 20px;
+        text-decoration: none;
+        /* margin-top: 8px; */
+        padding-bottom: 8px !important;
+        transition: all 0.1s;
+        text-align: left;
+        font-weight: normal;
+    }
+
+    .content-nav .guide h2:hover {
+        width: 100%;
+        font-weight: 600;
+        padding: 8px 0 16px;
+        margin-top: 0;
+        margin-bottom: 0px;
+        overflow: initial;
+        white-space: inherit;
+    }
+
+    .content-nav .guide.view h2 {
+        width: 100%;
+        font-weight: 600;
+        padding: 8px 0 16px;
+        margin-top: 0 !important;
+        margin-bottom: 0px;
+        overflow: initial;
+        white-space: inherit;
+    }
+
+    .go_to_lib {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 18px;
+        text-decoration-line: underline;
+        text-transform: capitalize;
+        color: #4E8DF6;
+        text-decoration: underline !important;
+    }
+
+    @media (max-width:980px) {
+        #_blog_mainbox {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #main-content .leftnav {
+            position: fixed;
+            width: 100% !important;
+            height: 0px;
+            max-width: 100% !important;
+            bottom: 0px !important;
+            z-index: 100;
+        }
+
+        .leftbox {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 510px;
+            position: fixed;
+            padding: 0;
+            bottom: 0px !important;
+            left: 0;
+            background: rgba(78, 141, 246, 0.8);
+            border-radius: 20px 20px 0 0;
+            backdrop-filter: blur(17px);
+            margin: 0;
+            max-width: 100%;
+            overflow: hidden;
+            display: none;
+            transition: height 0.3s;
+        }
+
+        .nav-list-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .left-top {
+            width: 100%;
+            margin-top: 90px;
+            text-align: center;
+            transform: scale(1.2);
+        }
+
+        #_blog_mainbox .close_phoneinput {
+            display: inline-block;
+        }
+
+        .sub-box {
+            width: 96%;
+            max-width: 435px;
+            margin: 0 auto;
+            border-bottom: none;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .sub-box .phone_text {
+            margin: 30px auto 0;
+            display: block;
+            max-width: 460px;
+            font-size: 25px;
+            line-height: 30px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .content-nav .guide {
+            width: 49%;
+        }
+
+        .hir-logo {
+            display: none;
+            width: 34px;
+            margin-bottom: 16px;
+        }
+
+        .hir-logo_phone {
+            display: inline-block;
+            width: 62px;
+            margin-bottom: 16px;
+        }
+
+        .leftbox.hide .hir-logo_phone {
+            margin: 0px auto 35px;
+        }
+
+        .show-form {
+            display: none;
+        }
+
+        .show-form_phone {
+            display: block;
+            max-width: 335px;
+            margin: 0 auto;
+        }
+
+        /* hide bottom */
+        .leftbox.hide {
+            height: 150px;
+        }
+
+        .leftbox.hide .close_phoneinput {
+            display: none;
+        }
+
+        .leftbox.hide .leftnav {
+            top: 30px !important;
+        }
+    }
+
+    /* ____________________________________________part2_min-text ___________ */
+    #_blog_mainbox {
+        text-align: left;
+    }
+
+    #_blog_mainbox .rightmain {
+        width: 75%;
+        max-width: 650px !important;
+        margin: 0 auto 0 0 !important;
+        display: inline-block;
+    }
+
+    .read-time {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 32px 0 39px;
+    }
+
+    .read-time>img {
+        width: 25px;
+        margin-right: 9px;
+    }
+
+    .read-time>span {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 28px;
+        color: #2768B3;
+    }
+
+    #main-content #_blog_mainbox .rightmain p {
+        color: rgba(0, 0, 0, 0.8) !important;
+        text-align: left;
+    }
+
+    #main-content #_blog_mainbox .rightmain .p1 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.8) !important;
+        margin-bottom: 30px;
+    }
+
+    #main-content #_blog_mainbox .rightmain .p1>a {
+        color: #4E8DF6 !important;
+        text-decoration: underline !important;
+    }
+
+    #main-content #_blog_mainbox .rightmain .p1 .first-word {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    #main-content #_blog_mainbox .rightmain .p1 .black {
+        color: #000000 !important;
+        font-weight: bold;
+    }
+
+    #_blog_mainbox .tip {
+        border-color: #ffffff;
+        box-shadow: 6px 6px 31px -6px rgb(0 0 0 / 30%);
+        border-radius: 26px;
+        padding: 16px;
+        margin-bottom: 30px;
+    }
+
+    #_blog_mainbox .tip .tiptext {
+        line-height: 25px !important;
+        font-size: 16px !important;
+        color: #000000 !important;
+        font-weight: bold !important;
+        margin-bottom: 15px;
+    }
+
+    #main-content #_blog_mainbox .rightmain .p4>a {
+        color: #2768B3 !important;
+        text-decoration: underline !important;
+    }
+
+    #_blog_mainbox .rightmain .content-img {
+        width: 100%;
+        margin: 38px 0;
+    }
+
+    #main-content #_blog_mainbox .rightmain .h2title {
+        text-align: left !important;
+        font-style: normal;
+        font-weight: 900 !important;
+        font-size: 24px !important;
+        line-height: 28px;
+        color: #2768B3 !important;
+        margin-bottom: 38px;
+        padding: 0;
+    }
+
+    #main-content #_blog_mainbox .rightmain .h3title {
+        text-align: left !important;
+        font-style: normal;
+        font-weight: bold !important;
+        font-size: 22px !important;
+        line-height: 28px;
+        color: #000000 !important;
+        margin-bottom: 38px;
+        padding: 0;
+    }
+
+    .cat_s_button {
+        width: 169px;
+        height: 43px !important;
+        border-radius: 26px;
+        background-color: #E85741;
+        box-sizing: border-box;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        display: block;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 14px;
+        text-align: center;
+        line-height: 23px;
+        padding: 10px 0px;
+        font-weight: 700;
+        letter-spacing: normal;
+        transition: all 0.5s ease;
+        white-space: nowrap;
+        border: none;
+        margin: 64px auto;
+        text-decoration: none;
+    }
+
+    .cat_s_button:hover {
+        background-color: #FFAD8D;
+    }
+
+    .bottom-line {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 1px;
+    }
+
+    #main-content #_blog_mainbox .rightmain .p4 .blockspan {
+        font-style: normal;
+        display: block;
+        font-weight: 500;
+    }
+
+    @media (max-width: 980px) {
+        #_blog_mainbox {
+            justify-content: center;
+            padding: 0 5% 0
+        }
+
+        #_blog_mainbox .rightmain {
+            width: 100% !important;
+            margin: 0 !important;
+            max-width: 100% !important;
+        }
+
+        .content-nav,
+        .heart-load {
+            display: none;
+        }
+
+        .form-box {
+            width: 96%;
+            max-width: 380px;
+            margin: 0 auto;
+        }
+    }
+
+    @media (max-width:750px) {
+        .read-time {
+            margin: 32px 0 55px;
+        }
+
+        .read-time>span {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        #main-content #_blog_mainbox .rightmain .p1 {
+            font-size: 30px;
+            line-height: 45px;
+        }
+
+        #main-content #_blog_mainbox .rightmain .p1 .first-word {
+            font-size: 30px;
+            line-height: 45px;
+        }
+
+        #main-content #_blog_mainbox .rightmain .h2title {
+            font-size: 36px !important;
+            line-height: 45px;
+        }
+
+        #_blog_mainbox .tip .tiptext {
+            line-height: 45px !important;
+            font-size: 30px !important;
+        }
+
+        .cat_s_button {
+            display: none;
+        }
+    }
+
+    @media (max-width:550px) {
+        .left-top {
+            transform: scale(1);
+        }
+    }
+
+    blockquote {
+        margin: 20px 0 30px;
+        border-left: 5px solid #2ab1e7;
+        padding-left: 20px;
+    }
+
+    .entry-content .h2title {
+        margin: 20px auto 35px;
+    }
+
+    a {
+        color: #2ab1e7;
+    }
+
+    p {
+        padding-bottom: 1em;
+    }
+
+    h3 {
+        padding-bottom: 10px;
+    }
+
+    .post-template-default #main-content .rightmain h2 {
+        margin-top: 20px;
+    }
+</style>
+<style>
+    /* 页面选项卡模块css */
+    .et_pb_tabs {
+        border: 2px solid #2768b3;
+    }
+
+    .et_pb_tabs * {
+        margin: 0;
+    }
+
+    .et_pb_tabs_controls {
+        display: flex;
+        justify-content: center;
+        background-color: #f4f4f4;
+        height: 40px;
+    }
+
+    .et_pb_tabs_controls>li {
+        border: 1px solid #d9d9d9;
+        line-height: 40px;
+    }
+
+    .et_pb_tabs_controls li a {
+        padding: 0px 30px !important;
+        line-height: 40px !important;
+        vertical-align: middle;
+        display: table-cell;
+        color: #666;
+        ;
+        font-weight: 600;
+        font-size: 100%;
+    }
+
+    .et_pb_tabs_controls>li.et_pb_tab_active {
+        color: #333 !important;
+        border: none;
+        background-color: #fff;
+        padding: 0;
+    }
+
+    .et_pb_all_tabs {
+        background-color: #f5f8fc;
+    }
+
+    .et_pb_all_tabs .et_pb_tab {
+        display: none;
+        padding: 24px 30px;
+    }
+
+    .et_pb_all_tabs .et_pb_tab.et_pb_active_content {
+        display: block;
+    }
+</style>
+
+
+
+<!-- may like and tag -->
+<style>
+    .addmore {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 60px auto 0;
+        transition: all 0.5s;
+    }
+
+    .addmore:hover {
+        transform: scale(1.05);
+    }
+
+    .addmore>span {
+        line-height: 21px;
+        width: 20px;
+        height: 20px;
+        background: #FFFFFF;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .mainfooterbox {
+        width: 75%;
+        margin: 0 auto;
+        padding: 50px 5%;
+        box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 4%), 0px 0px 7px 5px rgb(0 0 0 / 3%), 0px 0px 4px 4px rgb(0 0 0 / 2%), 0px 0px 3px 3px rgb(0 0 0 / 2%), 0px 0px 2px 2px rgb(0 0 0 / 1%), 0px 0px 1px 1px rgb(0 0 0 / 1%);
+    }
+
+    #main-footer {
+        max-width: 1080px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #main-footer .may_like {
+        font-weight: 900 !important;
+        font-size: 24px !important;
+        line-height: 28px !important;
+        color: #2768B3 !important;
+        text-align: left;
+        margin: 0px 0 0px 45px;
+        border-top: 1px solid #C4C4C4;
+        padding: 50px 0;
+    }
+
+    .alsolikemain {
+        width: 100%;
+        position: relative;
+    }
+
+    .alsolikemain .pre_but {
+        z-index: 5;
+        display: inline-block;
+        width: 43px;
+        height: 43px;
+        background-image: url(https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/12/left2.png);
+        background-size: 100% 100%;
+        background-position: center center;
+        position: absolute;
+        top: 27%;
+        left: -46px;
+        border-radius: 50%;
+    }
+
+    .alsolikemain .next_but {
+        z-index: 5;
+        display: inline-block;
+        width: 43px;
+        height: 43px;
+        background-image: url(https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/12/right2.png);
+        background-size: 100% 100%;
+        background-position: center center;
+        position: absolute;
+        top: 27%;
+        right: -46px;
+        border-radius: 50%;
+    }
+
+    .alsolike_slidebox {
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        margin-bottom: -100px;
+    }
+
+    .alsolike_slidebox .eachbox0 {
+        width: 33.3%;
+        display: flex;
+        justify-content: center;
+        flex: 0 0 33.3%;
+    }
+
+    .alsolike_slidebox .eachbox {
+        position: relative;
+        min-height: 350px;
+        width: 93%;
+        max-width: 275px;
+        padding: 0 0 15px;
+        /* border: 1px solid rgba(203, 203, 203, 0.5); */
+        box-sizing: border-box;
+        box-shadow: 0px 85px 80px rgb(0 0 0 / 1%), 0px 73.7776px 33.4221px rgb(0 0 0 / 2%), 0px 22.3363px 17.869px rgb(0 0 0 / 4%), 0px 12.5216px 10.0172px rgb(0 0 0 / 4%), 0px 6.6501px 5.32008px rgb(0 0 0 / 3%), 0px 2.76726px 2.21381px rgb(0 0 0 / 2%);
+        border-radius: 15px;
+        margin: 0px 1% 120px;
+    }
+
+    .alsolike_slidebox .eachbox .newlogo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+    }
+
+    .alsolike_slidebox .eachbox>a {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .alsolike_slidebox .eachbox .headimg {
+        width: 100%;
+        height: 230px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .alsolike_slidebox .eachbox .headimg>img {
+        height: 100%;
+        max-width: none;
+    }
+
+    #main-content .alsolike_slidebox .eachbox .ph3 {
+        font-weight: bold !important;
+        font-size: 14px !important;
+        line-height: 21px !important;
+        padding: 0 13px !important;
+        color: #000000 !important;
+        margin-top: 20px !important;
+    }
+
+    .alsolike_slidebox .eachbox .read-time {
+        width: 100%;
+        text-align: left;
+        margin: 8px 0 4px;
+        padding: 0 13px;
+    }
+
+    .alsolike_slidebox .eachbox .read-time>img {
+        width: 14px;
+        margin-bottom: -3px;
+    }
+
+    .alsolike_slidebox .eachbox .read-time>span {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 28px;
+        color: #4E8DF6;
+    }
+
+    .alsolikemain_phone_box {
+        display: none;
+    }
+
+    .alsolikemain_phone_box .alsolikemain_phone {
+        width: 100%;
+    }
+
+    .alsolikemain_phone .each_box>a {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto 62px auto;
+    }
+
+    .alsolikemain_phone .each_box .left_text {
+        width: 75%;
+        flex: 1 1 auto;
+    }
+
+    .alsolikemain_phone .each_box .left_text .title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        color: #000000;
+    }
+
+    .alsolikemain_phone .each_box .left_text .read-titme {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+
+    .alsolikemain_phone .each_box .left_text .read-titme>span {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        color: #4E8DF6;
+    }
+
+    .alsolikemain_phone .each_box .left_text .read-titme>img {
+        width: 27px;
+        margin-right: 6px;
+    }
+
+    .alsolikemain_phone .each_box .right_img {
+        position: relative;
+        width: 135px;
+        height: 135px;
+        flex: 0 0 135px;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .alsolikemain_phone .each_box .right_img .newlogo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        z-index: 5;
+        border-radius: 0;
+    }
+
+    .alsolikemain_phone .each_box .right_img>img {
+        height: 100%;
+        max-width: none;
+        border-radius: 13px;
+    }
+
+    @media(max-width:980px) {
+        #main-footer {
+            padding: 1px 13.5% 1px;
+        }
+
+        #main-footer .may_like {
+            margin: 50px 0 50px 0px;
+            font-size: 36px !important;
+            line-height: 28px !important;
+        }
+
+        .alsolikemain {
+            display: none;
+        }
+
+        .alsolikemain_phone_box {
+            display: block;
+        }
+
+        #main-footer .may_like {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 45px 0;
+            font-size: 36px !important;
+            line-height: 28px !important;
+        }
+
+        #main-footer .alsolikemain {
+            display: none;
+        }
+
+        #main-footer .alsolikemain_phone_box {
+            display: block;
+            max-width: 560px;
+            margin: 0 auto 62px;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box>a {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto 62px auto;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box .left_text {
+            width: 75%;
+            flex: 1 1 auto;
+            margin-right: 3%;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box .left_text .title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            height: auto;
+            color: #000000;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box .left_text .read-titme {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 12px;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box .left_text .read-titme>img {
+            width: 27px;
+            height: 27px;
+            margin-right: 6px;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box .left_text .read-titme>span {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            height: 28px;
+            line-height: 28px;
+            color: #4E8DF6;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box .right_img {
+            position: relative;
+            width: 135px;
+            height: 135px;
+            flex: 0 0 135px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        #main-footer .alsolikemain_phone_box .each_box .right_img .newlogo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            z-index: 2;
+            border-radius: 0;
+        }
+
+        .alsolikemain_phone_box .each_box .right_img>img {
+            height: 100%;
+            width: auto;
+            max-width: none;
+            border-radius: 13px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .alsolikemain_phone .each_box .left_text .title {
+            font-size: 19px;
+        }
+
+        .alsolikemain_phone .each_box .left_text .read-titme>span {
+            font-size: 15px;
+        }
+
+        .alsolikemain_phone .each_box .left_text .read-titme>img {
+            width: 19px;
+        }
+    }
+</style> <!-- tag -->
+<style>
+    /* classify_box */
+    .hidediv {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    div#_blog_mainbox .et_pb_column {
+        float: none;
+    }
+
+    .classify_box {
+        width: 100%;
+        max-width: 1260px;
+        padding-top: 30px;
+        margin: 60px auto 15px;
+        border-top: 1px dashed rgba(0, 0, 0, 0.2);
+    }
+
+    .classify_box>div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    div#_blog_mainbox .classify_box>div span.name {
+        margin-right: 5px;
+        white-space: nowrap;
+        height: 28px;
+        margin-top: 3px;
+    }
+
+    .classify_box>div .linkbox {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 auto;
+    }
+
+    div#_blog_mainbox .classify_box .categorie_box .linkbox span.line {
+        display: inline-block;
+        width: 1px;
+        height: 18px;
+        margin: 5px 14px 0;
+        background-color: #ccc;
+    }
+
+    div#_blog_mainbox .classify_box>div .linkbox .alink {
+        margin: 0 14px 14px 0;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 28px;
+        height: 28px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+
+    div#_blog_mainbox .classify_box .categorie_box .linkbox .alink {
+        margin: 0 0 8px 0;
+    }
+
+    div#_blog_mainbox .classify_box .categorie_box {
+        margin-bottom: 7px;
+    }
+
+    div#_blog_mainbox .classify_box .categorie_box .linkbox .alink:hover {
+        text-decoration-line: underline;
+        color: #4E8DF6;
+    }
+
+    div#_blog_mainbox .classify_box .tag_box .linkbox .alink {
+        position: relative;
+        padding: 0 14px 0 30px;
+        background: #F5F8FC;
+        border-radius: 14px;
+    }
+
+    div#_blog_mainbox .classify_box .tag_box .linkbox .alink:hover,
+    div#_blog_mainbox .classify_box .tag_box .linkbox .alink.act {
+        background: #4E8DF6;
+        box-shadow: 0px 4px 4px rgba(78, 141, 246, 0.1);
+        color: #FFFFFF;
+    }
+
+    div#_blog_mainbox .classify_box .tag_box .linkbox .alink>span {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+        color: #4E8DF6;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        left: 5px;
+        top: 4px;
+        background: #FFFFFF;
+        text-align: center;
+    }
+</style> <!-- tag -->
+
+<body>
+    <div class="leftbox" speaker-mute="true">
+        <a class="close_phoneinput" href="javascript:void(0)">
+            <img alt="Cross icon" src="https://hiretual.kinsta.cloud/wp-content/uploads/2021/11/close.png">
+        </a>
+        <div class="part2-left">
+            <div class="left-top">
+                <img alt="Recruiters recap image" class="hir-logo"
+                    src="https://hiretual.kinsta.cloud/wp-content/uploads/2021/12/blogloge.png">
+                <img alt="Hiretual icon in white" class="hir-logo_phone"
+                    src="https://hiretual.kinsta.cloud/wp-content/uploads/2021/11/logo_samall2.png">
+                <div class="sub-box">
+                    <button class="show-form" onclick="show_form()">Subscribe</button>
+                    <button class="show-form_phone" onclick="show_form()">Subscribe
+                        to Our Newsletter</button>
+                    <div class="phone_text">
+                        Recruitment strategy tips,
+                        guides, videos, and live
+                        Q&As
+                        delivered right to your inbox.
+                    </div>
+                    <div class="form-box hide">
+                        <iframe class="_iframe" src="https://explore.hiretual.com/l/874171/2021-06-07/9m15cb"
+                            width="100%" type="text/html" frameborder="0" allowtransparency="true"
+                            style="border: 0; margin-bottom: -15px;"></iframe>
+                    </div>
+                </div>
+                <div class="heart-load">
+                    <div class="heart"></div>
+                    <div class="down_load_box">
+                        <a href="#" download="test.pdf" class="load_pdf"></a>
+                        <span>Download</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-nav">
+                <span class="content-nav-title">TABLE OF CONTENTS</span><!-- list -->
+                <div class="nav-list-box"> </div>
+                <a class="go_to_lib" href="https://hiretual.kinsta.cloud/resources/content-library/">Back to Content
+                    Library</a>
+            </div>
+        </div>
+    </div>
+     <!-- bottom -->
+     <style>
+        /* partbottom */
+        .partbottom {
+            background-color: #4E8DF6;
+        }
+
+        .partbottom .cont {
+            max-width: 1180px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partbottom .cont>div {
+            width: 45%;
+        }
+
+        .partbottom .cont div.right-box {
+            width: 50%;
+        }
+
+        .partbottom .cont .left-box {
+            display: flex;
+        }
+
+        .partbottom .cont .left-box .ellipse {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 125px;
+   height: 160px;
+   background-image: url(https://hiretual.com/wp-content/uploads/2021/12/contenticon.png);
+   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 200px;
+    background-position: -352px 1px;
+    background-size: 515px auto;
+}
+
+        .partbottom .cont .left-box .ellipse img {
+            width: 100px;
+            height: 100px;
+            margin: 10px auto 8px;
+        }
+
+        .partbottom .cont .left-box .ellipse .name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+
+        .partbottom .cont .left-box>.ellipse:first-child {
+            margin-top: 134px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 33px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 18px;
+            margin-left: 18px;
+        }
+
+        .partbottom .cont .left-box>.ellipse:last-child {
+            margin-top: 106px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .right-box {
+            margin: 133px 0 134px;
+        }
+
+        .partbottom .cont .right-box .text {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            color: #FFFFFF;
+            margin-bottom: 34px;
+        }
+
+        .partbottom .cont .right-box .btn1 {
+            width: 211px;
+            height: 53px;
+            background: #E16427;
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            border: 0;
+        }
+
+        .jump-button {
+            display: inline-block;
+            width: 234px;
+            height: 52px;
+            line-height: 52px;
+            background: linear-gradient(114.45deg, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+            box-shadow: 0px 100px 80px rgb(232 87 65 / 7%), 0px 41.7776px 33.4221px rgb(232 87 65 / 5%), 0px 22.3363px 17.869px rgb(232 87 65 / 4%), 0px 12.5216px 10.0172px rgb(232 87 65 / 4%), 0px 6.6501px 5.32008px rgb(232 87 65 / 3%), 0px 2.76726px 2.21381px rgb(232 87 65 / 2%);
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+
+        @media (max-width:980px) {
+            .partbottom .cont {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .partbottom .cont div.right-box {
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont .left-box {
+                width: 425px;
+                margin-top: 50px;
+            }
+
+            .partbottom .cont .right-box .text {
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 1150px) {
+            div.et_pb_row {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            div.et_pb_css_mix_blend_mode_passthrough {
+                margin-left: 0px !important;
+            }
+        }
+    </style>
+    <div class="partbottom">
+        <div class="cont">
+            <div class="left-box">
+                <div class="ellipse">
+                    <picture>
+                        <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/newHealthcare-2X.webp" type="image/webp">
+                        <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/newHealthcare-2X.png" type="image/png">
+                        <img src="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/newHealthcare-2X.png" alt="Portrait of a girl" class="photo">
+                    </picture>
+                    <div class="name">Healthcare</div>
+                </div>
+                <div class="e-box">
+                    <div class="ellipse">
+                        <picture>
+                            <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/Diversity-2X.webp" type="image/webp">
+                            <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/Diversity-2X.png" type="image/png">
+                            <img src="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/Diversity-2X.png" alt="Portrait of a girl" class="photo">
+                        </picture>
+                        <div class="name">Diversity</div>
+                    </div>
+                    <div class="ellipse">
+                        <picture>
+                            <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/newScholar-2X.webp" type="image/webp">
+                            <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/newScholar-2X.png" type="image/png">
+                            <img src="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/newScholar-2X.png" alt="Portrait of a man" class="photo">
+                        </picture>
+                        <div class="name">Scholar</div>
+                    </div>
+                </div>
+                <div class="ellipse">
+                    <picture>    
+                        <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/Tech-2X.webp" type="image/webp">
+                            <source srcset="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/Tech-2X.png" type="image/png">
+                        <img src="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/11/Tech-2X.png" type="image/png" alt="Portrait of a man" class="photo">
+                    </picture>
+                    <div class="name">Tech</div>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="text">Ready to hire the best talent?</div>
+                <a class="jump-button url_e" data-vars-ga-category="blog_Ready to hire the best talent?"
+                    data-vars-ga-action="click_contact sales" href="https://explore.hiretual.com/contact-sales">CONTACT
+                    SALES</a>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://staging-hiretual.kinsta.cloud/wp-content/uploads/2021/12/blogjson.js?1218a"> </script>
+    <script>
+         (function () {
+    
+            var odiv = document.createElement('div');
+            odiv.className = 'odiv';
+            odiv.innerHTML = document.getElementsByClassName('title3')[0].innerHTML;
+            document.getElementsByClassName('part1bg')[0].appendChild(odiv);
+          
+        })();
+    
+        var $ = $ || jQuery;
+        var fulll_url = window.location.href;
+        var phone_data = {
+            init_phone_input_flag: 0,
+            phone_input_show: 1,
+            touch0: 0,
+            touch1: 0
+        }
+        var publicdata = {
+            slidebut_T: 0,
+        };
+    
+        function addevend() {
+    
+            // data-vars-ga-category="" data-vars-ga-action="" data-vars-ga-label=""
+            var title = document.getElementsByClassName('title3')[0].innerHTML;
+            var show_form1 = document.getElementsByClassName('show-form')[0];
+            var show_form2 = document.getElementsByClassName('show-form_phone')[0];
+            show_form1.setAttribute(
+                'data-vars-ga-category', title);
+            show_form1.setAttribute(
+                'data-vars-ga-action',
+                'click_subscribe');
+            show_form1.setAttribute(
+                'data-vars-ga-label', fulll_url);
+            show_form2.setAttribute(
+                'data-vars-ga-category', title);
+            show_form2.setAttribute(
+                'data-vars-ga-action',
+                'click_subscribe');
+            show_form2.setAttribute(
+                'data-vars-ga-label', fulll_url);
+    
+            var like = document.getElementsByClassName(
+                'wp_ulike_btn')[0];
+            if (like) {
+                like.setAttribute(
+                    'data-vars-ga-category', title);
+                like.setAttribute('data-vars-ga-action',
+                    'click_like');
+                like.setAttribute('data-vars-ga-label',
+                    fulll_url);
+            };
+    
+            var go_lib = document
+                .getElementsByClassName('go_to_lib')[0];
+            go_lib.setAttribute('data-vars-ga-category',
+                title);
+            go_lib.setAttribute('data-vars-ga-action',
+                'click_back to content library');
+            go_lib.setAttribute('data-vars-ga-label',
+                fulll_url);
+    
+    
+            var bottom_but = document
+                .getElementsByClassName('jump-button')[
+                0];
+            bottom_but.setAttribute(
+                'data-vars-ga-category', title);
+            bottom_but.setAttribute(
+                'data-vars-ga-action',
+                'click_contact sales');
+            bottom_but.setAttribute(
+                'data-vars-ga-label', fulll_url);
+    
+    
+            var a_ele = $(
+                '.entry-content .et_pb_row_0 .et_pb_column a'
+            ).not('.cat_s_button');
+            for (var i = 0; i < a_ele.length; i++) {
+                var ele_t = $(a_ele[i]).text();
+                $(a_ele[i]).attr({
+                    "data-vars-ga-category": title,
+                    "data-vars-ga-action": `click_${ele_t}`,
+                    "data-vars-ga-label": fulll_url
+                })
+            }
+    
+        }
+        // 渲染文章标题菜单
+        function set_content_nav() {
+            var h2title = document.getElementsByClassName('h2title');
+            var str = '';
+            for (var i = 0; i < h2title.length; i++) {
+                var t = h2title[i].innerText;
+                str += '<a href="#' + h2title[i].id + '" class="guide"> <h2> ' + t + '</h2> </a>';
+            };
+            document.getElementsByClassName('nav-list-box')[0].innerHTML = str;
+        };
+    
+    
+        // 点击展示表格
+        function show_form() {
+            document.getElementsByClassName('form-box')[
+                0].setAttribute('class', 'form-box');
+            document.getElementsByClassName(
+                'show-form')[0].style.display =
+                'none';
+            document.getElementsByClassName(
+                'show-form_phone')[0].style
+                .display = 'none';
+            document.getElementsByClassName(
+                'phone_text')[0].style.display =
+                'none';
+        }
+        var listen_scroll = function () {
+            var view_h = $(window).height();
+            var document_h = $(document).height();
+            var h2title = $('.h2title');
+            var len = h2title.length;
+    
+            var scroll_fn = function () {
+                var scrolltop = $(document)
+                    .scrollTop();
+                for (var i = 0; i < h2title.length; i++) {
+                    var top_y = h2title.eq(i).offset().top;
+    
+                    if (top_y - scrolltop <300) {
+                        $('.guide').removeClass('view');
+                        $('.guide').eq(i).addClass('view');
+                    }
+                };
+    
+                // set phone show input
+                if ((scrolltop + view_h) /
+                    document_h > 0.8 &&
+                    phone_data.phone_input_show
+                ) {
+                    $('.leftbox').fadeIn(500,
+                        function () {
+                            phone_input_tool.slidepage();
+                        });
+                }
+    
+            };
+    
+            $(window).scroll(scroll_fn);
+            scroll_fn();
+        };
+    
+        var phone_input_tool = {
+            close: function () {
+                phone_data.phone_input_show = 0;
+                $('.leftbox').fadeOut(300);
+            },
+            hidebox: function () {
+                $('.leftbox').addClass('hide');
+                phone_data.hidebox = 1;
+    
+            },
+            showbox: function () {
+                if ($(window).width() < 980) {
+                    if (phone_data.hidebox) {
+                        phone_data.hidebox = 0;
+                        $('.leftbox')
+                            .removeClass(
+                                'hide');
+                    }
+                    return false;
+                }
+            },
+            slidepage: function () {
+                $('body').on("touchstart",
+                    function (e) {
+                        phone_data.touch0 =e.touches[0].clientY;
+                    });
+                $('body').on("touchmove",
+                    function (e) {
+                        if (phone_data.hidebox) {
+                            return;
+                        };
+    
+                        phone_data.touch1 = e.touches[0].clientY;
+                        if (Math.abs(
+                            phone_data.touch1 - phone_data.touch0) > 50) {
+                            phone_input_tool.hidebox();
+                        }
+                    });
+            },
+            init_phone_input: function () {
+                phone_data.init_phone_input_flag = 1;
+                $('.leftbox').on('click',phone_input_tool.showbox);
+                $('.entry-content .close_phoneinput').on('click',phone_input_tool.close);
+            }
+        }
+        phone_input_tool.init_phone_input();
+    
+        // slide 
+    
+        var also_like = {
+            init_slide: function () { // init slide(初始化轮播)
+                var mainfoot = document.createElement("div");
+                mainfoot.innerHTML = '<div id="main-footer"></div>'
+                mainfoot.className = 'mainfooterbox';
+                $('#_blog_mainbox').after(
+                    mainfoot);
+                var maylike_box1 = $(
+                    '.rpwwt-widget>ul')[0];
+                var slidebox = document
+                    .createElement("div");
+                var slidebox_phone = document
+                    .createElement("div");
+                slidebox_phone.className =
+                    'alsolikemain_phone_box';
+                slidebox.className =
+                    'alsolikemain';
+                slidebox.innerHTML =
+                    `<a href="javascript:void(0)" data-vars-ga-category="you may also like" data-vars-ga-action="click_left arrow" data-vars-ga-label="${fulll_url}" class="pre_but"></a><div class="alsolike_slidebox"></div>
+    <a href="javascript:void(0)" data-vars-ga-category="you may also like" data-vars-ga-action="click_right arrow" data-vars-ga-label="${fulll_url}"  class="next_but"></a>`;
+                // slidebox.appendChild(maylike_box1);
+                $('#main-footer').html(
+                    '<div class="may_like">You may also like</div>'
+                );
+    
+                $('#main-footer').append(
+                    slidebox);
+                $('#main-footer').append(
+                    slidebox_phone);
+                also_like.blogresult();
+                $('.alsolikemain .pre_but').on(
+                    'click', also_like
+                    .next_fn);
+                $('.alsolikemain .next_but').on(
+                    'click', also_like
+                    .pre_fn);
+                // $('.addmore3').on('click', addmore_tool.addmore_all);
+            },
+            pre_fn: function () { //pre button
+    
+                var len = $(
+                    '#main-footer .slidebox>ul'
+                ).children().length;
+                if (+new Date() - publicdata
+                    .slidebut_T < 800) {
+                    return;
+                } else {
+                    publicdata.slidebut_T = +
+                        new Date();
+                }
+    
+                $('.alsolike_slidebox .eachbox0')
+                    .eq(0).animate({
+                        'margin-left': '-100%'
+                    }, 700, function () {
+                        var child0 = $(
+                            '.alsolike_slidebox .eachbox0'
+                        ).eq(0);
+                        var child1 = $(
+                            '.alsolike_slidebox .eachbox0'
+                        ).eq(1);
+                        var child2 = $(
+                            '.alsolike_slidebox .eachbox0'
+                        ).eq(2);
+                        child0.css({
+                            'margin-left': 0
+                        });
+                        $('#main-footer .alsolike_slidebox')
+                            .append(child0)
+                            .append(child1)
+                            .append(child2);
+                    });
+            },
+            next_fn: function () { //  next button
+    
+                var len = $(
+                    '#main-footer .alsolike_slidebox'
+                ).children().length;
+                if (+new Date() - publicdata
+                    .slidebut_T < 800) {
+                    return;
+                } else {
+                    publicdata.slidebut_T = + new Date();
+                }
+    
+                var lastchlid1 = $(
+                    '.alsolike_slidebox .eachbox0'
+                ).eq(len - 1);
+                var lastchlid2 = $(
+                    '.alsolike_slidebox .eachbox0'
+                ).eq(len - 2);
+                var lastchlid3 = $(
+                    '.alsolike_slidebox .eachbox0'
+                ).eq(len - 3);
+                lastchlid3.css({
+                    'margin-left': '-100%'
+                });
+                $('#main-footer .alsolike_slidebox')
+                    .prepend(lastchlid1)
+                    .prepend(lastchlid2)
+                    .prepend(lastchlid3);
+                lastchlid3.animate({
+                    'margin-left': '0'
+                }, 700, function () {
+                 
+                })
+            },
+            blogresult: function () {
+                var blog_data = pageData
+                    .blog_data;
+    
+                var str = '';
+                var str_phone = '';
+                var ifhide = '';
+                for (var i = 0; i < 6; i++) {
+                    var e = blog_data[i];
+                    str += `<div class="eachbox0">
+                            <div class="eachbox">
+                                ${e.new ? '<img   alt=""  class="newlogo" src="https://hiretual.com/wp-content/uploads/2021/12/newlogo.png">' : ''}
+                                <a href="${e.url}" data-vars-ga-category="Blog_You may also like" data-vars-ga-action="click_${e.title}" data-vars-ga-label="${fulll_url}">
+                                <div class="headimg">
+                                    <img src="${e.img}" alt="">
+                                </div>
+                                <p class="ph3">${e.title}
+                                <div class="read-time"><img  alt="" src="https://hiretual.com/wp-content/uploads/2021/12/eye.png"> <span>${e.read_time} read</span> </div>
+                                </a>
+                            </div>
+                        </div>`;
+    
+    
+                    str_phone += `<div class="each_box">
+                    <a href="${e.url}" data-vars-ga-category="Blog_You may also like" data-vars-ga-action="click_${e.title}" data-vars-ga-label="${fulll_url}">
+                            <div class="left_text">
+                                <span class="title">${e.title}</span>
+                                    <div class="read-titme">
+                                        <img alt="" src="https://hiretual.com/wp-content/uploads/2021/12/eye.png"> <span>${e.read_time} read</span>
+                                    </div>
+                            </div>
+                            <div class="right_img">
+                                ${e.new ? '<img   alt=""  class="newlogo" src="https://hiretual.com/wp-content/uploads/2021/12/newlogo.png">' : ''} <img src="${e.img}" alt="">
+                            </div>
+                        </a>
+                        </div>`;
+                }
+                $('.alsolikemain_phone_box')
+                    .html(str_phone);
+                $('.alsolike_slidebox').html(
+                    str);
+    
+                $('.blog-result-box .alsolike_showbox')
+                    .css('display', 'block');
+            },
+    
+        };
+    
+  var blog_template_init = function (params) {
+            document.querySelector('.read-time>img').setAttribute('src','https://hiretual.com/wp-content/uploads/2021/11/eye.png')
+            // var heart = document.getElementsByClassName('wpulike')[0];
+            // var heart_box = document.getElementsByClassName('heart')[0];
+            // heart && heart_box.appendChild(heart);
+            listen_scroll();
+            also_like.init_slide()
+            addevend();
+        };
+    
+        function creatclassify_box() {
+    
+            var pagehost = window.location.host;
+            var blogdata = pageData.blog_data || [];
+            var pageurl = window.location.href;
+            var pathname = window.location.pathname;
+            var pagedata = [];
+            var linkbox_w = {
+                all_W: 565,
+                add_w: 0
+            };
+            var textbox = document.createElement('div');
+            textbox.className = 'hidediv';
+            document.getElementsByTagName('body')[0]
+                .appendChild(textbox);
+    
+            blogdata.map(function (item) {
+                var itemurl = item.url;
+                if (item.url[item.url.length - 1] == '/') {
+                    itemurl = item.url.slice(0, item.url.length - 1)
+                }
+    
+                if (pathname[pathname.length - 1] == '/') {
+                    pathname = pathname.slice(0, pathname.length - 1)
+                }
+    
+                if (itemurl == pathname) {
+                    pagedata.push(item)
+                }
+            });
+    
+            if (pagedata.length < 1) {
+                return;
+            } else {
+                createbox();
+                pagedata = pagedata[0];
+                if (pagedata.tag && pagedata.tag[0] && pagedata.tag[0] != 'x') {
+    
+                    addtag(pagedata.tag);
+                } else {
+                    document.querySelector('.classify_box .tag_box').style.display = 'none';
+                }
+                if (pagedata.classify && pagedata.classify[0]) {
+                    addcat();
+                }
+            }
+    
+            function createbox() {
+    
+                var tagbox = document.createElement(
+                    'div');
+                tagbox.innerHTML = `
+           <div class="classify_box">
+        <div class="categorie_box"> <span class="name">Categories : </span> <div class="linkbox"> <!-- link --> </div></div>
+        <div class="tag_box"> <span class="name">Tags : </span> <div class="linkbox">  <!-- link --> </div></div>
+    </div>`;
+                document.querySelector('.rightmain').appendChild(tagbox);
+                linkbox_w.all_W = document.querySelector('.linkbox').offsetWidth;
+            }
+    
+            function addtag(tagarr) {
+    
+                tagarr = tagarr || ['Market Insights',
+                    'Engagement', 'Sourcing',
+                    'Talent Data Cloud',
+                    'Diversity and Inclusion',
+                    'Chrome Extension',
+                    'Integrations'
+                ];
+                var tagstr = '';
+                var act;
+                for (var i = 0; i < tagarr.length; i++) {
+    
+                    tagstr +=
+                        `<a data-vars-ga-category="tags" data-vars-ga-action="click_${tagarr[i]}" data-vars-ga-label="${pageurl}"  class="alink" href="https://${pagehost}/tag/?tag=${tagarr[i].trim()}"> <span>#</span>${tagarr[i]}</a>`
+                }
+                document.querySelector('.classify_box .tag_box .linkbox').innerHTML = tagstr;
+            }
+    
+            function addcat() {
+                var catstr = '';
+                var linestr = '';
+    
+                for (var k = 0; k < pagedata.classify.length; k++) {
+                    textbox.innerHTML = pagedata.classify[k];
+                    var len = linkbox_w.add_w + textbox.offsetWidth + 29;
+                 
+                    if (len <= linkbox_w.all_W) {
+                        if (linkbox_w.add_w) {
+                            linestr = '<span class="line"></span>';
+                        } else {
+                            linestr = '';
+                            len -= 29;
+                        }
+                        linkbox_w.add_w = len;
+                    } else {
+                        if ((linkbox_w.add_w + 29) <= linkbox_w.all_W) {
+                            linestr = '<span class="line" style="opacity: 0;"></span>';
+                        } else {
+                            linestr = '';
+                        }
+                        linkbox_w.add_w = 0;
+                    }
+    
+                    catstr +=
+                        `${linestr}<a class="alink" data-vars-ga-category="Categories" data-vars-ga-action="click_${pagedata.classify[k]}" data-vars-ga-label="${pageurl}" href="https://${pagehost}/resources/content-library/?enterpage=blog&cat=${pagedata.classify[k].replace(/\s+/g, '')}">${pagedata.classify[k]}</a>`
+                }
+                document.querySelector(
+                    '.classify_box .categorie_box .linkbox'
+                ).innerHTML = catstr;
+                textbox.remove();
+            }
+    
+        }
+         // 控制选项卡模块功能
+         function set_tabs() {
+            if (!$('.et_pb_tabs .et_pb_tabs_controls>li').length) return;
+    
+            $('.et_pb_tabs .et_pb_tabs_controls>li').click(function (e) {
+                var outbox = $(this).parents('.et_pb_tabs');
+                var cl = $(this).attr('class').split(' ')[0];
+                $(this).siblings('li').removeClass('et_pb_tab_active');
+                $(this).addClass('et_pb_tab_active');
+                var actbox = $(outbox).find('.et_pb_all_tabs .' + cl);
+                actbox.siblings('div').css('display','none');
+                actbox.css('display','block');
+                return false;
+            });
+        };
+        var blogflag = true;
+        window.addEventListener('load', function () {
+            if(!blogflag) return;
+            blogflag = false;
+            blog_template_init();
+            set_content_nav();
+            creatclassify_box();
+            set_tabs();
+        })
+    </script> 
+
+</body>
+
+</html>

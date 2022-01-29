@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- use form:Multinational-form -->
+    <!-- Cookiebot  -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="63dcd82f-a840-4920-8988-8fa19ab4a95f"
+        data-blockingmode="auto" type="text/javascript"></script>
+    <!-- Cookiebot  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="%%description%%" />
+    <title>%%title%%</title>
+    <!-- <meta property="og:image" content="https://explore.hiretual.com/l/874171/2021-01-15/92yvpw/874171/1610693263Ii1nWHyK/Hiretual_6_Min_Demo.png"> -->
+    <link rel="icon" href="https://storage.pardot.com/874171/163468/htm_icon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="https://explore.hiretual.com/explore.hiretual.index.css" />
+    <!-- zoominfo -->
+
+    <script>
+        (function () {
+            var zi = document.createElement('script');
+            zi.type = 'text/javascript';
+            zi.async = true;
+            zi.src = 'https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(zi, s);
+        })();
+    </script>
+
+    <script>
+
+
+        function getParam(p) {
+            var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function getExpiryRecord(value) {
+            var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 以毫秒计的 90 天有效期
+
+            var expiryDate = new Date().getTime() + expiryPeriod;
+            return {
+                value: value,
+                expiryDate: expiryDate
+            };
+        }
+
+        function addGclid() {
+            var gclidParam = getParam('gclid');
+            var gclidFormFields = ['874171_105037pi_874171_105037', 'foobar']; // 此处所有可能的 GCLID 表单字段
+            var gclidRecord = null;
+            var currGclidFormField;
+
+            var gclsrcParam = getParam('gclsrc');
+            var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+
+            gclidFormFields.forEach(function (field) {
+                if (document.getElementById(field)) {
+                    currGclidFormField = document.getElementById(field);
+                }
+            });
+
+            if (gclidParam && isGclsrcValid) {
+                gclidRecord = getExpiryRecord(gclidParam);
+                localStorage.setItem('gclid', JSON.stringify(gclidRecord));
+            }
+
+            var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
+            var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+
+            if (currGclidFormField && isGclidValid) {
+                currGclidFormField.value = gclid.value;
+            }
+        }
+
+        window.addEventListener('load', addGclid);
+
+    </script>
+
+    <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
+    <script>
+        window.addEventListener('message', receiveMessage, false);
+        function receiveMessage(event) {
+            if (event.data && event.data.message === 'PARDOT_DATA' && event.data.data) {
+                var data = event.data.data;
+                const submitData = {
+                    FirstName: data['FirstName'],
+                    LastName: data['LastName'],
+                    Company: data['CompanyName'],
+                    Email: data['WorkEmail'],
+                    Title: data['JobTitle'],
+                    Phone: data['Phone'],
+                    Lead_Form_Company_Size__c: data['CompanySize'],
+                    Number_of_recruiters__c: data['NumberofRecruiters']
+                }
+                ChiliPiper.submit("hiretual", "pardot-request-a-demo", { map: true, lead: submitData })
+            }
+        };
+
+    </script>
+    <style>
+        html,
+        body,
+        .wapper {
+            width: 100%;
+            /* min-width: 390px; */
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", arial, sans-serif;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        img,
+        div,
+        h1,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+    text-decoration: none !important;
+}
+       
+#page-heade {
+            width: 100%;
+            display: flex;
+            z-index: 11;
+        }
+
+        #page-heade div img {
+            width: 99px;
+            height: 99px;
+            border-radius: 100%;
+            background-color: #f15b0c;
+            margin-left: -1px;
+            margin-right: -1px;
+        }
+
+        .title-box {
+            width: 100%;
+            text-align: center;
+        }
+
+        p.title {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2768b3;
+            margin: 0px auto 0px;
+        }
+
+        .yellow-seperator {
+            margin: 20px auto 68px auto;
+            max-width: 500px;
+            width: 80%;
+            height: 9px;
+        }
+        form.form{
+            padding: 0 !important;
+        }
+    /* part1 */
+    .part1 {
+            width: 100%;
+            background-color: #32c5ff;
+            background-image: url(https://explore.hiretual.com/l/874171/2021-03-18/994bhq/874171/1616116497OibodbBc/LP_Multinational_image_top_bg.png);
+            background-size: auto 93.4%;
+            background-position: center top;
+            background-repeat: no-repeat;
+            padding-bottom: 1px;
+        }
+
+        .part-content {
+            width: 90%;
+            max-width: 1150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0px auto;
+            padding-top: 80px;
+        }
+
+        .part-content .left-text {
+            max-width: 650px;
+            width: 58%;
+            margin: 20px 0 0;
+        }
+
+        .part-content .left-text h1 {
+            width: 100%;
+            font-size: 28px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #ffffff;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .part-content .left-text h1>span{
+           color: #32c5ff;
+        }
+
+        .part-content .left-text h5 {
+            width: 100%;
+            font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #ffffff;
+            margin: 15px auto 60px;
+            text-align: left;
+        }
+
+        .part-content .left-text img {
+            width: 100%;
+        }
+
+        .part-content .right-table {
+            width: 30%;
+            max-width: 365px;
+            min-width: 300px;
+            min-height: 550px;
+            margin: 0 0 35px 2%;
+            box-sizing: border-box;
+        }
+       .part1 .top_border{
+           margin:  22px 0 -5px;
+           display: flex;
+           font-size: 0;
+           justify-content: center;
+       }
+       .part1 .top_border .border1{
+           height: 124px;
+           flex: 1 1 auto;
+       }
+       .part1 .top_border .border2{
+           width: 719px;
+           height: 124px;
+           flex: 0 0 auto;
+           margin: 0 -5px;
+       }
+        @media (max-width: 950px) {
+            .part-content {
+                width: 96%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .part1 {
+          
+            background-size: auto 100%;
+            background-position: center -62px;
+            background-repeat: no-repeat;
+            padding-bottom: 1px;
+        }
+            .part-content {
+                width: 98%;
+                flex-wrap: wrap;
+            }
+
+            .part-content .left-text {
+                width: 100%;
+                margin: 50px auto;
+                text-align: center;
+
+            }
+
+            .part-content .left-text img {
+                width: 90%;
+                margin: 0 auto;
+
+            }
+
+            .part-content .right-table {
+                width: 80%;
+                margin: 50px auto;
+            }
+            .part1 .top_border .border1{
+           display: none;
+       }
+       .part1 .top_border .border2{
+           width:1000px;
+           height: 124px;
+       }
+        }
+/* part2 */
+.part2{
+   width: 100%;
+    background-color: #e8e8e8;
+    padding: 65px 0 55px;
+}
+.part2 .part2-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-right: 20px;
+}
+.part2 .part2_content_box{
+    background-color: #ffffff;
+    box-shadow: 20px 20px 0px #2768b3;
+    border-radius: 25px;
+    padding: 38px 38px 50px;
+    text-align: left;
+    margin-bottom: 50px;
+    width: 46%;
+    max-width: 545px;
+}
+.part2 .part2_content_box h1{
+    font-size: 32px;
+  font-weight: bold;
+  line-height: 1.31;
+  color: #2768b3;
+  font-stretch: normal;
+  letter-spacing: normal;
+  margin-bottom: 40px;
+}
+.part2 .part2_content_box h5{
+    font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+@media (max-width: 800px) {
+    .part2 .part2_content_box{
+    margin: 30px auto;
+    width: 100%;
+    max-width: 600px;
+}
+}
+
+         /* part3-icon */
+        .part3-icon {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 50px 5% 90px;
+            box-sizing: border-box;
+        }
+
+        .part3-icon .icon-box {
+            width: 100%;
+            max-width: 1380px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+        }
+
+        .part3-icon .icon-box li {
+            height: 110px;
+            display: flex;
+            width: 20%;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 1260px) {
+            .part3-icon {
+
+                padding: 50px 1% 90px;
+            }
+
+            .part3-icon .icon-box {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .part3-icon .icon-box li {
+                width: 30%;
+                margin-bottom: 35px;
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .part3-icon .icon-box li {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .part3-icon .icon-box li {
+                width: 100%;
+            }
+        }
+
+   
+    /* part4 */
+    .part4 {
+            text-align: center;
+            width: 100%;
+            background-color: #32c5ff;
+            padding: 90px 0 50px;
+        }
+
+        .part4-list {
+            width: 100%;
+            max-width: 1070px;
+            margin: 0px auto 70px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .part4-list .list_text {
+            width: 87%;
+        }
+
+        .part4-list .list_text h1 {
+            text-align: left;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+        }
+
+        .part4-list .list_text h5 {
+            margin-top: 5px;
+            text-align: left;
+            font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+        }
+
+        .part4-list .list_icon {
+            align-self: flex-start;
+        }
+
+        @media (max-width:800px) {
+            .part4-list {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .part4-list .list_text {
+                width: 90%;
+            }
+
+            .part4-list .list_text h1 {
+                text-align: center;
+
+            }
+
+            .part4-list .list_text h5 {
+                text-align: center;
+            }
+        }
+/* part5 */
+.part5{
+   width: 100%;
+    padding: 65px 0 55px;
+}
+.part5 .part5-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 98%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-right: 20px;
+}
+.part5 .part5_content_box{
+    background-color: #ffffff;
+    box-shadow: 25px 25px 0px #2768b3;
+    border: solid 1px #979797;
+    border-radius: 25px;
+    padding: 50px 83px 69px 60px;
+    text-align: left;
+    margin-bottom: 50px;
+    width: 46%;
+    max-width: 625px;
+}
+.part5 .part5_content_box h3{
+    font-size: 21px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+}
+.part5 .part5_content_box h5{
+    font-size: 21px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #3c3c3c;
+  margin-top: 40px;
+  width: 85%;
+}
+.message2 h5{
+    margin-top: 30px;
+}
+@media (max-width: 950px) {
+    .part5 .part5_content_box{
+    margin: 30px auto;
+    width: 100%;
+    max-width: 650px;
+}
+}
+
+        /* bottom part */
+.part_bottom{
+    width: 100%;
+    text-align: center;
+}
+        .part_bottom-but {
+            display: block;
+            width: 100%;
+            max-width: 383px;
+            height: 72px;
+            margin: 0px auto 150px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #f15b0c;
+            font-size: 21px;
+            font-weight: bold;
+            line-height: 72px;
+            letter-spacing: normal;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page-heade">
+        <div style="width: 100px;
+    background-color: #f15b0c;
+    height: 38px;"></div>
+        <div style="height: 38px;background-color: #f15b0c;z-index: 11;">
+            <a href="hiretual.com" target="_top">
+                <img src="https://explore.hiretual.com/l/874171/2021-01-12/92m1jy/874171/1610499092Obgm457I/orange.png"
+                    alt="Hiretual Logo in white with light blog background">
+            </a>
+        </div>
+
+        <div style="width: 100%;background-color: #f15b0c;height: 38px;"></div>
+    </div>
+      <!-- part1 -->
+      <div class="part1">
+        <div class="part-content">
+            <div class="left-text">
+                <h1>Streamline hiring across your multinational corporation. <span>Global talent sourcing</span>  made simple with the Hiretual Platform </h1>
+                <h5>With Hiretual you can access the world’s largest talent pool to find top-tier global talent. Source across 750M+ candidate profiles from 45+ open web platforms including LinkedIn, Facebook, GitHub, Kaggle, UpWork, and more.  </h5>
+                <img src="https://explore.hiretual.com/l/874171/2021-03-19/9988zb/874171/1616202582jozMppAW/LP_Multinational_image_top2.png"
+                    alt="">
+            </div>
+            <div class="right-table" id="table">
+                %%content%%
+            </div>
+        </div>
+        <div class="top_border">
+            <img class="border1" src="https://explore.hiretual.com/l/874171/2021-03-18/994brl/874171/1616117338RjYS8MN6/topimg2.png" alt="">
+            <img class="border2" src="https://explore.hiretual.com/l/874171/2021-03-18/994brn/874171/1616117338kRSIntAi/topimg1.png" alt="">
+            <img class="border1" src="https://explore.hiretual.com/l/874171/2021-03-18/994brl/874171/1616117338RjYS8MN6/topimg2.png" alt="">
+        </div>
+    </div>
+    <!-- part2 -->
+    <div class="part2">
+        <p class="title" style="margin-top: 0px;">How Hiretual Simplifies Your Hiring Needs</p>
+  <img class="yellow-seperator" style="margin-bottom:50px;margin-top:15px"
+      src="https://explore.hiretual.com/l/874171/2020-10-28/8tb348/874171/160387394016ZZaZ29/yellow_seperator.png">
+      <div class="part2-main">
+        <div class="part2_content_box">
+            <h1>Build Strong Global Pipelines</h1>
+            <h5>Hiretual expands your global talent pool with over 600 million candidates to source from outside of the United States across open web platforms, like Upwork, GitHub, LinkedIn, Stack Overflow, Twitter, and more. </h5>
+        </div>
+        <div class="part2_content_box">
+            <h1>Launch Successful Campaigns with Data-Driven Insights</h1>
+            <h5>Inform your global hiring strategy with our AI-driven Market Insights. Act fast with a comprehensive talent pool summary of top job titles, companies, market values, and diversity breakdowns.</h5>
+        </div>
+        
+        <div class="part2_content_box">
+            <h1>Find Multilingual Talent Across The Globe</h1>
+            <h5>Expand your company’s reach into multilingual consumer markets by adding multilingual talent to your workforce. Source for global talent based on languages they speak using Hiretual’s powerful AI filters.</h5>
+        </div>
+
+        <div class="part2_content_box">
+            <h1>Drive More Conversations with Automated Engagement</h1>
+            <h5>Reach global talent wherever they are with engagement insights and automated multi-touch sequences with customizable variables.</h5>
+        </div>
+        
+      </div>
+      
+
+
+    </div>
+  <!-- part3-icon -->
+  <p class="title" style="margin-top: 55px;">Trusted by Top Fortune 500 Companies</p>
+  <img class="yellow-seperator" style="margin-bottom:0px;margin-top:15px"
+      src="https://explore.hiretual.com/l/874171/2020-10-28/8tb348/874171/160387394016ZZaZ29/yellow_seperator.png">
+  <div class="part3-icon">
+      <ul class="icon-box">
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnl9/874171/16147352973LwQwqZA/wayfair1.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnkt/874171/1614735296yZvZ8izN/intel2.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnkr/874171/1614735296cZKPtVqE/IBM3.png"
+                  alt=""></li>
+          <li><img style="margin-top: 0px;"
+                  src="https://explore.hiretual.com/l/874171/2021-03-02/97mnlc/874171/1614735297wgOJ9Zk9/accen4.png"
+                  alt=""></li>
+          <li><img style="margin-top: px"
+                  src="https://explore.hiretual.com/l/874171/2021-03-02/97mnl7/874171/1614735297TG2WWOjE/sutter5.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnkm/874171/1614735295uNeq0opV/deloitte6.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnl5/874171/1614735297dzIumki2/philips7.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnl1/874171/1614735296ul8P1l3k/noRTH8.png"
+                  alt=""></li>
+
+          <li><img style="margin-top: 0px" src="https://storage.pardot.com/874171/1614836795tQ64LOce/logo_nike.png"
+                  alt=""></li>
+          <li><img style="margin-top: 0px"
+                  src="https://explore.hiretual.com/l/874171/2021-03-02/97mnkp/874171/1614735295njbWdBOf/Dig10.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnlf/874171/1614735297Jc8Og282/bhp11.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnkh/874171/1614735295SdrZNpBz/cer12.png"
+                  alt=""></li>
+          <li><img src="https://explore.hiretual.com/l/874171/2021-03-02/97mnl3/874171/1614735296lzBVrZei/novo13.png"
+                  alt=""></li>
+          <li><img style="margin-top: 0px;"
+                  src="https://explore.hiretual.com/l/874171/2021-03-02/97mnky/874171/1614735296O7BJWhPV/M_T14.png"
+                  alt=""></li>
+          <li><img style="margin-top: 0px"
+                  src="https://explore.hiretual.com/l/874171/2021-03-02/97mnkk/874171/16147352953LDSiqtJ/contine15.png"
+                  alt=""></li>
+      </ul>
+  </div>
+      <!-- part4 -->
+      <div class="part4">
+        <p class="title" style="max-width: 100%;color: #ffffff;">Build and Expand Your Team With Us</p>
+        <img class="yellow-seperator" style="margin-bottom:65px;margin-top:25px"
+            src="https://explore.hiretual.com/l/874171/2020-10-28/8tb348/874171/160387394016ZZaZ29/yellow_seperator.png">
+
+        <div class="part4-list list1">
+            <img style="width: 69px;margin: 15px 0 0 20px;"
+                src="https://explore.hiretual.com/l/874171/2021-03-18/994bvv/874171/1616121330Rnukk1Bd/001.svg"
+                alt="" class="list_icon">
+            <div class="list_text">
+                <h1>Premium customer service</h1>
+                <h5>Our benchmark for customer service is to be nothing less than world-class. You will have a dedicated customer success manager who ensures you achieve and exceed your hiring goals with Hiretual.</h5>
+            </div>
+
+        </div>
+        <div class="part4-list list2">
+            <img style="width: 61px;margin: 15px 0 0 25px;"
+                src="https://explore.hiretual.com/l/874171/2021-03-18/994bw4/874171/1616123302aSMdCGZh/002.svg"
+                alt="" class="list_icon">
+            <div class="list_text">
+                <h1>You’re in safe hands</h1>
+                <h5>Hiretual has rigorous policies in place to ensure information security and compliance. We are GDPR compliant, SOC Type I and II certified, and EU-US Privacy Shield certified.</h5>
+            </div>
+        </div>
+        <div class="part4-list list3">
+            <img style="width: 61px;margin: 15px 0 0 25px;"
+                src="https://explore.hiretual.com/l/874171/2021-03-18/994bw2/874171/1616123184DnFaStNN/003.png"
+                alt="" class="list_icon">
+            <div class="list_text">
+                <h1>Built to scale</h1>
+                <h5>Hiretual’s AWS-based infrastructure is built to be scalable, stable, and reliable. As your business and teams grow, so does Hiretual. </h5>
+            </div>
+        </div>
+    </div>
+     <!-- part5 -->
+     <div class="part5">
+        <p class="title" style="margin-top: 0px;">See what others are saying about Hiretual</p>
+  <img class="yellow-seperator" style="margin-bottom:90px;margin-top:15px"
+      src="https://explore.hiretual.com/l/874171/2020-10-28/8tb348/874171/160387394016ZZaZ29/yellow_seperator.png">
+      <div class="part5-main">
+        <div class="part5_content_box message1">
+            <h3>“I love AI Sourcing. I love how I can start a search, go grab a cup of coffee and come back to a list of 50 candidates, 40 of whom are worth reaching out to. Hiretual has optimized the front-end for me: sourcing and engagement. Hiretual is fantastic at these and I’m super happy. My time is better spent on Hiretual than if I use Linkedin. In fact, I don’t have a LinkedIn account anymore.”</h3>
+            <h5>- Kray Blanding, Technical Sourcing Recruiter at Apptio</h5>
+        </div>
+       
+        <div class="part5_content_box message2">
+            <h3> “Hiretual gives you several sourcing options. Whether it be quick and dirty or complex boolean searches, increase your sourcing with automated suggestions, which are spot on and great for entry-level to advanced technical recruiters who really like to dig deep and target various sources such as Linkedin, Github, Angelist, Facebook, Bing, and Google. Hiretual is very fast and flexible for finding information, which continues to improve frequently.</h3>
+            <h5>- Allen R. Technical Sourcer</h5>
+        </div>
+        
+      </div>
+      
+
+
+    </div>
+    <div class="part_bottom">
+        <p class="title" style="margin-top: 50px;max-width: 1005px;">Ready to modernize your recruiting process across 
+            your Multinational Corporation? </p>
+        <img class="yellow-seperator" style="margin:23px auto 60px;"
+            src="https://explore.hiretual.com/l/874171/2020-10-28/8tb348/874171/160387394016ZZaZ29/yellow_seperator.png">
+        <a class="part_bottom-but pardotcta" href="#table">CONTACT SALES</a>
+    </div>
+     
+        <script src="https://explore.hiretual.com/explore.hiretual.index.js"></script>
+      
+        <noscript>
+            <img src="https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0" width="1" height="1" style="display: none;" />
+        </noscript>
+</body>
+
+</html>

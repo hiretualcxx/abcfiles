@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+
+    .box {
+      width: 900px;
+      margin: 50px auto 0;
+    }
+
+    .toptitle {
+      width: 100%;
+      height: 45px;
+      border-bottom: 1px solid #999;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 45px;
+      text-align: center;
+      display: flex;
+    }
+
+    .toptitle>span {
+      flex: 1 1 auto;
+      display: inline-block;
+      
+
+    }
+
+    .main {
+      width: 100%;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 25px;
+      text-align: center;
+      display: flex;
+    }
+
+    .main>ul {
+      flex: 1 1 16.6%;
+    }
+
+    .main>ul li  {
+      text-align: left;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .showdata,.post_data,.begin_req {
+      width: 100px;
+      height: 35px;
+      font-size: 20px;
+      line-height: 35px;
+      background-color: transparent;
+      border-radius: 5px;
+      display: block;
+      margin: 50px auto 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="toptitle">
+      <span>url</span><span>Performance</span><span>Accessibility</span><span>Best Practices</span><span>SEO</span><span>Google</span>
+    </div>
+    <div class="main">
+      <ul id="url"></ul>
+      <ul id="Performance"></ul>
+      <ul id="Accessibility"></ul>
+      <ul id="Best_Practices"></ul>
+      <ul id="seo"></ul>
+      <ul id="Google"></ul>
+    </div>
+  </div>
+  <button class="begin_req" onclick="run()">开始请求</button>
+  <button class="showdata" onclick="showdata()">生成结果</button>
+  <button class="post_data" onclick="post_data()">发送数据</button>
+  <button class="post_data" onclick="toLargerCSV()">导出数据</button>
+  <script src="./seodata.js"></script>
+  <script src="../jQuery-3-5-1.js"></script>
+
+  <script>
+    var urlarr = ['https://hiretual.com/', 'https://hiretual.com/about-us/',
+      'https://hiretual.com/accessibility-statement/', 'https://hiretual.com/api/', 'https://hiretual.com/apps/',
+      'https://hiretual.com/careers/', 'https://hiretual.com/ccpa/',
+      'https://hiretual.com/features/expansive-candidate-profiles/', 'https://hiretual.com/featured-articles/',
+      'https://hiretual.com/features/chrome-extension/', 'https://hiretual.com/features/diversity-inclusion/',
+      'https://hiretual.com/features/engagement/', 'https://hiretual.com/features/insights/',
+      'https://hiretual.com/features/integrations/', 'https://hiretual.com/features/security-clearance/',
+      'https://hiretual.com/features/sourcing/', 'https://hiretual.com/features/talent-data-cloud/',
+      'https://hiretual.com/gdpr/', 'https://hiretual.com/google-api-disclosure/',
+      'https://hiretual.com/new-partners/', 'https://hiretual.com/new-pricing/',
+      'https://hiretual.com/new-pricing/professional/', 'https://hiretual.com/newsroom/',
+      'https://hiretual.com/partners/', 'https://hiretual.com/partners/partner-program/',
+      'https://hiretual.com/pressrelease/', 'https://hiretual.com/resources/content-library/',
+      'https://hiretual.com/resources/feature-releases/', 'https://hiretual.com/security-compliance/',
+      'https://hiretual.com/solutions/', 'https://hiretual.com/solutions/enterprise/',
+      'https://hiretual.com/solutions/hypergrowth/', 'https://hiretual.com/solutions/small-medium/',
+      'https://hiretual.com/solutions/healthcare/', 'https://hiretual.com/solutions/security-defense/',
+      'https://hiretual.com/solutions/staff/', 'https://hiretual.com/solutions/collaboration/',
+      'https://hiretual.com/solutions/data-consolidation/', 'https://hiretual.com/solutions/business-development/',
+      'https://hiretual.com/sponsored/', 'https://hiretual.com/blog/how-to-source-candidates-on-Github',
+      'https://hiretual.com/blog/different-between-sourcing-vs-recruiting/',
+      'https://hiretual.com/blog/how-to-add-hiretual-chrome-extension/',
+      'https://hiretual.com/blog/recruiting-email-templates/',
+      'https://hiretual.com/blog/what-is-an-executive-recruiter/',
+      'https://hiretual.com/blog/best-email-finding-tool-for-recruiter/',
+      'https://hiretual.com/blog/what-is-hiretual/',
+      'https://hiretual.com/blog/boolean-recruiting-tools-with-hiretual/'
+    ]
+    var data = {};
+    var googleul = document.getElementById('googleul');
+
+    function re_googleqapi(u) {
+      var url =
+        `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(u)}&strategy=desktop&key=AIzaSyA5WXa9qjieZHQLqFVwMYeubKyNLehbGqw`;
+        // &key=AIzaSyA5WXa9qjieZHQLqFVwMYeubKyNLehbGqw
+      fetch(url)
+        .then(response => response.json())
+        .then(d => {
+          console.log(d.lighthouseResult.categories.performance.score);
+          data[u].Google = d.lighthouseResult.categories.performance.score;
+        })
+        .catch((err) => {
+          data[u].Google = 'xxx';
+          setTimeout(()=>{
+            re_googleqapi(u)
+          },2000)
+        
+        });
+    }
+    function re_web_dveqapi(u) {
+      var jsonData = {
+        "replace": true,
+        "save": false,
+        "url": u
+      }
+
+      fetch('https://lighthouse-dot-webdotdevsite.appspot.com//lh/newaudit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json;charset=UTF-8',
+            'origin': 'https://web.dev',
+            'referer': 'https://web.dev/',
+          },
+          'Content-Type': 'application/json;charset=UTF-8',
+          body: JSON.stringify(jsonData),
+        })
+        .then(response => response.json())
+        .then(d => {
+          console.log(d);
+          var d1 = d.lhrSlim;
+          var Performance = d1[0].score;
+          var Accessibility = d1[1].score;
+          var Best_Practices = d1[2].score;
+          var seo = d1[3].score;
+          data[u].Performance = Performance;
+          data[u].Accessibility = Accessibility;
+          data[u].Performance = Performance;
+          data[u].Best_Practices = Best_Practices;
+          data[u].seo = seo;
+        })
+        .catch((err) => {
+          data[u].Performance = 'xxx';
+          data[u].Accessibility = 'xxx';
+          data[u].Performance = 'xxx';
+          data[u].Best_Practices = 'xxx';
+          data[u].seo = 'xxx';
+          re_web_dveqapi(u);
+        });
+    }
+
+    function run() {
+      var i = 0;
+      var t = setInterval(() => {
+        re_googleqapi(urlarr[i]);
+        re_web_dveqapi(urlarr[i]);
+        data[urlarr[i]] = {
+          url: urlarr[i]
+        };
+        i++;
+        if (i >= urlarr.length) clearInterval(t);
+      }, 2500);
+    }
+    // run();
+    function showdata() {
+      $('#url').add('#Performance').add('#Performance').add('#Accessibility').add('#Best_Practices').add('#seo').add('#Google').html('');
+      for (var i = 0; i < urlarr.length; i++) {
+        var d0 = data[urlarr[i]];
+        for (var key in d0) {
+          var oli = document.createElement('li');
+
+          oli.innerHTML = Math.floor(d0[key] * 100) || d0[key] || 'xxx';
+
+          $('#' + key).append(oli)
+        }
+      }
+    }
+
+    function post_data() {
+      fetch('http://127.0.0.28:8080/api/upseodata', {
+          method: 'POST',
+          headers: {
+            // 'Content-Type': 'application/json;charset=UTF-8',
+            'origin': 'https://web.dev',
+            'referer': 'https://web.dev/',
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(d => {
+          console.log(d);
+        })
+        .catch((err) => {
+          console.log(err)
+        });
+
+    }
+
+    function toLargerCSV(){
+ //CSV格式可以自己设定，适用MySQL导入或者excel打开。
+ //由于Excel单元格对于数字只支持15位，且首位为0会舍弃 建议用 =“数值” 
+                d_arr = d_arr || [];
+                var day = ' ,';
+                var title = 'url,';
+                var numstr = '';
+                var urlobj = {};
+
+                for(var i=0;i<d_arr.length;i++){
+                  day+=`${d_arr[i].date}, , , , ,`;
+                  title+=`Performance,Accessibility,Best Practices,SEO,Google,`
+                   
+                    number(d_arr[i].d);
+                };
+                function number(d){
+                    for(var key in d){
+                        var d0 = d[key];
+                        urlobj[key] =  urlobj[key] || '';
+                        urlobj[key] += `${Math.floor(d0.Performance*100)|| 'xxx'},${Math.floor(d0.Accessibility*100)|| 'xxx'},${Math.floor(d0.Best_Practices*100)|| 'xxx'},${Math.floor(d0.seo*100)|| 'xxx'},${Math.floor(d0.Google*100)|| 'xxx'},`;
+
+                    }
+                };
+                for(var k=0;k<urlarr.length;k++){
+                    urlobj[urlarr[k]] = `${urlarr[k]},${urlobj[urlarr[k]]}`;
+                    numstr += (urlobj[urlarr[k]]+'\n');
+                }
+str = `${day}\n${title}\n${numstr}`
+
+
+
+
+
+
+//  var str = '行号,内容,题目,标题\n aa \t,bb  \n';
+ 
+//  for(let i=0;i<100000;i++){
+//   str += i.toString()+',1234567890123456789\t,张三李四王五赵六,bbbb,\n'
+//  }
+ var blob = new Blob([str], {type: "text/plain;charset=utf-8"});  
+ //解决中文乱码问题
+ blob = new Blob([String.fromCharCode(0xFEFF), blob], {type: blob.type}); 
+ object_url = window.URL.createObjectURL(blob); 
+ var link = document.createElement("a");
+ link.href = object_url;
+ link.download = "导出.csv";
+ document.body.appendChild(link);
+ link.click();
+ document.body.removeChild(link);        
+ }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- use form:Warehouse High Volume Recruiting-form -->
+    <!-- Cookiebot  -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="63dcd82f-a840-4920-8988-8fa19ab4a95f"
+        data-blockingmode="auto" type="text/javascript"></script>
+    <!-- Cookiebot  -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="%%description%%" />
+    <title>%%title%%</title>
+    <!-- <meta property="og:image" content="https://explore.hiretual.com/l/874171/2021-01-15/92yvpw/874171/1610693263Ii1nWHyK/Hiretual_6_Min_Demo.png"> -->
+    <link rel="icon" href="https://storage.pardot.com/874171/163468/htm_icon.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="https://explore.hiretual.com/explore.hiretual.index.css" />
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NSNSKFX');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Hotjar Tracking Code for https://discover.hiretual.com -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1537703,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+    <!-- zoominfo -->
+
+    <script>
+        (function () {
+            var zi = document.createElement('script');
+            zi.type = 'text/javascript';
+            zi.async = true;
+            zi.src = 'https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(zi, s);
+        })();
+    </script>
+    <script>
+
+        function getParam(p) {
+            var match = RegExp('[?&]' + p + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function getExpiryRecord(value) {
+            var expiryPeriod = 90 * 24 * 60 * 60 * 1000; // 以毫秒计的 90 天有效期
+
+            var expiryDate = new Date().getTime() + expiryPeriod;
+            return {
+                value: value,
+                expiryDate: expiryDate
+            };
+        }
+
+        function addGclid() {
+            var gclidParam = getParam('gclid');
+            var gclidFormFields = ['874171_108405pi_874171_108405', 'foobar']; // 此处所有可能的 GCLID 表单字段
+            var gclidRecord = null;
+            var currGclidFormField;
+
+            var gclsrcParam = getParam('gclsrc');
+            var isGclsrcValid = !gclsrcParam || gclsrcParam.indexOf('aw') !== -1;
+
+            gclidFormFields.forEach(function (field) {
+                if (document.getElementById(field)) {
+                    currGclidFormField = document.getElementById(field);
+                }
+            });
+
+            if (gclidParam && isGclsrcValid) {
+                gclidRecord = getExpiryRecord(gclidParam);
+                localStorage.setItem('gclid', JSON.stringify(gclidRecord));
+            }
+
+            var gclid = gclidRecord || JSON.parse(localStorage.getItem('gclid'));
+            var isGclidValid = gclid && new Date().getTime() < gclid.expiryDate;
+
+            if (currGclidFormField && isGclidValid) {
+                currGclidFormField.value = gclid.value;
+            }
+        }
+
+        window.addEventListener('load', addGclid);
+
+    </script>
+
+    <script src="https://js.chilipiper.com/marketing.js" type="text/javascript"></script>
+    <script>
+        window.addEventListener('message', receiveMessage, false);
+        function receiveMessage(event) {
+            if (event.data && event.data.message === 'PARDOT_DATA' && event.data.data) {
+                var data = event.data.data;
+                const submitData = {
+                    FirstName: data['FirstName'],
+                    LastName: data['LastName'],
+                    Company: data['CompanyName'],
+                    Email: data['WorkEmail'],
+                    Title: data['JobTitle'],
+                    Phone: data['Phone'],
+                    Lead_Form_Company_Size__c: data['CompanySize'],
+                    Number_of_recruiters__c: data['NumberofRecruiters']
+                }
+                ChiliPiper.submit("hiretual", "pardot-request-a-demo", { map: true, lead: submitData })
+            }
+        };
+
+    </script>
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", arial, sans-serif;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        body {
+            /* background-image: url(https://explore.hiretual.com/l/874171/2021-04-19/9dws7d/874171/1618891199NsfzVwuY/bg.jpg); */
+            /* background-size: 100% 100%; */
+        }
+
+        img,
+        div,
+        h1,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        #pardot-form {
+            padding: 0;
+        }
+        #page-heade {
+            width: 100%;
+            display: flex;
+            z-index: 99;
+        }
+
+        #page-heade div img {
+            z-index: 99;
+            width: 99px;
+            height: 99px;
+            border-radius: 100%;
+            background-color: #32c5ff;
+            margin-left: -1px;
+            margin-right: -1px;
+        }
+
+        /* part1 */
+        .part1 {
+            width: 100%;
+            padding: 100px 0 0px;
+        }
+
+        .part-content {
+            width: 90%;
+            max-width: 1240px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0px auto;
+        }
+
+        .part-content .left-text {
+            max-width: 660px;
+            width: 58%;
+        }
+
+        .part-content .left-text h1 {
+            font-size: 44px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #32c5ff;
+        }
+
+        .part-content .left-text h1>span {
+            color: #3c3636;
+            display: block;
+        }
+
+        .part-content .left-text h5 {
+            font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: -0.23px;
+  text-align: left;
+  color: #3c3636;
+            margin: 25px 0 65px;
+        }
+
+        .part-content .left-text img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 55px;
+        }
+
+        .part-content .right-table {
+            width: 32%;
+            max-width: 365px;
+            min-width: 325px;
+            min-height: 550px;
+            box-sizing: border-box;
+            padding: 15px 20px 5px;
+            border-radius: 14px;
+            background-color: #32c5ff;
+            box-shadow: 0 3px 15px #e9e9e9;
+        }
+
+        @media (max-width: 950px) {
+            .part-content {
+                width: 96%;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        @media (max-width: 880px) {
+            .part-content {
+                width: 96%;
+                flex-wrap: wrap;
+            }
+
+            .part-content .left-text {
+                width: 100%;
+                margin: 50px auto;
+                text-align: center;
+
+            }
+
+            .part-content .left-text img {
+                width: 90%;
+                margin: 0 auto;
+
+            }
+
+            .part-content .right-table {
+                width: 80%;
+                margin: 50px auto;
+            }
+        }
+
+              /* part2 */
+              .part2 {
+            padding: 55px 65px 50px;
+            width: 100%;
+            max-width: 1350px;
+            margin: 10px auto 0px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 24px 30px 0 rgba(34, 36, 54, 0.02), 0 64px 72px 0 rgba(81, 88, 94, 0.02), 0 4px 40px 0 rgba(135, 199, 224, 0.05), inset 0 0 30px 0 rgba(233, 233, 233, 0.1), 0 50px 74px 0 rgba(72, 72, 72, 0.1), 0 -8px 32px 0 rgba(194, 220, 251, 0.1);
+           background-image: linear-gradient(21deg, rgb(255,255,255,0.65) 0, rgba(255, 255, 255) 28%);
+                text-align: center;
+                border: 1px solid #efefef;
+        }
+
+        .part2 .part2-title {
+            font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.55px;
+  text-align: center;
+  color: #3c3636;
+            margin-bottom: 58px;
+        }
+
+        .logo_list {
+            width: 100%;
+            max-width: 1150px;
+        }
+
+        @media (max-width: 880px) {
+            .part2 {
+                width: 96%;
+                text-align: center;
+                margin: 50px auto;
+            }
+        }
+        @media (max-width: 600px) {
+            .part2 {
+                width: 100%;
+                padding: 35px 10px;
+            }
+            .part2 .part2-title{
+                font-size: 30px;
+                margin-bottom: 35px;
+            }
+        }
+
+
+        /* part3 */
+        .part3 {
+            width: 100%;
+            padding: 1px 0;
+            background-image: url(https://explore.hiretual.com/l/874171/2021-05-10/9hlvmb/874171/1620699914zZikvIMK/BG_design.png);
+           background-position: center top;
+           background-size: 105% 96%;
+           background-repeat: no-repeat;
+        }
+
+        .part3-title1 {
+            margin: 75px auto 35px;
+            font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.55px;
+  text-align: center;
+  color: #3c3636;
+        }
+        .part3-top {
+            width: 98%;
+            max-width: 1150px;
+            margin: 0 auto 35px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .part3-top .contentbox {
+            width: 355px;
+    padding: 105px 0px 130px;
+            background-image: url(https://explore.hiretual.com/l/874171/2021-05-10/9hlvjx/874171/1620697270SW4uu5nS/BlankHexagon.png);
+            background-size: 100% 100%;
+            margin: 0 -45px 25px;
+        }
+
+        .part3-top .contentbox>span{
+            display: block;
+            text-align: center;
+            max-width: 205px;
+            margin: 0 auto;
+        }
+        .part3-top .contentbox .p1 {
+            font-size: 79.9px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -0.39px;
+  text-align: center;
+  color: #32c5ff;
+        }
+        .part3-top .contentbox .p2 {
+            font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.39px;
+  text-align: center;
+  color: #32c5ff;
+        }
+
+        .part3-top .contentbox h5 {
+            width: 100%;
+            max-width: 285px;
+            margin: 0 auto;
+            font-size: 33.1px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.38;
+            letter-spacing: -0.46px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        @media (max-width: 900px) {
+            .part3-top {
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .part3-top .contentbox {
+                width: 355px;
+                margin: 0px -45px;
+            }
+        }
+        
+
+        .part3 .text_img {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 98%;
+            max-width: 1350px;
+            margin: 0px auto 50px;
+
+        }
+
+        .part3 .text_img .text {
+            width: 43%;
+            max-width: 550px;
+            border-radius: 8px;
+            margin: 0 0 0 3%;
+            padding: 30px;
+            border-radius: 16px;
+            border-radius: 16px;
+  box-shadow: 0 5px 5px 0 rgba(26, 26, 30, 0.02), 0 7px 8px 0 rgba(26, 26, 30, 0.04), 0 64px 60px 0 rgba(67, 75, 80, 0.06);
+  border: solid 0.5px #ebebeb;
+            background-color: #ffffff;
+        }
+
+        .part3 .text_img .text.right {
+            margin: 0 3% 0 0;
+        }
+
+        .part3 .text_img .text h1 {
+            font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #32c5ff;
+        }
+
+        .part3 .text_img .text h5 {
+            font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: -0.23px;
+  text-align: left;
+  color: #3c3636;
+            margin-top: 16px;
+        }
+
+
+        .part3 .text_img .img {
+            width: 52%;
+    max-width: 705px;
+        }
+
+
+        .text_img .left {
+
+            opacity: 0;
+            transform: translateX(-150px);
+            transition: all 1s;
+        }
+
+        .text_img.act .left {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        .text_img .right {
+
+            opacity: 0;
+            transform: translateX(150px);
+            transition: all 1s;
+        }
+
+        .text_img.act .right {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+
+        @media (max-width: 880px) {
+            .part3 .text_img {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 50px 0;
+                background-image: none;
+            }
+
+            .part3 .text_img .text {
+                width: 92%;
+                max-width: 75%;
+                margin: 50px 0;
+            }
+
+            .part3 .text_img .img {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+        }
+
+        /* part4 */
+        .part4 {
+            padding: 1px 0;
+            margin: 5px auto 79px;
+            background-image:  linear-gradient(to top, #6fb2f3, #66d4ff);;
+        }
+
+        .part4-title {
+            font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: -0.55px;
+  text-align: left;
+  color: #ffffff;
+  text-align: center;
+            margin: 65px auto 150px;
+        }
+        .part4 .part4main{
+          background-color: #ffffff;
+          border-radius: 30px;
+            padding: 10px 60px 65px;
+            margin: 0 auto 132px;
+            text-align: center;
+            max-width: 1240px;
+            width: 96%;
+            box-shadow: 0 44px 60px 0 rgba(0, 0, 0, 0.12);
+  border: solid 1px #e3e3e3;
+        }
+       
+        .part4 .part4main .head{
+            margin: -91.7px auto 0;
+            width: 209px;
+            text-align: center;
+            border-radius: 50%;
+
+        }
+        .part4 .part4main .head1{
+            margin: -92px auto 0;
+           
+
+        }
+        .part4 .part4main .head>img{
+            width: 100%;
+        }
+        .part4 .part4main .fuhao{
+            display: block;
+            width: 65px;
+            margin-top: -55px;
+            margin-bottom: 38px;
+        }
+        .part4 .part4main h2{
+            font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3636;
+        }
+        .part4 .part4main h5{
+            font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: -0.55px;
+  text-align: center;
+  color: #32c5ff;
+  
+        }
+        .part4 .part4main h5>span{
+            font-weight: bold;
+            display: block;
+            margin: 20px 0 5px;
+        }
+        @media (max-width: 550px){
+            .part4 .part4main .fuhao{
+                margin-top: 10px;
+            }
+        }
+       
+.partbottom{
+    width: 100%;
+    text-align: center;
+}
+        .part_bottom_title {
+            margin: 79px auto 0;
+            font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.39;
+  letter-spacing: -0.55px;
+  text-align: center;
+  color: #ffffff;
+        }
+
+        .part_bottom_but {
+            width: 252px;
+            height: 62px;
+            margin: 55px auto 85px;
+            display: block;
+            line-height: 62px;
+            font-size: 21px;
+            font-weight: bold;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 10px;
+            background-color: #f15b0c;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- top logo -->
+    <div id="page-heade">
+        <div style="z-index: 99; width: 100px;background-color: #32c5ff;height: 38px;">
+        </div>
+        <div style="height: 38px;background-color: #32c5ff;z-index: 99;">
+            <a href="hiretual.com" target="_top"><img src="https://storage.pardot.com/874171/16101585444Gn2TawA/H.png"
+                    alt="Hiretual Logo in white with light blog background"></a>
+        </div>
+        <div style="width: 100%;background-color: #32c5ff;height: 38px;z-index: 99;"></div>
+    </div>
+
+    <!-- part1 -->
+    <div class="part1">
+        <div class="part-content">
+            <div class="left-text">
+                <h1> <span>The Workplace Has Changed.</span> The Demand for Warehouse Hiring Hasn’t.  </h1>
+                <h5>The AI-powered Candidate Search and Data Hub to help you fill warehousing jobs with speed, scale, and quality in mind. </h5>
+                <img src="https://explore.hiretual.com/l/874171/2021-05-10/9hlvm6/874171/1620699434obU1S2OB/img1.png"
+                    alt="">
+            </div>
+            <div class="right-table" id="table">
+                %%content%%
+            </div>
+        </div>
+    </div>
+  <!-- part2 -->
+  <div class="part2">
+    <p class="part2-title">Trusted By Top Enterprise Companies</p>
+    <img class="logo_list" src="https://explore.hiretual.com/l/874171/2021-05-10/9hlvm8/874171/1620699437L8TB6ezN/logos.png" alt="">
+</div>
+
+    <!-- part3 -->
+
+    <div class="part3">
+        <p class="part3-title1">What Separates Us From the Rest? </p>
+        <div class="part3-top">
+            <div class="contentbox">
+             
+                <span class="p1"> 50%</span>
+                <span class="p2">Less Time Sourcing</span>
+            
+               
+            </div>
+            <div class="contentbox">
+        
+                <span class="p1"> 5x</span>
+                <span class="p2">More Qualified Leads</span>
+       
+               
+            </div>
+            <div class="contentbox">
+         
+                <span class="p1">45%</span> 
+                <span class="p2">Increase in Response Rates</span>
+        
+            </div>
+        </div>
+        <div class="text_img">
+            <div class="text left">
+                <h1>Keep Your Warehousing Talent Pools Filled </h1>
+                <h5>Keep your talent pool filled across all warehousing jobs, including movers, operators, clerks, and distribution managers. Cast a wider net for searches with our industry-leading talent pool of 750M+ from 45+ platforms, like Upwork, GitHub, LinkedIn, Stack Overflow, Twitter, and more.  </h5>
+            </div>
+            <img class="img right"
+                src="https://explore.hiretual.com/l/874171/2021-05-10/9hlvm4/874171/1620699362wECoarAi/img2.png"
+                alt="">
+        </div>
+        <div class="text_img">
+            <img class="img left"
+                src="https://explore.hiretual.com/l/874171/2021-05-10/9hlvm2/874171/1620699362jVeCE10G/img3.png"
+                alt="">
+            <div class="text right">
+                <h1>Work Faster to Fill Open Warehousing Jobs </h1>
+                <h5>We stack rank candidates in order of relevance to help you find the best fits first. To support rapid hiring, our AI technology sorts through 200,000 profiles within seconds to surface profiles that best match your search query.</h5>
+            </div>
+        </div>
+        <div class="text_img">
+            <div class="text left">
+                <h1>Engage Hundreds of Candidates with Ease </h1>
+                <h5>With so many applicants to consider across multiple roles, we’ve made engagement easy. Schedule and send emails in groups of up to 200 candidates at a time with one click.   </h5>
+            </div>
+            <img class="img right "
+                src="https://explore.hiretual.com/l/874171/2021-05-10/9hlvlz/874171/1620699361KTa6hSrR/img4.png"
+                alt="">
+        </div>
+
+    </div>
+
+    <!-- part4 -->
+    <div class="part4">
+        <p class="part4-title">
+            See What Recruiters Have to Say About Hiretual
+        </p>
+        <div class="part4main main1">
+            <div class="head head1">
+                <img  src="https://explore.hiretual.com/l/874171/2021-05-10/9hlvl8/874171/1620698953oW7yRZyC/head4.png" alt="">
+            </div>
+            
+            <img class="fuhao" src="https://explore.hiretual.com/l/874171/2021-04-02/9bn2tx/874171/1617348222uZnazeCR/quotation_marks.png" alt="">
+            <h2>"I’ve been recruiting for 21 years. I’ve tried many tools over the years. I have been using Hiretual for a couple of years now and it has become my number one sourcing tool. i like that it works on multiple platforms like LinkedIn, Facebook, Github, AngelList, and many others. It finds accurate contact email addresses and/or phone numbers."</h2>
+            <h5><span>Jason V</span> Lead Recruiter  </h5>
+        </div>
+        <div class="part4main main2">
+            <div class="head">
+                <img src="https://explore.hiretual.com/l/874171/2021-05-10/9hlvl6/874171/1620698953KyFkPNA1/head3.png" alt="">
+            </div>
+            
+            <img class="fuhao" src="https://explore.hiretual.com/l/874171/2021-04-02/9bn2tx/874171/1617348222uZnazeCR/quotation_marks.png" alt="">
+            <h2>"With Hiretual, My sourcing is faster, my research is ready in seconds, the time I used to invest in this manually is now used for making sure my outreach to my candidates is personalized and meaningful. Doing sourcing, outreach and market insights in our tool is definitely everything you need as a recruiter.”</h2>
+            <h5><span>Georgiana S. </span> Co-Founder & Recruiter @ Talentcrat</h5>
+        </div>
+        <div class="partbottom">
+            <p class="part_bottom_title">Ready To Strengthen Your Warehouse Hiring Efforts?  </p>
+            <a class="part_bottom_but" href="#table">CONTACT SALES</a>
+        </div>
+ 
+    </div>
+
+  
+    <script src="https://explore.hiretual.com/explore.hiretual.index.js"></script>
+    <script src="https://storage.pardot.com/874171/1605775081fJQEwFqt/jquery_3.5.1.min.js"></script>
+    <script>
+        var _fn = function (classname) {
+            var view_h = $(window).height() - 100;
+            var img_text_box = $('.' + classname);
+            var len = img_text_box.length;
+
+            var scroll_fn = function () {
+                var scrolltop = $(document).scrollTop();
+                for (var i = 0; i < img_text_box.length; i++) {
+                    var top_y = img_text_box.eq(i).offset().top;
+                    var div_h = img_text_box.eq(i).height()
+                    if (top_y - scrolltop < view_h && top_y - scrolltop > -div_h * 0.75) {
+                        img_text_box.eq(i).addClass('act');
+                    }
+                }
+            };
+
+            $(window).scroll(scroll_fn);
+            scroll_fn(classname)
+        };
+        _fn('text_img');
+
+        function openform(type) {
+            var b = $(".formtitle")
+            var d = $(".formicon")
+            if (type == 0) {
+                var a = $(".Industrycont")
+
+                for (var i = 0; i < a.length; i++) {
+                    if (a[i].style.display != "flex") {
+                        b[type].className = "formtitle titleopen"
+                        d[type].className = "formicon open-icon"
+                        a[i].style.display = "flex"
+                    } else {
+                        b[type].className = "formtitle titlecolose"
+                        d[type].className = "formicon colose-icon"
+                        a[i].style.display = "none"
+                    }
+                }
+            } else if (type == 1) {
+                var c = $(".Candidatecont")
+
+                for (var i = 0; i < c.length; i++) {
+                    if (c[i].style.display != "flex") {
+                        b[type].className = "formtitle titleopen"
+                        d[type].className = "formicon open-icon"
+                        c[i].style.display = "flex"
+                    } else {
+                        b[type].className = "formtitle titlecolose"
+                        d[type].className = "formicon colose-icon"
+                        c[i].style.display = "none"
+                    }
+                }
+            } else if (type == 2) {
+                var c = $(".atscont")
+
+                for (var i = 0; i < c.length; i++) {
+                    if (c[i].style.display != "flex") {
+                        b[type].className = "line14  formtitle titleopen"
+                        d[type].className = "formicon open-icon"
+                        c[i].style.display = "flex"
+                    } else {
+                        b[type].className = "line14  formborder formtitle titlecolose"
+                        d[type].className = "formicon colose-icon"
+                        c[i].style.display = "none"
+                    }
+                }
+            }
+        }
+
+    </script>
+    <noscript>
+        <img src="https://ws.zoominfo.com/pixel/CngkKS4P5cHITcR3fGL0" width="1" height="1" style="display: none;" />
+    </noscript>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSNSKFX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

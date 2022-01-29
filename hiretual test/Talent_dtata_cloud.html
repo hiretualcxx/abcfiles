@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&amp;display=swap">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Poppins;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .jump-button {
+            display: inline-block;
+            width: 234px;
+            height: 52px;
+            line-height: 52px;
+            background: linear-gradient(114.45deg, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+            box-shadow: 0px 100px 80px rgb(232 87 65 / 7%), 0px 41.7776px 33.4221px rgb(232 87 65 / 5%), 0px 22.3363px 17.869px rgb(232 87 65 / 4%), 0px 12.5216px 10.0172px rgb(232 87 65 / 4%), 0px 6.6501px 5.32008px rgb(232 87 65 / 3%), 0px 2.76726px 2.21381px rgb(232 87 65 / 2%);
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .jump-button2 {
+            display: inline-block;
+            width: 211px;
+            height: 53px;
+            line-height: 53px;
+            background: linear-gradient(114.45deg, rgba(255, 34, 0, 0.2) 4%, rgba(255, 255, 255, 0) 87.02%, rgba(232, 87, 65, 0) 87.02%), #E85741;
+            box-shadow: 0px 100px 80px rgb(232 87 65 / 7%), 0px 41.7776px 33.4221px rgb(232 87 65 / 5%), 0px 22.3363px 17.869px rgb(232 87 65 / 4%), 0px 12.5216px 10.0172px rgb(232 87 65 / 4%), 0px 6.6501px 5.32008px rgb(232 87 65 / 3%), 0px 2.76726px 2.21381px rgb(232 87 65 / 2%);
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .outbox {
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        @media (max-width:750px) {
+            .outbox {
+                width: 90%;
+                max-width: 550px;
+                margin: 0 auto;
+            }
+        }
+
+        /* part1 */
+        .part1 {
+            padding: 1px 0;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #4E8DF6;
+            overflow: hidden;
+            min-height: 740px;
+        }
+
+        .part1 .part1main {
+            text-align: center;
+        }
+
+        .part1main .part1-title {
+            max-width: 850px;
+            font-style: normal;
+            font-weight: bold !important;
+            font-size: 48px !important;
+            line-height: 72px !important;
+            text-align: center;
+            text-transform: capitalize;
+            color: #FFFFFF !important;
+            margin: 55px auto 15px;
+            animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 0.5s;
+            transform: translateY(200px);
+            opacity: 0;
+            padding: 0;
+        }
+
+        .part1main .part1-title2 {
+
+            font-weight: normal !important;
+            font-size: 18px !important;
+            line-height: 27px !important;
+            text-align: center;
+            color: #FFFFFF !important;
+            margin: 15px auto 27px;
+            animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 1s;
+            transform: translateY(200px);
+            opacity: 0;
+            padding: 0;
+        }
+
+        .part1 .but1 {
+            animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 1.5s;
+            transform: translateY(200px);
+            opacity: 0;
+        }
+
+        .part1img {
+            width: 380px;
+            margin: 15px auto 50px;
+            animation: animate0 1s cubic-bezier(0.39, 0.575, 0.565, 1) forwards 2s;
+            transform: translateY(200px);
+            opacity: 0;
+        }
+
+        @keyframes animate0 {
+            from {
+                transform: translateY(200px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width:1150px) {
+            .part1 {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width:980px) {
+            .part1 {
+                margin-top: 10px;
+            }
+        }
+
+        @media (max-width:750px) {
+            .part1main .part1-title {
+
+                font-size: 36px !important;
+                line-height: 54px !important;
+            }
+
+            .part1main .part1-title2 {
+                font-size: 24px !important;
+                line-height: 36px !important;
+            }
+        }
+
+        /* part2 */
+        .part2-1 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 100px auto 0;
+            padding: 1px 0;
+        }
+
+        .part2-1 .p2-1eachbox {
+            width: 255px;
+            height: 167px;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 13px;
+            background: #FFFFFF;
+            border: 1px solid rgba(203, 203, 203, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s all linear;
+        }
+
+        .part2-1 .p2-1eachbox:hover {
+            transform: scale(1.03) !important;
+        }
+
+        .part2-1 .p2-1eachbox .p1 {
+            width: 100%;
+            padding-left: 20px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 27px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        .part2-1 .p2-1eachbox .p1>span {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-right: 8px;
+            background: #4E8DF6;
+            border-radius: 50%;
+        }
+
+        .part2-2 {
+            width: 100%;
+            text-align: center;
+            padding: 1px 0;
+            margin-top: 120px;
+        }
+
+        .part2-2 .p1 {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            color: #4F4F4F;
+            margin: 120px auto 57px;
+            text-align: left;
+            max-width: 776px;
+        }
+
+        .part2-2 .introduce {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .introduce .img {
+            width: 61px;
+            border-radius: 50%;
+            margin: 0 24px 0 49px;
+
+        }
+
+        .introduce .p2 {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 27px;
+            color: #4F4F4F;
+            text-align: left;
+        }
+
+        .part2-2 .p3 {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: #4E8DF6;
+            margin: 23px auto 66px;
+        }
+
+        @media (max-width:1200px) {
+            .part2-1 {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .part2-1 .p2-1eachbox {
+                margin: 35px 5%;
+            }
+        }
+
+        @media (max-width:750px) {
+            .part2-1 {
+                justify-content: space-between;
+            }
+
+            .part2-1 .p2-1eachbox {
+                width: 45%;
+                margin: 21px 1%;
+
+            }
+
+            .part2-1 .p2-1eachbox .p1 {
+                font-size: 24px;
+                line-height: 36px;
+                position: relative;
+                padding-left: 50px;
+            }
+
+            .part2-1 .p2-1eachbox .p1>span {
+                position: absolute;
+                top: 38%;
+                left: 20px;
+            }
+
+            .part2-2 .p1 {
+                font-size: 30px;
+                line-height: 45px;
+                margin: 0px auto 57px;
+            }
+
+            .introduce .img {
+                width: 85px;
+
+            }
+
+            .introduce .p2 {
+                font-size: 24px;
+                line-height: 36px;
+            }
+
+        }
+
+        .part2-2,
+        .part2-1 {
+            position: relative;
+            z-index: 1;
+        }
+
+        .part2-bg {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -120px;
+            background: #F5F8FC;
+            height: 488px;
+            z-index: 0;
+        }
+
+        @media (max-width:750px) {
+            .part2-bg {
+                height: 870px;
+                bottom: -80px;
+            }
+        }
+
+        /* part3 */
+        .part3 {
+            padding: 1px 0;
+        }
+
+        .part3 .pat3-title {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.8);
+            max-width: 556px;
+            margin: 214px auto 61px;
+        }
+
+        .part3 .part3-main {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .part3 .part3-main .part3-eachbox {
+            width: 346px;
+            background: #FFFFFF;
+            border: 1px solid rgba(203, 203, 203, 0.5);
+            box-sizing: border-box;
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 13px;
+            padding: 60px 30px;
+        }
+
+        .part3 .part3-main .part3-eachbox:nth-child(1) {
+            padding: 60px 55px 60px 30px;
+        }
+
+        .part3-main .part3-eachbox .p1 {
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;
+            margin-bottom: 16px;
+        }
+
+        .part3-main .part3-eachbox .p2 {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width:1200px) {
+            .part3 .part3-main {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .part3 .part3-main .part3-eachbox {
+                margin: 35px 10%;
+            }
+        }
+
+        @media (max-width:750px) {
+            .part3 .pat3-title {
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 46px;
+                text-align: center;
+                color: rgba(0, 0, 0, 0.8);
+                max-width: 556px;
+                margin: 150px auto 35px;
+            }
+
+            .part3 .part3-main .part3-eachbox {
+                width: 550px;
+                padding: 60px;
+                margin: 0px auto 56px;
+            }
+
+            .part3-main .part3-eachbox .p1 {
+                font-size: 36px;
+                line-height: 54px;
+            }
+
+            .part3-main .part3-eachbox .p2 {
+                font-size: 24px;
+                line-height: 36px;
+            }
+        }
+
+        /* part4 */
+        .part4 {
+            padding: 178px 0 165px;
+        }
+
+        .part4 .flex-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .part4 .flex-box>div {
+            width: 50%;
+            text-align: left;
+        }
+
+        .part4 .flex-box .text-box .title {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .part4 .flex-box .text-box .content {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            color: #6F777B;
+            margin-bottom: 16px;
+        }
+
+        .part4 .flex-box .text-box .content2 {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 27px;
+            /* text-transform: capitalize; */
+            color: #6F777B;
+            position: relative;
+            padding-left: 21px;
+        }
+
+        .part4 .flex-box .text-box .content2::before {
+            content: ' ';
+            display: inline-block;
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            left: 0px;
+            top: 7px;
+            border-radius: 50%;
+            background: #4E8DF6;
+        }
+
+        .part4 .flex-box .img-box {
+            max-width: 400px;
+        }
+
+        .part4 .flex-box:nth-child(1) .img-box {
+            max-width: 375px;
+            margin-right: 55px;
+        }
+
+        .part4 .flex-box:nth-child(2) .img-box {
+            max-width: 430px;
+            margin-left: -50px;
+
+        }
+
+        .part4 .flex-box:nth-child(3) .img-box {
+            max-width: 380px;
+            margin-right: 75px;
+        }
+
+        .part4 .flex-box:nth-child(4) .img-box {
+            max-width: 385px;
+            margin-left: 45px;
+        }
+
+        .part4 .flex-box .img-box img {
+            width: 100%;
+        }
+
+        .part4 .flex-box:nth-child(2n+1) .img-box {
+            order: 2;
+        }
+
+        .part4 .flex-box .text-box {
+            max-width: 426px;
+        }
+
+        .part4 .flex-box:nth-child(3) .text-box {
+            max-width: 426px;
+        }
+
+        .part4 .flex-box:nth-child(4) .text-box {
+            max-width: 415px;
+        }
+
+        .part4 .flex-box:first-child .text-box .content {
+            max-width: 436px;
+        }
+
+        .part4 .flex-box:nth-child(n+2) {
+            margin-top: 150px;
+        }
+
+        @media (max-width: 1200px) {}
+
+        @media (max-width: 750px) {
+            .part4 {
+                padding: 80px 0;
+            }
+
+            .part4 .flex-box:nth-child(n+2) {
+                margin-top: 0px;
+            }
+
+            .part4 .flex-box {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .part4 .flex-box>div {
+                width: 100%;
+            }
+
+            .part4 .flex-box div.img-box {
+                order: 2;
+                margin: 100px auto !important;
+            }
+
+            .part4 .flex-box .text-box {
+                max-width: 550px !important;
+            }
+
+            .part4 .flex-box .text-box .title {
+                max-width: 100% !important;
+            }
+
+            .part4 .flex-box .text-box div.content {
+                max-width: 100% !important;
+                margin: 60px auto;
+                font-size: 30px;
+                line-height: 45px;
+            }
+
+            .part4 .flex-box .text-box .content2 {
+                font-size: 30px;
+                line-height: 45px;
+            }
+
+            .part4 .flex-box .text-box .content2::before {
+                width: 15px;
+                height: 15px;
+                left: 0px;
+                top: 15px;
+            }
+        }
+
+        input::placeholder {
+            color: #393939 !important;
+        }
+
+        /* part5 */
+        .part5 {
+            width: 100%;
+            min-height: 405px;
+            background-color: #F5F8FC;
+            padding: 70px 0 0px;
+        }
+
+        #main-content .part5 .p1 {
+            max-width: 500px;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 50px;
+            text-align: center;
+            color: #000000;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        #main-content .part5 .p2 {
+            max-width: 500px;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: center;
+            color: #6F777B;
+            margin: 18px auto 25px;
+        }
+
+        .iframe_formbox {
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .iframe_formbox>iframe {
+            width: 100%;
+        }
+
+        /* partbottom */
+        .partbottom {
+            background-color: #4E8DF6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .partbottom .cont {
+            max-width: 1180px;
+            margin-right: 77px;
+            display: flex;
+            align-items: center;
+        }
+
+        .partbottom .cont>div {
+            width: 45%;
+        }
+
+        .partbottom .cont div.right-box {
+            width: 72%;
+        }
+
+        .partbottom .cont .left-box {
+            display: flex;
+        }
+
+        .partbottom .cont .left-box .ellipse {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 125px;
+            height: 160px;
+            background: rgba(118, 167, 255, 0.7);
+            box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+            border-radius: 200px;
+        }
+
+        .partbottom .cont .left-box .ellipse>img {
+            width: 100px;
+            height: 100px;
+            margin: 10px auto 8px;
+        }
+
+        .partbottom .cont .left-box .ellipse .name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+
+        .partbottom .cont .left-box>.ellipse:first-child {
+            margin-top: 96px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 33px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .left-box .e-box .ellipse:last-child {
+            margin-top: 18px;
+            margin-left: 18px;
+        }
+
+        .partbottom .cont .left-box>.ellipse:last-child {
+            margin-top: 68px;
+            margin-left: 3px;
+        }
+
+        .partbottom .cont .right-box {
+            margin: 100px 0 87px;
+        }
+
+        .partbottom .cont .right-box .text {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .partbottom .cont .right-box .btn {
+            display: flex;
+        }
+
+        .partbottom .cont .right-box .btn1 {
+            width: 211px;
+            height: 53px;
+            display: block;
+            background: #E16427;
+            border-radius: 30px;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #FFFFFF;
+            border: 0;
+            text-decoration: none;
+            line-height: 53px;
+            margin-right: 32px;
+        }
+
+        @media (max-width:1200px) {
+            .partbottom .cont {
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                width: 90%;
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont>div {
+                width: 45%;
+                margin-right: 3%;
+            }
+
+        }
+
+        @media (max-width:980px) {
+            .partbottom .cont {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-right: 0;
+            }
+
+            .partbottom .cont div.right-box {
+                margin: 35px auto;
+                text-align: center;
+            }
+
+            .partbottom .cont .left-box {
+                width: 425px;
+                margin-top: 50px;
+            }
+
+            .partbottom .cont .right-box .text {
+                text-align: center;
+            }
+
+        }
+
+        @media screen and (max-width: 1150px) {
+            div.et_pb_row {
+                width: 100% !important;
+            }
+        }
+
+        @media (max-width: 750px) {}
+
+        @media (max-width: 560px) {
+            div.et_pb_css_mix_blend_mode_passthrough {
+                margin-left: 0px !important;
+            }
+        }
+
+        .tishi11 {
+            display: none;
+            text-align: left;
+            background-color: #fff;
+            border: 1px solid #00000080;
+            font-size: 12px;
+            color: #123456;
+            line-height: 2;
+            position: fixed;
+            z-index: 999999;
+            left: 50%;
+            border-radius: 5px;
+            width: auto;
+            padding: 3px 5px;
+        }
+    </style>
+</head>
+
+<body id="main-content">
+    <div class="part1">
+        <div class="part1main outbox">
+            <h1 class="part1-title">Transform your ATS into your best source for new hires </h1>
+            <p class="part1-title2">Talent Data Cloud centralizes the enterprise recruitment tech stack into a complete
+                integrated system for all your candidate data. Deduplicate, enrich and rediscover profiles in your ATS
+                with no manual maintenance work. </p>
+            <a class="jump-button but1 url_e"
+                data-vars-ga-category="tranform your ATS into your best source for new hires"
+                data-vars-ga-action="click_contact sales" href="https://explore.hiretual.com/contact-sales">CONTACT
+                SALES</a>
+            <div class="part1img">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/img1-7.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="part2 outbox">
+        <div class="part2-1">
+            <div class="p2-1eachbox">
+                <div class="p1"> <span></span> Deep integrations</div>
+            </div>
+            <div class="p2-1eachbox">
+                <div class="p1"> <span></span> Data enrichment </div>
+            </div>
+            <div class="p2-1eachbox">
+                <div class="p1"> <span></span> Talent rediscovery</div>
+            </div>
+            <div class="p2-1eachbox">
+                <div class="p1"> <span></span> Security </div>
+            </div>
+        </div>
+        <div class="part2-2">
+            <div class="p1">“The [Hiretual-Workday] integration has saved us a considerable amount of time, as the
+                Sourcing team no longer has to add hundreds of resumes and screening notes to Workday manually every
+                week. Additionally, this has created a significantly better experience for everyone on the Sourcing and
+                TA teams as all candidate details are now accurately added to a Workday Req in a timely and efficient
+                manner.”</div>
+            <div class="introduce">
+                <img class="img" src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/tFimg.png"
+                    alt="">
+                <span class="p2">Martin Warren, <br>
+                    Head of Talent Sourcing at Grab</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="part2-bg"></div>
+
+    <div class="part3 outbox">
+        <h2 class="pat3-title">
+            The Single Source of Truth for Enterprise Hiring Teams
+        </h2>
+        <div class="part3-main">
+            <div class="part3-eachbox">
+                <h3 class="p1">Up-to-date records</h3>
+                <div class="p2">Sync candidate data across Hiretual and your ATS in real-time</div>
+            </div>
+            <div class="part3-eachbox">
+                <h3 class="p1">Faster collaboration</h3>
+                <div class="p2">Remove silos with data visibility across your entire recruiting team</div>
+            </div>
+            <div class="part3-eachbox">
+                <h3 class="p1">No-code maintenance</h3>
+                <div class="p2">Hiretual helps you build and scale your ideal framework for you</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="part4 outbox">
+        <div class="flex-box">
+            <div class="img-box">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/hg-img4.png" alt="">
+            </div>
+            <div class="text-box">
+                <h3 class="title">
+                    Turn Old Data into Actionable Data
+                </h3>
+                <div class="content">
+                    Sourcing from your existing database? Talent Data Cloud keeps your database clean so all information
+                    is in the right place.
+                </div>
+                <div class="content2">
+                    Enrich ATS profiles with new open web data merge duplicate profiles with custom field-mapping
+                </div>
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="img-box">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/img2-3.png" alt="">
+            </div>
+            <div class="text-box">
+                <h3 class="title" style="max-width: 400px;">
+                    Source for Your Warmest Leads
+                </h3>
+                <div class="content">
+                    Past applicants and employees can be your quickest hires. Our AI technology helps you spend less
+                    time finding and sourcing these profiles.
+                </div>
+                <div class="content2">
+                    Search and rank your ATS profiles with Hiretual’s AI Sourcing
+                </div>
+                <div class="content2">
+                    Segment candidates by ATS job and ATS stage
+                </div>
+                <div class="content2">
+                    Source across a combined talent pool from the open web and your ATS
+                </div>
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="img-box">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/img3-6.png" alt="">
+            </div>
+            <div class="text-box">
+                <h3 class="title">
+                    Collaborate With Your Team in Real-Time
+                </h3>
+                <div class="content">
+                    A seamless team experience that keeps team data visible and accessible to avoid duplicate efforts
+                    and drive immediate feedback.
+                </div>
+                <div class="content2">
+                    View ATS notes and activity directly in Hiretual
+                </div>
+                <div class="content2">
+                    Filter out candidates who were already contacted by your team
+                </div>
+                <div class="content2">
+                    Easily export and share candidate profiles and reports
+                </div>
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="img-box">
+                <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/img4-6.png" alt="">
+            </div>
+            <div class="text-box">
+                <h3 class="title">
+                    Enterprise-grade data security
+                </h3>
+                <div class="content">
+                    Your data is in safe hands. Hiretual works with your organization to ensure all security
+                    requirements and safeguards are met.
+                </div>
+                <div class="content2">
+                    Candidate data is secured with GDPR and CCPA compliance
+                </div>
+                <div class="content2">
+                    Infrastructures designed to keep ATS integrations safe and authenticated
+                </div>
+                <div class="content2">
+                    SOC 2 Type I and II compliance met for customer data protection
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="part5">
+        <p class="p1">Looking to get your data refreshed and enriched? </p>
+        <p class="p2">Make sure your potential vendor that offers a talent data platform the following questions.</p>
+        <div class="iframe_formbox">
+            <iframe src="https://explore.hiretual.com/l/874171/2021-07-19/9t122w" frameborder="0"></iframe>
+        </div>
+
+    </div>
+    <!-- partbottom -->
+    <div class="partbottom">
+        <div class="cont">
+            <div class="left-box">
+                <div class="ellipse">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/peo4.png" alt=""
+                        class="photo">
+                    <div class="name">Healthcare</div>
+                </div>
+                <div class="e-box">
+                    <div class="ellipse">
+                        <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Diversity.png"
+                            alt="" class="photo">
+                        <div class="name">Diversity</div>
+                    </div>
+                    <div class="ellipse">
+                        <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/newScholar.png"
+                            alt="" class="photo">
+                        <div class="name">Scholar</div>
+                    </div>
+                </div>
+                <div class="ellipse">
+                    <img src="https://staging-hiretualcom.kinsta.cloud/wp-content/uploads/2021/06/Tech.png" alt=""
+                        class="photo">
+                    <div class="name">Tech</div>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="text">Curious to know why thousands of
+                    recruiters trust Hiretual to find and hire
+                    the best candidates?</div>
+                <a class="jump-button2"
+                    data-vars-ga-category="curious to know why thousands of recruiters trust Hiretual to find and hire the best candidates?"
+                    data-vars-ga-action="click_contact sales" href="https://explore.hiretual.com/contact-sales">CONTACT
+                    SALES</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="tishi11"> No ATS Switch. No Manual Sync. <br>
+        Merge Duplicate Profiles in One-Touch. </div>
+    <script src="./jQuery-3-5-1.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            function addhovertip() {
+                  // passive event listening
+var passiveSupported = false;
+try {
+    var options1 =Object.defineProperty({}, 'passive', {
+        get: function() {
+            passiveSupported = true;
+        }
+    });
+} catch(err) {
+    console.error(err);
+}
+
+// throttle fn
+function throttle(callback, delay) {
+    let pre = 0;
+    return function (event) { 
+        const current = Date.now();
+        if (current - pre > delay) { 
+            callback.call(this, event);
+            pre = current;
+        }
+    }
+}
+
+// clear mouseTimeOut
+function clearMouseTimeOut() {
+    $('.tishi11').hide();
+    clearTimeout(mouseTimeOut);
+}
+
+// mouse move listening
+var mouseTimeOut;
+var bodyWidth = document.body.clientWidth;
+window.addEventListener('mousemove', function(e) {
+    $('.tishi11').hide();
+    if (mouseTimeOut) {
+        clearTimeout(mouseTimeOut);
+    }
+    mouseTimeOut = setTimeout(() => {
+        $('.tishi11').css('top',`${e.clientY + 20}px`);
+        if ((e.clientX + 320) < bodyWidth ) {
+            $('.tishi11').css('left',`${e.clientX + 10}px`);
+            $('.tishi11').css('right',`initial`);
+        } else {
+            $('.tishi11').css('right',`${bodyWidth - e.clientX}px`);
+            $('.tishi11').css('left',`initial`);
+        }
+        $('.tishi11').show();
+    }, 1000);
+}, passiveSupported ? {passive: true} : false);
+
+window.addEventListener('mouseout', throttle(clearMouseTimeOut, 100), passiveSupported ? {passive: true} : false);
+
+                $('.part1-title ,.part1-title2,.jump-button, .part1img,.part2-1, .part2-1 *, .part2-2 *,.part2-2, .pat3-title,.part3-main *,.img-box,.img-box *,.text-box,.text-box *,.part5 *,.left-box *, .right-box *, #myCopyright')
+                    .on('mousemove', throttle(function () {
+                        clearTimeout(mouseTimeOut)
+                    }, 100), passiveSupported ? {
+                        passive: true
+                    } : false);
+                // 
+                $('.part1-title ,.part1-title2,.jump-button, .part1img,.part2-1, .part2-1 *, .part2-2 *,.part2-2, .pat3-title,.part3-main *,.img-box,.img-box *,.text-box,.text-box *,.part5 *,.left-box *, .right-box *, #myCopyright')
+                    .on('mouseover', throttle(function () {
+                        clearTimeout(mouseTimeOut)
+                    }, 100), passiveSupported ? {
+                        passive: true
+                    } : false);
+
+            };
+            addhovertip();
+        })
+    </script>
+</body>
+
+</html>
