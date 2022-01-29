@@ -1,0 +1,1 @@
+命令行上传文件 aws s3 cp ./.bash_history s3://htm-cdn-test/WebGroup/ --acl public-read --profile Webdeveloper-780323805217
