@@ -54,11 +54,30 @@
             padding: 1px 0;
             width: 100%;
             margin: 0 auto;
-            background-color: var(--part1Bg);
+            background: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/01/Hero-Section.png);
+              background-size: cover;
             /* background-color: #000000; */
             overflow: hidden;
             min-height: 740px;
         }
+   .part1btn{
+     background: rgba(39, 100, 252, 0.2);
+    border: 2.59091px solid #FBC7D4;
+    box-sizing: border-box;
+    border-radius: 51.8183px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24.104px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    display: block;
+    width: 238px;
+     margin:42px auto;
+     padding:12px 0;
+       opacity: 0;
+      animation: part1-show 1s forwards 1s;
+   }
         .part1img .mainimg{
           height:auto;
         }
@@ -67,13 +86,12 @@
         }
 
         #main-content .part1main .part1-title {
-            max-width: 785px;
+            max-width: 735px;
             font-style: normal;
             font-weight: bold ;
             font-size: 48px;
             line-height: 72px;
             text-align: center;
-            text-transform: uppercase;
             color: #FFFFFF;
             margin: 55px auto 15px;
             padding: 0;
@@ -85,18 +103,18 @@
             font-weight: normal;
             font-size: 18px;
             line-height: 25px;
-            text-align: left;
+            text-align: center;
             color: #FFFFFF;
-            margin: 15px auto 160px;
+            margin: 15px auto 96px;
             padding: 0;
             opacity: 0;
-            animation: part1-show 1s forwards 1s;
+            animation: part1-show 1s forwards 2s;
         }
         .part1img {
             max-width: 812px;
             width: 90%;
             opacity: 0;
-            animation: part1-show 1s forwards 2s;
+            animation: part1-show 1s forwards 3s;
         }
         @keyframes part1-show {
     from {
@@ -246,14 +264,15 @@ color: #6F777B;
 <body id="main-content">
        
   
-      <div class="part1">
+    <div class="part1">
             
-              <div class="part1main outbox">
-                  <h1 class="part1-title">Unleash Access to Untapped Talent Pools</h1>
-                  <p class="part1-title2">Unleash access to 750M+ candidates from 45+ open web platforms, get market insights and DE&I information to build data-driven recruiting strategies and maximize the value of your existing ATS database </p>
-                  <img class="part1img" src="https://hireez.com/wp-content/uploads/2022/01/topimg.png" alt="">
-              </div>
-      </div>
+        <div class="part1main outbox">
+            <h1 class="part1-title">Unleash Access to Untapped Talent Pools</h1>
+          <a class="part1btn"><img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/01/hireEZ-Logo-dark-background-2.png"> Sourcing</a>
+            <p class="part1-title2">Unleash access to 750M+ candidates from 45+ open web platforms, get market insights and DE&I information to build data-driven recruiting strategies and maximize the value of your existing ATS database </p>
+            <img class="part1img" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/01/topimg.png" alt="">
+        </div>
+</div>
 
       <div class="part2">
         <div class="eachbox">

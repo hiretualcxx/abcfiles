@@ -1,0 +1,1951 @@
+/* <style> */
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+div h1,
+div h2,
+div h3,
+div h4,
+div h5,
+div h6 {
+    letter-spacing: normal;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    overflow-x: visible;
+    min-width: 750px;
+}
+
+@media screen and (max-width: 1150px) {
+    div.et_pb_row {
+        width: 100% !important;
+    }
+}
+
+.sytlebox {
+    height: 25px;
+}
+
+.out_box div {
+    font-size: 0;
+}
+
+div img {
+    max-width: none;
+}
+
+button {
+    border: none;
+    background: none;
+    display: inline-block;
+}
+
+.jump-button {
+    display: inline-block;
+    width: 234px;
+    height: 52px;
+    line-height: 52px;
+    background-color: #FFC021;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+}
+
+.addmore {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 60px auto 0;
+    transition: all 0.5s;
+}
+
+.addmore.hide {
+    display: none;
+}
+
+.addmore:hover {
+    transform: scale(1.05);
+}
+
+.addmore>span {
+    line-height: 21px;
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+/* no result */
+.noresultbox {
+    display: none;
+}
+
+.noresult {
+    width: 100%;
+    text-align: center;
+    margin: 100px auto;
+}
+
+.noresult .noresult_p {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.noresult>img {
+    width: 87px;
+}
+
+/* noresult_showbox  */
+.noresult_showbox {
+    width: 100%;
+    max-width: 908px;
+    margin: 0 auto;
+    border-top: 1px solid #C4C4C4;
+    position: relative;
+    display: none;
+    padding: 0 55px;
+}
+
+.noresult_showbox .noresulttitle {
+    font-weight: 900;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 28px;
+    color: #00154D;
+    margin: 50px 0 50px 0px;
+}
+
+/* start */
+.part1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.out_box {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.page-type-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-type-nav .nav-but {
+    font-weight: 400;
+    padding: 0;
+    margin-right: 49px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8F9397;
+    position: relative;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.page-type-nav .nav-but.choose {
+    border-bottom: none;
+    color: #0F1114;
+    font-weight: 800;
+}
+
+.part1-input {
+    margin: 0;
+    max-width: 370px;
+    width: 50%;
+    border-left: 1px solid #E4E4E4;
+    position: relative;
+}
+
+.part1-input .put-text {
+    padding-left: 64px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    font-size: 14px;
+    line-height: 47px;
+    color: #8F9397;
+    padding: 0 15px 0 65px;
+    border-radius: 30px;
+    outline: none;
+}
+
+.part1-input .search-icon {
+    left: 24px;
+    top: 16px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/search-2.png);
+    background-position: center center;
+    width: 31px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+}
+
+@media (max-width:750px) {
+    .part1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-type-nav {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .page-type-nav .a_box {
+        margin-bottom: 25px;
+        margin-right: 50px;
+    }
+
+    .page-type-nav .nav-but {
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .part1-input {
+        width: 90%;
+        max-width: 750px;
+        margin: 0 auto 75px;
+    }
+
+    .part1-input .put-text {
+        width: 100%;
+        height: 80px;
+        border-radius: 62px;
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .part1-input .search-icon {
+        top: 22px;
+        right: 26px;
+        width: 40px;
+        background-size: 22px;
+        background-position: 0 7px;
+        height: 40px;
+    }
+}
+
+/* part2 */
+.part2 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.part2bg {
+    width: 100%;
+    min-height: 490px;
+    background-color: #F2F5F9;
+}
+
+.part2bg .part2-box {
+    display: none;
+    position: relative;
+}
+
+.part2bg .part2-box.choose {
+    display: block;
+}
+
+.slidebox {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slidebox>div {
+    position: relative;
+    flex: 0 0 100%;
+}
+
+.part2-box .pre_but,
+.pre_but {
+    z-index: 5;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/contenticon.png);
+    background-size: 410px auto;
+    background-position: -58px -1px;
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    border-radius: 50%;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+
+.part2-box .next_but,
+.next_but {
+    z-index: 5;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/contenticon.png);
+    background-size: 410px auto;
+    background-position: -125px -1px;
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    border-radius: 50%;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+}
+
+@media (max-width:1400px) {
+    .part2-box .pre_but {
+        left: 2%;
+    }
+
+    .part2-box .next_but {
+        right: 2%;
+    }
+
+    .part2bg .part2-box .blog-box2 {
+        width: 85%;
+    }
+}
+
+@media (max-width:980px) {
+    .part2bg {
+        min-height: 990px;
+    }
+}
+
+/* part2-blog */
+.part2bg .part2-box .blog-box {
+    width: 100%;
+}
+
+.part2bg .part2-box .blog-box2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1080px;
+    position: relative;
+    z-index: 3;
+}
+
+.blog-box .left-text {
+    width: 50%;
+    max-width: 539px;
+    margin: 100px 0 70px;
+}
+
+.blog-box .left-text .line1 {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.blog-box .left-text .line1>.newicon {
+    display: inline-block;
+    width: 91px;
+    height: 40px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/contenticon.png);
+    background-position: -79px -54px;
+    background-size: 410px auto;
+    margin-right: 15px;
+}
+
+.blog-box .left-text .line1>h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#main-content .blog-box .left-text .line2 {
+    min-height: 162px;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000 !important;
+    margin: 20px 0 46px;
+}
+
+.blog-box .right-img {
+    width: 520px;
+    position: relative;
+    height: 100%;
+    margin: 0;
+}
+
+.anim .blog-box .right-img>div {
+    opacity: 0;
+}
+
+.anim .blog-box .right-img .ele1 {
+    top: 220px;
+}
+
+.blog-box .right-img .ele1 {
+    width: 378px;
+    position: absolute;
+    left: 128px;
+    top: 120px;
+    z-index: 4;
+}
+
+.anim .blog-box .right-img .ele2 {
+    left: 450px;
+    top: 0px;
+}
+
+.blog-box .right-img .ele2 {
+    width: 108px;
+    height: 108px;
+    background: rgba(78, 141, 246, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    position: absolute;
+    left: 415px;
+    top: 101px;
+    z-index: 5;
+}
+
+.blog-box .right-img .ele3 {
+    width: 393px;
+    height: 393px;
+    border-radius: 50%;
+    background: rgba(242, 187, 65, 0.8);
+    box-shadow: 0px 4px 10px rgb(242 191 92 / 20%);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    left: 68px;
+    top: 40px;
+    z-index: 3;
+}
+
+.anim .blog-box .right-img .ele4 {
+    left: 0;
+    top: 450px;
+}
+
+.blog-box .right-img .ele4 {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: #7FD3A2;
+    position: absolute;
+    left: 37px;
+    top: 318px;
+    z-index: 3;
+}
+
+.blog-box .right-img div>img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+@media (max-width:1080px) {
+    .blog-box .left-text {
+        margin: 100px -50px 70px 0;
+    }
+}
+
+@media (max-width:1000px) {
+    .part2bg .part2-box .blog-box2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .blog-box .left-text {
+        width: 96%;
+        margin: 100px auto 50px;
+    }
+
+    .blog-box .right-img {
+        height: 520px;
+    }
+}
+
+/* part2-webinar */
+.part2bg .part2-box .webinar-box {
+    width: 96%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.webinar-box .left-text {
+    width: 58%;
+    max-width: 610px;
+    margin: 100px 0 70px;
+}
+
+.webinar-box .left-text .line1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.webinar-box .left-text .line1>.newicon {
+    display: inline-block;
+    width: 91px;
+    height: 40px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/contenticon.png);
+    background-position: -180px -55px;
+    background-size: 410px auto;
+    margin-right: 15px;
+}
+
+.webinar-box .left-text .line1 .lin1-img2 {
+    height: 95px;
+    margin: 0 0 0 auto;
+}
+
+.webinar-box .left-text .line1>h1 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.webinar-box .left-text .line2 {
+    font-weight: bold !important;
+    font-size: 36px !important;
+    line-height: 54px !important;
+    color: #000000 !important;
+    margin: 0px;
+    padding: 0;
+}
+
+.webinar-box .left-text .line3 {
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 30px !important;
+    color: #000000 !important;
+    padding-left: 43px !important;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/contenticon.png);
+    background-size: 410px auto;
+    background-repeat: no-repeat;
+    background-position: -205px -128px;
+    margin: 5px 0 40px;
+}
+
+.webinar-box .right-img {
+    width: 40%;
+    max-width: 410px;
+    height: 315px;
+    margin: 41px 0 85px 0;
+    position: relative;
+}
+
+.webinar-box .right-img>img {
+    border-radius: 15px;
+    width: 100%;
+    position: absolute;
+    top: 69.5px;
+    left: 0px;
+    opacity: 0;
+}
+
+@media (max-width:1000px) {
+    .webinar-box .right-img {
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .part2bg .part2-box .webinar-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .webinar-box .left-text {
+        width: 100%;
+    }
+
+    .webinar-box .left-text .line1 {
+        margin-bottom: 25px;
+    }
+
+    .webinar-box .left-text .line1 .lin1-img2 {
+        display: none;
+    }
+}
+
+/* part2-ebook */
+.part2bg .part2-box .ebook-box {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ebook-box .right-text .text {
+    max-width: 600px;
+}
+
+.ebook-box .right-text .titlep>.newicon {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/contenticon.png);
+    background-position: -190px 0;
+    background-size: 410px auto;
+    margin: 0px 10px -12px 0px;
+}
+
+#main-content .ebook-box .right-text .titlep {
+    font-family: Proxima nova !important;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: #000000;
+    padding: 0;
+}
+
+#main-content .ebook-box .right-text .content {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #545659;
+    margin: 12px 0 32px;
+    padding: 0;
+}
+
+.ebook-box .right-text .bannerbut {
+    display: inline-block;
+    max-width: 234px;
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    background-color: #FFC021;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+}
+
+.ebook-box .left-img {
+    width: 395px;
+    height: 290px;
+    margin: 91px 0;
+    position: relative;
+}
+
+.ebook-box .left-img .ele3 {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 69px;
+    left: 138px;
+    z-index: 3;
+    opacity: 0;
+    border-radius: 13px;
+}
+
+.ebook-box .left-img .ele2 {
+    width: 285px;
+    height: 285px;
+    border-radius: 50%;
+    background-color: rgba(242, 187, 65, 0.8);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    margin-left: -130px;
+    opacity: 0;
+}
+
+.ebook-box .left-img .ele1 {
+    width: 223px;
+    height: 223px;
+    border-radius: 50%;
+    background: rgba(78, 141, 246, 0.8);
+    position: absolute;
+    top: 66px;
+    left: 165px;
+    z-index: 1;
+    backdrop-filter: blur(4px);
+    margin-left: 109px;
+    opacity: 0;
+}
+
+@media (max-width:1000px) {
+    .part2bg .part2-box .ebook-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .ebook-box .right-text {
+        width: 92%;
+        margin-top: 55px;
+    }
+
+    .ebook-box .right-text .text {
+        margin: 0 auto 150px;
+    }
+
+    .ebook-box .left-img {
+        order: 2;
+        margin: 0 0 90px;
+    }
+
+    .webinar-box .left-text .line1 {
+        margin-bottom: 25px;
+    }
+
+    .webinar-box .left-text .line1 .lin1-img2 {
+        display: none;
+    }
+}
+
+/* part2 end */
+#main-content .part3 .part3-p {
+    font-family: Proxima nova !important;
+    font-weight: bold;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #8F9397 !important;
+    text-align: center;
+    margin: 60px auto 25px;
+    padding: 0;
+}
+
+.part3 .part3-p>span {
+    color: #2764FC;
+}
+
+.part3 .part3-logo-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 835px;
+    margin: 0 auto 90px;
+    min-height: 82px;
+}
+
+.part3 .part3-logo-box>span {
+    text-align: center;
+}
+
+.part3 .part3-logo-box>span img {
+    width: auto;
+    height: auto;
+}
+
+@media (max-width:880px) {
+    .part3 .part3-logo-box {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+        min-height: 197px;
+    }
+
+    .part3 .part3-logo-box>span {
+        width: 33.2%;
+        margin-bottom: 20px;
+    }
+
+    #main-content .part3 .part3-p {
+        max-width: 533px;
+        width: 90%;
+        font-weight: bold !important;
+        color: #8F9397 !important;
+        text-align: center;
+        margin: 60px auto 35px;
+        padding: 0;
+    }
+}
+
+@media (max-width:750px) {
+    #main-content .part3 .part3-p {
+        font-size: 32px !important;
+        line-height: 48px !important;
+    }
+}
+
+/* part3 end */
+/* part4 */
+.part4 {
+    margin-bottom: 120px;
+    min-height: 500px;
+}
+
+.part4 .part4-box {
+    display: none;
+}
+
+.part4 .part4-box.choose {
+    display: block;
+}
+
+@media (max-width:880px) {
+    .part4 {
+        max-width: 660px;
+    }
+}
+
+/* blog part */
+/* blog 分类导航 */
+.blog-result-box .blog_cate_navbox .cate_title {
+    font-family: Proxima nova !important;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.blog-result-box .blog_cate_navbox .blog_cate_nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 32px 0 10px;
+}
+
+.blog-result-box .blog_cate_navbox .blog_cate_nav .blog_nav-but {
+    padding: 0 24px;
+    height: 44px;
+    left: 180px;
+    top: 1178px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid #E4E4E4;
+    border-radius: 30px;
+    font-size: 16px;
+    line-height: 44px;
+    color: #000000;
+    text-align: left;
+    margin: 0 20px 20px 0;
+    transition: transform 0.3s;
+}
+
+.blog_cate_nav .nullele {
+    flex: 1 1 auto;
+    width: 255px;
+    height: 60px;
+    margin: 0 auto 45px;
+}
+
+.blog_cate_nav .nullele.hide {
+    display: none;
+}
+
+.blog-result-box .blog_cate_navbox .blog_cate_nav .blog_nav-but.choose {
+    background-color: #2764FC;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.blog-result-box .blog_cate_navbox .blog_cate_nav .blog_nav-but.hide {
+    display: none;
+}
+
+.blog-result-box .blog_cate_navbox .blog_cate_nav .blog_nav-but:hover {
+    transform: scale(1.03);
+}
+
+.blog-result-box .Categoriesname {
+    display: block;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin: 85px 0 -23px 0;
+}
+
+/* select-cat-wrap */
+.filtrate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filtrate div.select-cat-wrap {
+    position: relative;
+    width: 177px;
+    height: 44px;
+    padding: 0 16px 0 20px;
+    background: #ffffff;
+    border-radius: 30px;
+    border: 1px solid #E4E4E4;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 40px;
+    color: #000000;
+    cursor: default;
+}
+
+.select-cat-wrap .current {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+.select-cat-wrap .icon-arrow {
+    position: absolute;
+    right: 16px;
+    top: 21px;
+    display: block;
+    width: 12px;
+    height: 7px;
+    background: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/blogtag/arrow.png)no-repeat;
+    background-size: 100% 100%;
+    transition: transform 0.3s;
+}
+
+.select-cat-wrap .select-cat-wrap.show .icon-arrow {
+    transform: rotate(-180deg);
+}
+
+.select-cat-wrap .select-cat-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 99%;
+    height: auto;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12), 0px 8px 24px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(36.08px);
+    border-radius: 13px;
+    z-index: 10;
+}
+
+.select-cat-wrap .select-cat-menu .cat {
+    font-size: 16px;
+    width: 100%;
+    height: 37px;
+    line-height: 37px;
+    cursor: pointer;
+    list-style: none;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.select-cat-wrap .select-cat-menu .cat:hover {
+    background: #F2F5F9;
+}
+
+/* select-cat-wrap end */
+/* 展示blog匹配结果 */
+.match_blogbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 103%;
+}
+
+.match_blogbox .eachbox {
+    background-color: #ffffff;
+    min-height: 430px;
+    width: 32%;
+    padding: 24px;
+    border: 1px solid rgba(203, 203, 203, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 15px;
+    max-width: 346px;
+    margin: 56px 2% 0 0;
+    position: relative;
+}
+
+.match_blogbox .eachbox.hide {
+    display: none;
+}
+
+.match_blogbox .eachbox .newlogo {
+    position: absolute;
+    width: 45px;
+    top: 0;
+    right: 0;
+    z-index: 15;
+}
+
+.match_blogbox .eachbox>a {
+    display: inline-block;
+    width: 100%;
+}
+
+.match_blogbox .eachbox .headimg {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.match_blogbox .eachbox .headimg>img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#main-content .match_blogbox .eachbox .ph3 {
+    font-style: normal;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    margin: 21px 0 10px;
+    padding: 0;
+}
+
+.eachbox .blogdate {
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8F9397;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 15px;
+}
+
+.eachbox .publish_date {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.eachbox .blogdate .dian {
+    width: 4px;
+    height: 4px;
+    margin: 0 6px;
+    background: #8F9397;
+    border-radius: 50%;
+}
+
+.match_blogbox .eachbox .read-time {
+    text-align: left;
+    font-size: 12px;
+}
+
+#main-content .match_blogbox .eachbox .ph5 {
+    font-weight: normal !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: #8F9397 !important;
+    padding: 0;
+}
+
+/* blog匹配结果为空展示 */
+.blog-result-box .noresult_showbox {
+    padding: 0;
+}
+
+.noresult_showbox .noresultmain {
+    width: 100%;
+    position: relative;
+}
+
+.noresult_showbox .next_but {
+    top: 27%;
+    right: -46px;
+}
+
+.noresult_showbox .pre_but {
+    top: 27%;
+    left: -46px;
+}
+
+.noresult_slidebox {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: -155px;
+}
+
+.noresult_slidebox .eachbox0 {
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    flex: 0 0 33.3%;
+}
+
+.noresult_slidebox .eachbox {
+    min-height: 350px;
+    width: 100%;
+    max-width: 275px;
+    padding: 0 0 15px;
+    border: 1px solid rgba(203, 203, 203, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 85px 80px rgb(0 0 0 / 1%), 0px 73.7776px 33.4221px rgb(0 0 0 / 2%), 0px 22.3363px 17.869px rgb(0 0 0 / 4%), 0px 12.5216px 10.0172px rgb(0 0 0 / 4%), 0px 6.6501px 5.32008px rgb(0 0 0 / 3%), 0px 2.76726px 2.21381px rgb(0 0 0 / 2%);
+    border-radius: 16px;
+    margin: 0px 1% 120px;
+    position: relative;
+}
+
+.noresult_slidebox .eachbox .newlogo {
+    width: 45px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 15;
+}
+
+.noresult_slidebox .eachbox.hide {
+    display: none;
+}
+
+.noresult_slidebox .eachbox>a {
+    display: inline-block;
+    width: 100%;
+}
+
+.noresult_slidebox .eachbox .headimg {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.noresult_slidebox .eachbox .headimg>img {
+    height: 100%;
+}
+
+#main-content .noresult_slidebox .eachbox .ph3 {
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    padding: 0 13px !important;
+    color: #000000 !important;
+    margin-top: 20px !important;
+}
+
+.noresult_slidebox .eachbox .read-time {
+    width: 100%;
+    text-align: left;
+    margin: 8px 0 4px;
+    padding: 0 13px;
+}
+
+.noresult_slidebox .eachbox .read-time>img {
+    width: 14px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+}
+
+.noresult_slidebox .eachbox .read-time>span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 28px;
+    color: #2764FC;
+}
+
+.noresultmain_phone_box {
+    display: none;
+}
+
+.noresultmain_phone_box .noresultmain_phone {
+    width: 100%;
+}
+
+.noresultmain_phone .each_box>a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 62px auto;
+}
+
+.noresultmain_phone .each_box.hide {
+    display: none;
+}
+
+.noresultmain_phone .each_box .left_text {
+    width: 75%;
+    flex: 1 1 auto;
+}
+
+.noresultmain_phone .each_box .left_text .title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.noresultmain_phone .each_box .left_text .read-titme {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 12px;
+}
+
+.noresultmain_phone .each_box .left_text .read-titme>img {
+    width: 27px;
+    margin-right: 6px;
+}
+
+.noresultmain_phone .each_box .left_text .read-titme>span {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: #2764FC;
+}
+
+.noresultmain_phone .each_box .right_img {
+    width: 135px;
+    height: 135px;
+    flex: 0 0 135px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.noresultmain_phone .each_box .right_img .newlogo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    z-index: 5;
+    border-radius: 0;
+}
+
+.noresultmain_phone .each_box .right_img>img {
+    height: 100%;
+    border-radius: 13px;
+}
+
+@media (max-width:750px) {
+    .blog-result-box .noresultmain {
+        display: none;
+    }
+
+    .blog-result-box .noresultmain_phone_box {
+        display: block;
+    }
+}
+
+@media (max-width:1200px) {
+    .filtrate {
+        width: 95%;
+        margin: 0;
+    }
+
+    .blog-result-box .blog_cate_navbox .cate_title {
+        margin-left: 2%;
+    }
+
+    .blog-result-box .blog_cate_navbox .blog_cate_nav {
+        width: 100%;
+    }
+
+    .blog-result-box .blog_cate_navbox .blog_cate_nav .blog_nav-but.hide {
+        display: flex;
+    }
+
+    .addmore.addmore1 {
+        display: none;
+    }
+
+    .blog_cate_nav .nullele {
+        display: none;
+    }
+
+    .blog-result-box .Categoriesname {
+        margin-left: 2%;
+    }
+
+    .match_blogbox {
+        width: 100%;
+        padding-left: 2%;
+    }
+
+    .match_blogbox .eachbox {
+        width: 32%;
+        margin: 56px 1% 0 0;
+    }
+}
+
+/* blog no result slide  */
+@media (max-width:1000px) {
+    .blog-result-box .noresult_showbox {
+        width: 85%;
+    }
+
+    .noresult_slidebox .eachbox0 {
+        width: 32%;
+        display: flex;
+        justify-content: center;
+        flex: 0 0 32%;
+        margin: 0 2% 0 0;
+    }
+}
+
+@media (max-width:880px) {
+    .blog-result-box .noresult_showbox {
+        width: 100%;
+    }
+
+    .blog-result-box .blog_cate_navbox {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .blog-result-box .Categoriesname {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .match_blogbox {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    .match_blogbox .eachbox {
+        width: 49%;
+        margin: 56px 0 0 0;
+    }
+}
+
+@media (max-width:750px) {
+    .addmore {
+        font-size: 24px;
+    }
+
+    .match_blogbox .eachbox {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .blog-result-box .blog_cate_navbox {
+        max-width: 560px;
+    }
+
+    .match_blogbox {
+        justify-content: center;
+    }
+
+    .eachbox .blogdate {
+        margin: 35px 0;
+    }
+
+    .match_blogbox .eachbox .headimg {
+        height: 260px;
+    }
+
+    .match_blogbox .eachbox .headimg>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .eachbox .publish_date,
+    .match_blogbox .eachbox .read-time {
+        font-size: 24px;
+    }
+
+    #main-content .match_blogbox .eachbox .ph3 {
+        font-size: 30px !important;
+        line-height: 42px !important;
+    }
+
+    .match_blogbox .eachbox .read-time>img {
+        width: 16px;
+        margin-bottom: -4px;
+    }
+
+    .match_blogbox .eachbox .read-time>span {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #main-content .match_blogbox .eachbox .ph5 {
+        font-size: 24px !important;
+        line-height: 36px !important;
+    }
+}
+
+/* weninar part */
+/* 展示webinar匹配结果 */
+.match_webinarbox {
+    width: 100%;
+    margin: 0px;
+}
+
+.match_webinarbox .upcoming {
+    display: none;
+}
+
+.match_webinarbox .upcoming,
+.match_webinarbox .past {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.match_webinarbox .eventbox .eachtitle {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000000;
+    margin: 36px 0;
+    padding: 0 0 0 10px;
+}
+
+.matchbox {
+    width: 100%;
+    margin: 0px 0 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.match_webinarbox .noresult {
+    margin: 0px auto 100px;
+}
+
+.match_webinarbox .eachbox {
+    background-color: #ffffff;
+    width: 31%;
+    padding: 23px;
+    border: 1px solid rgba(203, 203, 203, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 13px;
+    max-width: 346px;
+    margin: 0px 1% 55px;
+    text-align: center;
+}
+
+.match_webinarbox .eachbox.hide {
+    display: none;
+}
+
+.match_webinarbox .eachbox .skip_page {
+    display: inline-block;
+    width: 100%;
+}
+
+.match_webinarbox .eachbox .skippage .headimg>img {
+    width: 100%;
+    height: auto;
+    border-radius: 13px;
+}
+
+.match_webinarbox .eachbox .headimg {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.match_webinarbox .eachbox .headimg>img {
+    height: 100%;
+}
+
+.match_webinarbox .eachbox .ph3 {
+    font-style: normal;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    margin-top: 24px;
+    text-align: left;
+    min-height: 42px;
+    padding: 0;
+}
+
+.match_webinarbox .eachbox .meeting_time {
+    width: 100%;
+    text-align: left;
+    margin: 12px 0 25px;
+    position: relative;
+    padding-left: 30px;
+    height: 20px;
+}
+
+.match_webinarbox .eachbox .meeting_time>img {
+    width: 20px;
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+}
+
+.match_webinarbox .eachbox .meeting_time>span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 19px;
+    color: #2764FC;
+}
+
+.match_webinarbox .eachbox .ph5 {
+    font-weight: normal !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: #8F9397 !important;
+    text-align: left;
+    height: 105px;
+    white-space: wrap;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+.match_webinarbox .eachbox .weninarbut {
+    display: inline-block;
+    width: 234px;
+    height: 52px;
+    line-height: 52px;
+    background-color: #FFC021;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+    margin: 45px 0 25px;
+}
+
+/* no result show */
+.webinar-result-box .noresult_showbox .noresultmain {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 805px;
+    margin: 0 auto;
+}
+
+.webinar-result-box .noresult_showbox .noresultmain .eachbox {
+    width: 31%;
+    max-width: 252px;
+    background: #FFFFFF;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 13px;
+    padding: 0 0 30px;
+}
+
+.webinar-result-box .noresultmain .eachbox a {
+    display: inline-block;
+    width: 100%;
+}
+
+.webinar-result-box .noresultmain .eachbox .headimg {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.webinar-result-box .noresultmain .eachbox .headimg>img {
+    width: 100%;
+    border-radius: 13px;
+}
+
+.webinar-result-box .noresultmain .eachbox .ph3 {
+    padding: 0 10px;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    text-align: left;
+    min-height: 42px;
+}
+
+.webinar-result-box .noresultmain .eachbox .meeting_time {
+    width: 100%;
+    text-align: left;
+    margin: 9px 0 20px;
+    padding: 0 10px 0 38px;
+    position: relative;
+    height: 20px;
+}
+
+.webinar-result-box .noresultmain .eachbox .meeting_time>img {
+    width: 20px;
+    position: absolute;
+    left: 10px;
+}
+
+.webinar-result-box .noresultmain .eachbox .meeting_time>span {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 19px;
+    color: #2764FC;
+}
+
+.webinar-result-box .noresultmain .eachbox .ph5 {
+    padding: 0 15px;
+    font-weight: bold !important;
+    font-size: 12px !important;
+    line-height: 18px !important;
+    color: #6F777B !important;
+    text-align: left;
+    height: 90px;
+    white-space: wrap;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+@media (max-width:880px) {
+    .match_webinarbox .eachbox {
+        width: 48%;
+    }
+}
+
+@media (max-width:750px) {
+    .matchbox {
+        justify-content: center;
+    }
+
+    .match_webinarbox {
+        justify-content: center;
+    }
+
+    .match_webinarbox .eachbox {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .match_webinarbox .eachbox .headimg {
+        height: 265px;
+    }
+
+    .match_webinarbox .eachbox .headimg>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .match_webinarbox .eachbox .ph3 {
+        font-size: 30px !important;
+        line-height: 42px !important;
+        height: auto;
+    }
+
+    .match_webinarbox .eachbox .meeting_time>span {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .match_webinarbox .eachbox .ph5 {
+        font-size: 24px !important;
+        line-height: 36px !important;
+        height: auto;
+    }
+
+    /* no result */
+    .webinar-result-box .noresult_showbox .noresultmain .eachbox {
+        width: 100%;
+        margin-bottom: 55px;
+        max-width: 100%;
+        background: #FFFFFF;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .webinar-result-box .noresult_showbox .noresultmain .eachbox a {
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    .webinar-result-box .noresultmain .eachbox .headimg {
+        width: 135px;
+        height: 135px;
+        flex: 0 0 135px;
+        border-radius: 13px;
+    }
+
+    .webinar-result-box .noresultmain .eachbox .headimg>img {
+        width: auto;
+        height: 100%;
+    }
+
+    .webinar-result-box .noresultmain .eachbox .ph3 {
+        font-size: 24px !important;
+        line-height: 36px !important;
+        min-height: 42px;
+        margin: 3px 13px 5px 0;
+    }
+
+    .noresult_showmore .each_page_infor .read-time {
+        margin: 0;
+    }
+
+    .webinar-result-box .noresultmain .eachbox .meeting_time>img {
+        width: 23px;
+        margin-right: 10px;
+    }
+
+    .webinar-result-box .noresultmain .eachbox .meeting_time>span {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .webinar-result-box .noresultmain .eachbox .ph5 {
+        display: none;
+    }
+}
+
+/* ebook part */
+/* 展示ebook匹配结果 */
+.match_ebookbox {
+    width: 100%;
+    margin: 0px 0 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.match_ebookbox .noresult {
+    margin: 0px auto 100px;
+}
+
+.match_ebookbox .eachbox {
+    background-color: #ffffff;
+    width: 31%;
+    padding: 45px;
+    border: 1px solid rgba(203, 203, 203, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 13px;
+    max-width: 346px;
+    margin: 0px 1% 55px;
+    text-align: center;
+}
+
+.match_ebookbox .eachbox.hide {
+    display: none;
+}
+
+.match_ebookbox .eachbox .headimg {
+    width: 100%;
+    height: 323px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.match_ebookbox .eachbox .headimg>img {
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+
+.match_ebookbox .eachbox .ph5 {
+    font-weight: normal !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: #8F9397 !important;
+    text-align: left;
+    margin: 25px 0;
+    height: 85px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.match_ebookbox .eachbox .ebookbut {
+    display: inline-block;
+    max-width: 234px;
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    background-color: #FFC021;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+}
+
+.e-books-result-box .addmore {
+    margin-top: 0;
+}
+
+/* no result show */
+.e-books-result-box .noresult_showbox .noresultmain {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 805px;
+    margin: 0 auto;
+}
+
+.e-books-result-box .noresult_showbox .noresultmain .eachbox {
+    width: 31%;
+    max-width: 252px;
+    background: #FFFFFF;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 13px;
+    padding: 0 0 30px;
+    margin-bottom: 25px;
+}
+
+.e-books-result-box .noresultmain .eachbox .ebookbut {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #00154D;
+}
+
+.e-books-result-box .noresultmain .eachbox .headimg {
+    width: 100%;
+    height: 230px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.e-books-result-box .noresultmain .eachbox .headimg>img {
+    height: auto;
+    width: 100%;
+}
+
+.e-books-result-box .noresultmain .eachbox .ph3 {
+    padding: 0 10px;
+    margin: 20px 0;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    height: 42px;
+    overflow: hidden;
+}
+
+.e-books-result-box .noresultmain .eachbox .ph5 {
+    padding: 0 15px;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    color: #6F777B !important;
+    text-align: left;
+    margin: 0 0 12px;
+    height: 84px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+@media (max-width:880px) {
+    .match_ebookbox .eachbox {
+        width: 48%;
+    }
+}
+
+@media (max-width:750px) {
+    .match_ebookbox {
+        justify-content: center;
+    }
+
+    .match_ebookbox .eachbox {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .match_ebookbox .eachbox .headimg {
+        height: 637px;
+        border-radius: 10px;
+    }
+
+    .match_ebookbox .eachbox .headimg>img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .match_ebookbox .eachbox .ph5 {
+        font-size: 24px !important;
+        line-height: 36px !important;
+        height: auto;
+    }
+
+    /* no result */
+    .e-books-result-box .noresult_showbox .noresultmain .eachbox {
+        width: 100%;
+        max-width: none;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        margin-bottom: 55px;
+    }
+
+    .e-books-result-box .noresultmain .eachbox .headimg {
+        width: 135px;
+        height: 135px;
+        flex: 0 0 135px;
+        border-radius: 13px;
+    }
+
+    .e-books-result-box .noresultmain .eachbox .headimg>img {
+        width: 100%;
+        height: auto;
+    }
+
+    .e-books-result-box .noresultmain .eachbox .ph3 {
+        font-size: 24px !important;
+        line-height: 36px !important;
+        margin: 3px 13px 5px 0;
+        padding: 0;
+        height: auto;
+    }
+
+    .noresult_showmore .each_page_infor .read-time {
+        margin: 0;
+    }
+
+    .e-books-result-box .noresultmain .eachbox .ebookbut {
+        text-align: left;
+    }
+
+    .e-books-result-box .noresultmain .eachbox .ph5 {
+        display: none;
+    }
+}
+
+/* </style> */
