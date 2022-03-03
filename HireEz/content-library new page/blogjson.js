@@ -1,7 +1,27 @@
-// V0128a 新站点
+// V0205a 新站点
 var pageData = {};
 pageData.firstEbookIndex = 5;//设置第一篇Ebook在列表第几个位置，0 是 第一个位置
-pageData.blog_data = [{
+pageData.blog_data = [
+    {
+    "new": 1,
+    "title": "The Future of Recruiting is Here!",
+    "img": "https://hireez.com/wp-content/uploads/2022/02/future-of-outbound-recruiting-strategy.png",
+    "url": "/blog/future-of-outbound-recruiting-strategy/",
+    "content": "If you’ve been working in the talent acquisition industry within the past few years...",
+    "read_time": "4 min",
+    "classify": ["Recruiting Strategy"],
+    "tag": []
+},
+{
+    "new": 1,
+    "title": "Outbound Recruiting: Rewriting The Rules of Recruitment",
+    "img": "https://hireez.com/wp-content/uploads/2022/01/Outbound-Recruiting.png",
+    "url": "/blog/hiretual-announces-rebrand-to-hireez/",
+    "content": "The greatest ideas in the world often leave us saying one thing:...",
+    "read_time": "4 min",
+    "classify": ["Talent Sourcing","Product"],
+    "tag": []
+},{
     "new": 1,
     "title": "Reasons Why Recruiters Have to Act Fast in 2022",
     "img": "https://hireez.com/wp-content/uploads/2022/01/Copy-of-Website-Blog-Header.jpg",
@@ -11,7 +31,7 @@ pageData.blog_data = [{
     "classify": ["Recruiting Strategy","Recruitment Operations"],
     "tag": []
 },{
-    "new": 1,
+   
     "title": "What does your Commitment to Diversity tell Candidates about your Business?",
     "img": "https://hireez.com/wp-content/uploads/2022/01/ez001.jpg",
     "url": "/blog/what-does-your-commitment-to-diversity-tell-candidates-about-your-business/",
@@ -20,7 +40,7 @@ pageData.blog_data = [{
     "classify": ["Team Collaboration","Diversity & Inclusion","Candidate Engagement"],
     "tag": ["commitment to diversity", "commitment to diversity equity and inclusion", "demonstrates a commitment to diversity & inclusion", "Diversity and Inclusion", "Diversity Hiring"]
 },{
-    "new": 1,
+
     "title": "“Recruiters Need to Adapt. This Competitive Job Market is Here to Stay.”",
     "img": "https://hireez.com/wp-content/uploads/2022/01/ez004.jpg",
     "url": "/blog/recruiters-need-to-adapt-this-competitive-job-market-is-here-to-stay/",
@@ -1399,6 +1419,30 @@ pageData.case_data = [
 
 ];
 pageData.webinar_data = [
+    // {
+    //     title: "The Outbound Recruiters Playbook",
+    //     content:"With the tech talent war still in full effect, it’s become even more challenging to recruit Software professionals.",
+    //     url: "https://explore.hireez.com/5essential-outbound-recruiting-strategies-for-software-roles",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/02/5e.jpg',
+    //     meeting_time:"April 13, 2022 | 9 AM PT | 12 PM ET",
+    //     recommend:true,
+    // },
+    {
+        title: "Winning the Tech Talent War with Outbound Recruiting",
+        content:"If you search for “tech talent war” on Google, you would be slammed with countless blogs, articles and statistics about the hiring difficulties facing technical recruiters.",
+        url: "https://explore.hireez.com/winning-the-tech-talent-war-with-outbound-recruiting",
+        img: 'https://hireez.com/wp-content/uploads/2022/02/winning.jpg',
+        meeting_time:"March 23,2022 | 10AM PT | 12PM CT",
+        recommend:true,
+    },
+    {
+        title: "The Outbound Recruiters Playbook",
+        content:"“Talent shortages.” “Hiring difficulties.” “The Great Resignation.”  While these words are recently commonplace largely due to economic circumstances",
+        url: "https://explore.hireez.com/the-outbound-recruiters-playbook",
+        img: 'https://hireez.com/wp-content/uploads/2022/02/outbound.jpg',
+        meeting_time:"February 23rd, 2022 | 10AM PT | 12PM CT",
+        recommend:true,
+    },
     {
         title: "Neurodiversity in the Workplace: Your Untapped Strength",
         content:"More organizations are making strides to create inclusive, welcoming and diverse workplaces that bring forward the voices of underrepresented groups including Black, Native American, Hispanic and Latinx, women, veteran and LGBTQ individuals in the workplace. ",
@@ -1413,7 +1457,7 @@ pageData.webinar_data = [
         url: "https://explore.hireez.com/hiretuality-2021/",
         img: 'https://hireez.com/wp-content/uploads/2022/01/building_beyond.png',
         meeting_time:"Wednesday, October 13th, 20th, 27th | 10 AM PT | 1 PM ET",
-        recommend:true,
+       
     },
     {
         title: "Think Like a Marketer: Setting Recruitment up for Demand Generation",
@@ -1428,7 +1472,7 @@ pageData.webinar_data = [
         url: "https://explore.hireez.com/improve-candidate-experience",
         img: 'https://hireez.com/wp-content/uploads/2022/01/why_you.png',
         meeting_time:"Feb 16, 2021 at 10:00 AM PST",
-        recommend:true,
+       
     },
     {
         
@@ -1464,22 +1508,22 @@ pageData.webinar_data = [
        
     },
   
-    {
-        title: "Navigating A Virtual Hiring Landscape",
-        content:"How should the roles and responsibilities of Talent Acquisition professionals change in this new normal? Join us for a talk with Monique Davis on upskilling, going digital, and being a hero to candidates who need it.",
-        url: "https://explore.hireez.com/virtual-recruiting",
-        img: 'https://hireez.com/wp-content/uploads/2022/01/navigating.jpg',
-       meeting_time:"Jun 18, 2020 at 10:30 AM PST",
+    // {
+    //     title: "Navigating A Virtual Hiring Landscape",
+    //     content:"How should the roles and responsibilities of Talent Acquisition professionals change in this new normal? Join us for a talk with Monique Davis on upskilling, going digital, and being a hero to candidates who need it.",
+    //     url: "https://explore.hireez.com/virtual-recruiting",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/01/navigating.jpg',
+    //    meeting_time:"Jun 18, 2020 at 10:30 AM PST",
       
-    },
-    {
-        title: "Building A Mindful Candidate Engagement Strategy",
-        content:"We’ve talked about keeping candidates warm during this time, but what’s the best way to do it? Join James Temple and Marc Hamel to discuss how recruiters can be both effective and mindful communicators.",
-        url: "https://explore.hireez.com/candidate-engagement-strategy",
-        img: 'https://hireez.com/wp-content/uploads/2021/11/Webinar-_-Candidate-Engagement-Strategy-2-2.png',
-       meeting_time:"May 26, 2020 at 10:00 AM PST",
+    // },
+    // {
+    //     title: "Building A Mindful Candidate Engagement Strategy",
+    //     content:"We’ve talked about keeping candidates warm during this time, but what’s the best way to do it? Join James Temple and Marc Hamel to discuss how recruiters can be both effective and mindful communicators.",
+    //     url: "https://explore.hireez.com/candidate-engagement-strategy",
+    //     img: 'https://hireez.com/wp-content/uploads/2021/11/Webinar-_-Candidate-Engagement-Strategy-2-2.png',
+    //    meeting_time:"May 26, 2020 at 10:00 AM PST",
     
-    },
+    // },
   
     {
        
@@ -1515,21 +1559,21 @@ pageData.webinar_data = [
         meeting_time:"Jan 15, 2020 at 10:00 AM PST",
     },
   
-    {
-        title: "The 3 Greatest Challenges with Diversity Recruiting",
-        content:"Join Darrell James as he discusses the importance of identifying problems and implementing the right strategies to improve diversity in this free webinar. ",
-        url: "https://explore.hireez.com/challenges-with-diversity-recruiting",
-        img: 'https://hireez.com/wp-content/uploads/2022/01/the_3greateds.jpg',
-        meeting_time:"Nov 5, 2019 at 10:00 AM PDT",
-    },
-    {
-        title: "Sourcing for Modern Recruiters",
-        content:"The Sourcing Alchemist Denys uncovers new ways of sourcing and discovering candidates to stay up to date with the current information age!",
-        url: "https://explore.hireez.com/sourcing-for-recruiters",
-        img: 'https://hireez.com/wp-content/uploads/2022/01/sourcingformodern.jpg',
-       meeting_time:"Sep 17, 2019 at 10:00 AM PST",
+    // {
+    //     title: "The 3 Greatest Challenges with Diversity Recruiting",
+    //     content:"Join Darrell James as he discusses the importance of identifying problems and implementing the right strategies to improve diversity in this free webinar. ",
+    //     url: "https://explore.hireez.com/challenges-with-diversity-recruiting",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/01/the_3greateds.jpg',
+    //     meeting_time:"Nov 5, 2019 at 10:00 AM PDT",
+    // },
+    // {
+    //     title: "Sourcing for Modern Recruiters",
+    //     content:"The Sourcing Alchemist Denys uncovers new ways of sourcing and discovering candidates to stay up to date with the current information age!",
+    //     url: "https://explore.hireez.com/sourcing-for-recruiters",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/01/sourcingformodern.jpg',
+    //    meeting_time:"Sep 17, 2019 at 10:00 AM PST",
      
-    },
+    // },
 ];
 pageData.ebook_data = [
     {
@@ -1638,14 +1682,14 @@ pageData.ebook_data = [
        
     },
     
-    {
-        title: "Ultimate Guide To Email Personalizatio",
-        content:"Effective personalization of sourcing emails should always be rooted in a deep understanding of the targeted groups. Fid out more from the guide.",
-        url: "https://explore.hireez.com/email-personalization",
-        img: 'https://hireez.com/wp-content/uploads/2022/01/uitimate.png',
-        tag:["Engagement"]
+    // {
+    //     title: "Ultimate Guide To Email Personalizatio",
+    //     content:"Effective personalization of sourcing emails should always be rooted in a deep understanding of the targeted groups. Fid out more from the guide.",
+    //     url: "https://explore.hireez.com/email-personalization",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/01/uitimate.png',
+    //     tag:["Engagement"]
        
-    },
+    // },
     {
         title: "Give Disadvantaged Graduates A Better Future",
         content:"It’s important for recruiters and organizations to cultivate the success of candidates with diverse backgrounds and life experiences. Read more.",
@@ -1654,14 +1698,14 @@ pageData.ebook_data = [
         tag:["Diversity and Inclusion"]
         
     },
-    {
-        title: "People Retention and Machine Learning",
-        content:"Machine Learning can aid organizations in retaining employees by predicting and identifying employee behavior. Find out how it works.",
-        url: "https://explore.hireez.com/whitepaper-people-retention-and-machine-Learning",
-        img: 'https://hireez.com/wp-content/uploads/2022/01/people.png',
-        tag:["x"]
+    // {
+    //     title: "People Retention and Machine Learning",
+    //     content:"Machine Learning can aid organizations in retaining employees by predicting and identifying employee behavior. Find out how it works.",
+    //     url: "https://explore.hireez.com/whitepaper-people-retention-and-machine-Learning",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/01/people.png',
+    //     tag:["x"]
     
-    },
+    // },
     {
         title: "Navigate the Current Workforce with AI Recruitment Technology",
         content:"AI does not eliminate the demand for recruiters. Rather, it elevates recruiters’ potential to engage with hiring team and qualified candidates. Read more.",
@@ -1678,22 +1722,22 @@ pageData.ebook_data = [
         tag:["x"]
       
     },
-    {
-        title: "The Economy Is Good Is That Bad For Business?",
-        content:"How to overcome recruiting problem in a tight labor market, strategies to retain your current employees and more. How economy affecting the business",
-        url: "https://explore.hireez.com/economy-and-business",
-        img: 'https://hireez.com/wp-content/uploads/2022/01/the_economy.jpg',
-        tag:["x"]
+    // {
+    //     title: "The Economy Is Good Is That Bad For Business?",
+    //     content:"How to overcome recruiting problem in a tight labor market, strategies to retain your current employees and more. How economy affecting the business",
+    //     url: "https://explore.hireez.com/economy-and-business",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/01/the_economy.jpg',
+    //     tag:["x"]
      
-    },
-    {
+    // },
+    // {
       
-        title: "Business Impact of AI on Recruiting",
-        content:"As talent retention becomes a bigger challenge now than ever, employers are in dire need to keep their workforce engaged. Read more.",
-        url: "https://explore.hireez.com/Business-Impact-of-AI-on-Recruiting",
-        img: 'https://hireez.com/wp-content/uploads/2022/01/business.jpg',
-        tag:["x"]
-    },
+    //     title: "Business Impact of AI on Recruiting",
+    //     content:"As talent retention becomes a bigger challenge now than ever, employers are in dire need to keep their workforce engaged. Read more.",
+    //     url: "https://explore.hireez.com/Business-Impact-of-AI-on-Recruiting",
+    //     img: 'https://hireez.com/wp-content/uploads/2022/01/business.jpg',
+    //     tag:["x"]
+    // },
     {
         title: "A Proactive Talent Acquisition Strategy is Critical In A Tight Labor Market",
         content:"The current demand for talent is high and qualified candidates are in short supply. What strategy should we take to retain top talent?",
