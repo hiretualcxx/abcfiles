@@ -1,0 +1,681 @@
+/* <style> */
+/* public start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    overflow-x: visible;
+    min-width: 750px;
+}
+a{
+    text-decoration: none;
+}
+button {
+    border: none;
+    background: none;
+    display: inline-block;
+}
+.out_box {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.title_0{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #000;
+    position: relative;
+}
+.title_0>p{
+    font-size: 20px;
+    line-height: 55px;
+}
+
+/* public end */
+.part1{
+    /* position: fixed; */
+    position: sticky!important;
+    top: 100px;
+    left: 0;
+    height: 65px;
+    width: 100%;
+    background-color: aliceblue;
+    z-index: 99 ;
+}
+.part1 .main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.part1 .main .cl_nav{
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+.main .cl_nav .nav_title{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+  
+}
+.main .cl_nav  .nav_listbox{
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+.part1 .main .cl_nav:hover .nav_listbox{
+    display: block;
+}
+.main .cl_nav  .nav_listbox>li{
+    width: 100%;
+}
+
+.part1-input {
+    margin: 0;
+    max-width: 370px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    z-index: 5;
+
+}
+
+.part1-input .put-text {
+    width: 71%;
+    height: 56px;
+    border: none;
+    font-size: 19px;
+    line-height: 47px;
+    color: #8F9397;
+    padding: 0 15px 0 5px;
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+
+.part1-input .search-icon {
+    right: 25px;
+    top: 6px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/Group-30.png);
+    background-position: center center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: 85px auto;
+    background-position: -14px 3px;
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+}
+
+/* part2 */
+.part2{
+    margin-top: 150px;
+}
+.part2 .title_1{
+    width: 95%;
+}
+.part2 .contentbox{
+    display: flex;
+    justify-content: start;
+    align-items: top;
+}
+
+.part2 .contentbox .leftbox{
+    flex: 1 1 69%;
+}
+
+.part2 .contentbox .leftbox .eachbox{
+    width: 46%;
+    margin: 0 2% 15px 0;
+    display: inline-block;
+    justify-content: space-between;
+    padding: 0 0 15px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.part2 .leftbox  .eachbox>.img{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 13px;
+}
+.part2 .leftbox  .eachbox .img>img{
+    width: 100%;
+}
+.part2 .leftbox  .eachbox>.text{
+    border-left: none;
+    width: 100%;
+    padding: 15px;
+}
+.part2 .leftbox  .eachbox>.text .title{
+    color: #000;
+    
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    height: 68px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.part2 .leftbox  .eachbox>.text .content{
+    margin: 10px 0;
+}
+.part2 .publishdate{
+    font-size: 12px;
+line-height: 160%;
+text-transform: uppercase;
+color: #555555;
+
+}
+.part2 .leftbox  .eachbox .text .linebox{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.part2 .eachbox .text .linebox .yuan{
+    width: 30px;
+height: 30px;
+background: #FFC021;
+border-radius: 50%;
+flex: 0 0 30px;
+}
+.part2 .contentbox .rightbox{
+    flex: 1 1 30%;
+  
+}
+.part2  .rightbox .catul li{
+    padding: 0 0 0 15px;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 65px;
+  
+    cursor:pointer 
+}
+.part2  .rightbox .catul li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.part2  .rightbox .catul li.choose{
+    background-color: #2764FC;
+    color: #FFFFFF;
+}
+
+.part2 .ad_part{
+    padding: 50px 25px 25px;
+    width: 100%;
+    margin-top: 123px;
+    min-height: 350px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/Newsletter.png);
+    background-position: center center;
+    background-size: cover;
+}
+.part2 .ad_part .title{
+    flex: 1 0 250px;
+    max-width: 250px;
+    width: 100%;
+    font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 120%;
+text-transform: capitalize;
+color: #FFFFFF;
+margin: 0 15px 20px 0;
+}
+
+.part2 .ad_part iframe,.part2 .ad_part .iframe{
+    width: 100%;
+}
+.part2 .ad_part .iframe{
+    width: 100%;
+    margin-bottom: -80px;
+}
+/* part3 */
+
+.part3{
+    margin-top: 150px;
+}
+.part3 .title_1{
+    width: 95%;
+}
+.part3 .contentbox{
+    display: flex;
+    justify-content: start;
+    align-items: top;
+}
+
+.part3 .contentbox .leftbox{
+    flex: 1 1 69%;
+}
+
+.part3 .contentbox .leftbox .eachbox{
+    width: 46%;
+    margin: 0 2% 15px 0;
+    display: inline-block;
+    justify-content: space-between;
+    padding: 0 0 15px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.part3 .leftbox  .eachbox>.img{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 13px;
+}
+.part3 .leftbox  .eachbox .img>img{
+    width: 100%;
+}
+.part3 .leftbox  .eachbox>.text{
+    border-left: none;
+    width: 100%;
+    padding: 15px;
+}
+.part3 .leftbox  .eachbox>.text .title{
+    color: #000;
+    
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    height: 68px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.part3 .leftbox  .eachbox>.text .content{
+    margin: 10px 0;
+}
+.part3 .publishdate{
+    font-size: 12px;
+line-height: 160%;
+text-transform: uppercase;
+color: #555555;
+
+}
+.part3 .leftbox  .eachbox .text .linebox{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.part3 .eachbox .text .linebox .yuan{
+    width: 30px;
+height: 30px;
+background: #FFC021;
+border-radius: 50%;
+flex: 0 0 30px;
+}
+.part3 .contentbox .rightbox{
+    flex: 1 1 30%;
+  
+}
+.part3  .rightbox .catul li{
+    padding: 0 0 0 15px;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 65px;
+  
+    cursor:pointer 
+}
+.part3  .rightbox .catul li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.part3  .rightbox .catul li.choose{
+    background-color: #2764FC;
+    color: #FFFFFF;
+}
+
+.part3 .ad_part{
+    padding: 50px 25px 25px;
+    width: 100%;
+    margin-top: 123px;
+    min-height: 350px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/Newsletter.png);
+    background-position: center center;
+    background-size: cover;
+}
+.part3 .ad_part .title{
+    flex: 1 0 250px;
+    max-width: 250px;
+    width: 100%;
+    font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 120%;
+text-transform: capitalize;
+color: #FFFFFF;
+margin: 0 15px 20px 0;
+}
+
+.part3 .ad_part iframe,.part3 .ad_part .iframe{
+    width: 100%;
+}
+.part3 .ad_part .iframe{
+    width: 100%;
+    margin-bottom: -80px;
+}
+
+.part4{
+    display: none;
+}
+
+/* part5 */
+.part5 .control_but{
+    width: 90px;
+    height: 30px;
+    /* position: absolute;
+    right: 10%;
+    top: 0px; */
+}
+.part5 .control_but>button{
+    width: 30px;
+    height: 30px;
+    background-color: #8F9397;
+}
+
+
+.part5 .main {
+    width: 100%;
+    position: relative;
+}
+
+.part5 .next_but {
+    top: 27%;
+    right: -46px;
+}
+
+.part5 .pre_but {
+    top: 27%;
+    left: -46px;
+}
+
+.part5 .slidebox {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.part5 .slidebox .eachbox {
+    flex:0 0 23%;
+    margin: 0 2% 0 0;
+    border-radius: 13px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.part5 .slidebox .eachbox .img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    border-radius: 13px;
+   
+}
+.part5 .slidebox .eachbox .img>img{
+    height: 100%;
+}
+.part5 .slidebox .eachbox .infor{
+    padding: 0 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 21, 76, 0.18) 0%, rgba(0, 21, 76, 0.8) 100%);
+
+}
+.part5 .slidebox .eachbox .infor .title{
+    font-weight: 800;
+    min-height: 60px;
+    
+    font-family: Proxima Nova;
+font-size: 16px;
+margin: 100px 0 10px;
+line-height: 20px;
+color: #FFFFFF;
+transition: all 0.3s;
+}
+.part5 .slidebox .eachbox .blogdate {
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 10px 0 30px;
+}
+.part5 .slidebox .eachbox .publish_date {
+    font-size: 12px;
+}
+.part5 .slidebox .eachbox  .blogdate .dian {
+    width: 4px;
+    height: 4px;
+    margin: 0 6px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+/* part6 */
+.part6{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.part6 .catbox{
+    flex: 0 0 49%;
+    margin-top: 55px;
+
+}
+.part6 .catbox .main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.part6 .catbox .main .left{
+    width: 50%;
+    flex: 0  0 50%;
+    position: relative;
+}
+.part6 .catbox .main .left .img{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part6 .catbox .main .left .img>img{
+    height: 100%;
+}
+.part6 .catbox .main .right{
+    width: 50%;
+    flex: 0 0 50%;
+    position: relative;
+}
+.part6 .catbox .main .right .eachbox{
+    width: 100%;
+}
+
+
+/* part7 */
+.part7 .main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.part7 .main .videobox{
+    width: 46%;
+}
+.part7 .main .videobox .img{
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+}
+.part7 .main .videobox .img>img{
+    width: 100%;
+}
+.part7 .main .videobox .title{
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* 播放视频黑蒙层 */
+.videolayer {
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 10000000;
+    top: 0;
+    left: 0;
+}
+
+.videolayer.hide {
+    display: none;
+}
+
+.videolayer .iframebox {
+    width: 90%;
+    height: 500px;
+    background: #070707;
+    border-radius: 40px;
+    max-width: 1080px;
+    margin: 10% auto 0;
+    padding: 0 50px;
+}
+
+.fluid-width-video-wrapper {
+    height: 100%;
+}
+
+.videolayer .iframebox>iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* part8 */
+.part8{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+.part8 .left{
+    width: 65%;
+    flex: 1 1 65%;
+
+}
+.part8 .left .main{
+    width: 100%;
+
+}
+.part8 .left .main{
+    position: relative;
+    width: 100%;
+}
+.part8 .left .main .p_box{
+  display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #FFFFFF;
+}
+.part8 .left .main .p_box.show{
+    display: block;
+    z-index: 3;
+}
+.part8 .left .main .p_box .eachbox{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.part8 .left .main .p_box .eachbox .img{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.part8 .left .main .p_box .eachbox .img>img{
+    height: 100%;
+}
+.part8 .left .main .p_box .eachbox .text{
+    width: 50%;
+}
+.part8 .right{
+    width: 32%;
+    flex: 1 1 32%;
+    background-color: #000;
+    min-height: 500px;
+
+}
+.part8-2{
+    margin-bottom: 150px;
+}
+.part8-2 .choose_p{
+    display: inline-block;
+   width: 35px;
+   height: 35px;
+   background-color: #FFFFFF;
+   border-radius: 5px;
+}
+.part8-2 .choose_p.choose{
+    background-color: #FFC021;
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:920px) {
+   
+}
+/* </style> */

@@ -213,7 +213,8 @@
         </div>
 
         <!-- part4 -->
-        <div class="part4 out_box">
+      
+         <div class="part4 out_box">
             <!-- blog -->
             <div class="blog-result-box part4-box">
                 <div class="blog_cate_navbox">
@@ -286,11 +287,11 @@
                 <div class="noresult_showbox">
                     <span class="noresulttitle">You may also like</span>
                     <div class="noresultmain">
-                        <button class="pre_but"></a>
+                        <button class="pre_but"></button>
                         <div class="noresult_slidebox">
 
                         </div>
-                        <button class="next_but"></a>
+                        <button class="next_but"></button>
                     </div>
                     <div class="noresultmain_phone_box">
                         <div class="noresultmain_phone">
@@ -354,838 +355,838 @@
 
 
     <!-- <script src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/blogjson.js?0218a"></script> -->
-    <script src="./blogjson.js"></script>
+    <script src="https://staging-rebrand.kinsta.cloud/blogjson/"></script>
     <script>
-        var enterpage = 'webinar';
-        var blogcat = 'outbound';
-        var ifcat = null;
-        var blogcatobj = {
-            'RecruitingStrategy': 'recruiting',
-            'Data': 'data',
-            'OutboundRecruiting': 'outbound',
-            'Diversity': 'diversity',
-            'Events': 'events',
-            'CandidateEngagement': 'candidate',
-            'TeamCollaboration': 'team',
-            'RecruiterStories': 'recruiter',
-            'RecruitmentOperations': 'recruitment',
-            'Product': 'product'
-        }
-        var urlcode = window.location.search.substring(1);
-        var urlcode2 = urlcode.split('&')
-        for (var u = 0; u < urlcode2.length; u++) {
-            var urlcode3 = urlcode2[u];
-            if (urlcode3.split('=')[0] == 'enterpage') {
-
-                if (urlcode3.split('=')[1] == 'blog' || urlcode3.split('=')[1] == 'webinar' || urlcode3.split('=')[1] == 'e-books') {
-                    enterpage = urlcode3.split('=')[1];
-                } else {
-                    enterpage = 'webinar';
-                }
-            } else if (urlcode3.split('=')[0] == 'cat' && enterpage == 'blog') {
-                blogcat = blogcatobj[urlcode3.split('=')[1]];
-                ifcat = 1;
-            }
-        };
-
-
-        (function (control_module) {
-            control_module = control_module || 'e-books';
-
-            if (control_module == 'e-books') return;
-            // 初始化顶部选择nav
-            document.querySelector('.page-type-nav .blog').classList.remove("choose");
-            document.querySelector('.page-type-nav .' + control_module).classList.add("choose");
-
-            // 初始化显示part2
-            document.querySelector('.part2-blog').classList.remove("choose");
-            document.querySelector('.part2-' + control_module).classList.add("choose");
-
-            // 结果展示框
-            document.querySelector('.blog-result-box').classList.remove("choose");
-            document.querySelector('.' + control_module + '-result-box').classList.add("choose");
-        })(enterpage);
-
-        var base_url = 'https://' + window.location.host;
-        var full_url = window.location.href;
-        var publicdata = {
-            control_module: 'blog', matchData: '', showresult: 'blogresult', laststr: '', Categoriesname: 'Outbound Recruiting',
-            screen_w: '', screen_h: '', blogshow: 0, webinarshow: 0, ebookshow: 0, blogfirst: true, blogresult: [],choosecat:'latest'
-        };
-        (function () {
-            var url_es = document.getElementsByClassName('url_e');
-            for (var i = 0; i < url_es.length; i++) {
-                url_es[i].setAttribute('data-vars-ga-label', full_url)
-            }
-        })();
-        // nav choose
-        var nav_change_tool = {
-            nav_choose: function (e, control_module) {
-
-                if (e) { control_module = $(this).attr('control'); }
-
-                $('.put-text').val('');
-                publicdata.laststr = '';
-
-                slide_tool.removeanim(publicdata.control_module);
-                publicdata.control_module = control_module;
-
-                switch (control_module) {
-                    case 'blog':
-                        // init blog
-                        publicdata.Categoriesname = 'Outbound Recruiting';
-
-                        blogcat = blogcat || 'outbound';
-                        blog_nav_choose(null, blogcat);
-
-                        $('.part1-input .put-text').attr('placeholder', 'search the best recruiting tips');
-                        if (!publicdata.blogshow) {
-                            $('.part2-blog').addClass('anim');
-                            anim_tool.blog_anim1();
-                            publicdata.blogshow = 1;
-                        }
-                        break;
-
-                    case 'webinar':
-                        //  init weninar 
-                        generate_result_tool.webinarresult(pageData.webinar_data);
-
-                        $('.part1-input .put-text').attr('placeholder', 'learn more about recruiting trends');
-                        if (!publicdata.webinarshow) {
-                            $('.part2-webinar').addClass('anim');
-                            anim_tool.webinar_anim1();
-                            publicdata.webinarshow = 1;
-                        }
-                        break;
-
-                    case 'e-books':
-                        //  init ebook 
-                        generate_result_tool.ebookresult(pageData.ebook_data);
-                        $('.part1-input .put-text').attr('placeholder', 'get the recruiting guidance now');
-                        if (!publicdata.ebookshow) {
-                            $('.part2-e-books').addClass('anim');
-                            anim_tool.ebook_anim1();
-                            publicdata.ebookshow = 1;
-                        }
-                        break;
-                };
-                slide_tool.changeslide();
-                // 改变搜索框匹配的数据
-                nav_change_tool.change_matchdata(control_module);
-                //改变蓝色底部追踪事件
-                addevent.change_bottomevent();
-                $('.nav-but').not('.' + control_module).removeClass('choose');
-                $('.nav-but.' + control_module).addClass('choose');
-                $('.part2-box').not('.part2-' + control_module).removeClass('choose');
-                $('.part2-' + control_module).addClass('choose');
-                $('.part4-box').not('.' + control_module + '-result-box').removeClass('choose');
-                $('.' + control_module + '-result-box').addClass('choose');
-            },
-            change_matchdata: function (e) {
-
-                switch (e) {
-                    case 'blog':
-                        publicdata.matchData = pageData.blog_data;
-                        publicdata.showresult = 'blogresult';
-                        break;
-
-                    case 'webinar':
-                        publicdata.matchData = pageData.webinar_data;
-                        publicdata.showresult = 'webinarresult';
-                        break;
-
-                    case 'e-books':
-                        publicdata.matchData = pageData.ebook_data;
-                        publicdata.showresult = 'ebookresult';
-                        break;
-                }
-            },
-            setnav_anim: function () {
-                setTimeout(function () {
-                    $('.page-type-nav').removeClass('anim')
-                }, 10000);
-
-            },
-
-        }
-
-        // blog_nav_choose
-        var blog_nav_choose = function (e, choose_cate) {
-            if (!choose_cate) {
-                choose_cate = $(this).attr('chooseCate');
-
-                publicdata.Categoriesname = $(this).html();
-                $('.blog_nav-but').removeClass('choose');
-
-                $(this).addClass('choose');
-                scroll_tool('part4');
-            } else {
-                $('.blog_nav-but').removeClass('choose');
-                $('.blog_nav-but[choosecate=' + choose_cate + ']').addClass('choose');
-            }
-
-            var match_data;
-            if(choose_cate == 'all'){
-                match_data = pageData.blog_data;
-            }else{
-                 match_data = search_tool.match_classify_fn(choose_cate);
-            }
-            generate_result_tool.blogresult(match_data);
-            
-
-        }
-        // serach
-        var search_tool = {
-            search_fn: function () { // search_fn(搜索匹配)
-                var match_data;
-                publicdata.Categoriesname = '';
-                var put_val = $('.put-text').val().trim();
-                var valarr = put_val.split(' ');
-                valarr = valarr.filter(function (e) {
-                    return e.length >= 3;
-                });
-                scroll_tool('part4');
-                if (!put_val) {
-                    match_data = publicdata.matchData
-                    // $('.blog_nav-but.all').addClass('choose');
-                } else {
-                    match_data = search_tool.match_title_fn(valarr);
-                }
-                generate_result_tool[publicdata.showresult](match_data, true);
-            },
-            match_title_fn: function (arr) {//   match_title_fn(匹配title搜索关键词)
-
-                var data = {};
-                var match_arr = [];
-                for (var i = 0; i < arr.length; i++) {
-                    var str = arr[i].toLowerCase();
-                    publicdata.matchData.forEach(function (e, index) {
-                        var t = e.title.toLowerCase();
-                        if (t.indexOf(str) >= 0) {
-                            data[index] = data[index] ? data[index] + 1 : 1;
-                        }
-                    })
-                };
-
-                for (var key in data) {
-                    if (data[key] >= Math.ceil(arr.length / 2)) {
-                        var k = parseInt(key);
-                        match_arr.push(publicdata.matchData[k]);
-                    }
-                }
-                return match_arr;
-            },
-            match_classify_fn: function (classify) {
-
-                var match_data = pageData.blog_data.filter(function (d, index) {
-                    var returnval = false;
-                    for (var i = 0; i < d.classify.length; i++) {
-                        if (d.classify[i].toLowerCase().indexOf(classify) > -1) {
-                            returnval = true;
-                        }
-                    };
-                    return returnval;
-                })
-                return match_data;
-            },
-        };
-        // slide
-        var slide_tool = {
-            init_slidepage: function () { // init slide(初始化轮播)
-                slide_tool.changeslide();
-                $('.part2 .pre_but').on('click', slide_tool.next_fn);
-                $('.part2 .next_but').on('click', slide_tool.pre_fn);
-
-                var read_m = $('.blog-box .left-text .jump-button');
-                for (var i = 0; i < read_m.length; i++) {
-                    var str = read_m.eq(i).siblings('.line2').html();
-                    read_m.eq(i).attr('data-vars-ga-category', 'blog_' + str);
-                }
-            },
-            changeslide: function () {
-                publicdata.slidechild = $('.part2-' + publicdata.control_module + ' .slidebox').children();
-            },
-            pre_fn: function () {  //pre button
-                if (+new Date() - publicdata.slidebut_T < 800) {
-                    return;
-                } else {
-                    publicdata.slidebut_T = +new Date();
-                }
-                slide_tool.removeanim(publicdata.control_module);
-                $('.part2-' + publicdata.control_module + ' .slidebox>div').eq(0).animate({ 'margin-left': '-100%' }, 700, function () {
-                    var child0 = $('.part2-' + publicdata.control_module + ' .slidebox>div').eq(0);
-                    child0.css({ 'margin-left': 0 });
-                    $('.part2-' + publicdata.control_module + ' .slidebox').append(child0);
-                });
-            },
-            next_fn: function () {    //  next button
-                if (+new Date() - publicdata.slidebut_T < 800) {
-                    return;
-                } else {
-                    publicdata.slidebut_T = +new Date();
-                }
-                slide_tool.removeanim(publicdata.control_module);
-                var lastchlid = $('.part2-' + publicdata.control_module + ' .slidebox>div').eq(publicdata.slidechild.length - 1);
-                lastchlid.css({ 'margin-left': '-100%' });
-                $('.part2-' + publicdata.control_module + ' .slidebox').prepend(lastchlid);
-                lastchlid.animate({ 'margin-left': '0' }, 700, function () {
-                    // var child0 = $('.part2-'+publicdata.control_module+' .slidebox>div').eq(1);child0.css({'margin-right':0});
-                })
-            },
-            removeanim: function (control_module) {
-                switch (control_module) {
-                    case 'blog':
-                        $('.part2-blog.anim').length && $('.part2-blog').removeClass('anim');
-                        break;
-                    case 'webinar':
-                        $('.part2-webinar.anim').length && $('.part2-webinar').removeClass('anim');
-                        break;
-                    case 'e-books':
-                        $('.part2-e-books.anim').length && $('.part2-e-books').removeClass('anim');
-                        break;
-                }
-            }
-        }
-
-        // scroll set
-        var scroll_tool = function (ele) {
-            var offset_top = $('.' + ele).offset().top;
-            var slid_y = offset_top;
-            switch (publicdata.showresult) {
-                case 'blogresult':
-                    slid_y = offset_top + 115;
-                    break;
-                case 'webinarresult':
-                    slid_y = offset_top - 150;
-                    break;
-                case 'ebookresult':
-                    slid_y = offset_top - 150;
-                    break;
-            }
-            window.scrollTo({
-                left: 0,
-                top: slid_y,
-                behavior: 'smooth'
-            });
-        }
-        // generate result
-        var generate_result_tool = {
-            blogresult: function (res, put) {
-
-                res = public_tool.sortfn(res,publicdata.choosecat);
-
-                publicdata.lastblogresult = res;
-
-                var ifhide = '';
-                var str = '';
-                var e;
-                var lazy_src = false;
-                if (res.length == 0) {
-                    str = generate_result_tool.noresult();
-                    noresult_tool.blogresult();
-                } else {
-                    $('.blog-result-box .noresult_showbox').css('display', 'none');
-                }
-                var i_max = res.length;
-                if (publicdata.blogfirst && i_max > 6) {
-                    i_max = 6;
-                    publicdata.blogfirst = false;
-                    publicdata.blogresult = res.slice(6);
-                } else {
-                    publicdata.blogresult = [];
-                }
-
-                for (var i = 0; i < i_max; i++) {
-                    e = res[i];
-                    if (e.content.length > 85) {
-                        e.content = e.content.substr(0, 85);
-                    };
-
-                    if (i > 5) {
-                        ifhide = ' hide'
-                    } else {
-                        ifhide = '';
-                    };
-                    // 首次进入渲染图片懒加载
-                    if (enterpage == 'blog') { lazy_src = true };
-                    str += `<div class="eachbox clicka${ifhide}">
-                            ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
-                            <a data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}" href="${base_url + e.url}">
-                            <div class="headimg"> <img ${lazy_src ? `lazy_src=${e.img}` : ''} src="${lazy_src ? '' : e.img}" alt=""> </div>
-                            <div class="blogdate">
-                                <div class="publish_date"> ${e.publish_date} </div>
-                                <div class="dian"> </div>
-                                <div class="read-time"> ${e.read_time || '3 min'} read </div>
-                            </div>
-                            <h3 class="ph3">${e.title}</h3>
-                            
-                            <p class="ph5">${e.content || ''}</p> </a> </div>`;
-                };
-                if (str == publicdata.laststr) {
-                    return;
-                } else {
-                    publicdata.laststr = str;
-                }
-                if (res.length > 6) {
-                    $('.blog-result-box .addmore2').removeClass('hide');
-                } else {
-                    $('.blog-result-box .addmore2').addClass('hide');
-                }
-                $('.Categoriesname').html(publicdata.Categoriesname);
-
-                $('.match_blogbox').html(str);
-
-                if (enterpage) {
-                    generate_result_tool.scrollpage('match_blogbox');
-                    enterpage = '';
-                }
-
-
-                put && $('.blog_nav-but').removeClass('choose');
-            },
-            webinarresult: function (res) {
-                    var eachstr = {
-                        upcomingstr:'',
-                        paststr:'',
-                    };
-                    var e = '';
-                    if (res.length < 1) {
-                        $('.match_webinarbox .noresultbox').html(`<div class="noresult">
-                           <div class="noresult_p">There is no result</div>
-                           <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/noresult.png" alt="">
-                           </div>`).show();
-                        noresult_tool.webinarresult();
-                    } else {
-                        $('.webinar-result-box .noresult_showbox').css('display', 'none');
-                        for (var i = 0; i < res.length; i++) {
-                            e = res[i];
-                            var str = e.endtime > public_tool.outUTCtime() ? 'upcomingstr':'paststr';
-                            
-                            eachstr[str] += `<div class="eachbox">
-                               ${e.ctaurl ? `<a href="${e.url}" class="skip_page ${'skippage'}">`:''} 
-                            <div class="headimg">
-                                <img src="${e.img}" alt="">
-                            </div>
-                            <h2 class="ph3">${e.title}</h2>
-                            <div class="meeting_time"> <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/01/clock2.png" alt=""> <span>${e.meeting_time}</span> </div>
-                            <p class="ph5">${e.content}</p>
-                            ${e.ctaur? '</a>':''} 
-                            <a class="weninarbut clicka" data-vars-ga-category="webinar_${e.title}" data-vars-ga-action="click_get access to watch" data-vars-ga-label="${full_url}" href="${e.ctaurl ||e.url}"> ${e.cta || 'Get access to watch'} </a>
-                        </div>`
-                        }
-                    }
-
-                    $('.webinar-result-box .past .matchbox').html(eachstr.paststr);
-                    $('.webinar-result-box .upcoming .matchbox').html(eachstr.upcomingstr);
-
-                    if($('.webinar-result-box .upcoming .matchbox>.eachbox').length>0 ) {
-                        $('.webinar-result-box .upcoming').show();
-                        $('.match_webinarbox .noresultbox').hide();
-                    }else{
-                        $('.webinar-result-box .upcoming').hide();
-                    };
-                    if($('.webinar-result-box .past .matchbox>.eachbox').length>0) {
-                        $('.webinar-result-box .past').show();
-                        $('.match_webinarbox .noresultbox').hide();
-                    }else{
-                        $('.webinar-result-box .past').hide();
-                    }
-                    
-                },
-            ebookresult: function (res) {
-
-                var str = '';
-                var e = '';
-                var ifhide = ''
-                $('.e-books-result-box .addmore').addClass('hide');
-                if (res.length < 1) {
-                    str = generate_result_tool.noresult();
-                    noresult_tool.ebookresult();
-                } else {
-                    $('.e-books-result-box .noresult_showbox').css('display', 'none');
-                    if (res.length > 6) {
-                        $('.e-books-result-box .addmore').removeClass('hide');
-                    }
-
-                    for (var i = 0; i < res.length; i++) {
-                        e = res[i];
-                        if (i > 5) {
-                            ifhide = ' hide'
-                        } else {
-                            ifhide = '';
-                        }
-                        str += `<div class="eachbox${ifhide}">
-                            <div class="headimg">
-                                <img width="240" height="323" src="${e.img}" alt="">
-                            </div>
-                    
-                            <p class="ph5">${e.content}</p>
-                            <a class="ebookbut  clicka" data-vars-ga-category="e-books_${e.title}" data-vars-ga-action="click_get access to download" data-vars-ga-label="${full_url}" href="${e.url}">Access your copy</a>
-                        </div>`
-                    }
-                }
-                if (str == publicdata.laststr) {
-                    return;
-                } else {
-                    publicdata.laststr = str;
-                }
-
-                $('.e-books-result-box .match_ebookbox').html(str);
-            },
-            noresult: function (parentbox) {
-                return `<div class="noresult">
-                           <div class="noresult_p">There is no result</div>
-                           <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/noresult.png" alt="">
-                           </div>`;
-            },
-            imgsrc: function (parent) {
-                var imgs = $('.' + parent).find('img[lazy_src]');
-                var i_src;
-                for (var n = 0; n < imgs.length; n++) {
-                    i_src = imgs.eq(n).attr('lazy_src');
-                    imgs.eq(n).attr('src', i_src);
-                }
-            },
-            scrollpage: function (classname) {
-                var view_h = $(window).height() - 100;
-                var img_box = $('.' + classname);
-                var scroll_fn = function () {
-                    var scrolltop = $(document).scrollTop();
-                    var top_y = img_box.eq(0).offset().top;
-                    if (top_y - scrolltop < view_h) {
-                        generate_result_tool.imgsrc(classname);
-                        $(window).unbind('scroll', scroll_fn)
-                    }
-                };
-
-                $(window).on('scroll', scroll_fn);
-                scroll_fn(classname)
-            },
-
-        }
-        // no result 
-        var noresult_tool = {
-            init_slide: function () { // init slide(初始化轮播)
-                $('.noresultmain .pre_but').on('click', noresult_tool.next_fn);
-                $('.noresultmain .next_but').on('click', noresult_tool.pre_fn);
-            },
-            pre_fn: function () {  //pre button
-                var len = $('.noresult_slidebox').children().length;
-                if (+new Date() - publicdata.slidebut_T < 800) {
-                    return;
-                } else {
-                    publicdata.slidebut_T = +new Date();
-                }
-
-                $('.noresult_slidebox>.eachbox0').eq(0).animate({ 'margin-left': '-100%' }, 700, function () {
-                    var child0 = $('.noresult_slidebox>.eachbox0').eq(0);
-                    var child1 = $('.noresult_slidebox>.eachbox0').eq(1);
-                    var child2 = $('.noresult_slidebox>.eachbox0').eq(2);
-                    child0.css({ 'margin-left': 0 });
-                    $('.noresult_slidebox').append(child0).append(child1).append(child2);
-                });
-            },
-            next_fn: function () {    //  next button
-                var len = $('.noresult_slidebox').children().length;
-                if (+new Date() - publicdata.slidebut_T < 800) {
-                    return;
-                } else {
-                    publicdata.slidebut_T = +new Date();
-                }
-
-                var lastchlid1 = $('.noresult_slidebox>.eachbox0').eq(len - 1);
-                var lastchlid2 = $('.noresult_slidebox>.eachbox0').eq(len - 2);
-                var lastchlid3 = $('.noresult_slidebox>.eachbox0').eq(len - 3);
-                lastchlid3.css({ 'margin-left': '-100%' });
-                $('.noresult_slidebox').prepend(lastchlid1).prepend(lastchlid2).prepend(lastchlid3);
-                lastchlid3.animate({ 'margin-left': '0' }, 700, function () {
-                    // var child0 = $('.part2-'+publicdata.control_module+' .slidebox>div').eq(1);
-                    // child0.css({'margin-right':0});
-                })
-            },
-            blogresult: function () {
-                var str = '';
-                var str_phone = '';
-                var ifhide = '';
-                for (var i = 0; i < 8; i++) {
-                    var e = pageData.blog_data[i];
-                    str += `<div class="eachbox0">
-                                    <div class="eachbox clicka">
-                                        ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
-                                        <a href="${base_url + e.url}" data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}">
-                                        <div class="headimg">
-                                            <img src="${e.img}" alt="">
-                                        </div>
-                                        <h3 class="ph3">${e.title}</h3>
-                                        <div class="read-time"><img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/blogtag/eye-icon.png" alt=""> <span>${e.read_time} read</span> </div>
-                                        </a>
-                                    </div>
-                                </div>`;
-
-                    if (i > 3) {
-                        ifhide = ' hide';
-                        $('.addmore3.hide').removeClass('hide')
-                    } else {
-                        ifhide = '';
-                    }
-                    str_phone += `<div class="each_box clicka${ifhide}">
-                            <a href="${base_url + e.url}" data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}">
-                                    <div class="left_text">
-                                        <span class="title">${e.title}</span>
-                                            <div class="read-titme">
-                                                <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/blogtag/eye-icon.png" alt="">
-                                                <span>${e.read_time} read</span>
-                                            </div>
-                                    </div>
-                                    <div class="right_img">
-                                        ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
-                                        <img src="${e.img}" alt="">
-                                    </div>
-                                </a>
-                                </div>`;
-                }
-                $('.noresultmain_phone_box .noresultmain_phone').html(str_phone);
-                $('.noresult_slidebox').html(str);
-                $('.blog-result-box .noresult_showbox').css('display', 'block');
-            },
-            // 渲染底部类别选择
-            webinarresult: function () {
-                var str = '';
-                if ($('.webinar-result-box  .noresultmain .eachbox').length == 0) {
-                    for (var i = 0; i < pageData.webinar_data.length; i++) {
-                        var e = pageData.webinar_data[i];
-                        if (e.recommend) {
-                            str += `<div class="eachbox clicka">
-                            <a href="${e.url}">
-                                <div class="headimg">
-                                    <img src="${e.img}" alt="">
-                                </div>
-                                <div class="left_text">
-                                <h2 class="ph3">${e.title}</h2>
-                                <div class="meeting_time"> <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/01/clock2.png" alt=""> <span>${e.meeting_time}</span> </div>
-                                <p class="ph5">${e.content}</p>
-                            </div>
-                            </a>
-                            </div>`
-                        }
-                    }
-                    $('.webinar-result-box .noresultmain').html(str);
-
-                };
-
-                $('.webinar-result-box .noresult_showbox').css('display', 'block');
-
-            },
-            ebookresult: function () {
-                var str = '';
-                var recommendn = 0;
-                if ($('.e-books-result-box  .noresultmain .eachbox').length == 0) {
-                    for (var i = 0; i < pageData.ebook_data.length; i++) {
-                        var e = pageData.ebook_data[i];
-                        if (e.recommend) {
-
-                            str += `<div class="eachbox">
-                           
-                                <div class="headimg">
-                                    <img src="${e.img}" alt="">
-                                </div>
-                                <div class="left_text">
-                                <h3 class="ph3">${e.title}</h3>
-                                <p class="ph5">${e.content}</p>
-                                <a class="ebookbut clicka" href="${e.url}"> Access your copy > </a>
-                            </div>
-                                </div>`;
-
-                            if (++recommendn >= 3) break;
-                        }
-                    }
-                    $('.e-books-result-box .noresultmain').html(str);
-
-                };
-
-                $('.e-books-result-box .noresult_showbox').css('display', 'block');
-
-            }
-        }
-
-        //   addmore bur
-        var addmore_tool = {
-            addmore_all: function () {
-                var control = $(this).attr('control');
-                $(this).addClass('hide');
-                var showlen = $('.' + control).children().not('.hide').length;
-
-                $('.' + control).children().eq(showlen - 1).children().focus();
-
-                if (publicdata.blogresult.length && control == 'match_blogbox') {
-                    var str = '';
-                    for (var i = 0; i < publicdata.blogresult.length; i++) {
-                        e = publicdata.blogresult[i];
-                        if (e.content.length > 85) {
-                            e.content = e.content.substr(0, 85);
-                        };
-
-                        str += `<div class="eachbox clicka">
-                            ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
-                            <a data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}" href="${base_url + e.url}">
-                            <div class="headimg">  <img src="${e.img}" alt=""> </div>
-                            <div class="blogdate">
-                                <div class="publish_date"> ${e.publish_date} </div>
-                                <div class="dian"> </div>
-                                <div class="read-time"> ${e.read_time || '3 min'} read </div>
-                            </div>
-                            <h3 class="ph3">${e.title}</h3>
-                           
-                            <p class="ph5">${e.content || ''}</p> </a> </div>`;
-                    };
-                    $('.match_blogbox').append(str);
-                    publicdata.blogresult = [];
-                } else {
-                    var hide_ele = $('.' + control + ' .hide');
-                    hide_ele.removeClass('hide');
-                }
-            }
-        };
-        var anim_tool = {
-            blog_anim1: function () {
-                $('.blog-box.box1 .ele1').animate({ 'top': '120px', 'opacity': 1 }, 1600);
-                $('.blog-box.box1 .ele2').animate({ 'top': '101px', 'left': '415', 'opacity': 1 }, 1300);
-                $('.blog-box.box1 .ele3').animate({ 'opacity': 1 }, 1500);
-                $('.blog-box.box1 .ele4').animate({ 'left': '39px', 'top': '318px', 'opacity': 1 }, 1500);
-            },
-            webinar_anim1: function () {
-                $('.webinar-box .right-img>img').delay(300).animate({ 'opacity': 1 }, 1000);
-            },
-            ebook_anim1: function () {
-                $('.ebook-box .left-img .ele3').delay(600).animate({ 'opacity': 1 }, 1000);
-                $('.ebook-box .left-img .ele2').delay(300).animate({ 'margin-left': '0', 'opacity': 1 }, 1000);
-                $('.ebook-box .left-img .ele1').delay(300).animate({ 'margin-left': '0', 'opacity': 1 }, 1000);
-            },
-        };
-
-        var addevent = {
-            change_bottomevent: function () {
-                switch (publicdata.showresult) {
-                    case 'blogresult':
-                        $('.contact_cales_btn').attr('data-vars-ga-category', 'blog_Ready to make Outbound Recruiting EZ ?'); break;
-                    case 'webinarresult':
-                        $('.contact_cales_btn').attr('data-vars-ga-category', 'Webinar_Ready to make Outbound Recruiting EZ ?'); break;
-                    case 'ebookresult':
-                        $('.contact_cales_btn').attr('data-vars-ga-category', 'E-books_Ready to make Outbound Recruiting EZ ?'); break;
-                }
-            },
-        }
-
-
-        var public_tool = {
-            outUTCtime: function () {
-                var t = new Date().getTime();
-                var offectT = (new Date().getTimezoneOffset() / 60) * 3600000;
-                var UTCT = t + offectT;
-                return UTCT;
-            },
-            sortfn: function(arr,sortstr){
-                var newdata;
-                
-                newdata =  arr.sort(function(a,b){
-                    if(sortstr == 'readtime'){
-                        var reada = parseInt(a.read_time.split(' ')[0]);
-                        var readb = parseInt(b.read_time.split(' ')[0]);
-                        return (reada - readb)
-                    }else{
-                        return (b.publish_data - a.publish_data)
-                    }
-                    
-                });
-
-                return newdata;
-            },
-            init_blogcatnum:function(){
-                var d0 = pageData.blog_data;
-                var blogcatnum = { }
-                for(var i=0;i<d0.length;i++){
-                    var dclassfy = d0[i].classify;
-                    for(var k=0;k<dclassfy.length;k++){
-                        var classify = dclassfy[k].trim().split(' ').join('').split('&').join('').toLowerCase(); 
-                        if(blogcatnum[classify]){
-                            blogcatnum[classify]++;
-                        }else{
-                            blogcatnum[classify] = 1;
-                        }
-                    }
-                    
-                };
-
-                for(var key in blogcatnum){
-                    $('.blog_nav-but.'+key+' .catnum').html(` (${blogcatnum[key] || ''}) `);
-                };
-                $('.blog_nav-but.all .catnum').html(` (${pageData.blog_data.length || ''}) `)
-
-
-            },
-            choosecat_state:function(e,hide){
-                if( hide || publicdata.show){
-                  
-                    $('.select-cat-menu').slideUp(300);
-                }else{
-                    $('.select-cat-menu').slideDown(300);
-                }
-                publicdata.show = !publicdata.show;
+          var enterpage = 'blog';
+          var blogcat = 'outbound';
+          var ifcat = null;
+          var blogcatobj = {
+              'RecruitingStrategy': 'recruiting',
+              'Data': 'data',
+              'OutboundRecruiting': 'outbound',
+              'Diversity': 'diversity',
+              'Events': 'events',
+              'CandidateEngagement': 'candidate',
+              'TeamCollaboration': 'team',
+              'RecruiterStories': 'recruiter',
+              'RecruitmentOperations': 'recruitment',
+              'Product': 'product'
+          }
+          var urlcode = window.location.search.substring(1);
+          var urlcode2 = urlcode.split('&')
+          for (var u = 0; u < urlcode2.length; u++) {
+              var urlcode3 = urlcode2[u];
+              if (urlcode3.split('=')[0] == 'enterpage') {
   
-                $('.select-cat-wrap').attr('show',publicdata.show);
-             
-            },
-            choosecat:function(){
-               publicdata.choosecat = $(this).attr('option') || 'latest';
-               $('.select-cat-wrap .current').html($(this).html());
-               public_tool.choosecat_state(null,true);
+                  if (urlcode3.split('=')[1] == 'blog' || urlcode3.split('=')[1] == 'webinar' || urlcode3.split('=')[1] == 'e-books') {
+                      enterpage = urlcode3.split('=')[1];
+                  } else {
+                      enterpage = 'blog';
+                  }
+              } else if (urlcode3.split('=')[0] == 'cat' && enterpage == 'blog') {
+                  blogcat = blogcatobj[urlcode3.split('=')[1]];
+                  ifcat = 1;
+              }
+          };
+  
+  
+          (function (control_module) {
+              control_module = control_module || 'e-books';
+  
+              if (control_module == 'e-books') return;
+              // 初始化顶部选择nav
+              document.querySelector('.page-type-nav .blog').classList.remove("choose");
+              document.querySelector('.page-type-nav .' + control_module).classList.add("choose");
+  
+              // 初始化显示part2
+              document.querySelector('.part2-blog').classList.remove("choose");
+              document.querySelector('.part2-' + control_module).classList.add("choose");
+  
+              // 结果展示框
+              document.querySelector('.blog-result-box').classList.remove("choose");
+              document.querySelector('.' + control_module + '-result-box').classList.add("choose");
+          })(enterpage);
+  
+          var base_url = 'https://' + window.location.host;
+          var full_url = window.location.href;
+          var publicdata = {
+              control_module: 'blog', matchData: '', showresult: 'blogresult', laststr: '', Categoriesname: 'Outbound Recruiting',
+              screen_w: '', screen_h: '', blogshow: 0, webinarshow: 0, ebookshow: 0, blogfirst: true, blogresult: [],choosecat:'latest'
+          };
+          (function () {
+              var url_es = document.getElementsByClassName('url_e');
+              for (var i = 0; i < url_es.length; i++) {
+                  url_es[i].setAttribute('data-vars-ga-label', full_url)
+              }
+          })();
+          // nav choose
+          var nav_change_tool = {
+              nav_choose: function (e, control_module) {
+  
+                  if (e) { control_module = $(this).attr('control'); }
+  
+                  $('.put-text').val('');
+                  publicdata.laststr = '';
+  
+                  slide_tool.removeanim(publicdata.control_module);
+                  publicdata.control_module = control_module;
+  
+                  switch (control_module) {
+                      case 'blog':
+                          // init blog
+                          publicdata.Categoriesname = 'Outbound Recruiting';
+  
+                          blogcat = blogcat || 'outbound';
+                          blog_nav_choose(null, blogcat);
+  
+                          $('.part1-input .put-text').attr('placeholder', 'search the best recruiting tips');
+                          if (!publicdata.blogshow) {
+                              $('.part2-blog').addClass('anim');
+                              anim_tool.blog_anim1();
+                              publicdata.blogshow = 1;
+                          }
+                          break;
+  
+                      case 'webinar':
+                          //  init weninar 
+                          generate_result_tool.webinarresult(pageData.webinar_data);
+  
+                          $('.part1-input .put-text').attr('placeholder', 'learn more about recruiting trends');
+                          if (!publicdata.webinarshow) {
+                              $('.part2-webinar').addClass('anim');
+                              anim_tool.webinar_anim1();
+                              publicdata.webinarshow = 1;
+                          }
+                          break;
+  
+                      case 'e-books':
+                          //  init ebook 
+                          generate_result_tool.ebookresult(pageData.ebook_data);
+                          $('.part1-input .put-text').attr('placeholder', 'get the recruiting guidance now');
+                          if (!publicdata.ebookshow) {
+                              $('.part2-e-books').addClass('anim');
+                              anim_tool.ebook_anim1();
+                              publicdata.ebookshow = 1;
+                          }
+                          break;
+                  };
+                  slide_tool.changeslide();
+                  // 改变搜索框匹配的数据
+                  nav_change_tool.change_matchdata(control_module);
+                  //改变蓝色底部追踪事件
+                  addevent.change_bottomevent();
+                  $('.nav-but').not('.' + control_module).removeClass('choose');
+                  $('.nav-but.' + control_module).addClass('choose');
+                  $('.part2-box').not('.part2-' + control_module).removeClass('choose');
+                  $('.part2-' + control_module).addClass('choose');
+                  $('.part4-box').not('.' + control_module + '-result-box').removeClass('choose');
+                  $('.' + control_module + '-result-box').addClass('choose');
+              },
+              change_matchdata: function (e) {
+  
+                  switch (e) {
+                      case 'blog':
+                          publicdata.matchData = pageData.blog_data;
+                          publicdata.showresult = 'blogresult';
+                          break;
+  
+                      case 'webinar':
+                          publicdata.matchData = pageData.webinar_data;
+                          publicdata.showresult = 'webinarresult';
+                          break;
+  
+                      case 'e-books':
+                          publicdata.matchData = pageData.ebook_data;
+                          publicdata.showresult = 'ebookresult';
+                          break;
+                  }
+              },
+              setnav_anim: function () {
+                  setTimeout(function () {
+                      $('.page-type-nav').removeClass('anim')
+                  }, 10000);
+  
+              },
+  
+          }
+  
+          // blog_nav_choose
+          var blog_nav_choose = function (e, choose_cate) {
+              if (!choose_cate) {
+                  choose_cate = $(this).attr('chooseCate');
+  
+                  publicdata.Categoriesname = $(this).html();
+                  $('.blog_nav-but').removeClass('choose');
+  
+                  $(this).addClass('choose');
+                  scroll_tool('part4');
+              } else {
+                  $('.blog_nav-but').removeClass('choose');
+                  $('.blog_nav-but[choosecate=' + choose_cate + ']').addClass('choose');
+              }
+  
+              var match_data;
+              if(choose_cate == 'all'){
+                  match_data = pageData.blog_data;
+              }else{
+                   match_data = search_tool.match_classify_fn(choose_cate);
+              }
+              generate_result_tool.blogresult(match_data);
+              
+  
+          }
+          // serach
+          var search_tool = {
+              search_fn: function () { // search_fn(搜索匹配)
+                  var match_data;
+                  publicdata.Categoriesname = '';
+                  var put_val = $('.put-text').val().trim();
+                  var valarr = put_val.split(' ');
+                  valarr = valarr.filter(function (e) {
+                      return e.length >= 3;
+                  });
+                  scroll_tool('part4');
+                  if (!put_val) {
+                      match_data = publicdata.matchData
+                      // $('.blog_nav-but.all').addClass('choose');
+                  } else {
+                      match_data = search_tool.match_title_fn(valarr);
+                  }
+                  generate_result_tool[publicdata.showresult](match_data, true);
+              },
+              match_title_fn: function (arr) {//   match_title_fn(匹配title搜索关键词)
+  
+                  var data = {};
+                  var match_arr = [];
+                  for (var i = 0; i < arr.length; i++) {
+                      var str = arr[i].toLowerCase();
+                      publicdata.matchData.forEach(function (e, index) {
+                          var t = e.title.toLowerCase();
+                          if (t.indexOf(str) >= 0) {
+                              data[index] = data[index] ? data[index] + 1 : 1;
+                          }
+                      })
+                  };
+  
+                  for (var key in data) {
+                      if (data[key] >= Math.ceil(arr.length / 2)) {
+                          var k = parseInt(key);
+                          match_arr.push(publicdata.matchData[k]);
+                      }
+                  }
+                  return match_arr;
+              },
+              match_classify_fn: function (classify) {
+  
+                  var match_data = pageData.blog_data.filter(function (d, index) {
+                      var returnval = false;
+                      for (var i = 0; i < d.classify.length; i++) {
+                          if (d.classify[i].toLowerCase().indexOf(classify) > -1) {
+                              returnval = true;
+                          }
+                      };
+                      return returnval;
+                  })
+                  return match_data;
+              },
+          };
+          // slide
+          var slide_tool = {
+              init_slidepage: function () { // init slide(初始化轮播)
+                  slide_tool.changeslide();
+                  $('.part2 .pre_but').on('click', slide_tool.next_fn);
+                  $('.part2 .next_but').on('click', slide_tool.pre_fn);
+  
+                  var read_m = $('.blog-box .left-text .jump-button');
+                  for (var i = 0; i < read_m.length; i++) {
+                      var str = read_m.eq(i).siblings('.line2').html();
+                      read_m.eq(i).attr('data-vars-ga-category', 'blog_' + str);
+                  }
+              },
+              changeslide: function () {
+                  publicdata.slidechild = $('.part2-' + publicdata.control_module + ' .slidebox').children();
+              },
+              pre_fn: function () {  //pre button
+                  if (+new Date() - publicdata.slidebut_T < 800) {
+                      return;
+                  } else {
+                      publicdata.slidebut_T = +new Date();
+                  }
+                  slide_tool.removeanim(publicdata.control_module);
+                  $('.part2-' + publicdata.control_module + ' .slidebox>div').eq(0).animate({ 'margin-left': '-100%' }, 700, function () {
+                      var child0 = $('.part2-' + publicdata.control_module + ' .slidebox>div').eq(0);
+                      child0.css({ 'margin-left': 0 });
+                      $('.part2-' + publicdata.control_module + ' .slidebox').append(child0);
+                  });
+              },
+              next_fn: function () {    //  next button
+                  if (+new Date() - publicdata.slidebut_T < 800) {
+                      return;
+                  } else {
+                      publicdata.slidebut_T = +new Date();
+                  }
+                  slide_tool.removeanim(publicdata.control_module);
+                  var lastchlid = $('.part2-' + publicdata.control_module + ' .slidebox>div').eq(publicdata.slidechild.length - 1);
+                  lastchlid.css({ 'margin-left': '-100%' });
+                  $('.part2-' + publicdata.control_module + ' .slidebox').prepend(lastchlid);
+                  lastchlid.animate({ 'margin-left': '0' }, 700, function () {
+                      // var child0 = $('.part2-'+publicdata.control_module+' .slidebox>div').eq(1);child0.css({'margin-right':0});
+                  })
+              },
+              removeanim: function (control_module) {
+                  switch (control_module) {
+                      case 'blog':
+                          $('.part2-blog.anim').length && $('.part2-blog').removeClass('anim');
+                          break;
+                      case 'webinar':
+                          $('.part2-webinar.anim').length && $('.part2-webinar').removeClass('anim');
+                          break;
+                      case 'e-books':
+                          $('.part2-e-books.anim').length && $('.part2-e-books').removeClass('anim');
+                          break;
+                  }
+              }
+          }
+  
+          // scroll set
+          var scroll_tool = function (ele) {
+              var offset_top = $('.' + ele).offset().top;
+              var slid_y = offset_top;
+              switch (publicdata.showresult) {
+                  case 'blogresult':
+                      slid_y = offset_top + 115;
+                      break;
+                  case 'webinarresult':
+                      slid_y = offset_top - 150;
+                      break;
+                  case 'ebookresult':
+                      slid_y = offset_top - 150;
+                      break;
+              }
+              window.scrollTo({
+                  left: 0,
+                  top: slid_y,
+                  behavior: 'smooth'
+              });
+          }
+          // generate result
+          var generate_result_tool = {
+              blogresult: function (res, put) {
+  
+                  res = public_tool.sortfn(res,publicdata.choosecat);
+  
+                  publicdata.lastblogresult = res;
+  
+                  var ifhide = '';
+                  var str = '';
+                  var e;
+                  var lazy_src = false;
+                  if (res.length == 0) {
+                      str = generate_result_tool.noresult();
+                      noresult_tool.blogresult();
+                  } else {
+                      $('.blog-result-box .noresult_showbox').css('display', 'none');
+                  }
+                  var i_max = res.length;
+                  if (publicdata.blogfirst && i_max > 6) {
+                      i_max = 6;
+                      publicdata.blogfirst = false;
+                      publicdata.blogresult = res.slice(6);
+                  } else {
+                      publicdata.blogresult = [];
+                  }
+  
+                  for (var i = 0; i < i_max; i++) {
+                      e = res[i];
+                      if (e.content.length > 85) {
+                          e.content = e.content.substr(0, 85);
+                      };
+  
+                      if (i > 5) {
+                          ifhide = ' hide'
+                      } else {
+                          ifhide = '';
+                      };
+                      // 首次进入渲染图片懒加载
+                      if (enterpage == 'blog') { lazy_src = true };
+                      str += `<div class="eachbox clicka${ifhide}">
+                              ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
+                              <a data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}" href="${base_url + e.url}">
+                              <div class="headimg"> <img ${lazy_src ? `lazy_src=${e.img}` : ''} src="${lazy_src ? '' : e.img}" alt=""> </div>
+                              <div class="blogdate">
+                                  <div class="publish_date"> ${e.publish_date} </div>
+                                  <div class="dian"> </div>
+                                  <div class="read-time"> ${e.read_time || '3 min'} read </div>
+                              </div>
+                              <h3 class="ph3">${e.title}</h3>
+                              
+                              <p class="ph5">${e.content || ''}</p> </a> </div>`;
+                  };
+                  if (str == publicdata.laststr) {
+                      return;
+                  } else {
+                      publicdata.laststr = str;
+                  }
+                  if (res.length > 6) {
+                      $('.blog-result-box .addmore2').removeClass('hide');
+                  } else {
+                      $('.blog-result-box .addmore2').addClass('hide');
+                  }
+                  $('.Categoriesname').html(publicdata.Categoriesname);
+  
+                  $('.match_blogbox').html(str);
+  
+                  if (enterpage) {
+                      generate_result_tool.scrollpage('match_blogbox');
+                      enterpage = '';
+                  }
+  
+  
+                  put && $('.blog_nav-but').removeClass('choose');
+              },
+              webinarresult: function (res) {
+                      var eachstr = {
+                          upcomingstr:'',
+                          paststr:'',
+                      };
+                      var e = '';
+                      if (res.length < 1) {
+                          $('.match_webinarbox .noresultbox').html(`<div class="noresult">
+                             <div class="noresult_p">There is no result</div>
+                             <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/noresult.png" alt="">
+                             </div>`).show();
+                          noresult_tool.webinarresult();
+                      } else {
+                          $('.webinar-result-box .noresult_showbox').css('display', 'none');
+                          for (var i = 0; i < res.length; i++) {
+                              e = res[i];
+                              var str = e.endtime > public_tool.outUTCtime() ? 'upcomingstr':'paststr';
+                              
+                              eachstr[str] += `<div class="eachbox">
+                                 ${e.ctaurl ? `<a href="${e.url}" class="skip_page ${'skippage'}">`:''} 
+                              <div class="headimg">
+                                  <img src="${e.img}" alt="">
+                              </div>
+                              <h2 class="ph3">${e.title}</h2>
+                              <div class="meeting_time"> <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/01/clock2.png" alt=""> <span>${e.meeting_time}</span> </div>
+                              <p class="ph5">${e.content}</p>
+                              ${e.ctaur? '</a>':''} 
+                              <a class="weninarbut clicka" data-vars-ga-category="webinar_${e.title}" data-vars-ga-action="click_get access to watch" data-vars-ga-label="${full_url}" href="${e.ctaurl ||e.url}"> ${e.cta || 'Get access to watch'} </a>
+                          </div>`
+                          }
+                      }
+  
+                      $('.webinar-result-box .past .matchbox').html(eachstr.paststr);
+                      $('.webinar-result-box .upcoming .matchbox').html(eachstr.upcomingstr);
+  
+                      if($('.webinar-result-box .upcoming .matchbox>.eachbox').length>0 ) {
+                          $('.webinar-result-box .upcoming').show();
+                          $('.match_webinarbox .noresultbox').hide();
+                      }else{
+                          $('.webinar-result-box .upcoming').hide();
+                      };
+                      if($('.webinar-result-box .past .matchbox>.eachbox').length>0) {
+                          $('.webinar-result-box .past').show();
+                          $('.match_webinarbox .noresultbox').hide();
+                      }else{
+                          $('.webinar-result-box .past').hide();
+                      }
+                      
+                  },
+              ebookresult: function (res) {
+  
+                  var str = '';
+                  var e = '';
+                  var ifhide = ''
+                  $('.e-books-result-box .addmore').addClass('hide');
+                  if (res.length < 1) {
+                      str = generate_result_tool.noresult();
+                      noresult_tool.ebookresult();
+                  } else {
+                      $('.e-books-result-box .noresult_showbox').css('display', 'none');
+                      if (res.length > 6) {
+                          $('.e-books-result-box .addmore').removeClass('hide');
+                      }
+  
+                      for (var i = 0; i < res.length; i++) {
+                          e = res[i];
+                          if (i > 5) {
+                              ifhide = ' hide'
+                          } else {
+                              ifhide = '';
+                          }
+                          str += `<div class="eachbox${ifhide}">
+                              <div class="headimg">
+                                  <img width="240" height="323" src="${e.img}" alt="">
+                              </div>
+                      
+                              <p class="ph5">${e.content}</p>
+                              <a class="ebookbut  clicka" data-vars-ga-category="e-books_${e.title}" data-vars-ga-action="click_get access to download" data-vars-ga-label="${full_url}" href="${e.url}">Access your copy</a>
+                          </div>`
+                      }
+                  }
+                  if (str == publicdata.laststr) {
+                      return;
+                  } else {
+                      publicdata.laststr = str;
+                  }
+  
+                  $('.e-books-result-box .match_ebookbox').html(str);
+              },
+              noresult: function (parentbox) {
+                  return `<div class="noresult">
+                             <div class="noresult_p">There is no result</div>
+                             <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/noresult.png" alt="">
+                             </div>`;
+              },
+              imgsrc: function (parent) {
+                  var imgs = $('.' + parent).find('img[lazy_src]');
+                  var i_src;
+                  for (var n = 0; n < imgs.length; n++) {
+                      i_src = imgs.eq(n).attr('lazy_src');
+                      imgs.eq(n).attr('src', i_src);
+                  }
+              },
+              scrollpage: function (classname) {
+                  var view_h = $(window).height() - 100;
+                  var img_box = $('.' + classname);
+                  var scroll_fn = function () {
+                      var scrolltop = $(document).scrollTop();
+                      var top_y = img_box.eq(0).offset().top;
+                      if (top_y - scrolltop < view_h) {
+                          generate_result_tool.imgsrc(classname);
+                          $(window).unbind('scroll', scroll_fn)
+                      }
+                  };
+  
+                  $(window).on('scroll', scroll_fn);
+                  scroll_fn(classname)
+              },
+  
+          }
+          // no result 
+          var noresult_tool = {
+              init_slide: function () { // init slide(初始化轮播)
+                  $('.noresultmain .pre_but').on('click', noresult_tool.next_fn);
+                  $('.noresultmain .next_but').on('click', noresult_tool.pre_fn);
+              },
+              pre_fn: function () {  //pre button
+                  var len = $('.noresult_slidebox').children().length;
+                  if (+new Date() - publicdata.slidebut_T < 800) {
+                      return;
+                  } else {
+                      publicdata.slidebut_T = +new Date();
+                  }
+  
+                  $('.noresult_slidebox>.eachbox0').eq(0).animate({ 'margin-left': '-100%' }, 700, function () {
+                      var child0 = $('.noresult_slidebox>.eachbox0').eq(0);
+                      var child1 = $('.noresult_slidebox>.eachbox0').eq(1);
+                      var child2 = $('.noresult_slidebox>.eachbox0').eq(2);
+                      child0.css({ 'margin-left': 0 });
+                      $('.noresult_slidebox').append(child0).append(child1).append(child2);
+                  });
+              },
+              next_fn: function () {    //  next button
+                  var len = $('.noresult_slidebox').children().length;
+                  if (+new Date() - publicdata.slidebut_T < 800) {
+                      return;
+                  } else {
+                      publicdata.slidebut_T = +new Date();
+                  }
+  
+                  var lastchlid1 = $('.noresult_slidebox>.eachbox0').eq(len - 1);
+                  var lastchlid2 = $('.noresult_slidebox>.eachbox0').eq(len - 2);
+                  var lastchlid3 = $('.noresult_slidebox>.eachbox0').eq(len - 3);
+                  lastchlid3.css({ 'margin-left': '-100%' });
+                  $('.noresult_slidebox').prepend(lastchlid1).prepend(lastchlid2).prepend(lastchlid3);
+                  lastchlid3.animate({ 'margin-left': '0' }, 700, function () {
+                      // var child0 = $('.part2-'+publicdata.control_module+' .slidebox>div').eq(1);
+                      // child0.css({'margin-right':0});
+                  })
+              },
+              blogresult: function () {
+                  var str = '';
+                  var str_phone = '';
+                  var ifhide = '';
+                  for (var i = 0; i < 8; i++) {
+                      var e = pageData.blog_data[i];
+                      str += `<div class="eachbox0">
+                                      <div class="eachbox clicka">
+                                          ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
+                                          <a href="${base_url + e.url}" data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}">
+                                          <div class="headimg">
+                                              <img src="${e.img}" alt="">
+                                          </div>
+                                          <h3 class="ph3">${e.title}</h3>
+                                          <div class="read-time"><img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/blogtag/eye-icon.png" alt=""> <span>${e.read_time} read</span> </div>
+                                          </a>
+                                      </div>
+                                  </div>`;
+  
+                      if (i > 3) {
+                          ifhide = ' hide';
+                          $('.addmore3.hide').removeClass('hide')
+                      } else {
+                          ifhide = '';
+                      }
+                      str_phone += `<div class="each_box clicka${ifhide}">
+                              <a href="${base_url + e.url}" data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}">
+                                      <div class="left_text">
+                                          <span class="title">${e.title}</span>
+                                              <div class="read-titme">
+                                                  <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/blogtag/eye-icon.png" alt="">
+                                                  <span>${e.read_time} read</span>
+                                              </div>
+                                      </div>
+                                      <div class="right_img">
+                                          ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
+                                          <img src="${e.img}" alt="">
+                                      </div>
+                                  </a>
+                                  </div>`;
+                  }
+                  $('.noresultmain_phone_box .noresultmain_phone').html(str_phone);
+                  $('.noresult_slidebox').html(str);
+                  $('.blog-result-box .noresult_showbox').css('display', 'block');
+              },
+              // 渲染底部类别选择
+              webinarresult: function () {
+                  var str = '';
+                  if ($('.webinar-result-box  .noresultmain .eachbox').length == 0) {
+                      for (var i = 0; i < pageData.webinar_data.length; i++) {
+                          var e = pageData.webinar_data[i];
+                          if (e.recommend) {
+                              str += `<div class="eachbox clicka">
+                              <a href="${e.url}">
+                                  <div class="headimg">
+                                      <img src="${e.img}" alt="">
+                                  </div>
+                                  <div class="left_text">
+                                  <h2 class="ph3">${e.title}</h2>
+                                  <div class="meeting_time"> <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/01/clock2.png" alt=""> <span>${e.meeting_time}</span> </div>
+                                  <p class="ph5">${e.content}</p>
+                              </div>
+                              </a>
+                              </div>`
+                          }
+                      }
+                      $('.webinar-result-box .noresultmain').html(str);
+  
+                  };
+  
+                  $('.webinar-result-box .noresult_showbox').css('display', 'block');
+  
+              },
+              ebookresult: function () {
+                  var str = '';
+                  var recommendn = 0;
+                  if ($('.e-books-result-box  .noresultmain .eachbox').length == 0) {
+                      for (var i = 0; i < pageData.ebook_data.length; i++) {
+                          var e = pageData.ebook_data[i];
+                          if (e.recommend) {
+  
+                              str += `<div class="eachbox">
+                             
+                                  <div class="headimg">
+                                      <img src="${e.img}" alt="">
+                                  </div>
+                                  <div class="left_text">
+                                  <h3 class="ph3">${e.title}</h3>
+                                  <p class="ph5">${e.content}</p>
+                                  <a class="ebookbut clicka" href="${e.url}"> Access your copy > </a>
+                              </div>
+                                  </div>`;
+  
+                              if (++recommendn >= 3) break;
+                          }
+                      }
+                      $('.e-books-result-box .noresultmain').html(str);
+  
+                  };
+  
+                  $('.e-books-result-box .noresult_showbox').css('display', 'block');
+  
+              }
+          }
+  
+          //   addmore bur
+          var addmore_tool = {
+              addmore_all: function () {
+                  var control = $(this).attr('control');
+                  $(this).addClass('hide');
+                  var showlen = $('.' + control).children().not('.hide').length;
+  
+                  $('.' + control).children().eq(showlen - 1).children().focus();
+  
+                  if (publicdata.blogresult.length && control == 'match_blogbox') {
+                      var str = '';
+                      for (var i = 0; i < publicdata.blogresult.length; i++) {
+                          e = publicdata.blogresult[i];
+                          if (e.content.length > 85) {
+                              e.content = e.content.substr(0, 85);
+                          };
+  
+                          str += `<div class="eachbox clicka">
+                              ${e.new ? '<img class="newlogo" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2021/12/newlogo.png" alt="">' : ''}
+                              <a data-vars-ga-category="blog" data-vars-ga-action="view_blog page" data-vars-ga-label="${full_url}" href="${base_url + e.url}">
+                              <div class="headimg">  <img src="${e.img}" alt=""> </div>
+                              <div class="blogdate">
+                                  <div class="publish_date"> ${e.publish_date} </div>
+                                  <div class="dian"> </div>
+                                  <div class="read-time"> ${e.read_time || '3 min'} read </div>
+                              </div>
+                              <h3 class="ph3">${e.title}</h3>
+                             
+                              <p class="ph5">${e.content || ''}</p> </a> </div>`;
+                      };
+                      $('.match_blogbox').append(str);
+                      publicdata.blogresult = [];
+                  } else {
+                      var hide_ele = $('.' + control + ' .hide');
+                      hide_ele.removeClass('hide');
+                  }
+              }
+          };
+          var anim_tool = {
+              blog_anim1: function () {
+                  $('.blog-box.box1 .ele1').animate({ 'top': '120px', 'opacity': 1 }, 1600);
+                  $('.blog-box.box1 .ele2').animate({ 'top': '101px', 'left': '415', 'opacity': 1 }, 1300);
+                  $('.blog-box.box1 .ele3').animate({ 'opacity': 1 }, 1500);
+                  $('.blog-box.box1 .ele4').animate({ 'left': '39px', 'top': '318px', 'opacity': 1 }, 1500);
+              },
+              webinar_anim1: function () {
+                  $('.webinar-box .right-img>img').delay(300).animate({ 'opacity': 1 }, 1000);
+              },
+              ebook_anim1: function () {
+                  $('.ebook-box .left-img .ele3').delay(600).animate({ 'opacity': 1 }, 1000);
+                  $('.ebook-box .left-img .ele2').delay(300).animate({ 'margin-left': '0', 'opacity': 1 }, 1000);
+                  $('.ebook-box .left-img .ele1').delay(300).animate({ 'margin-left': '0', 'opacity': 1 }, 1000);
+              },
+          };
+  
+          var addevent = {
+              change_bottomevent: function () {
+                  switch (publicdata.showresult) {
+                      case 'blogresult':
+                          $('.contact_cales_btn').attr('data-vars-ga-category', 'blog_Ready to make Outbound Recruiting EZ ?'); break;
+                      case 'webinarresult':
+                          $('.contact_cales_btn').attr('data-vars-ga-category', 'Webinar_Ready to make Outbound Recruiting EZ ?'); break;
+                      case 'ebookresult':
+                          $('.contact_cales_btn').attr('data-vars-ga-category', 'E-books_Ready to make Outbound Recruiting EZ ?'); break;
+                  }
+              },
+          }
+  
+  
+          var public_tool = {
+              outUTCtime: function () {
+                  var t = new Date().getTime();
+                  var offectT = (new Date().getTimezoneOffset() / 60) * 3600000;
+                  var UTCT = t + offectT;
+                  return UTCT;
+              },
+              sortfn: function(arr,sortstr){
+                  var newdata;
+                  
+                  newdata =  arr.sort(function(a,b){
+                      if(sortstr == 'readtime'){
+                          var reada = parseInt(a.read_time.split(' ')[0]);
+                          var readb = parseInt(b.read_time.split(' ')[0]);
+                          return (reada - readb)
+                      }else{
+                          return (b.publish_data - a.publish_data)
+                      }
+                      
+                  });
+  
+                  return newdata;
+              },
+              init_blogcatnum:function(){
+                  var d0 = pageData.blog_data;
+                  var blogcatnum = { }
+                  for(var i=0;i<d0.length;i++){
+                      var dclassfy = d0[i].classify;
+                      for(var k=0;k<dclassfy.length;k++){
+                          var classify = dclassfy[k].trim().split(' ').join('').split('&').join('').toLowerCase(); 
+                          if(blogcatnum[classify]){
+                              blogcatnum[classify]++;
+                          }else{
+                              blogcatnum[classify] = 1;
+                          }
+                      }
+                      
+                  };
+  
+                  for(var key in blogcatnum){
+                      $('.blog_nav-but.'+key+' .catnum').html(` (${blogcatnum[key] || ''}) `);
+                  };
+                  $('.blog_nav-but.all .catnum').html(` (${pageData.blog_data.length || ''}) `)
+  
+  
+              },
+              choosecat_state:function(e,hide){
+                  if( hide || publicdata.show){
+                    
+                      $('.select-cat-menu').slideUp(300);
+                  }else{
+                      $('.select-cat-menu').slideDown(300);
+                  }
+                  publicdata.show = !publicdata.show;
+    
+                  $('.select-cat-wrap').attr('show',publicdata.show);
                
-               var put_val = $('.put-text').val().trim();
-               if(put_val+publicdata.choosecat == publicdata.lastsearch){
-                    return;
-                }
-                generate_result_tool.blogresult(publicdata.lastblogresult);
-            }
-        
-        }
-
-        // 初始化页面基础元素
-        // init (页面入口)
-        function content_library_init_fn() {
-            nav_change_tool.nav_choose(null, enterpage);
-
-            $('.nav-but').on('click', nav_change_tool.nav_choose);
-            $('.blog_nav-but').on('click', blog_nav_choose);
-            $('.select-cat-wrap').on('click', 'p', public_tool.choosecat_state);
-            $('.select-cat-wrap li.cat').on('click', public_tool.choosecat);
-            $('.search-icon').on('click', search_tool.search_fn);
-            // $('.blog_cate_nav .addmore1').on('click', addmore_tool.addmore_all)
-            $('.addmore').on('click', addmore_tool.addmore_all);
-            // init cat number
-            public_tool.init_blogcatnum();
-            // init part2 slide
-            slide_tool.init_slidepage();
-            noresult_tool.init_slide();
-
-            // nav anim
-            // nav_change_tool.setnav_anim();
-            publicdata.screen_w = $(window).width();
-            publicdata.screen_h = $(window).height();
-            if (ifcat) {
-                $('.addmore.addmore1').click();
-                window.scrollTo({
-                    left: 0,
-                    top: 1000,
-                    behavior: 'smooth'
-                });
-            }
-        }
-
-        window.addEventListener('load', function () {
-            content_library_init_fn();
-        });
-
-    </script>
+              },
+              choosecat:function(){
+                 publicdata.choosecat = $(this).attr('option') || 'latest';
+                 $('.select-cat-wrap .current').html($(this).html());
+                 public_tool.choosecat_state(null,true);
+                 
+                 var put_val = $('.put-text').val().trim();
+                 if(put_val+publicdata.choosecat == publicdata.lastsearch){
+                      return;
+                  }
+                  generate_result_tool.blogresult(publicdata.lastblogresult);
+              }
+          
+          }
+  
+          // 初始化页面基础元素
+          // init (页面入口)
+          function content_library_init_fn() {
+              nav_change_tool.nav_choose(null, enterpage);
+  
+              $('.nav-but').on('click', nav_change_tool.nav_choose);
+              $('.blog_nav-but').on('click', blog_nav_choose);
+              $('.select-cat-wrap').on('click', 'p', public_tool.choosecat_state);
+              $('.select-cat-wrap li.cat').on('click', public_tool.choosecat);
+              $('.search-icon').on('click', search_tool.search_fn);
+              // $('.blog_cate_nav .addmore1').on('click', addmore_tool.addmore_all)
+              $('.addmore').on('click', addmore_tool.addmore_all);
+              // init cat number
+              public_tool.init_blogcatnum();
+              // init part2 slide
+              slide_tool.init_slidepage();
+              noresult_tool.init_slide();
+  
+              // nav anim
+              // nav_change_tool.setnav_anim();
+              publicdata.screen_w = $(window).width();
+              publicdata.screen_h = $(window).height();
+              if (ifcat) {
+                  $('.addmore.addmore1').click();
+                  window.scrollTo({
+                      left: 0,
+                      top: 1000,
+                      behavior: 'smooth'
+                  });
+              }
+          }
+  
+          window.addEventListener('load', function () {
+              content_library_init_fn();
+          });
+  
+      </script>
 
 </body>
 

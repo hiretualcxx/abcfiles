@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>页面跑分</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style: none;
+    }
+    .boxtitle{
+      text-align: center;
+      font-weight: 600;
+    font-size: 22px;
+margin-top: 35px;
+    }
+    .time{
+      position: fixed;
+      top: 50px;
+      left: 10px;
+      color: #f40;
+      font-weight: 600;
+    }
+    .butbox{
+      display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+      position: fixed;
+      top: 150px;
+      left: 10px;
+      color: #f40;
+      font-weight: 600;
+    }
+ 
+.butbox button{
+  width: 100px;
+  height: 35px;
+  border: none;
+  border-radius: 15px;
+  margin: 15px 25px;
+  color: aliceblue;
+  background-color: rgb(115, 168, 218);
+  font-weight: 600;
+  font-size: 16px;
+}
+.butbox button.disable{
+  pointer-events: none;
+}
+.wapper{
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid #666;
+    min-height: 500px;
+}
+.title{
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    line-height: 45px;
+    border-bottom: 1px solid #666;
+}
+.main p{
+  text-align: center;
+  margin: 100px auto 0;
+}
+.url{
+  overflow: hidden;
+    width: 40%;
+}
+.num{
+    width: 10%;
+    text-align: center;
+}
+.num.red{
+  color: #f40;
+}
+ul.main li{
+    display: flex;
+    justify-content: flex-start;
+    line-height: 45px;
+    border-bottom: 1px solid #666;
+}
+
+
+  </style>
+</head>
+
+<body>
+    <div class="time">
+      预计xxxs后完成
+    </div>
+    <p class="boxtitle"><span class="strategyname">desktop</span> 跑分</p>
+    <div class="wapper">
+        <div class="title">
+            <span class="url">url</span>
+            <span class="num1 num">1</span>
+            <span class="num2 num">2</span>
+            <span class="num3 num">3</span>
+            <!-- <span class="num4 num">4</span>
+            <span class="num5 num">5</span> -->
+            <span class="ave num">平均</span>
+        </div>
+      
+        <ul class="main">
+    
+          <p>憋急，等一下子...</p>
+        
+        </ul>
+    </div>
+    
+  </div>
+   <div class="butbox">
+    <form action="http://vip.biancheng.net/login.php" method="post" name="formName">
+      
+        <label><input type="radio" name="strategy" value="desktop" checked > desktop</label>  
+        <label><input type="radio" name="strategy" value="mobile" > mobile</label>  
+    </form>
+    <button class="begin_req" onclick="run()">开始请求</button>
+    <button class="showdata" onclick="reset()">重置</button>
+    <button class="tocsv disable" onclick="toLargerCSV()">导出表格</button>
+   </div>
+ 
+  <script src="https://hiretual.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1"></script>
+  <script>
+      var $ = jQuery;
+      var urlarr = [
+      'https://hiretual.com/', 
+      'https://hiretual.com/about-us/',
+      'https://hiretual.com/accessibility-statement/', 
+      'https://hiretual.com/api/', 
+      'https://hiretual.com/apps/',
+      'https://hiretual.com/careers/',
+       'https://hiretual.com/ccpa/',
+      'https://hiretual.com/features/expansive-candidate-profiles/',
+       'https://hiretual.com/featured-articles/',
+      'https://hiretual.com/features/chrome-extension/',
+       'https://hiretual.com/features/diversity-inclusion/',
+      'https://hiretual.com/features/engagement/', 
+      'https://hiretual.com/features/insights/',
+      'https://hiretual.com/features/integrations/', 
+      'https://hiretual.com/features/security-clearance/',
+      'https://hiretual.com/features/sourcing/',
+       'https://hiretual.com/features/talent-data-cloud/',
+      'https://hiretual.com/gdpr/',
+       'https://hiretual.com/google-api-disclosure/',
+       'https://hiretual.com/new-pricing/',
+      'https://hiretual.com/new-pricing/professional/', 
+      'https://hiretual.com/newsroom/',
+      'https://hiretual.com/partners/',
+       'https://hiretual.com/partners/partner-program/',
+      'https://hiretual.com/pressrelease/', 
+      'https://hiretual.com/resources/content-library/',
+      'https://hiretual.com/resources/feature-releases/',
+       'https://hiretual.com/security-compliance/',
+      'https://hiretual.com/solutions/',
+       'https://hiretual.com/solutions/enterprise/',
+      'https://hiretual.com/solutions/hypergrowth/',
+       'https://hiretual.com/solutions/small-medium/',
+      'https://hiretual.com/solutions/healthcare/',
+       'https://hiretual.com/solutions/security-defense/',
+      'https://hiretual.com/solutions/staff/',
+       'https://hiretual.com/solutions/collaboration/',
+      'https://hiretual.com/solutions/data-consolidation/',
+       'https://hiretual.com/solutions/business-development/',
+      'https://hiretual.com/sponsored/',
+    ];
+   var data = {};
+    var pushnum = 0;
+    var csvstr = '';
+    var strategy = 'desktop'
+    function initdata (){
+        for(var i=0;i<urlarr.length;i++){
+            data[urlarr[i]] = []
+        }
+    }
+
+    // function re_web_dveqapi(u) {
+
+    //   fetch('https://lighthouse-dot-webdotdevsite.appspot.com//lh/newaudit', {
+    //       method: 'POST',
+    //       headers: {'Content-Type': 'application/json;charset=UTF-8','origin': 'https://web.dev','referer': 'https://web.dev/'},
+    //       'Content-Type': 'application/json;charset=UTF-8',
+    //       body: JSON.stringify({"replace": true,"save": false,"url": u}),
+    //     })
+    //     .then(response => response.json())
+    //     .then(d => {
+    //       var Performance = d.lhrSlim[0].score;
+    //       pushdata(data[u],Performance);
+    //       if(data[u].length < 5){
+    //           re_web_dveqapi(u)
+    //       }
+    //     })
+    //     .catch((err) => {
+    //       re_web_dveqapi(u);
+    //     });
+    // }
+
+
+    function re_web_dveqapi(u) {
+var url = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(u)}&strategy=${strategy}&key=AIzaSyA5WXa9qjieZHQLqFVwMYeubKyNLehbGqw`
+fetch(url)
+.then(response => response.json())
+        .then(d => {
+          var Performance = d.lighthouseResult.categories.performance.score;
+          pushdata(data[u],Performance);
+          if(data[u].length < 5){
+              re_web_dveqapi(u)
+          }
+        })
+        .catch((err) => {
+          re_web_dveqapi(u);
+        });
+    }
+
+
+    function pushdata(arr,data){
+      arr.push(data);
+      pushnum++;
+      if(pushnum >= (urlarr.length)*5){
+        showdata();
+      }
+    }
+
+    function run() {
+      console.log('开始啦'+strategy);
+      gettime();
+      $('.begin_req').addClass('disable');
+      var i = 0;
+      var t = setInterval(() => {
+        re_web_dveqapi(urlarr[i]);
+        i++;
+        if (i >= urlarr.length) clearInterval(t);
+      }, 1500);
+    }
+    
+    function showdata() {
+        var str = '';
+       
+      for(var k in data){
+        var num1 = Number(Number(data[k][0]*100).toFixed());
+        var num2 = Number(Number(data[k][1]*100).toFixed());
+        var num3 = Number(Number(data[k][2]*100).toFixed());
+        var num4 = Number(Number(data[k][3]*100).toFixed());
+        var num5 = Number(Number(data[k][4]*100).toFixed());
+        // var ave =  ((num1+num2+num3+num4+num5)/5).toFixed(1);
+        var sortarr = [num1,num2,num3,num4,num5].sort(function(a,b){
+                return (a-b)
+              });
+        num1 = sortarr[1];
+        num2 = sortarr[2];
+        num3 = sortarr[3];
+        var ave =  ((num1+num2+num3)/3).toFixed(1);
+        
+        str+=` <li>
+                <span class="url"> <a href="${k}" target="_blank">${k}</a> </span>
+                <span class="num1 num ${num1< 75 ? 'red':''} ">${num1}</span>
+                <span class="num2 num ${num2< 75 ? 'red':''} ">${num2}</span>
+                <span class="num3 num ${num3< 75 ? 'red':''} ">${num3}</span>
+                  <span class="ave num ${ave< 75 ? 'red':''} ">${ave}</span>
+              </li>`;
+
+              csvstr += `${k},${num1},${num2},${num3},${ave}\n`;
+      };
+
+      
+      $('.main').html(str);
+      $('.tocsv').removeClass('disable');
+    }
+
+    function reset(){
+      pushnum = 0;
+      initdata ();
+      csvstr = '';
+      $('.main').html('<p>憋急，等一下子...</p>');
+      $('.begin_req').removeClass('.disable');
+      run();
+      $('.tocsv').addClass('disable');
+    }
+
+    function gettime(){
+      var arrlen = (urlarr.length)*5;
+      var urln;
+       var t = setInterval(function(){
+          urln = arrlen - pushnum;
+          $('.time').html(` 预计${15*urln}s后完成`);
+          // if(urln == 0) clearInterval(t);
+        },1000);
+    }
+
+   
+    function toLargerCSV(){
+      var  title =`page url,1,2,3,平均\n`;
+      str = `${title}${csvstr}`
+ var blob = new Blob([str], {type: "text/plain;charset=utf-8"});  
+
+ blob = new Blob([String.fromCharCode(0xFEFF), blob], {type: blob.type}); 
+ object_url = window.URL.createObjectURL(blob); 
+ var link = document.createElement("a");
+ link.href = object_url;
+ link.download = "导出.csv";
+ document.body.appendChild(link);
+ link.click();
+ document.body.removeChild(link);        
+ }
+
+function changestrategy(){
+  $('input').click(function(){
+    strategy = $(this).val();
+    $('.strategyname').html(strategy);
+  })
+}
+
+
+    window.onload = function(){
+        initdata();
+        changestrategy();
+    }
+
+  </script>
+</body>
+
+</html>

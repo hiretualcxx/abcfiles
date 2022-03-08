@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Manrope!important;
+}
+html,
+body {
+    overflow-x: visible;
+    min-width: 750px;
+}
+a{
+    text-decoration: none;
+}
+button {
+    border: none;
+    background: none;
+    display: inline-block;
+}
+
+.jump-button {
+    display: inline-block;
+    width: 234px;
+    height: 52px;
+    line-height: 52px;
+    background-color: #FFC021;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+    text-align: center;
+}
+
+.out_box {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.title_1{
+    font-style: normal;
+font-weight: 500;
+font-size: 25px;
+display: flex;
+align-items: center;
+justify-content: start;
+margin: 35px 0;
+}
+
+/* part1 */
+.part1{
+    width: 100%;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/topbg.png);
+    background-position: left top;
+    background-size: cover;
+    padding: 1px 0;
+}   
+.part1 .main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px auto;
+}
+.part1 .main .topimg{
+    width: 272px;
+    margin:0 1% 0 10% ;
+}
+.part1 .main .righttext{
+    max-width: 530px;
+    color: #ffffff;
+}
+.part1 .main .righttext>h1{
+    font-style: normal;
+font-weight: 800;
+font-size: 50px;
+line-height: 61px;
+color: #FFFFFF;
+}
+.part1 .main .righttext>p{
+    font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+margin: 8px 0 40px;
+
+}
+.part1 .searchbox{
+    max-width: 360px;
+    width: 100%;
+}
+/* select-cat-wrap */
+
+.select-cat-wrap {
+    position: relative;
+    width: 100%;
+    height: 52px;
+    padding: 0 16px 0 20px;
+    background: transparent;
+    border-radius: 30px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 46px;
+    color: #ffffff;
+    cursor: default;
+}
+
+.select-cat-wrap .current {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+.select-cat-wrap .icon-arrow {
+    position: absolute;
+    right: 25px;
+    top: 21px;
+    display: block;
+    width: 16px;
+    height: 10px;
+    background: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/Arrow-24-Stroke.png)no-repeat;
+    background-size: 16px auto;
+}
+
+.select-cat-wrap .select-cat-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 99%;
+    height: auto;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12), 0px 8px 24px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(36.08px);
+    border-radius: 13px;
+    z-index: 10;
+}
+
+.select-cat-wrap .select-cat-menu .cat {
+    font-size: 16px;
+    width: 100%;
+    height: 37px;
+    line-height: 37px;
+    cursor: pointer;
+    list-style: none;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.select-cat-wrap .select-cat-menu .cat:hover {
+    background: #F2F5F9;
+}
+
+.part1-input {
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+.part1-input .put-text {
+    width: 100%;
+    height: 52px;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    line-height: 52px;
+    color: #ffffff;
+    margin-top: 20px;
+    border: 1px solid #ffffff;
+    padding: 0 45px 0 30px;
+    border-radius: 30px;
+    outline: none;
+}
+.part1-input .put-text::placeholder{
+    color: #ffffff;
+}
+
+.part1-input .search-icon {
+    right: 20px;
+    top: 32px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/searchicon.png);
+    background-position: center center;
+    width: 23px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-size: 23px auto;
+    display: inline-block;
+    position: absolute;
+    z-index: 5;
+}
+
+/* part2 */
+.part2{
+    margin-top: 100px;
+}
+.part2 .parttitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px 0;
+}
+.part2 .parttitle .title{
+    font-style: normal;
+font-weight: 800;
+font-size: 36px;
+line-height: 45px;
+color: #000000;
+}
+.part2 .parttitle .viewall{
+    font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 45px;
+text-align: right;
+color: #8F9397;
+
+}
+.part2 .main{
+    width: 100%;
+}
+.part2 .main .head_eachbox{
+    width: 100%;
+    padding: 24px;
+    background: #FFFFFF;
+    border: 1px solid rgba(203, 203, 203, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+    border-radius: 13px;
+   
+}
+.part2 .main .head_eachbox .right{
+    width: 67%;
+    max-width: 680px;
+    background-image: url(https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/blogbg.png);
+    background-position: left bottom;
+    background-size: cover;
+    border-radius: 13px;
+    height: 100%;
+    padding: 30px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.part2 .main .head_eachbox .right .text{
+max-width: 380px;
+}
+.part2 .main .head_eachbox .right .logo{
+    width: 53px;
+    
+}
+.part2 .main .head_eachbox .right .partname{
+    font-style: normal;
+font-weight: bold;
+font-size: 13px;
+line-height: 25px;
+letter-spacing: 0.32em;
+margin: 46px 0 16px;
+color: #FFFFFF;
+}
+.part2 .main .head_eachbox .right .blogtitle{
+    font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 112%;
+color: #FFFFFF;
+
+}
+.part2 .main .head_eachbox .right .blogtitle2{
+    font-style: normal;
+font-weight: normal;
+font-size: 13.5398px;
+line-height: 112%;
+color: #FFFFFF;
+margin: 9px 0 27px;
+}
+.part2 .main .head_eachbox .right .readbut{
+    background: #FFC021;
+box-shadow: 0px 46.2901px 37.0321px rgba(232, 87, 65, 0.07), 0px 19.3389px 15.4711px rgba(232, 87, 65, 0.0503198), 0px 10.3395px 8.2716px rgba(232, 87, 65, 0.0417275), 0px 5.79624px 4.63699px rgba(232, 87, 65, 0.035), 0px 3.07834px 2.46267px rgba(232, 87, 65, 0.0282725), 0px 1.28097px 1.02477px rgba(232, 87, 65, 0.0196802);
+border-radius: 13.887px;
+width: 108px;
+height: 24px;
+font-weight: 800;
+font-size: 12px;
+line-height: 24px; 
+text-align: center; 
+color: #00154D;
+margin-bottom: 60px;
+}
+.part2 .main .head_eachbox .right .img{
+    max-width: 208px;
+}
+    </style>
+</head>
+<body>
+    <div class="part1">
+        <div class="main out_box">
+            <img class="topimg" src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/topimg.png" alt="">
+            <div class="righttext">
+                <h1>Content Library </h1>
+                <p>hireEZ Administration delivers license management capabilities and a clear view into the status of sourcing projects and candidate engagement</p>
+                <div class="searchbox">
+                    <div class="select-cat-wrap" show=false>
+                        <p class="current">Latest</p>
+                        <span class="icon-arrow"></span>
+                        <ul class="select-cat-menu">
+                            <li option="latest" class="cat">Latest</li>
+                            <li option="readtime" class="cat">Reading time</li>
+                        </ul>
+                    </div>
+                    <form action="javascript:search_tool.search_fn()" class="part1-input">
+                        <input type="text" class="put-text" placeholder="Search for articles">
+                        <button href="javascript:void(0)" data-vars-ga-category="Search bar click" data-vars-ga-action="click_Search"
+                            class="search-icon url_e"></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="part2 out_box">
+        <div class="parttitle">
+            <p class="title">Most Recent Blogs</p>
+            <a class="viewall" href="">View All ></a>
+        </div>
+
+        <div class="main">
+            <div class="head_eachbox">
+                <div class="right">
+                    <div class="text">
+                        <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/02/hireEZ-Logo-1.png" alt="" class="logo">
+                        <div class="partname">BLOG</div>
+                        <p class="blogtitle">
+                            What is Outbound Recruiting?
+                            And Why Is it Here to Stay?
+                        </p>
+                        <p class="blogtitle2">
+                            The Future of Recruiting in a Candidate-Driven Market
+                        </p>
+                        <button class="readbut">READ BLOG</button>
+                    </div>
+                    <img src="https://staging-rebrand.kinsta.cloud/wp-content/uploads/2022/03/img003.png" alt="" class="img">
+                </div>
+                <div class="left">
+
+                </div>
+            </div>
+            <div class="each_outbox">
+                <div class="eachbox"></div>
+            </div>
+        </div>
+        
+    </div>
+
+<script src="../jQuery-3-5-1.js"></script>
+<script src="https://hireez.com/blogjson/"></script>
+<script>
+var public_data = {
+
+};
+
+var tool_fn = {
+    initpage:function(){
+        console.log('init')
+    },
+    
+}
+
+ // serach
+ var search_tool = {
+            search_fn: function () { // search_fn(搜索匹配)
+                var match_data;
+                publicdata.Categoriesname = '';
+                var put_val = $('.put-text').val().trim();
+                var valarr = put_val.split(' ');
+                valarr = valarr.filter(function (e) {
+                    return e.length >= 3;
+                });
+                // scroll_tool('part4');
+                if (!put_val) {
+                    match_data = publicdata.matchData
+                    // $('.blog_nav-but.all').addClass('choose');
+                } else {
+                    match_data = search_tool.match_title_fn(valarr);
+                }
+
+            //   执行渲染结果函数
+            },
+            match_title_fn: function (arr) {//   match_title_fn(匹配title搜索关键词)
+
+                var data = {};
+                var match_arr = [];
+                for (var i = 0; i < arr.length; i++) {
+                    var str = arr[i].toLowerCase();
+                    publicdata.matchData.forEach(function (e, index) {
+                        var t = e.title.toLowerCase();
+                        if (t.indexOf(str) >= 0) {
+                            data[index] = data[index] ? data[index] + 1 : 1;
+                        }
+                    })
+                };
+
+                for (var key in data) {
+                    if (data[key] >= Math.ceil(arr.length / 2)) {
+                        var k = parseInt(key);
+                        match_arr.push(publicdata.matchData[k]);
+                    }
+                }
+                return match_arr;
+            },
+            match_classify_fn: function (classify) {
+
+                var match_data = pageData.blog_data.filter(function (d, index) {
+                    var returnval = false;
+                    for (var i = 0; i < d.classify.length; i++) {
+                        if (d.classify[i].toLowerCase().indexOf(classify) > -1) {
+                            returnval = true;
+                        }
+                    };
+                    return returnval;
+                })
+                return match_data;
+            },
+        };
+        
+
+window.addEventListener('load',tool_fn.initpage);
+</script>
+</body>
+</html>
